@@ -1,8 +1,8 @@
 # Entrega 1 — Conhecendo o projeto, o usuário e o problema
 
-**Data:** {{dd/mm/aaaa}}  
-**Status:** ⬜ não iniciada  
-**Responsabilidade:** 1 solução consolidada por equipe
+**Data:** 27/08/2026
+**Status:** 🟩 Concluída
+**Responsabilidade:** Desenvolver uma interface para intermediar o uso do modelo de inteligência artificial explicável que visa auxiliar no diagnóstico da doença de alzheimer por profissionais da área da saúde.
 
 ## Objetivo da atividade
 
@@ -59,15 +59,18 @@ Uma hipótese explicitada é melhor do que uma suposição escondida.
 
 | Nome completo | Matrícula | GitHub |
 |---|---:|---|
-| {{...}} | {{...}} | {{...}} |
+| Paulo Hudson | 22.222.013-9 | @Paulo Hudson
+| Ana Carolina | 22.123.001-4 | @lazzuriana08
+| Raphael | 22.123.014-7 | @rapha661
+| Nathan | 22.123.028-7 | @NathanGbl
 
 ## 0.2 Título atual do TCC
 
-{{...}}
+M-XAI: Um framework multimodal de inteligência artificial explicável para diagnóstico da doença de alzheimer
 
 ## 0.3 Orientador(a)
 
-{{...}}
+Murillo Freitas Bouzon
 
 ## 0.4 Qual é o resultado principal atualmente previsto no TCC?
 
@@ -75,7 +78,7 @@ Marque e descreva:
 
 - [ ] sistema/aplicação interativa;
 - [ ] algoritmo;
-- [ ] modelo de IA/ML/LLM;
+- [x] modelo de IA/ML/LLM;
 - [ ] biblioteca/API/framework;
 - [ ] análise de dataset;
 - [ ] estudo/benchmark/avaliação experimental;
@@ -83,17 +86,18 @@ Marque e descreva:
 - [ ] componente embarcado/IoT;
 - [ ] outro: {{...}}.
 
-**Descrição:** {{...}}
+**Descrição:** 
 
 ## 0.5 O TCC já previa desenvolvimento de interface com usuário?
 
-- [ ] Sim, a interface já faz parte do TCC.
+- [x] Sim, a interface já faz parte do TCC.
 - [ ] Parcialmente; existe alguma interação, mas ainda não está bem definida.
 - [ ] Não. O TCC é predominantemente técnico e não previa interface.
 
-**Explique o que está formalmente previsto no TCC:** {{...}}
+**Explique o que está formalmente previsto no TCC:** O projeto tem como intuíto desenvolver uma aplicação web para intermediar a utilização do modelo de inteligência artificial. Por meio da aplicação, o profissional de saúde poderá fornecer dados do paciente, como imagens de exames e informações clínicas, e consultar o resultado produzido pelo modelo juntamente com sua respectiva explicação.
 
-> Esta resposta serve para separar o compromisso do TCC do projeto da disciplina. Mesmo quando a opção for **não**, a equipe irá definir uma interface para exercitar IHC.
+A interface será responsável por apresentar as etapas de envio dos dados, processamento e consulta do resultado de forma adequada ao contexto de utilização por profissionais da área da saúde.
+
 
 ---
 
@@ -101,25 +105,22 @@ Marque e descreva:
 
 ## 1.1 Explique o TCC em uma frase, sem citar linguagem de programação, framework ou banco de dados.
 
-{{...}}
+Interface que auxiliará um profissional da saúde a saber com mais clareza e objetividade no diagnóstico de alzheimer de um paciente utilizando inteligência artificial explicativa.
 
 ## 1.2 Qual situação, atividade ou problema do mundo real motivou o TCC?
 
-{{[F/H/?] ...}}
+[F] Falta de assertividade no diagnóstico da doença de alzheimer por conta da dificuldade de visualização em suas fases iniciais.
 
 ## 1.3 Qual é a **capacidade/contribuição central** produzida pelo TCC?
 
 Complete, se ajudar:
 
-> “Nosso TCC produz, melhora, analisa ou permite `{{capacidade}}`.”
+Nosso TCC, melhora a confiabilidade por parte dos médicos em realizar uma analise de exames de alzheimer utilizando inteligência artificial por conta do XAI e a possibilidade de utilizar tanto imagens de MRI e dados tabulares de exames sanguíneos.
 
-Exemplos: otimizar consultas; classificar imagens; detectar anomalias; comparar modelos; identificar padrões; prever demanda; analisar desempenho; gerar resumos; recomendar configurações.
-
-{{...}}
 
 ## 1.4 O que se espera que esteja diferente **para pessoas, organizações ou processos** se essa contribuição for bem-sucedida?
 
-{{[F/H/?] ...}}
+ []
 
 ## 1.5 O que é mérito técnico/científico do TCC e o que seria uma possível aplicação prática?
 

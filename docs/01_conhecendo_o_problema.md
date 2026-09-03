@@ -827,13 +827,25 @@ A equipe pode registrar possibilidades para investigação. Cada uma corresponde
 
 | Benefício esperado | Problema/necessidade | Usuário | Status/evidência |
 |---|---|---|---|
-| {{...}} | {{...}} | {{...}} | {{...}} |
+| Reduzir tempo até uma decisão diagnóstica inicial | Fila de meses por especialista | Médico clínico | [F] |
+| Explicar o "porquê" da sugestão, não só o resultado | "Caixa preta" clínica, falta de justificativa técnica | Médico clínico | [F] |
+| Gerar documentação/justificativa automática da decisão | Falta de rastreabilidade para auditoria | Médico clínico / Hospital | [F] |
+| Mostrar grau de confiança para apoiar decisão de escalonar | Casos ambíguos sem critério objetivo | Médico clínico | [H] |
+| Reduzir divergência de interpretação entre profissionais | Baixa concordância inter-observador | Médico clínico / Neurologista | [F] |
 
 ## 9.2 Que ações o usuário deverá conseguir realizar?
 
 | ID | O usuário precisa conseguir... | Para alcançar... | Prioridade inicial |
 |---|---|---|---|
-| F01 | {{ação}} | {{objetivo}} | alta/média/baixa |
+| F01 | Abrir um caso com MRI e dados clínicos | Iniciar a análise | alta |
+| F02 | Ver a MRI com regiões destacadas pela explicação | Entender onde o modelo "olhou" | alta |
+| F03 | Ver as features (imagem + clínicas) em linguagem clara | Entender o "porquê" da sugestão | alta |
+| F04 | Ver o grau de confiança da predição | Calibrar quanto confiar no resultado | alta |
+| F05 | Comparar com exames anteriores do mesmo paciente | Avaliar progressão | média |
+| F06 | Registrar a decisão final com justificativa | Documentar de forma auditável | alta |
+| F07 | Encaminhar o caso a um especialista | Lidar com casos ambíguos | média |
+| F08 | Consultar glossário/ajuda contextual | Reduzir a barreira de interpretação | baixa |
+
 
 ## 9.3 Tecnologias/restrições já definidas no TCC
 
@@ -841,7 +853,11 @@ A tecnologia aparece **agora**, depois do entendimento do uso.
 
 | Tecnologia/restrição | Por que existe | Possível impacto na interação |
 |---|---|---|
-| {{...}} | {{...}} | {{...}} |
+| Modelo multimodal (MRI + dados tabulares) | Definição central do TCC | Interface precisa integrar imagem e dados clínicos |
+| Abordagem Feature-Augmented XAI | Diferencial científico do TCC | Explicação precisa ir além de heatmap, incluindo biomarcadores |
+| Saída probabilística (score, não binária) | Natureza do modelo de ML | Precisa comunicar incerteza sem gerar falsa certeza |
+| LGPD/HIPAA, rede hospitalar privada | Sensibilidade dos dados | Sem exportação livre; exige logout/controle de sessão |
+| Responsabilidade legal é do médico, não da IA | Regulação médica | Interface deve deixar isso explícito ("sugestão", não "diagnóstico") |
 
 ---
 
@@ -849,9 +865,11 @@ A tecnologia aparece **agora**, depois do entendimento do uso.
 
 | ID | Hipótese/dúvida | Por que importa | Como poderá ser investigada |
 |---|---|---|---|
-| H01 | {{...}} | {{...}} | Entrega 2/3/7/... |
-| H02 | {{...}} | {{...}} | {{...}} |
-| H03 | {{...}} | {{...}} | {{...}} |
+| H01 | Explicação Feature-Augmented aumenta a confiança do médico vs. um score isolado | É a premissa central de valor do TCC | Entrega 7 |
+| H02 | Explicação combinada (imagem + biomarcadores) reduz o tempo de decisão | Sustenta o benefício de rapidez (9.1) | Entrega 7 |
+| H03 | Médico entende o score de confiança sem treinamento extenso | Risco de má interpretação já identificado | Entrega 6/7 |
+| H04 | Gestores aprovariam a adoção se houver ganho comprovado | Impacta viabilidade real, fora do escopo direto | Não priorizado nesta disciplina |
+| H05 | Pacientes/familiares não são usuários diretos nesta fase | Delimita escopo | Reavaliar em versões futuras |
 
 Registre em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 
@@ -861,23 +879,23 @@ Registre em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 
 | Pergunta | Síntese atual |
 |---|---|
-| Qual é a contribuição central do TCC? | {{...}} |
-| O TCC já previa interface? | {{...}} |
-| Quem é o usuário prioritário de IHC? | {{...}} |
-| O que ele precisa alcançar? | {{...}} |
-| Qual problema/atividade será estudado? | {{...}} |
-| Como isso acontece hoje? | {{...}} |
-| Qual é o contexto de uso? | {{...}} |
-| Que interface/recorte será explorado? | {{...}} |
-| Como a interface se relaciona ao TCC? | {{...}} |
-| Quais pontos ainda são hipóteses? | {{H01...}} |
+| Qual é a contribuição central do TCC? | Modelo de IA explicável que combina MRI e dados clínicos tabulares para apoiar o diagnóstico de Alzheimer |
+| O TCC já previa interface? | Sim — aplicação web para envio de dados e consulta de resultado |
+| Quem é o usuário prioritário de IHC? | Rede médica |
+| O que ele precisa alcançar? | Diagnosticar com confiança e rapidez, entendendo o porquê da sugestão |
+| Qual problema/atividade será estudado? | Interpretar as explicações XAI para apoiar a decisão diagnóstica |
+| Como isso acontece hoje? | Radiologista interpreta a MRI visualmente; médico combina com MMSE/histórico e julgamento pessoal, sem explicação estruturada |
+| Qual é o contexto de uso? | Hospital/consultório, tempo limitado, requisitos de privacidade e rastreabilidade |
+| Que interface/recorte será explorado? | Visualizar MRI + explicação + confiança, comparar histórico, registrar decisão, encaminhar especialista |
+| Como a interface se relaciona ao TCC? | Extensão conceitual do app já previsto, com foco no médico clínico |
+| Quais pontos ainda são hipóteses? | H01, H02, H03, H04 |
 
 ### Delimitação
 
-**Dentro do escopo de IHC:** {{...}}  
-**Fora do escopo de IHC:** {{...}}  
-**Dentro do escopo formal do TCC:** {{...}}  
-**Interface da disciplina será implementada no TCC?** não definido / sim / não — {{justificativa, se houver}}
+**Dentro do escopo de IHC:** interação do médico com MRI, explicação, score de confiança, histórico e registro de decisão.
+**Fora do escopo de IHC:** configuração do modelo, infraestrutura, interface para pacientes, integração completa com EHR, auditoria em nível de sistema.
+**Dentro do escopo formal do TCC:** modelo multimodal M-XAI e app web básica.
+**Interface da disciplina será implementada no TCC?** não definido — depende de validação clínica preliminar e decisão da equipe/orientador.
 
 ---
 

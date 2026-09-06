@@ -1,8 +1,8 @@
 # Entrega 2 — Público-alvo e análise de concorrência
 
-**Data:** {{dd/mm/aaaa}}  
-**Status:** ⬜ não iniciada  
-**Responsabilidade mínima:** cada integrante analisa pelo menos 1 concorrente/interface representativa; a equipe produz síntese comparativa.
+- **Data:** 03/09/2026
+- **Status:** 🟨 em andamento  
+- **Responsabilidade mínima:** cada integrante analisa pelo menos 1 concorrente/interface representativa; a equipe produz síntese comparativa.
 
 ## Objetivo da atividade
 
@@ -36,7 +36,9 @@ Se uma hipótese da Entrega 1 for confirmada ou refutada durante esta análise, 
 
 ## 1. Público-alvo desta análise
 
-{{descrever e ligar à Entrega 1}}
+O público-alvo é composto principalmente por profissionais de saúde, com foco no médico clínico/generalista, definido na Entrega 1 como usuário primário da interface. Neurologistas e radiologistas também são considerados, principalmente para validação dos resultados.
+
+A análise de IHC terá como foco compreender as necessidades desses profissionais ao interpretar as explicações geradas pela IA e utilizá-las como apoio ao diagnóstico de Alzheimer, atividade identificada na Entrega 1 como a mais frequente e crítica.
 
 ## 2. Concorrentes diretos/indiretos
 

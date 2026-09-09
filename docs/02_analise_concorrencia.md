@@ -42,16 +42,19 @@ A análise de IHC terá como foco compreender as necessidades desses profissiona
 
 ## 2. Concorrentes diretos/indiretos
 
-### Análise C01 — {{produto}}
+### Análise C01 — Glass Health
 
-**Autor(a):** {{nome — matrícula}}  
-**Tipo:** direto / indireto / análogo  
-**Link oficial:** {{URL}}  
-**Data de acesso:** {{dd/mm/aaaa}}
+**Autor(a):** Nathan Gabriel da Fonseca Leite - 221230287
+
+**Tipo:** indireto
+
+**Link oficial:** https://glass.health/
+
+**Data de acesso:** 09/09/2026
 
 #### Contexto e proposta
 
-{{...}}
+Esta plataforma reconheceu alguns dos problemas que existiam nos ambientes médicos tais como: sobrecarga administrativa, fragmentação e o volume informacional e busca obsoletas (precisa fazer uma pesquisa bastante específica para achar uma informação útil). Para resolver isso, ela traz a IA para automatizar o preenchimento de relatórios e outros documentos, direciona a atenção do profissional para o diagnósticos de 3 níveis (Mais provável, expandido e não pode perder).
 
 #### Funcionalidades relevantes
 
@@ -65,7 +68,14 @@ Use avaliações públicas, relatos, estudos, testes próprios ou outra fonte id
 
 #### Preço/modelo de negócio
 
-{{...}}
+O Glass Health opera sob um modelo freemium baseado em assinaturas SaaS abordando individualmente o profissional ou institucionalmente o hospital.
+
+| Plano | Preço Mensal | Principais Recursos Incluídos |
+|---|---:|---|
+| Glass Lite | Gratuito ($0) | Uso limitado de gravação de consultas (scribe) e suporte a decisões clínicas. Inclui anúncios. |
+| Glass Starter | $20 / mês | Capacidade expandida de gravação de consultas e suporte clínico aprimorado. |
+| Glass Pro | $90 / mês | Transcrição de consultas ilimitada, suporte clínico completo e acesso ao modo de Deep Reasoning (Raciocínio Clínico Profundo). |
+| Glass Max | $200 / mês | Tudo do plano Pro + Integração com prontuários eletrônicos (EHR) como Epic, athenahealth, eClinicalWorks e Elation. |
 
 #### Padrões e tendências percebidos
 

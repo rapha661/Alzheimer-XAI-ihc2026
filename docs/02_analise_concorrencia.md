@@ -87,7 +87,56 @@ O Glass Health opera sob um modelo freemium baseado em assinaturas SaaS abordand
 |---|---|---|
 | {{...}} | {{...}} | {{...}} |
 
-> Repita a subseção para C02, C03... até atender à quantidade da equipe.
+### Análise C02 — BrainSee (Darmiyan, Inc.)
+
+**Autor(a):** Paulo Hudson - 22.222.013-9
+
+**Tipo:** indireto / análogo
+
+**Link oficial:** https://brainsee.ai
+
+**Data de acesso:** 09/09/2026
+
+BrainSee é um software de IA, desenvolvido pela Darmiyan Inc. É o produto de mercado mais próximo do M-XAI que encontramos: combina MRI cerebral de rotina com testes cognitivos (MMSE e CDR-SB) e dados demográficos (idade, sexo) para gerar um score de 0 a 100 que indica a probabilidade de um paciente com comprometimento cognitivo leve progredir para demência de Alzheimer em 5 anos. O score reflete o grau de similaridade do paciente com duas populações de referência: quem progrediu ("converters") e quem não progrediu ("non-converters") dentro desse período.
+
+É oferecido como plataforma em nuvem, acessada via portal web por médicos (neurologistas, geriatras, psiquiatras, clínicos gerais e médicos internistas), tipicamente em atenção primária — exatamente o perfil que priorizamos na Entrega 1 (médico clínico sem acesso imediato a especialista).
+
+#### Funcionalidades relevantes
+
+| Funcionalidade | Como é realizada | Evidência/print | Observação de IHC |
+|---|---|---|---|
+| Upload de dados do paciente | Médico faz upload do arquivo de MRI e insere manualmente os scores de MMSE e CDR-SB no portal web | `../assets/02_concorrencia/brainsee_portal.png` |Fluxo de entrada muito próximo ao nosso F01 (abrir caso com MRI + dados clínicos) |
+| Geração de score de risco (0–100) | Processamento automático no servidor; resultado no mesmo dia | pendente |  |
+| Relatório de saída visualizável/baixável/imprimível | Relatório com o score e guia de interpretação | pendente |  |
+| Tutorial e guia de interpretação | Material de apoio fornecido junto ao software, tanto para médicos quanto para pacientes/cuidadores | pendente |  |
+
+#### Experiência do usuário e opiniões
+
+ O que existe publicado é a validação clínica do escore: em estudo clínico, médicos não afiliados à Darmiyan usaram o software para prever o prognóstico de 107 pacientes com aMCI amnéstico, comparando a predição com os desfechos clínicos 5 anos depois;
+
+#### Preço/modelo de negócio
+
+- Preço de tabela: US$ 1.500 por teste.
+- Preço praticado enquanto aguarda cobertura pelo Medicare: US$ 300 por teste.
+- A ressonância em si já é coberta pelo Medicare separadamente (custo médio de US$ 1.000 fora do bolso, quando não coberta).
+- Desde set/2024, existe também o "BrainSee Platform", que amplia o produto para incluir consultas remotas, agendamento de MRI e acompanhamento — não é mais só o teste isolado, é uma jornada completa do paciente.
+
+#### Padrões e tendências percebidos
+
+- Saída como **score único e objetivo (0–100)**, não como explicação multi-camada (sem heatmap visual sobre a MRI, ao que tudo indica) — é mais parecido com uma pontuação de risco tipo "score de crédito" do que com uma explicação Grad-CAM/SHAP.
+- Uso de **duas populações de referência** (quem progrediu vs. quem não progrediu) como base de comparação — um tipo de explicação por analogia/exemplo, diferente da explicação por atribuição de features do M-XAI.
+- Fornecimento de **material de apoio à interpretação** junto ao produto (tutorial + guia), reconhecendo que o número sozinho não basta.
+- Modelo de precificação por teste (não assinatura), alinhado ao fato de ser usado pontualmente por caso, não como ferramenta de uso contínuo.
+
+#### Pontos positivos, limitações e lições
+
+| Ponto | Evidência | Implicação para nosso projeto |
+|---|---|---|
+| Fluxo de entrada simples (upload de MRI + 2 scores clínicos) já validado no mercado e aprovado pela FDA | Documentação regulatória FDA DEN220066; fluxo descrito em múltiplas fontes de imprensa especializada | Valida que nosso F01 (upload de MRI + dados clínicos) é um padrão realista e aceito clinicamente, não uma invenção nossa |
+| Saída como score único, sem explicação visual sobre a imagem | Ausência de menção a heatmap/overlay em toda a cobertura encontrada | Aqui está uma diferença real e defensável do M-XAI: nosso projeto vai além do BrainSee ao oferecer explicação visual (Grad-CAM) + explicação de features clínicas (SHAP), não apenas um número — isso pode virar argumento de originalidade **verificado**, ao contrário do "Feature-Augmented" (ver observação da pesquisa anterior) |
+| Empresa fornece guia de interpretação junto ao produto | Confirmado em fonte jornalística (Alzforum) | Reforça a prioridade de F08 (ajuda/glossário) — mesmo um produto aprovado pela FDA sentiu necessidade de "traduzir" o resultado para o médico |
+| Preço alto de tabela (US$1.500) pode ser barreira de adoção, mesmo com desconto temporário | Fonte: Alzforum | Não é um problema de IHC diretamente, mas é contexto de mercado relevante para justificar por que uma alternativa mais acessível (como a proposta do M-XAI) tem valor de negócio, não só técnico |
+
 
 ## 3. Softwares que o público-alvo usa no cotidiano
 

@@ -105,10 +105,12 @@ BrainSee é um software de IA, desenvolvido pela Darmiyan Inc. É o produto de m
 
 | Funcionalidade | Como é realizada | Evidência/print | Observação de IHC |
 |---|---|---|---|
-| Upload de dados do paciente | Médico faz upload do arquivo de MRI e insere manualmente os scores de MMSE e CDR-SB no portal web | `../assets/02_concorrencia/brainsee_portal.png` |Fluxo de entrada muito próximo ao nosso F01 (abrir caso com MRI + dados clínicos) |
-| Geração de score de risco (0–100) | Processamento automático no servidor; resultado no mesmo dia | pendente |  |
-| Relatório de saída visualizável/baixável/imprimível | Relatório com o score e guia de interpretação | pendente |  |
-| Tutorial e guia de interpretação | Material de apoio fornecido junto ao software, tanto para médicos quanto para pacientes/cuidadores | pendente |  |
+| Upload de dados do paciente | Médico faz upload do arquivo de MRI e insere manualmente os scores de MMSE e CDR-SB no portal web | Fonte: brainsee.ai/doctors ("Upload brain MRI scan files... Enter MMSE & CDRSB scores") — sem print, portal fechado a cadastro profissional | Fluxo de entrada muito próximo ao nosso F01 (abrir caso com MRI + dados clínicos) |
+| Geração de score de risco (0–100) | Processamento automático no servidor; resultado no mesmo dia; score <50 = baixo risco, >50 = alto risco | Fonte: brainsee.ai/doctors + BioSpace (release oficial) — sem print, portal fechado | Análogo ao nosso F04 (ver grau de confiança) — mas aqui é um único número de risco, não uma explicação de features |
+| Relatório de saída visualizável/baixável/imprimível (PDF) | "View/download BrainSee the analysis report (PDF)" dentro do próprio portal | Fonte: brainsee.ai/doctors — sem print, portal fechado | Relaciona-se a F06 (registrar decisão com justificativa) |
+| Tutorial e guia de interpretação | Material de apoio fornecido junto ao software, tanto para médicos quanto para pacientes/cuidadores | Fonte: Alzforum ("comes with a tutorial and interpretation guide for physicians, as well as a guide for patients and caregivers") — sem print | Reforça diretamente F08 (glossário/ajuda contextual) |
+
+> **Nota metodológica**: o portal do BrainSee é fechado com acesso liberado após formulário de verificação profissional (CRM/licença, instituição), aprovado pela Darmiyan. Não há demo público do lado do médico (só um vídeo de imprensa sobre a aprovação da FDA, sem imagens da tela). Por isso as evidências acima são citações de fonte primária (site oficial + imprensa), não capturas de tela. Isso em si é um dado de IHC: o produto não expõe transparência de interface ao público, o que dificulta benchmarking externo — algo que podemos citar como diferencial se o nosso protótipo/documentação for mais aberta.
 
 #### Experiência do usuário e opiniões
 

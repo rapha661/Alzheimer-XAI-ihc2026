@@ -137,6 +137,52 @@ BrainSee é um software de IA, desenvolvido pela Darmiyan Inc. É o produto de m
 | Empresa fornece guia de interpretação junto ao produto | Confirmado em fonte jornalística (Alzforum) | Reforça a prioridade de F08 (ajuda/glossário) — mesmo um produto aprovado pela FDA sentiu necessidade de "traduzir" o resultado para o médico |
 | Preço alto de tabela (US$1.500) pode ser barreira de adoção, mesmo com desconto temporário | Fonte: Alzforum | Não é um problema de IHC diretamente, mas é contexto de mercado relevante para justificar por que uma alternativa mais acessível (como a proposta do M-XAI) tem valor de negócio, não só técnico |
 
+### Análise C03 — OHIF Viewer
+
+**Autor(a):** Ana Carolina Lazzuri - 22.123.001-4
+
+**Tipo:** análogo / ferramenta cotidiana
+
+**Link oficial:** https://ohif.org / https://viewer.ohif.org/
+
+**Data de acesso:** 09/09/2026
+
+#### Contexto e proposta
+
+O OHIF Viewer é o visualizador web de exames DICOM mais usado para integrar modelos de IA à práticas médicas. Ele permite navegar por imagens 3D (como ressonâncias magnéticas) e aplicar mapas de calor e segmentações direto no navegador, sem precisar de instalações na máquina do hospital.
+
+#### Funcionalidades relevantes
+
+| Funcionalidade | Como é realizada | Evidência/print | Observação de IHC |
+|---|---|---|---|
+| Visualização de MRI em diferentes formatos (Axial, Sagital, Coronal) | *Viewports* divididos e sincronizados para navegar pelos planos da imagem. | pendente | O médico já espera usar o *scroll* do mouse para trocar de corte e arrastar para dar zoom/pan. |
+| Controle de Overlays de IA | Botão para ligar/desligar a camada de IA e barra para ajustar a transparência (0 a 100%). | pendente | O usuário precisa conseguir esconder o Grad-CAM para conferir a anatomia real por baixo. |
+| Painel de Dados do Paciente | Barra lateral retrátil com dados do paciente e métricas do exame. | pendente| Manter as informações na lateral evita poluição visual no centro da tela. |
+| Ajuste de Contraste (*Windowing*) | Arrastar o ponteiro sobre a imagem para alterar brilho e contraste em tempo real. |pendente | A sobreposição da IA não pode quebrar a ajuste de contraste feito pelo médico. |
+
+#### Experiência do usuário e opiniões
+
+O OHIF se destaca pelo desempenho rápido no navegador e por usar o padrão *dark mode*, que reduz o cansaço visual e melhora a leitura das imagens de ressonância. Por outro lado, médicos que não são radiologistas costumam achar a tela inicial carregada com muitas ferramentas técnicas de medição que não usam no dia a dia.
+
+#### Preço/modelo de negócio
+
+Gratuito e open-source (licença MIT). É financiado pelo *National Cancer Institute* (NCI) e mantido pela comunidade, servindo de base para diversas startups e hospitais criarem suas próprias interfaces.
+
+#### Padrões e tendências percebidos
+
+- **Tema Escuro Nativo:** Padrão absoluto em radiologia para dar contraste às imagens em tom de cinza.
+- **Controle de Transparência:** A interface nunca deixa o destaque da IA fixo; o médico sempre pode suavizar ou ocultar a marcação.
+- **Painéis Retráteis:** Ferramentas e dados adicionais ficam escondidos nas laterais para priorizar o exame na tela principal.
+
+#### Pontos positivos, limitações e lições
+
+| Ponto | Evidência | Implicação para nosso projeto |
+|---|---|---|
+| Ajuste de transparência do destaque visual | Slider de opacidade presente nas ferramentas de IA do OHIF | O M-XAI deve ter um controle simples para o médico ajustar a opacidade do Grad-CAM sobre a ressonância. |
+| Foco central na imagem com fundo escuro | Design nativo do OHIF em tom escuro  | Usar tema escuro na tela do exame para evitar fadiga visual e destacar o hipocampo. |
+| Poluição visual para o clínico geral | Excesso de botões de medição e calibração no topo da tela | Como nosso foco são profissionais da área da saúde, devemos manter apenas o básico: zoom, contraste, cortes e transparência da IA. |
+| Pouco espaço para dados clínicos fora da imagem | OHIF foca 100% na imagem e joga os dados em abas secundárias | O M-XAI é multimodal; precisamos dar o mesmo destaque visual para a explicação SHAP (dados do paciente) e para o Grad-CAM (imagem). |
+
 
 ## 3. Softwares que o público-alvo usa no cotidiano
 

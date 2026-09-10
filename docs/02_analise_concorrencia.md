@@ -60,7 +60,7 @@ Esta plataforma reconheceu alguns dos problemas que existiam nos ambientes médi
 
 | Funcionalidade | Como é realizada | Evidência/print | Observação de IHC |
 |---|---|---|---|
-| {{...}} | {{...}} | `../assets/02_concorrencia/...` | {{...}} |
+| Upload de dados tabulares |  | `../assets/02_concorrencia/glasshealth_upload_chat.png` | {{...}} |
 
 #### Experiência do usuário e opiniões
 

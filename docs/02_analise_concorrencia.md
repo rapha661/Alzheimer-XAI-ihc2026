@@ -185,39 +185,33 @@ Gratuito e open-source (licença MIT). É financiado pelo *National Cancer Insti
 | Poluição visual para o clínico geral | Excesso de botões de medição e calibração no topo da tela | Como nosso foco são profissionais da área da saúde, devemos manter apenas o básico: zoom, contraste, cortes e transparência da IA. |
 | Pouco espaço para dados clínicos fora da imagem | OHIF foca 100% na imagem e joga os dados em abas secundárias | O M-XAI é multimodal; precisamos dar o mesmo destaque visual para a explicação SHAP (dados do paciente) e para o Grad-CAM (imagem). |
 
-
 ## 3. Softwares que o público-alvo usa no cotidiano
-
-Analise interfaces que moldam a expectativa do público, mesmo que não sejam concorrentes.
 
 | Software | Por que o público usa | Padrões relevantes | Prints | O que aprender |
 |---|---|---|---|---|
-| {{...}} | {{...}} | {{...}} | {{link local}} | {{...}} |
+| **OHIF Viewer** | Visualizar exames de ressonância (MRI) e camadas de IA no navegador. | Tela escura, navegação por cortes (*scroll*), zoom e ajuste de transparência da IA. |  | O médico já está acostumado a ver imagens em telas escuras e controlar a opacidade dos destaques da IA. |
+| **BrainSee (Darmiyan)**| Consultar o risco de progressão de Alzheimer para apoiar o diagnóstico. | Formulário simples de envio de dados, score numérico de risco e relatório em PDF. |  | A entrada de dados precisa ser rápida e o resultado deve vir acompanhado de um guia fácil de interpretar. |
+| **Glass Health** | Auxiliar no raciocínio diagnóstico e agilizar relatórios médicos. | Diagnósticos organizados por prioridade (*Mais provável*, *Expandido*, *Não pode perder*) e chat. | | Mostrar hipóteses bem categorizadas sem sobrecarregar o médico com blocos longos de texto. |
 
 ## 3.1 Padrões de interface relevantes ao escopo de IHC
 
-Registre somente padrões encontrados nas soluções analisadas e que possam ter relação com objetivos reais da equipe.
-
 | Padrão observado | Produto(s) | Para qual tarefa serve | Vantagem percebida | Risco/limitação | Aplicável ao nosso escopo? |
 |---|---|---|---|---|---|
-| dashboard | {{...}} | {{...}} | {{...}} | {{...}} | sim/não/talvez |
-| relatório | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
-| histórico + filtros | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
-| administração/CRUD | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
-| comparação de resultados | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
-
-> O objetivo não é concluir “todo concorrente tem dashboard, então teremos um”. O padrão só será adotado se apoiar uma tarefa rastreável.
+| **Destaque Visual com Transparência** | OHIF Viewer | Analisar o cérebro e conferir a marcação (Grad-CAM) da IA. | Permite ver a imagem original e o destaque da IA sem esconder o cérebro. | Se a barra de transparência for ruim, a marcação pode cobrir detalhes da imagem. | **Sim** (Usar no visualizador do Grad-CAM). |
+| **Score Numérico de Risco** | BrainSee | Resumir a chance do paciente evoluir para Alzheimer (0 a 100). | Entendimento rápido em consultas curtas. | O médico pode confiar no número sem checar os motivos. | **Talvez** (Usar como resumo, mas acompanhado da explicação). |
+| **Painéis Laterais Dobráveis** | OHIF Viewer / Glass Health | Mostrar dados e testes do paciente sem cobrir o exame. | Mantém o foco no cérebro e deixa a tela limpa. | Se ficar escondido, o médico pode não ver dados importantes. | **Sim** (Ideal para os dados do paciente e o gráfico SHAP). |
+| **Relatório Baixável (PDF)** | BrainSee / Glass Health | Salvar o diagnóstico no prontuário ou entregar ao paciente. | Facilita guardar o histórico e explicar o caso para a família. | Texto muito técnico pode confundir o paciente. | **Sim** (Permitir baixar o laudo explicativo). |
 
 ## 4. Síntese comparativa da equipe
 
-| Critério | C01 | C02 | C03 | Oportunidade para o projeto |
+| Critério | C01 (Glass Health) | C02 (BrainSee)| C03 (OHIF Viewer) | Oportunidade para o projeto |
 |---|---|---|---|---|
-| Navegação |  |  |  |  |
-| Feedback/estado |  |  |  |  |
-| Prevenção/recuperação de erro |  |  |  |  |
-| Terminologia |  |  |  |  |
-| Acessibilidade |  |  |  |  |
-| Eficiência |  |  |  |  |
+| **Navegação** | Baseada em chat e abas de documentos. | Passo a passo direto: Envio $\rightarrow$ Análise $\rightarrow$ Relatório. | Telas divididas com navegação de imagens pelo *scroll* do mouse. | Usar o envio simples do C02 com a tela de visualização direta do C03. |
+| **Feedback/estado** | Respostas de texto em tempo real no chat. | Avisa quando o resultado do score está pronto. | Resposta imediata ao mexer no contraste e botão claro de IA ligada/desligada. | Mostrar na hora o ajuste de transparência e o status de carregamento da IA |
+| **Prevenção de erro** | Campo de texto livre pode aceitar dados incompletos. | Bloqueia o envio se faltar algum teste ou imagem. | Avisa se o arquivo de imagem estiver corrompido. | Validar os arquivos e exames antes de enviar para a IA não errar. |
+| **Terminologia** | Termos médicos do dia a dia da clínica geral. | Linguagem direta focada em probabilidade e testes. | Termos muito técnicos e avançados de radiologia. | Usar termos simples para o clínico geral e explicar nomes difíceis de IA em um glossário. |
+| **Acessibilidade** | Tela clara e focada em leitura de texto. | Visual limpo com opção de relatório fácil de ler e imprimir. | Tela escura nativa para não cansar a vista e destacar detalhes da imagem. | Adotar tela escura na imagem do cérebro para não cansar a vista do médico. |
+| **Eficiência** | Agiliza a criação de relatórios. | Leitura rápida por meio de um score único. | Imagens carregam rápido no navegador. | Juntar a rapidez do resumo numérico do C02 com a facilidade do mouse do C03. |
 
 ## 5. Recomendações derivadas
 

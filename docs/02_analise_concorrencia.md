@@ -66,7 +66,12 @@ Esta plataforma reconheceu alguns dos problemas que existiam nos ambientes médi
 
 #### Experiência do usuário e opiniões
 
-Excelente "Parceiro de Raciocínio": Diferente de plataformas que funcionam apenas como mecanismos de busca estruturada, o Glass Health funciona como uma "lousa digital inteligente". Ele ajuda o clínico a mapear possibilidades e estruturar o pensamento frente a casos complexos. Inteligência Ambiental Integrada (Ambient Scribing): A plataforma evoluiu para capturar consultas em tempo real, gerando notas clínicas estruturadas e planos de manejo diretamente a partir da conversa. Transparência em Citações: O Glass Health é elogiado por embutir referências e links diretos para a literatura médica em seus planos de tratamento recomendados. Foco no Modelo Americano/Global: A iatroX alerta que o Glass Health possui uma base de dados predominantemente voltada para as diretrizes dos EUA. Por conta disso, ele pode sugerir condutas ou antibióticos que conflitam com protocolos locais de outros países (como as diretrizes do NICE no Reino Unido ou protocolos do SUS no Brasil). Risco no Processamento de Dados: Como o Glass Health ingere dados clínicos e áudios de consultas em tempo real, há uma fricção regulatória maior quanto à privacidade de dados locais dos pacientes se comparado a ferramentas de consulta estática. [1] (https://www.iatrox.com/blog/glass-health-review-uk-nhs-ambient-ddx)
+Excelente "Parceiro de Raciocínio": Diferente de plataformas que funcionam apenas como mecanismos de busca estruturada, o Glass Health funciona como uma "lousa digital inteligente". Ele ajuda o clínico a mapear possibilidades e estruturar o pensamento frente a casos complexos. 
+Inteligência Ambiental Integrada (Ambient Scribing): A plataforma evoluiu para capturar consultas em tempo real, gerando notas clínicas estruturadas e planos de manejo diretamente a partir da conversa. 
+Transparência em Citações: O Glass Health é elogiado por embutir referências e links diretos para a literatura médica em seus planos de tratamento recomendados. 
+
+Foco no Modelo Americano/Global: A iatroX alerta que o Glass Health possui uma base de dados predominantemente voltada para as diretrizes dos EUA. Por conta disso, ele pode sugerir condutas ou antibióticos que conflitam com protocolos locais de outros países (como as diretrizes do NICE no Reino Unido ou protocolos do SUS no Brasil). 
+Risco no Processamento de Dados: Como o Glass Health ingere dados clínicos e áudios de consultas em tempo real, há uma fricção regulatória maior quanto à privacidade de dados locais dos pacientes se comparado a ferramentas de consulta estática.
 
 #### Preço/modelo de negócio
 

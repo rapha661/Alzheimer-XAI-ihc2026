@@ -60,11 +60,13 @@ Esta plataforma reconheceu alguns dos problemas que existiam nos ambientes médi
 
 | Funcionalidade | Como é realizada | Evidência/print | Observação de IHC |
 |---|---|---|---|
-| Upload de dados tabulares |  | `../assets/02_concorrencia/glasshealth_upload_chat.png` | {{...}} |
+| Upload de dados tabulares | Botão que abre uma janela para upload de arquivos | `../assets/02_concorrencia/glasshealth_upload_chat.png` |---|
+| Chat com LLM para relatórios automáticos e direcionamento de diagnóstico | Aba na esquerda da tela com uma barra inferior onde pode digitar | `../assets/02_concorrencia/glasshealth_upload_chat.png` | Uso de fundo claro e preenchimento da altura completa da tela |
+| Dashboard de exibição de dados | Ao subir dados do paciente, há o preenchimento automático do dashboard exibindo estes mesmos | `../assets/02_concorrencia/glasshealth_upload_chat.png` | Elementos arredondados, informações importantes em negrito |
 
 #### Experiência do usuário e opiniões
 
-Use avaliações públicas, relatos, estudos, testes próprios ou outra fonte identificável. Não trate opinião isolada como verdade universal.
+Excelente "Parceiro de Raciocínio": Diferente de plataformas que funcionam apenas como mecanismos de busca estruturada, o Glass Health funciona como uma "lousa digital inteligente". Ele ajuda o clínico a mapear possibilidades e estruturar o pensamento frente a casos complexos. Inteligência Ambiental Integrada (Ambient Scribing): A plataforma evoluiu para capturar consultas em tempo real, gerando notas clínicas estruturadas e planos de manejo diretamente a partir da conversa. Transparência em Citações: O Glass Health é elogiado por embutir referências e links diretos para a literatura médica em seus planos de tratamento recomendados. Foco no Modelo Americano/Global: A iatroX alerta que o Glass Health possui uma base de dados predominantemente voltada para as diretrizes dos EUA. Por conta disso, ele pode sugerir condutas ou antibióticos que conflitam com protocolos locais de outros países (como as diretrizes do NICE no Reino Unido ou protocolos do SUS no Brasil). Risco no Processamento de Dados: Como o Glass Health ingere dados clínicos e áudios de consultas em tempo real, há uma fricção regulatória maior quanto à privacidade de dados locais dos pacientes se comparado a ferramentas de consulta estática. [1] (https://www.iatrox.com/blog/glass-health-review-uk-nhs-ambient-ddx)
 
 #### Preço/modelo de negócio
 
@@ -79,13 +81,14 @@ O Glass Health opera sob um modelo freemium baseado em assinaturas SaaS abordand
 
 #### Padrões e tendências percebidos
 
-{{...}}
+Uso de cores claras, elementos arredondados, ícones de acordo com a tarefa ou contexto do elemento, informações importantes em destaque por negrito, diferentes cores de fundo de acordo com a funcionalidade geral(Azul para exibição dos dados no dashboard e branco para o chat LLM, por exemplo).
 
 #### Pontos positivos, limitações e lições
 
 | Ponto | Evidência | Implicação para nosso projeto |
 |---|---|---|
-| {{...}} | {{...}} | {{...}} |
+| Variar cores de fundo de acordo com o funcionalidade geral | `../assets/02_concorrencia/glasshealth_upload_chat.png` | Usar a mesma ideia para facilitar o olhar intuitivo do médico |
+| Uso de cores claras | `../assets/02_concorrencia/glasshealth_upload_chat.png` | Usar a mesma ideia para evitar um estranhamento inicial do usuário com a interface |
 
 ### Análise C02 — BrainSee (Darmiyan, Inc.)
 

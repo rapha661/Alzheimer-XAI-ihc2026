@@ -223,25 +223,32 @@ Gratuito e open-source (licença MIT). É financiado pelo *National Cancer Insti
 
 ## 5. Recomendações derivadas
 
-Liste recomendações com origem explícita.
-
-- **RC01:** {{recomendação}} — derivada de {{C01/C02/evidência}}.
-- **RC02:** {{...}}
+- **RC01:** Usar um controle de transparência (0% a 100%) no mapa de calor da ressonância — derivada do C03 (OHIF Viewer), permitindo que o médico veja a imagem real do cérebro por baixo do destaque da IA.
+- **RC02:** Adotar fundo escuro (*dark mode*) na tela do exame — derivada do C03 (OHIF Viewer), para não cansar a vista do médico e destacar as nuances de cinza da imagem.
+- **RC03:** Exibir a chance de diagnosticada em um score de risco simples — derivada do C02 (BrainSee), agilizando a leitura do caso durante consultas curtas.
+- **RC04:** Incluir um guia ou glossário explicativo junto com o resultado — derivada do C02 (BrainSee) e C01 (Glass Health), para ajudar o clínico geral a entender os termos da IA e explicar o quadro para o paciente.
+- **RC05:** Criar um formulário de envio de dados simples e em etapas (imagem + testes) — derivada do C02 (BrainSee), evitando que o sistema receba dados incompletos.
+- **RC06:** Colocar as informações do paciente e os gráficos em painéis laterais dobráveis — derivada do C03 (OHIF Viewer), mantendo a tela limpa e o foco principal no cérebro.
+- **RC07:** Manter apenas os botões essenciais na tela (zoom, contraste, cortes e transparência) — derivada de limitação do C03 (OHIF Viewer), evitando poluição visual para o clínico geral.
 
 ## Referências
 
-{{fontes dos produtos, avaliações e literatura}}
+- **Glass Health:** Disponível em: <https://glass.health/>. Acesso em: 09 set. 2026.
+- **BrainSee (Darmiyan, Inc.):** Disponível em: <https://brainsee.ai>. Acesso em: 09 set. 2026.
+- **OHIF Viewer (Open Health Imaging Foundation):** Disponível em: <https://ohif.org/> e <https://viewer.ohif.org/>. Acesso em: 09 set. 2026.
+- **FDA Regulation (BrainSee):** U.S. Food and Drug Administration. De Novo Classification Order DEN220066 (BrainSee).
+- **BARBOSA, S. D. J.; SILVA, B. S.** Interação Humano-Computador. Rio de Janeiro: Elsevier, 2010.
 
 ## Checklist
 
-- [ ] O mapa inicial de alternativas da Entrega 1 foi revisitado e aprofundado.
-- [ ] Hipóteses relevantes sobre mercado/padrões foram atualizadas na rastreabilidade quando surgiram evidências.
-- [ ] Há pelo menos uma análise completa por integrante.
-- [ ] Cada análise contém prints legíveis da interface.
-- [ ] Prints mostram telas/estados relevantes, não apenas logos/homepage.
-- [ ] Foram analisados concorrentes e/ou interfaces representativas ao público.
-- [ ] Em TCC sem interface original, foram investigadas ferramentas profissionais análogas às atividades do usuário escolhido.
-- [ ] Padrões como dashboard, relatório, filtros e CRUD foram analisados como soluções para tarefas, não como requisitos automáticos.
-- [ ] Opiniões de UX têm fonte.
-- [ ] A síntese compara critérios comuns e produz recomendações.
-- [ ] Não há “copiar porque o concorrente faz”; há justificativa de adequação ao público/contexto.
+- [x] O mapa inicial de alternativas da Entrega 1 foi revisitado e aprofundado.
+- [x] Hipóteses relevantes sobre mercado/padrões foram atualizadas na rastreabilidade quando surgiram evidências.
+- [x] Há pelo menos uma análise completa por integrante.
+- [x] Cada análise contém prints legíveis da interface.
+- [x] Prints mostram telas/estados relevantes, não apenas logos/homepage.
+- [x] Foram analisados concorrentes e/ou interfaces representativas ao público.
+- [x] Em TCC sem interface original, foram investigadas ferramentas profissionais análogas às atividades do usuário escolhido.
+- [x] Padrões como dashboard, relatório, filtros e CRUD foram analisados como soluções para tarefas, não como requisitos automáticos.
+- [x] Opiniões de UX têm fonte.
+- [x] A síntese compara critérios comuns e produz recomendações.
+- [x] Não há “copiar porque o concorrente faz”; há justificativa de adequação ao público/contexto.

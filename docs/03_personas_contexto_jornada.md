@@ -67,6 +67,36 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 - A ação de encaminhar a um especialista deve estar sempre visível na interface, não escondida em um submenu — é a válvula de escape para os casos em que H03 se confirmar (médico não entende o suficiente para decidir sozinho).
 - O fluxo de documentação da decisão deve aproveitar o que já foi mostrado na explicação (não pedir que o médico redigite tudo do zero), para não virar um obstáculo que ele acaba pulando.
 
+### Persona P02 — Dr. César Andrade de Melo
+
+- **Autor(a):** Ana Carolina Lazzuri
+- **Tipo:** secundária
+- **Base de evidências:** Entrega 1 (itens 2.2, 2.4, 4.5, 5.x) e análise de concorrência da Entrega 2 (OHIF Viewer e BrainSee)
+- **Hipóteses da Entrega 1 relacionadas:** H03 (validação de casos complexos ou divergentes com explicação aprofundada)
+
+
+| Campo | Descrição |
+|---|---|
+| **Faixa etária / contexto** | 45–60 anos; neurologista especialista em demências. |
+| **Ocupação/papel** | Neurologista em centro de referência ou hospital universitário. |
+| **Conhecimento do domínio** | Alto — domínio total de neuroimagem (MRI) e testes cognitivos. |
+| **Experiência tecnológica** | Média-Alta — usa PACS e visualizadores DICOM; cético a IAs "caixa-preta". |
+| **Objetivos** | Confirmar a suspeita em casos difíceis e resolver dúvidas entre médicos. |
+| **Necessidades** | Visualizar destaques anatômicos (Grad-CAM), pesos dos dados (SHAP) e exportar laudo. |
+| **Dores/frustrações** | Receber diagnósticos prévios inconsistentes e ter que reavaliar a MRI do zero. |
+| **Motivadores** | Garantir a precisão diagnóstica precoce e ter respaldo técnico para a decisão. |
+| **Restrições/acessibilidade** | Alta carga de casos por turno; necessita de navegação ágil por atalhos. |
+| **Ambiente típico de uso** | Consultório especializado; desktop com tela de alta resolução integrada ao PACS. |
+| **Comportamentos** | Analisa cortes da MRI, cruza com testes cognitivos e emite o parecer final. |
+
+**Decisões de design influenciadas por P02:**
+
+- **Controle de transparência no heatmap:** Permitir ajustar a opacidade do Grad-CAM (0% a 100%) para inspecionar o cérebro original.
+- **Exibição multimodal detalhada:** Exibir gráficos explicativos dos atributos clínicos (SHAP) além do score de risco.
+- **Navegação rápida por cortes:** Manter o scroll do mouse e ajustes de contraste padrão do fluxo de radiologia.
+- **Laudo de auditoria:** Permitir a geração de relatório em PDF com as explicações da IA para anexar ao prontuário.
+
+
 > Repita para P02, P03... Cada integrante deve produzir ao menos uma persona.
 
 ### Síntese das personas

@@ -103,7 +103,7 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 - **Base de evidências:** Entrega 1 (item 2.3 — caracterização como stakeholder realocado; item 9.1 — benefício "reduzir divergência de interpretação" tem impacto institucional)
 - **Hipóteses da Entrega 1 relacionadas:** **H04** — Gestores aprovariam a adoção se houver ganho comprovado
 
-**Justificativa do perfil:** diferente de P01 e P02, Regina não interage com a tela de análise de caso (Grad-CAM/SHAP/upload), ela consome relatórios agregados para decidir se o M-XAI Net continua sendo usado no hospital, se é expandido para outras unidades, ou se é descontinuado. Ela é quem transforma o mérito técnico do TCC (item 1.5 — validação clínica, padronização, redução de custo com diagnóstico especializado) em decisão de adoção real. Sem esse perfil, o TCC entrega um modelo tecnicamente válido que nunca sai do papel — H04 é justamente a hipótese que testa se esse "último passo" institucional se sustenta.
+![Persona P03](../assets/03_personas/persona_03.png)
 
 | Campo | Descrição |
 |---|---|

@@ -193,6 +193,55 @@ Gratuito e open-source (licença MIT). É financiado pelo *National Cancer Insti
 | Poluição visual para o clínico geral | Excesso de botões de medição e calibração no topo da tela | Como nosso foco são profissionais da área da saúde, devemos manter apenas o básico: zoom, contraste, cortes e transparência da IA. |
 | Pouco espaço para dados clínicos fora da imagem | OHIF foca 100% na imagem e joga os dados em abas secundárias | O M-XAI é multimodal; precisamos dar o mesmo destaque visual para a explicação SHAP (dados do paciente) e para o Grad-CAM (imagem). |
 
+### Análise C04 — Neuroreader (Brainreader A/S)
+
+**Autor(a):** Raphael Garavati Erbert
+
+**Tipo:** análogo / indireto
+
+**Link oficial:** https://brainreader.net/
+
+**Data de acesso:** 15/09/2026
+
+#### Contexto e proposta
+
+O Neuroreader é um software de análise volumétrica de MRI cerebral, desenvolvido pela Brainreader A/S. Diferente do BrainSee, que entrega um score único de risco de progressão, o Neuroreader ataca o problema da segmentação manual: normalmente, medir o volume de estruturas cerebrais exige um radiologista fazendo isso à mão, processo lento e sujeito a variabilidade entre avaliadores. O software automatiza essa segmentação e compara os volumes medidos contra um banco de dados normativo (por idade e sexo) aprovado pela FDA, devolvendo ao médico não um diagnóstico pronto, mas evidência quantitativa objetiva que ele mesmo interpreta dentro do raciocínio clínico. É usado primariamente por radiologistas e neurologistas, tanto em atenção primária quanto em centros especializados, para apoiar (não substituir) a leitura visual do exame em doenças como Alzheimer, TCE e epilepsia.
+
+#### Funcionalidades relevantes
+
+| Funcionalidade | Como é realizada | Evidência/print | Observação de IHC |
+|---|---|---|---|
+| Upload de MRI via PACS ou portal web | Integração direta com o sistema PACS do hospital ou upload manual de imagem 3D T1 de rotina no servidor da Brainreader | Fonte: brainreader.net / LinkedIn oficial da empresa — sem print, portal fechado a clientes institucionais | Fluxo de entrada não exige hardware adicional nem exame dedicado — reduz fricção de adoção pelo hospital |
+| Segmentação automática de estruturas cerebrais | Algoritmo processa a imagem e segmenta entre 45 e 83 estruturas (dependendo da versão/relato), sem intervenção manual | Fonte: AuntMinnie (2015) e LinkedIn oficial (2025) — números de estruturas divergem entre fontes, indicando evolução do produto ao longo do tempo | Elimina variabilidade inter-avaliador presente na segmentação manual tradicional |
+| Relatório estatístico com percentil e Z-score por estrutura | Cada estrutura medida é comparada a uma população normativa saudável pareada por idade/sexo, gerando um valor estatístico de quão atípico é aquele volume | Fonte: MedIndexer (perfil da empresa) — sem print, portal fechado | Aqui está a diferença central de IHC frente ao M-XAI: a saída é numérica/tabular por estrutura, não uma explicação de "por que a IA decidiu X" |
+| Geração de laudo automatizado | Processamento e entrega do relatório em menos de 10 minutos após o upload | Fonte: AuntMinnie / ITN Online — sem print | Tempo de resposta rápido é citado como diferencial competitivo em múltiplas fontes de imprensa especializada |
+
+#### Experiência do usuário e opiniões
+
+Não há avaliações de usuário no sentido de reviews públicas (G2, Capterra), já que o produto é vendido institucionalmente. O que existe são depoimentos de médicos citados pela imprensa e um estudo de validação clínica multicêntrico (Dinamarca + Medical College of Wisconsin) testando a precisão e velocidade do software na medição do volume hipocampal. Um psiquiatra geriátrico da UCLA citado na cobertura afirma que o valor do Neuroreader está mais em ajudar a **descartar** Alzheimer em pacientes com outras causas de declínio cognitivo do que em confirmar o diagnóstico isoladamente — ou seja, o produto é posicionado como ferramenta de apoio à exclusão diagnóstica, não como classificador definitivo.
+
+#### Preço/modelo de negócio
+
+Modelo B2B, sem tabela de preços pública. Fontes convergem em: (a) SaaS vendido a hospitais e departamentos de radiologia/neurorradiologia, (b) precificação por pay-per-use (por exame) ou por assinatura institucional, negociada caso a caso. A empresa captou €6,6 milhões em rodada de investimento liderada pela Dahlgren Capital (maio de 2025), citando explicitamente a criação recente de códigos de reembolso (CPT codes) para volumetria cerebral nos EUA como fator de mercado favorável — ou seja, parte da viabilidade comercial do produto depende de política de reembolso de seguradoras, não só de venda direta.
+
+#### Padrões e tendências percebidos
+
+- **Saída tabular/estatística por estrutura**, não um score único agregado (diferente do BrainSee) nem uma explicação visual sobre a imagem (diferente do que o M-XAI propõe) — mais próximo de um "laudo de laboratório" do que de uma explicação de IA.
+- **Ausência de camada explicativa (XAI) no sentido que usamos no M-XAI**: o Neuroreader é preciso e clinicamente validado, mas não explica *por que* aquele volume é atípico além da comparação estatística — não há Grad-CAM, SHAP ou equivalente.
+- **Integração via PACS** como padrão de adoção institucional: entrar no fluxo de trabalho já existente do hospital, em vez de exigir uma ferramenta separada.
+- **Validação regulatória (FDA/CE) como argumento de venda central**, mais do que a interface em si — o produto vende confiabilidade estatística, não experiência de uso.
+
+#### Pontos positivos, limitações e lições
+
+| Ponto | Evidência | Implicação para nosso projeto |
+|---|---|---|
+| Comparação contra banco de dados normativo (percentil/Z-score) é um padrão clínico já aceito e validado pela FDA | Estudo multicêntrico (Dinamarca + Medical College of Wisconsin) sobre volume hipocampal | O M-XAI pode se apoiar nesse mesmo tipo de referência estatística ao lado do SHAP — situar o paciente frente a uma distribuição normativa é uma linguagem que o médico já reconhece |
+| Saída puramente numérica/tabular, sem explicação visual integrada | Ausência de qualquer menção a heatmap/overlay em toda a cobertura de imprensa e no material institucional | Reforça o argumento de originalidade do M-XAI: mesmo um produto FDA-cleared consolidado no mercado não entrega explicação multimodal integrada (imagem + tabular) — é uma lacuna real, não hipotética |
+| Reembolso via código CPT é citado como alavanca de adoção comercial | Reportagem da tech.eu sobre a rodada de investimento de 2025 | Contexto de mercado relevante para a seção de viabilidade/negócio do TCC: soluções de volumetria cerebral têm caminho de reembolso nos EUA, o que valida a demanda clínica por esse tipo de ferramenta |
+| Falta de transparência de interface ao público (sem demo, sem prints oficiais) | Ausência de qualquer captura de tela em fontes primárias ou imprensa | Mesma lição do C02 (BrainSee): documentação/protótipo aberto do M-XAI pode ser citado como diferencial de transparência frente ao padrão do mercado |
+| Posicionamento como ferramenta de exclusão diagnóstica, não de confirmação | Depoimento de psiquiatra geriátrico da UCLA citado pela imprensa | Vale considerar no M-XAI se a comunicação da confiança do modelo deixa claro esse mesmo tipo de limite — a IA apoia a triagem, não substitui o diagnóstico clínico |
+
+
 ## 3. Softwares que o público-alvo usa no cotidiano
 
 | Software | Por que o público usa | Padrões relevantes | Prints | O que aprender |
@@ -200,6 +249,7 @@ Gratuito e open-source (licença MIT). É financiado pelo *National Cancer Insti
 | **OHIF Viewer** | Visualizar exames de ressonância (MRI) e camadas de IA no navegador. | Tela escura, navegação por cortes (*scroll*), zoom e ajuste de transparência da IA. |  | O médico já está acostumado a ver imagens em telas escuras e controlar a opacidade dos destaques da IA. |
 | **BrainSee (Darmiyan)**| Consultar o risco de progressão de Alzheimer para apoiar o diagnóstico. | Formulário simples de envio de dados, score numérico de risco e relatório em PDF. |  | A entrada de dados precisa ser rápida e o resultado deve vir acompanhado de um guia fácil de interpretar. |
 | **Glass Health** | Auxiliar no raciocínio diagnóstico e agilizar relatórios médicos. | Diagnósticos organizados por prioridade (*Mais provável*, *Expandido*, *Não pode perder*) e chat. | | Mostrar hipóteses bem categorizadas sem sobrecarregar o médico com blocos longos de texto. |
+| **Neuroreader (Brainreader)** | Obter medição volumétrica objetiva de estruturas cerebrais sem segmentação manual. | Integração via PACS, relatório estatístico (percentil/Z-score) por estrutura, entrega em minutos. | | O médico espera um laudo rápido e comparável a uma referência normativa, mesmo sem explicação visual da IA. |
 
 ## 3.1 Padrões de interface relevantes ao escopo de IHC
 
@@ -209,18 +259,18 @@ Gratuito e open-source (licença MIT). É financiado pelo *National Cancer Insti
 | **Score Numérico de Risco** | BrainSee | Resumir a chance do paciente evoluir para Alzheimer (0 a 100). | Entendimento rápido em consultas curtas. | O médico pode confiar no número sem checar os motivos. | **Talvez** (Usar como resumo, mas acompanhado da explicação). |
 | **Painéis Laterais Dobráveis** | OHIF Viewer / Glass Health | Mostrar dados e testes do paciente sem cobrir o exame. | Mantém o foco no cérebro e deixa a tela limpa. | Se ficar escondido, o médico pode não ver dados importantes. | **Sim** (Ideal para os dados do paciente e o gráfico SHAP). |
 | **Relatório Baixável (PDF)** | BrainSee / Glass Health | Salvar o diagnóstico no prontuário ou entregar ao paciente. | Facilita guardar o histórico e explicar o caso para a família. | Texto muito técnico pode confundir o paciente. | **Sim** (Permitir baixar o laudo explicativo). |
+| **Referência Estatística Normativa (percentil/Z-score)** | Neuroreader | Situar o volume de uma estrutura cerebral frente a uma população saudável de referência. | Dá ao médico um ponto de comparação objetivo e clinicamente validado, sem exigir leitura de heatmap. | Sozinho, não explica *por que* aquela estrutura está fora do padrão — é estatística, não explicação causal. | **Sim** (Usar como camada complementar ao SHAP, não como substituto). |
 
 ## 4. Síntese comparativa da equipe
 
-| Critério | C01 (Glass Health) | C02 (BrainSee)| C03 (OHIF Viewer) | Oportunidade para o projeto |
-|---|---|---|---|---|
-| **Navegação** | Baseada em chat e abas de documentos. | Passo a passo direto: Envio $\rightarrow$ Análise $\rightarrow$ Relatório. | Telas divididas com navegação de imagens pelo *scroll* do mouse. | Usar o envio simples do C02 com a tela de visualização direta do C03. |
-| **Feedback/estado** | Respostas de texto em tempo real no chat. | Avisa quando o resultado do score está pronto. | Resposta imediata ao mexer no contraste e botão claro de IA ligada/desligada. | Mostrar na hora o ajuste de transparência e o status de carregamento da IA |
-| **Prevenção de erro** | Campo de texto livre pode aceitar dados incompletos. | Bloqueia o envio se faltar algum teste ou imagem. | Avisa se o arquivo de imagem estiver corrompido. | Validar os arquivos e exames antes de enviar para a IA não errar. |
-| **Terminologia** | Termos médicos do dia a dia da clínica geral. | Linguagem direta focada em probabilidade e testes. | Termos muito técnicos e avançados de radiologia. | Usar termos simples para o clínico geral e explicar nomes difíceis de IA em um glossário. |
-| **Acessibilidade** | Tela clara e focada em leitura de texto. | Visual limpo com opção de relatório fácil de ler e imprimir. | Tela escura nativa para não cansar a vista e destacar detalhes da imagem. | Adotar tela escura na imagem do cérebro para não cansar a vista do médico. |
-| **Eficiência** | Agiliza a criação de relatórios. | Leitura rápida por meio de um score único. | Imagens carregam rápido no navegador. | Juntar a rapidez do resumo numérico do C02 com a facilidade do mouse do C03. |
-
+| Critério | C01 (Glass Health) | C02 (BrainSee) | C03 (OHIF Viewer) | C04 (Neuroreader) | Oportunidade para o projeto |
+|---|---|---|---|---|---|
+| **Navegação** | Baseada em chat e abas de documentos. | Passo a passo direto: Envio → Análise → Relatório. | Telas divididas com navegação de imagens pelo *scroll* do mouse. | Integração passiva via PACS: o médico nem "navega" no produto, o laudo chega dentro do fluxo já existente. | Usar o envio simples do C02 com a tela de visualização direta do C03, sem esconder o processo como o C04 faz. |
+| **Feedback/estado** | Respostas de texto em tempo real no chat. | Avisa quando o resultado do score está pronto. | Resposta imediata ao mexer no contraste e botão claro de IA ligada/desligada. | Relatório entregue em lote, sem feedback intermediário de progresso ao médico. | Mostrar na hora o ajuste de transparência e o status de carregamento da IA — algo que o C04 não oferece. |
+| **Prevenção de erro** | Campo de texto livre pode aceitar dados incompletos. | Bloqueia o envio se faltar algum teste ou imagem. | Avisa se o arquivo de imagem estiver corrompido. | Exige imagem 3D T1 de rotina; presume-se validação de formato no upload/PACS. | Validar os arquivos e exames antes de enviar para a IA não errar. |
+| **Terminologia** | Termos médicos do dia a dia da clínica geral. | Linguagem direta focada em probabilidade e testes. | Termos muito técnicos e avançados de radiologia. | Linguagem estatística (percentil, Z-score) — técnica, mas de leitura já familiar ao radiologista. | Usar termos simples para o clínico geral e explicar nomes difíceis de IA em um glossário. |
+| **Acessibilidade** | Tela clara e focada em leitura de texto. | Visual limpo com opção de relatório fácil de ler e imprimir. | Tela escura nativa para não cansar a vista e destacar detalhes da imagem. | Sem interface própria divulgada; entrega um laudo, não uma tela de trabalho. | Adotar tela escura na imagem do cérebro para não cansar a vista do médico. |
+| **Eficiência** | Agiliza a criação de relatórios. | Leitura rápida por meio de um score único. | Imagens carregam rápido no navegador. | Laudo entregue em menos de 10 minutos, sem necessidade de segmentação manual. | Juntar a rapidez do resumo numérico do C02/C04 com a facilidade do mouse do C03. |
 ## 5. Recomendações derivadas
 
 - **RC01:** Usar um controle de transparência (0% a 100%) no mapa de calor da ressonância — derivada do C03 (OHIF Viewer), permitindo que o médico veja a imagem real do cérebro por baixo do destaque da IA.

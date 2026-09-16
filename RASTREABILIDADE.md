@@ -33,13 +33,14 @@ Use esta tabela para itens importantes marcados como `[H]` ou `[?]`. Preserve o 
 | H03 | Médico clínico consegue interpretar corretamente o score de confiança sem treinamento extenso | H | Risco de má interpretação já identificado (Entrega 1, item 2.4) | Entrega 6/7 | PENDENTE | aberta | Pode exigir glossário/ajuda contextual (F08) |
 | H04 | Gestores hospitalares aprovariam a adoção da ferramenta caso haja ganho comprovado | H | Impacta viabilidade real de adoção, ainda que fora do escopo direto de IHC | Não priorizado nesta disciplina | PENDENTE | aberta | Não altera o recorte atual; registrado como lacuna |
 | H05 | Pacientes/familiares não serão usuários diretos da interface nesta fase | H | Delimita o escopo do projeto, evitando expansão excessiva | Reavaliar em versões futuras do TCC | PENDENTE | aberta | Confirma exclusão de perfis de paciente do recorte atual |
+| H06 | Existe pressão institucional para usar ferramentas de IA clínica como substitutas do especialista (ex.: reduzir encaminhamentos) por motivo de custo | H | Se confirmada, justifica as decisões de design de exclusão da persona negativa P04 e explica uma das rupturas do cenário C02 | Entrega 7 (entrevista com médicos clínicos) | PENDENTE | aberta | Sustenta P04; se refutada, P04 deve ser revista |
 
 ## 3. Rastreabilidade entre contribuição técnica, necessidades e artefatos
 
 | ID | Capacidade do TCC utilizada | Necessidade/problema | Persona | Cenário problema | Objetivo/tarefa | HTA/GOMS/CTT | Cenário de interação / signos | MoLIC | Tela(s) Figma | Heurística / problema | Tarefa no teste | Decisão/melhoria |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | R01 | {{ex.: recomendação de otimização}} | {{...}} | {{P01}} | {{C01}} | {{T01}} | {{links}} | {{...}} | {{M01}} | {{F01...}} | {{V01 ou —}} | {{UT01}} | {{...}} |
-| R02 |  |  |  |  |  |  |  |  |  |  |  |  |
+| R02 | Explicação multimodal (MRI + dados clínicos) e score de confiança | Interpretar laudo vago e decidir conduta sem especialista; encaminhar com justificativa | P01 (P04 como pressão do ambiente) | C02 | A03 — interpretar e decidir; F07 — encaminhar a especialista | a definir | a definir | a definir | a definir | — | a definir | — |
 
 ## 4. Rastreabilidade de padrões de interface
 

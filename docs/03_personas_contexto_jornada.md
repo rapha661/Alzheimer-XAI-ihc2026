@@ -128,7 +128,7 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 
 ### Persona P04 — Otávio Rezende Prado (persona negativa)
  
-- **Autor(a):** Nathan Gabriel da Fonseca Leite
+- **Autor(a):** Nathan Gabriel da Fonseca Leite - 221230287
 - **Tipo:** negativa
 - **Base de evidências:** Entrega 1 (item 1.4 — "redução de custos com diagnósticos especializados"; item 2.3 — gestor hospitalar como stakeholder sem uso da tela de diagnóstico; item 5.4 — responsabilidade legal é do médico; item 5.6 — consequências de falso negativo/positivo; item 9.3 — LGPD e "sugestão, não diagnóstico"); Entrega 2 (BrainSee — preço de tabela como barreira de adoção)
 - **Hipóteses relacionadas:** H04 (adoção por gestores); **H06 (nova)** — há pressão institucional para usar a ferramenta como substituta do especialista, e não como apoio à decisão

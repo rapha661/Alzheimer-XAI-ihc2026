@@ -126,7 +126,43 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 - A trilha de auditoria (item 5.5, já prevista para o médico) deve ser agregável em relatório de gestão, evitando duplicar esforço de registro — o log criado para rastreabilidade médica é a mesma fonte de dado que sustenta a decisão de adoção de P03.
 - Reforça, por contraste, por que o **recorte de IHC da disciplina exclui esse perfil da interface principal** (item "Fora do escopo de IHC": auditoria em nível de sistema) — P03 existe para deixar isso explícito e justificado, não para virar tela nova.
 
-> Repita para P02, P03... Cada integrante deve produzir ao menos uma persona.
+### Persona P04 — Otávio Rezende Prado (persona negativa)
+ 
+- **Autor(a):** Nathan Gabriel da Fonseca Leite
+- **Tipo:** negativa
+- **Base de evidências:** Entrega 1 (item 1.4 — "redução de custos com diagnósticos especializados"; item 2.3 — gestor hospitalar como stakeholder sem uso da tela de diagnóstico; item 5.4 — responsabilidade legal é do médico; item 5.6 — consequências de falso negativo/positivo; item 9.3 — LGPD e "sugestão, não diagnóstico"); Entrega 2 (BrainSee — preço de tabela como barreira de adoção)
+- **Hipóteses relacionadas:** H04 (adoção por gestores); **H06 (nova)** — há pressão institucional para usar a ferramenta como substituta do especialista, e não como apoio à decisão
+
+![Persona 04](../assets/03_personas/persona_04.png)
+  
+**Otávio Rezende Prado, diretor financeiro — "se a IA já diz o resultado, por que pagar o especialista?"**
+ 
+Otávio tem 52 anos e é diretor financeiro de um hospital geral privado há seis anos. Formado em Ciências Contábeis, com MBA em gestão de saúde, ele acompanha diariamente planilhas de custo por procedimento, glosas de convênios e tempo de ocupação de agenda. Ele não tem formação clínica e vê a IA como uma forma de "fazer mais com menos": sua expectativa é que, uma vez adotado o sistema, o hospital possa reduzir os encaminhamentos ao neurologista, cortar pedidos de ressonância "desnecessários" e medir quais médicos são mais produtivos. Ele gostaria de ter acesso à tela de cada caso para cruzar o resultado da IA com o faturamento do paciente e com a negociação junto às operadoras de saúde. Para ele, o score de confiança é um número que deveria bastar para encerrar o caso.
+ 
+| Campo | Descrição |
+|---|---|
+| Faixa etária / contexto relevante | 48–60 anos; executivo da área financeira, sem formação clínica |
+| Ocupação/papel | Diretor financeiro (CFO) do hospital; participa da decisão de compra, mas **não** é quem decide sobre conduta clínica |
+| Conhecimento do domínio | Baixo em Alzheimer, neuroimagem e XAI; alto em custos, faturamento, contratos com operadoras e indicadores financeiros |
+| Experiência tecnológica | Média-alta em ERP, BI e planilhas; nenhuma em sistemas clínicos de apoio à decisão |
+| Objetivos pessoais | Mostrar à diretoria redução de custo e aumento de produtividade no curto prazo |
+| Objetivos (que a interface **não** atenderá) | Usar o resultado da IA para dispensar o parecer do especialista; restringir encaminhamentos e exames com base no score; ranquear médicos por "casos fechados"; acessar dados de pacientes individuais para faturamento e negociação com operadoras |
+| Necessidades declaradas | Número único e "definitivo" por paciente; painel de produtividade por médico; exportação livre de dados por paciente; bloqueio automático de encaminhamento quando o score é alto |
+| Dores/frustrações | Custo alto de especialistas e de ressonância; fila longa que ocupa agenda sem gerar receita proporcional; ferramentas cujo retorno sobre investimento não aparece rápido (ex.: preço de tabela do BrainSee, Entrega 2) |
+| Motivadores | Metas de margem e redução de despesas; pressão da diretoria e dos convênios |
+| Relacionamentos | Responde à diretoria executiva; negocia com operadoras de saúde; costuma entrar em conflito com a diretora clínica (P03) e com o corpo médico (P01, P02) sobre autonomia clínica |
+| Expectativas sobre o produto | Acredita que a IA "dá o diagnóstico" e que o médico só precisa confirmar — expectativa **incompatível** com o item 9.3 da Entrega 1 (responsabilidade legal é do médico; a interface deve mostrar "sugestão", não "diagnóstico") |
+| Ambiente típico | Escritório administrativo; reuniões de diretoria; acesso a ERP e BI, não ao consultório |
+| Comportamentos relevantes | Pede relatórios por profissional; propõe metas de volume; questiona pedidos de exame e encaminhamentos que "não se pagam" |
+
+**Decisões de design influenciadas por P04**
+ 
+- A ação "Encaminhar a especialista" (F07) nunca será bloqueada, ocultada ou condicionada ao valor do score de confiança.
+- O resultado continuará sendo apresentado como **sugestão** acompanhada de explicação (F02–F04); a interface não terá um modo "somente score" nem encerrará o caso automaticamente.
+- Não haverá ranking, meta ou painel de produtividade por médico dentro do sistema clínico, para não induzir pressa na atividade mais crítica (A03).
+- Nenhuma informação de custo, faturamento ou convênio aparecerá durante a interpretação e o registro da decisão, para não enviesar a conduta clínica.
+- O controle de acesso por perfil (item 8 da Entrega 1 — usuários/perfis/permissões) não dará à área financeira acesso a casos, imagens ou explicações individuais; relatórios institucionais, se existirem no futuro, serão agregados e anonimizados.
+- A exportação de dados por paciente ficará restrita ao laudo clínico destinado ao prontuário (necessidade de P02), sem exportação livre em massa.
 
 ### Síntese das personas
 

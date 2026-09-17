@@ -126,43 +126,39 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 - A trilha de auditoria (item 5.5, já prevista para o médico) deve ser agregável em relatório de gestão, evitando duplicar esforço de registro — o log criado para rastreabilidade médica é a mesma fonte de dado que sustenta a decisão de adoção de P03.
 - Reforça, por contraste, por que o **recorte de IHC da disciplina exclui esse perfil da interface principal** (item "Fora do escopo de IHC": auditoria em nível de sistema) — P03 existe para deixar isso explícito e justificado, não para virar tela nova.
 
-### Persona P04 — Otávio Rezende Prado (persona negativa)
+### Persona P04 — Bruno Tavares Lima
  
 - **Autor(a):** Nathan Gabriel da Fonseca Leite - 221230287
-- **Tipo:** negativa
-- **Base de evidências:** Entrega 1 (item 1.4 — "redução de custos com diagnósticos especializados"; item 2.3 — gestor hospitalar como stakeholder sem uso da tela de diagnóstico; item 5.4 — responsabilidade legal é do médico; item 5.6 — consequências de falso negativo/positivo; item 9.3 — LGPD e "sugestão, não diagnóstico"); Entrega 2 (BrainSee — preço de tabela como barreira de adoção)
-- **Hipóteses relacionadas:** H04 (adoção por gestores); **H06 (nova)** — há pressão institucional para usar a ferramenta como substituta do especialista, e não como apoio à decisão
-
-![Persona 04](../assets/03_personas/persona_04.png)
+- **Tipo:** primária — responsável pela atividade A01 (preparar e enviar os dados do paciente), da qual dependem todas as etapas seguintes
+- **Base de evidências:** Entrega 1 (item 2.2 — Técnico de Laboratório / Preparação de Dados; item 2.4 — conhecimento operacional, linguagem de aquisição, sem necessidade de métricas do modelo; item 3.2 — A01 com frequência alta e criticidade média-alta; item 4.1 — aquisição de MRI e armazenamento no PACS; item 4.2 — protocolos variam e não há padrão de qualidade; item 5.3 — LGPD)
+- **Hipóteses relacionadas:** **H06 (nova)** — problemas de qualidade da MRI e de dados clínicos incompletos só são percebidos depois que o paciente saiu do setor, o que gera reconvocação e atraso no diagnóstico
   
-**Otávio Rezende Prado, diretor financeiro — "se a IA já diz o resultado, por que pagar o especialista?"**
+![Persona P04](../assets/03_personas/persona_p04.png)
  
-Otávio tem 52 anos e é diretor financeiro de um hospital geral privado há seis anos. Formado em Ciências Contábeis, com MBA em gestão de saúde, ele acompanha diariamente planilhas de custo por procedimento, glosas de convênios e tempo de ocupação de agenda. Ele não tem formação clínica e vê a IA como uma forma de "fazer mais com menos": sua expectativa é que, uma vez adotado o sistema, o hospital possa reduzir os encaminhamentos ao neurologista, cortar pedidos de ressonância "desnecessários" e medir quais médicos são mais produtivos. Ele gostaria de ter acesso à tela de cada caso para cruzar o resultado da IA com o faturamento do paciente e com a negociação junto às operadoras de saúde. Para ele, o score de confiança é um número que deveria bastar para encerrar o caso.
+**Bruno Tavares Lima, técnico em radiologia — "se o exame sair ruim, ninguém percebe até o paciente já ter ido embora"**
+ 
+Bruno tem 32 anos e trabalha há oito como técnico em radiologia no setor de imagem de um hospital geral. Ele opera o aparelho de ressonância magnética, prepara os exames e os envia para laudo. Conhece bem as sequências de aquisição e sabe reconhecer um artefato de movimento, mas não faz interpretação diagnóstica: isso é papel do radiologista. Nos casos de investigação de demência, os pacientes costumam ser idosos, às vezes confusos ou agitados, e têm dificuldade de ficar parados durante o exame. Os pedidos médicos nem sempre dizem o que se quer investigar, e Bruno precisa decidir sozinho qual protocolo usar. Depois do exame, ele ainda junta as informações clínicas do prontuário que precisam acompanhar as imagens. Quando alguma coisa fica faltando, ele só descobre dias depois, quando o laudo volta com a observação "exame limitado", e o paciente precisa ser chamado de novo.
  
 | Campo | Descrição |
 |---|---|
-| Faixa etária / contexto relevante | 48–60 anos; executivo da área financeira, sem formação clínica |
-| Ocupação/papel | Diretor financeiro (CFO) do hospital; participa da decisão de compra, mas **não** é quem decide sobre conduta clínica |
-| Conhecimento do domínio | Baixo em Alzheimer, neuroimagem e XAI; alto em custos, faturamento, contratos com operadoras e indicadores financeiros |
-| Experiência tecnológica | Média-alta em ERP, BI e planilhas; nenhuma em sistemas clínicos de apoio à decisão |
-| Objetivos pessoais | Mostrar à diretoria redução de custo e aumento de produtividade no curto prazo |
-| Objetivos (que a interface **não** atenderá) | Usar o resultado da IA para dispensar o parecer do especialista; restringir encaminhamentos e exames com base no score; ranquear médicos por "casos fechados"; acessar dados de pacientes individuais para faturamento e negociação com operadoras |
-| Necessidades declaradas | Número único e "definitivo" por paciente; painel de produtividade por médico; exportação livre de dados por paciente; bloqueio automático de encaminhamento quando o score é alto |
-| Dores/frustrações | Custo alto de especialistas e de ressonância; fila longa que ocupa agenda sem gerar receita proporcional; ferramentas cujo retorno sobre investimento não aparece rápido (ex.: preço de tabela do BrainSee, Entrega 2) |
-| Motivadores | Metas de margem e redução de despesas; pressão da diretoria e dos convênios |
-| Relacionamentos | Responde à diretoria executiva; negocia com operadoras de saúde; costuma entrar em conflito com a diretora clínica (P03) e com o corpo médico (P01, P02) sobre autonomia clínica |
-| Expectativas sobre o produto | Acredita que a IA "dá o diagnóstico" e que o médico só precisa confirmar — expectativa **incompatível** com o item 9.3 da Entrega 1 (responsabilidade legal é do médico; a interface deve mostrar "sugestão", não "diagnóstico") |
-| Ambiente típico | Escritório administrativo; reuniões de diretoria; acesso a ERP e BI, não ao consultório |
-| Comportamentos relevantes | Pede relatórios por profissional; propõe metas de volume; questiona pedidos de exame e encaminhamentos que "não se pagam" |
-
-**Decisões de design influenciadas por P04**
+| Faixa etária / contexto relevante | 28–40 anos; formação técnica em radiologia, com anos de prática em ressonância magnética |
+| Ocupação/papel | Técnico em radiologia / preparação de dados: adquire as imagens, confere a qualidade e envia exame e dados clínicos para análise |
+| Conhecimento do domínio | Alto em aquisição de imagem (sequências, protocolos, artefatos); baixo em interpretação diagnóstica de Alzheimer, que não é sua função (Entrega 1, item 2.4) |
+| Experiência tecnológica | Alta — opera o console do scanner, o PACS e o prontuário eletrônico todos os dias |
+| Objetivos | Entregar um exame completo e com qualidade na primeira tentativa, com os dados clínicos corretos e do paciente certo, sem precisar reconvocar ninguém |
+| Necessidades | Saber quais sequências e dados clínicos o caso exige antes de começar; conferir a qualidade da imagem enquanto o paciente ainda está no setor; levar os dados clínicos do prontuário sem redigitá-los; anonimizar os dados sem trabalho manual extra |
+| Dores/frustrações | Pedido médico vago ("RM de crânio"), sem protocolo definido para demência; artefato de movimento em pacientes agitados; erro descoberto só dias depois, no laudo; dados clínicos (MMSE, idade, histórico) espalhados no prontuário; risco de associar dados ao paciente errado |
+| Motivadores | Evitar retrabalho e reconvocação de pacientes idosos; entregar um exame que realmente sirva para o diagnóstico; não ser apontado como a causa de um atraso |
+| Restrições/acessibilidade | Agenda cheia no scanner, com pouco tempo entre um paciente e outro; pacientes com dificuldade de colaborar; obrigação de proteger dados sensíveis (LGPD) |
+| Ambiente típico de uso | Setor de imagem: sala de comando do scanner e estação de trabalho com PACS, em turnos |
+| Comportamentos relevantes | Confere as imagens logo depois da aquisição; repete uma sequência quando o paciente ainda tolera; copia dados do prontuário para a requisição; liga para o radiologista quando tem dúvida sobre o protocolo |
+  
+**Decisões de design influenciadas por P04:**
  
-- A ação "Encaminhar a especialista" (F07) nunca será bloqueada, ocultada ou condicionada ao valor do score de confiança.
-- O resultado continuará sendo apresentado como **sugestão** acompanhada de explicação (F02–F04); a interface não terá um modo "somente score" nem encerrará o caso automaticamente.
-- Não haverá ranking, meta ou painel de produtividade por médico dentro do sistema clínico, para não induzir pressa na atividade mais crítica (A03).
-- Nenhuma informação de custo, faturamento ou convênio aparecerá durante a interpretação e o registro da decisão, para não enviesar a conduta clínica.
-- O controle de acesso por perfil (item 8 da Entrega 1 — usuários/perfis/permissões) não dará à área financeira acesso a casos, imagens ou explicações individuais; relatórios institucionais, se existirem no futuro, serão agregados e anonimizados.
-- A exportação de dados por paciente ficará restrita ao laudo clínico destinado ao prontuário (necessidade de P02), sem exportação livre em massa.
+- Indicadores de qualidade devem usar a linguagem de aquisição de imagem (sequência, artefato, cobertura), nunca métricas do modelo, como já previsto na Entrega 1 (item 2.4).
+- A verificação dos requisitos do caso (sequências e dados clínicos obrigatórios) deve acontecer antes do envio, enquanto o paciente ainda está no setor, e não depois do laudo.
+- Os dados clínicos devem vir do prontuário, sem redigitação, com uma confirmação explícita da identidade do paciente antes do envio.
+- O fluxo de preparo deve ser curto e direto, já que o contato do técnico com a interface é breve e acontece entre um exame e outro.
 
 ### Síntese das personas
 

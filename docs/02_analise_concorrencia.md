@@ -1,7 +1,7 @@
 # Entrega 2 — Público-alvo e análise de concorrência
 
 - **Data:** 03/09/2026
-- **Status:** 🟩 em andamento  
+- **Status:** 🟩 Pronto 
 - **Responsabilidade mínima:** cada integrante analisa pelo menos 1 concorrente/interface representativa; a equipe produz síntese comparativa.
 
 ## Objetivo da atividade
@@ -30,7 +30,16 @@ Retome o mapa inicial de alternativas e produtos citado na Entrega 1. Aqui a equ
 
 | Item citado na Entrega 1 | Tipo | Por que foi citado | Status inicial | Decisão nesta entrega |
 |---|---|---|---|---|
-| {{...}} | concorrente / análogo / ferramenta cotidiana / processo manual | {{...}} | F / H / ? | analisar / descartar com justificativa |
+| PACS (item 6.3) | ferramenta cotidiana | Padrão universal de visualização de imagem médica, já conhecido por todo o público-alvo | [F] | analisar — investigado via **C03 (OHIF Viewer)**, a implementação de referência open-source de visualizador PACS/DICOM com camadas de IA |
+| IA "caixa preta" / CAD simples (item 6.1) | concorrente indireto | Apoio computado básico já usado em hospitais com sistemas antigos, mas sem explicabilidade | [F] | analisar — a busca por um exemplo real e atual desse tipo de ferramenta aplicada a Alzheimer levou à análise **C02 (BrainSee)** |
+| Plataformas comerciais de IA em neuroimagem — Zebra Medical Vision (item 6.2) | concorrente indireto | Citada como exemplo de IA comercial em imagem médica, ainda que não específica para Alzheimer nem explicável | [F] | descartar com justificativa — não trata de Alzheimer nem de explicabilidade; a pesquisa de mercado real desta entrega encontrou um concorrente mais relevante e comparável (BrainSee, C02) |
+| IBM Watson for Oncology, descontinuado (item 6.2) | concorrente indireto | Citada como tentativa histórica de IA clínica que falhou por falta de confiança do corpo médico | [F] | descartar com justificativa — produto descontinuado, sem interface ativa para analisar; mantido apenas como referência de risco de adoção, já registrada na Entrega 1 |
+| Discussão multidisciplinar em conferência (item 6.1) | processo manual | Alternativa atual cara e não escalável para casos ambíguos | [F] | descartar com justificativa — não é um produto/interface, é um processo humano; não gera artefato de tela a comparar, mas reforça a recomendação RC03/RC04 (score + guia, para reduzir a dependência desse processo) |
+| Consultoria externa especializada (item 6.1) | processo manual | Alternativa cara e restrita a pacientes particulares | [F] | descartar com justificativa — mesmo motivo acima; não é interface digital |
+| Dashboards de BI — Tableau, Power BI (item 6.3) | ferramenta cotidiana | Usados por hospitais grandes para auditar performance agregada | [H] | descartar com justificativa — relevante para a persona P03 (gestora hospitalar), que está fora do escopo de IHC desta disciplina (ver Entrega 3); não analisado aqui |
+| Google Scholar, PubMed (item 6.3) | ferramenta cotidiana | Usados por pesquisadores/clínicos acadêmicos para busca de literatura | [F] | descartar com justificativa — ferramenta de busca acadêmica, não de apoio ao diagnóstico; fora da atividade A03 do médico clínico (P01) |
+| ADNI (item 6.2) | análogo (dataset, não interface) | Citado como base de dados de pesquisa usada por modelos de IA para Alzheimer | [F] | descartar com justificativa — é um repositório de dados, não um produto com interface a ser avaliado |
+| Prontuário eletrônico / EHR (item 6.3) | ferramenta cotidiana | Sistema obrigatório em hospitais, usado para documentação estruturada | [F] | descartar com justificativa nesta entrega — é infraestrutura genérica do hospital, não específica ao domínio de XAI/Alzheimer; volta a ser relevante nas Entregas 9–11 (integração do fluxo de registro de decisão) |
 
 Se uma hipótese da Entrega 1 for confirmada ou refutada durante esta análise, atualize `H01`, `H02`... em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 

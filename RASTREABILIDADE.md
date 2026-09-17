@@ -33,13 +33,14 @@ Use esta tabela para itens importantes marcados como `[H]` ou `[?]`. Preserve o 
 | H03 | Médico clínico consegue interpretar corretamente o score de confiança sem treinamento extenso | H | Risco de má interpretação já identificado (Entrega 1, item 2.4) | Entrega 6/7 | PENDENTE | aberta | Pode exigir glossário/ajuda contextual (F08) |
 | H04 | Gestores hospitalares aprovariam a adoção da ferramenta caso haja ganho comprovado | H | Impacta viabilidade real de adoção, ainda que fora do escopo direto de IHC | Não priorizado nesta disciplina | PENDENTE | aberta | Não altera o recorte atual; registrado como lacuna |
 | H05 | Pacientes/familiares não serão usuários diretos da interface nesta fase | H | Delimita o escopo do projeto, evitando expansão excessiva | Reavaliar em versões futuras do TCC | PENDENTE | aberta | Confirma exclusão de perfis de paciente do recorte atual |
+| H06 | Problemas de qualidade da MRI e dados clínicos incompletos só são percebidos depois que o paciente sai do setor, gerando reconvocação e atraso no diagnóstico | H | Se confirmada, justifica verificar qualidade e dados antes do envio (P04, C02) | Entrega 7 (entrevista com técnicos e radiologistas) | PENDENTE | aberta | Sustenta P04 e C02 |
 
 ## 3. Rastreabilidade entre contribuição técnica, necessidades e artefatos
 
 | ID | Capacidade do TCC utilizada | Necessidade/problema | Persona | Cenário problema | Objetivo/tarefa | HTA/GOMS/CTT | Cenário de interação / signos | MoLIC | Tela(s) Figma | Heurística / problema | Tarefa no teste | Decisão/melhoria |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | R01 | {{ex.: recomendação de otimização}} | {{...}} | {{P01}} | {{C01}} | {{T01}} | {{links}} | {{...}} | {{M01}} | {{F01...}} | {{V01 ou —}} | {{UT01}} | {{...}} |
-| R02 |  |  |  |  |  |  |  |  |  |  |  |  |
+| R02 | Preparação e envio de MRI + dados clínicos com verificação de qualidade | Evitar exame incompleto e reconvocação do paciente | P04 | C02 | A01 — preparar e enviar dados; F01 — abrir caso | a definir | a definir | a definir | a definir | — | a definir | — |
 
 ## 4. Rastreabilidade de padrões de interface
 

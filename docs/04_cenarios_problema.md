@@ -1,7 +1,7 @@
 # Entrega 4 — Cenários de análise/problema
 
-**Data:** {{dd/mm/aaaa}}  
-**Status:** ⬜ não iniciada  
+**Data:** {17/09/2026}  
+**Status:** 🟨 Em andamento 
 **Responsabilidade:** 1 solução completa por integrante
 
 ## Objetivo da atividade
@@ -125,6 +125,72 @@ Hoje, o Sr. Ivo retorna à consulta acompanhado do filho, **depois que a famíli
 - Atualizar a `RASTREABILIDADE.md` com a ligação C02 → P01/P02 → H03, H06.
 - Não desenhar ainda nenhuma tela: o cenário descreve apenas a situação atual, antes de qualquer interface.
 
+## Cenário C03 — O exame que precisou ser refeito
+
+**Autor(a):** Nathan Gabriel da Fonseca Leite — 221230287
+**Persona(s) relacionada(s):** P04 — Bruno Tavares Lima
+**Necessidade relacionada:** Conferir a qualidade da imagem e os dados clínicos obrigatórios antes de liberar o exame (campo "Necessidades" de P04, Entrega 3); atividade A01 (Entrega 1, item 3.2)
+**Situação concreta da Entrega 1 relacionada:** item 4.1 (aquisição de MRI e armazenamento no PACS) e item 4.2 (protocolos variam; inconsistência de qualidade; falta de especialistas no local)
+**Hipóteses ainda presentes:** H07
+
+### 1. Cenário inicial
+
+Numa segunda-feira de manhã, Bruno Tavares Lima, técnico em radiologia, recebe no setor de imagem a Sra. Aparecida Souza, 74 anos, acompanhada do filho, Rogério. O pedido médico diz apenas "RM de crânio — investigação de déficit cognitivo". Bruno usa o protocolo padrão de crânio que o setor aplica na maioria dos casos. Durante o exame, Dona Aparecida fica inquieta e mexe a cabeça várias vezes. Bruno repete uma das sequências, mas ela pede para sair e ele encerra o exame. Na tela, as imagens parecem aceitáveis. Depois que a paciente vai embora, Bruno envia o exame ao PACS e copia do prontuário as informações clínicas que encontra para a requisição de laudo. Três dias depois, o laudo volta com a observação "exame limitado por artefato de movimento; ausência de sequência volumétrica; dados clínicos incompletos". Dona Aparecida precisa ser chamada de novo, e o diagnóstico atrasa algumas semanas.
+
+### 2. Questões de refinamento
+
+As questões seguem a técnica da aula e cobrem todos os elementos do cenário (objetivo, ambiente, atores, planejamento, ação, evento e avaliação), com questões exploratórias ("Por que…?", "Como…?", "O que é…?") e de verificação. Na coluna "Fonte", **[F]** indica resposta já sustentada pela Entrega 1 e **[H]** indica resposta plausível que ainda precisa ser confirmada (Entrega 7).
+
+| # | Questão | Por que precisa ser respondida | Fonte/forma de obter resposta |
+|---|---|---|---|
+| Q1 | **(Objetivo — Por que)** Por que é importante que o exame saia completo na primeira tentativa? | Mostra o custo da ruptura para o paciente e para o hospital | [F] Entrega 1, item 3.2 (qualidade dos dados afeta todo o processo) e item 4.2 (fila e atraso); [H] dificuldade de reconvocar idosos, a confirmar com o setor de imagem |
+| Q2 | **(Objetivo — O que é)** O que compõe um exame "completo" para investigação de Alzheimer? | Revela os objetos do domínio e seus atributos, que depois alimentam a análise de tarefas | [F] Entrega 1, item 4.1 (sinais buscados: atrofia hipocampal, perda de matéria cinzenta) e item 4.3 (MMSE/MoCA, histórico); [H] sequência volumétrica T1 como requisito, a confirmar com radiologista |
+| Q3 | **(Ambiente — Pressões)** Quais pressões existem no setor de imagem durante o exame? | Explica por que Bruno encerra o exame sem refazer tudo | [H] agenda cheia no scanner e intervalo curto entre pacientes; nuança o item 2.4 da Entrega 1 ("pressão baixa"), a confirmar |
+| Q4 | **(Ambiente — Tecnologias)** Que tecnologias Bruno usa e como as usa nesse processo? | Mostra onde a informação está e onde ela se perde | [F] Entrega 1, item 4.1 (scanner e PACS) e item 5.2 (prontuário eletrônico); [H] a requisição de laudo é preenchida à mão com dados copiados do prontuário |
+| Q5 | **(Atores — Características)** Que características da paciente e de Bruno ajudam ou atrapalham o objetivo? | Liga as rupturas ao perfil dos atores, não só ao processo | [F] Entrega 1, item 2.4 (técnico com conhecimento operacional, sem interpretação diagnóstica); [H] pacientes com declínio cognitivo têm dificuldade de ficar parados |
+| Q6 | **(Atores — De quem depende)** De quem Bruno depende para saber o que o caso exige? | Mostra que a informação necessária para escolher o protocolo não chega até ele | [F] Entrega 1, item 5.4 (médico solicita e decide; radiologista interpreta); [H] pedido médico sem indicação de protocolo |
+| Q7 | **(Atores — Quem consome)** Quem depende do trabalho de Bruno? | Mostra o alcance da falha além do setor de imagem | [F] Entrega 1, item 5.4 (radiologista laudista) e item 4.1 (médico clínico lê o laudo para decidir); [F] item 4.2 (falta de neurorradiologistas); [H] laudo feito por especialista de outra unidade |
+| Q8 | **(Planejamento — Estratégias)** Que alternativas Bruno tem quando o paciente se mexe? | Revela as decisões que ele toma sozinho e sem critério definido | [H] repetir a sequência, orientar o paciente, pedir ajuda do acompanhante ou encerrar; a confirmar com técnicos |
+| Q9 | **(Ação — Como)** Como Bruno avalia se a imagem está boa o suficiente? | Mostra a dificuldade concreta da atividade A01 | [F] Entrega 1, item 4.2 (sem padrão ouro objetivo; protocolos variam); [H] avaliação visual rápida no console, sem critério escrito |
+| Q10 | **(Ação — Informações e erros)** Como os dados clínicos são reunidos, e que erros podem acontecer? | Mostra risco de dado incompleto ou do paciente errado | [F] Entrega 1, item 5.3 (dados sensíveis, LGPD); [H] cópia manual do prontuário, com risco de omitir o MMSE ou trocar pacientes com nomes parecidos |
+| Q11 | **(Evento)** Que evento revela o problema, e quando? | Mostra a distância entre o erro e sua descoberta | [H] H07 — o laudo volta dias depois com a observação "exame limitado" |
+| Q12 | **(Avaliação — Ação)** Como Bruno sabe, no momento, se o exame foi concluído com sucesso? | Mostra que não existe confirmação no momento certo | [H] não sabe; só confia na própria avaliação visual |
+| Q13 | **(Verificação)** A escolha do protocolo faz parte do pedido médico ou é decidida pelo técnico? | Verifica em que ponto do processo essa decisão deveria estar | [H] hoje fica com o técnico, por falta de informação no pedido; a confirmar com o setor de imagem |
+
+### 3. Cenário refinado
+
+Convenção: o texto em **negrito** foi acrescentado no refinamento, e o número entre colchetes indica a questão respondida naquele trecho.
+
+Numa segunda-feira de manhã, Bruno Tavares Lima, técnico em radiologia, recebe no setor de imagem a Sra. Aparecida Souza, 74 anos, acompanhada do filho, Rogério. **A agenda do aparelho está cheia, com um paciente a cada meia hora, e o seguinte já aguarda na recepção [Q3].** O pedido médico diz apenas "RM de crânio — investigação de déficit cognitivo". **O pedido não indica protocolo, e o médico solicitante não está no hospital para ser consultado; a escolha fica com Bruno [Q6] [Q13].** Bruno usa o protocolo padrão de crânio que o setor aplica na maioria dos casos. **Esse protocolo não inclui a sequência volumétrica que permite avaliar com precisão o hipocampo, algo que Bruno só saberia se o pedido dissesse que se trata de investigação de Alzheimer [Q2].**
+
+Durante o exame, Dona Aparecida fica inquieta e mexe a cabeça várias vezes. **Ela não lembra por que está ali e pergunta ao filho, pelo interfone, quando vai acabar [Q5].** **Bruno sabe que pode repetir a sequência, conversar com a paciente ou pedir que o filho fique ao lado dela, mas cada tentativa atrasa o próximo exame [Q8].** Bruno repete uma das sequências, mas ela pede para sair e ele encerra o exame. Na tela, as imagens parecem aceitáveis. **Bruno faz apenas uma olhada rápida no console; não existe um critério escrito que diga quanto movimento ainda é tolerável [Q9].** **Sem nenhuma outra confirmação, ele considera o exame concluído [Q12].**
+
+Depois que a paciente vai embora, Bruno envia o exame ao PACS e copia do prontuário as informações clínicas que encontra para a requisição de laudo. **Ele alterna entre duas janelas, procurando idade, queixa e resultado do MMSE. O MMSE está registrado em uma evolução antiga, que ele não encontra, e o campo fica em branco. No mesmo dia, há outra paciente com sobrenome Souza na agenda, e ele confere duas vezes para não misturar os dados [Q4] [Q10].** **Como o hospital não tem neurorradiologista, o exame é laudado por um especialista de outra unidade, que depende inteiramente do que Bruno enviou; o laudo, por sua vez, será usado pelo médico clínico para decidir a conduta [Q7].**
+
+Três dias depois, o laudo volta com a observação "exame limitado por artefato de movimento; ausência de sequência volumétrica; dados clínicos incompletos". **É só nesse momento que Bruno descobre que o exame não serviu [Q11].** Dona Aparecida precisa ser chamada de novo, e o diagnóstico atrasa algumas semanas. **Rogério precisa faltar ao trabalho mais uma vez para acompanhar a mãe, e a nova vaga no aparelho só aparece quinze dias depois; enquanto isso, o médico continua sem informação para decidir [Q1].**
+
+### 4. Elementos extraídos
+
+| Elemento | Evidência no cenário |
+|---|---|
+| Ator(es) | Bruno Tavares Lima (técnico em radiologia, P04); Sra. Aparecida Souza (paciente); Rogério (filho e acompanhante); médico solicitante (ausente); radiologista laudista de outra unidade; médico clínico que usará o laudo (P01, indiretamente) |
+| Objetivo(s) | Realizar e enviar um exame de MRI completo e com qualidade, acompanhado dos dados clínicos corretos, para investigação de Alzheimer |
+| Contexto | Setor de imagem de hospital geral; agenda cheia no aparelho; paciente idosa com dificuldade de colaborar; pedido médico sem protocolo; laudo feito por especialista de outra unidade |
+| Recursos/informações | Pedido médico em texto livre; protocolo padrão de crânio; console do scanner; PACS; prontuário eletrônico; requisição de laudo preenchida à mão |
+| Ações | Escolher o protocolo; realizar o exame; repetir uma sequência; avaliar as imagens visualmente; encerrar o exame; enviar ao PACS; copiar dados clínicos do prontuário; conferir identidade da paciente |
+| Problemas/rupturas | Pedido sem indicação de protocolo; ausência da sequência necessária; artefato de movimento; nenhum critério objetivo de qualidade; dados clínicos espalhados e MMSE não encontrado; risco de trocar pacientes; erro descoberto só dias depois, no laudo |
+| Consequências | Exame inútil para o diagnóstico; reconvocação da paciente; atraso de semanas no diagnóstico; custo para a família e para a agenda do setor; médico clínico sem informação para decidir |
+
+### 5. Implicações para as próximas entregas
+
+- Modelar na Entrega 5 a tarefa "preparar e enviar os dados do paciente" (A01), separando as subtarefas de escolher o protocolo, conferir a qualidade da imagem, reunir os dados clínicos e confirmar a identidade do paciente.
+- Registrar que, hoje, a verificação de qualidade acontece depois que o paciente sai do setor. Esse é o ponto da ruptura e deve orientar a análise da tarefa.
+- Coletar na Entrega 7, com técnicos e radiologistas, quais sequências e dados clínicos são de fato necessários para investigação de Alzheimer (Q2) e quem decide o protocolo (Q13).
+- Investigar na Entrega 7 com que frequência exames de demência são reconvocados por falta de qualidade ou de dados (H07).
+- Confirmar se o laudo é feito por especialista de outra unidade (Q7), porque isso muda quem consome os dados preparados por Bruno.
+- Atualizar a `RASTREABILIDADE.md` com a ligação C03 → P04 → A01/F01 → H07.
+- Não desenhar ainda nenhuma tela: o cenário descreve apenas a situação atual.
+  
 > Repita para C02, C03... com autoria individual.
 
 ## Checklist

@@ -19,7 +19,7 @@ Para projetos cujo TCC não previa interface, esta matriz é especialmente impor
 | Interface/recorte de IHC | Visualizar MRI + explicação sobreposta, ver features/confiança em linguagem clínica, comparar histórico, registrar decisão justificada, encaminhar a especialista | Entrega 1, item 7.4 | proposta |
 | Relação com o TCC | extensão conceitual | Entrega 1, item 7.5 — aprofunda o app já previsto, com foco no médico clínico | definido |
 
-> Se o escopo de IHC mudar ao longo do semestre, preserve a decisão anterior no histórico e registre **qual evidência motivou a mudança**.
+
 
 ## 2. Registro de hipóteses e lacunas da Entrega 1
 
@@ -35,7 +35,7 @@ Use esta tabela para itens importantes marcados como `[H]` ou `[?]`. Preserve o 
 | H06 | Permitir reabrir/atualizar um caso encaminhado depois que o especialista responde, evitando perda do parecer e do raciocínio clínico | H | Gap identificado na jornada de P01 (Entrega 3, etapa 9); aprofundado no cenário C02 (Entrega 4) | Entrega 7 | PENDENTE | aberta | Sustenta P01/P02 e o cenário C02; pode gerar nova funcionalidade (reabrir caso) além de F01–F08 |
 | H07 | Problemas de qualidade da MRI e dados clínicos incompletos só são percebidos depois que o paciente sai do setor, gerando reconvocação e atraso no diagnóstico | H | Se confirmada, justifica verificar qualidade e dados antes do envio | Entrega 7 (entrevista com técnicos e radiologistas) | PENDENTE | aberta | Sustenta a persona P04 (Bruno) e o cenário C03 |
 
-> **Histórico de hipóteses removidas**: uma hipótese sobre "pressão institucional para usar a ferramenta como substituta do especialista" havia sido proposta na Entrega 3, ligada à persona P04 original (Otávio Rezende Prado, diretor financeiro). Essa persona foi removida por decisão da equipe (ver seção 5) e a hipótese foi retirada junto, por não ter mais evidência/persona que a sustente. H06 e H07 acima foram renumeradas para evitar colisão com essa hipótese removida e com a hipótese de Bruno, que também havia sido registrada como H06 por engano.
+
 
 ## 3. Rastreabilidade entre contribuição técnica, necessidades e artefatos
 

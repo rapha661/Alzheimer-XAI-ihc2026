@@ -1,7 +1,7 @@
 # Entrega 3 — Personas, mapa de empatia, contexto de uso e jornada
 
 - **Data:** 09/09/2026
-- **Status:** 🟨 em andamento
+- **Status:** 🟩 Concluído
 - **Responsabilidade:** 1 persona por integrante; 1 mapa de empatia, 1 contexto de uso consolidado e 1 jornada por equipe.
 
 ## Objetivo da atividade

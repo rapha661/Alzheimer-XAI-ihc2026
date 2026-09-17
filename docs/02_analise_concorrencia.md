@@ -165,10 +165,12 @@ O OHIF Viewer é o visualizador web de exames DICOM mais usado para integrar mod
 
 | Funcionalidade | Como é realizada | Evidência/print | Observação de IHC |
 |---|---|---|---|
-| Visualização de MRI em diferentes formatos (Axial, Sagital, Coronal) | *Viewports* divididos e sincronizados para navegar pelos planos da imagem. | pendente | O médico já espera usar o *scroll* do mouse para trocar de corte e arrastar para dar zoom/pan. |
-| Controle de Overlays de IA | Botão para ligar/desligar a camada de IA e barra para ajustar a transparência (0 a 100%). | pendente | O usuário precisa conseguir esconder o Grad-CAM para conferir a anatomia real por baixo. |
-| Painel de Dados do Paciente | Barra lateral retrátil com dados do paciente e métricas do exame. | pendente| Manter as informações na lateral evita poluição visual no centro da tela. |
-| Ajuste de Contraste (*Windowing*) | Arrastar o ponteiro sobre a imagem para alterar brilho e contraste em tempo real. |pendente | A sobreposição da IA não pode quebrar a ajuste de contraste feito pelo médico. |
+| Visualização de MRI em diferentes formatos (Axial, Sagital, Coronal) | *Viewports* divididos e sincronizados para navegar pelos planos da imagem. | https://github.com/rapha661/Alzheimer-XAI-ihc2026/blob/main/assets/02_concorrencia/Print_1_OHIF.png | O médico já espera usar o *scroll* do mouse para trocar de corte e arrastar para dar zoom/pan. |
+| Controle de Overlays de IA | Botão para ligar/desligar a camada de IA e barra para ajustar a transparência (0 a 100%). |https://github.com/rapha661/Alzheimer-XAI-ihc2026/blob/main/assets/02_concorrencia/Controle_opacidade.pngg * | O usuário precisa conseguir esconder o Grad-CAM para conferir a anatomia real por baixo. |
+| Painel de Dados do Paciente | Barra lateral retrátil com dados do paciente e métricas do exame. |https://github.com/rapha661/Alzheimer-XAI-ihc2026/blob/main/assets/02_concorrencia/Print_1_OHIF.png| Manter as informações na lateral evita poluição visual no centro da tela. |
+| Ajuste de Contraste (*Windowing*) | Arrastar o ponteiro sobre a imagem para alterar brilho e contraste em tempo real. |pendente* | A sobreposição da IA não pode quebrar a ajuste de contraste feito pelo médico. |
+
+*Obs: Não foi possível identificar todas as telas. Algumas telas só são visualizadas ao instalar/executar o visualizador de forma local para a inserção das imagens médicas.
 
 #### Experiência do usuário e opiniões
 

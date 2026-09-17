@@ -17,44 +17,43 @@ Leia obrigatoriamente o [Guia para definir o escopo de IHC a partir do tema do T
 
 ## Identificação
 
-**Título do projeto de IHC:** {{TÍTULO DO PROJETO}}  
-**TCC/projeto de origem:** {{TÍTULO ORIGINAL DO TCC}}  
-**Orientador(a):** {{NOME}}  
-**Disciplina:** Interação Humano-Computador  
-**Instituição:** {{INSTITUIÇÃO}}  
-**Semestre:** {{ANO/SEMESTRE}}
+**Título do projeto de IHC:** Interface de Apoio ao Diagnóstico Explicável de Alzheimer (M-XAI Net)
+**TCC/projeto de origem:** M-XAI Net: Um Framework Multimodal de Inteligência Artificial Explicável para Diagnóstico da Doença de Alzheimer
+**Orientador(a):** Murillo Freitas Bouzon
+**Disciplina:** Interação Humano-Computador (CC8122)
+**Instituição:** Centro Universitário FEI
+**Semestre:** 2º semestre de 2026
+
 
 ### Equipe
 
-| Nome completo | Matrícula | GitHub | Responsabilidade principal |
-|---|---:|---|---|
-| {{Nome 1}} | {{matrícula}} | {{@usuario}} | {{...}} |
-| {{Nome 2}} | {{matrícula}} | {{@usuario}} | {{...}} |
+| Nome completo | Matrícula | GitHub |
+|---|---:|---|
+| Paulo Hudson Josué da Silva | 22.222.013-9 | @paulohudson |
+| Ana Carolina Lazzuri | 22.123.001-4 | @lazzuriana08 |
+| Raphael Garavati Erbert | 22.123.014-7 | @rapha661 |
+| Nathan Gabriel da Fonseca Leite | 22.123.028-7 | @NathanGbl |
 
 ## Relação entre TCC e projeto de IHC
 
 | Item | Descrição |
 |---|---|
-| Tema central do TCC | {{...}} |
-| Resultado técnico esperado do TCC | {{algoritmo, estudo, sistema, modelo, análise, API...}} |
-| O TCC já previa interface? | sim / não / parcialmente |
-| Capacidade técnica que pode gerar valor para pessoas | {{...}} |
-| Usuário principal adotado em IHC | {{...}} |
-| Objetivo principal desse usuário | {{...}} |
-| Interface/recorte explorado na disciplina | {{...}} |
-| Relação com o escopo formal do TCC | parte prevista / extensão conceitual / protótipo demonstrativo / outra |
+| Tema central do TCC | Diagnóstico explicável da doença de Alzheimer a partir de dados multimodais (MRI + dados clínicos tabulares) |
+| Resultado técnico esperado do TCC | Modelo de IA/ML (M-XAI Net) com classificação em três estágios (CN / MCI / AD) e explicabilidade via Grad-CAM (imagem) e SHAP (dados tabulares) |
+| O TCC já previa interface? | sim — aplicação web para envio de dados do paciente (imagens e informações clínicas) e consulta do resultado com sua respectiva explicação |
+| Capacidade técnica que pode gerar valor para pessoas | Explicação "Feature-Augmented", que combina as saídas do modelo com biomarcadores clinicamente significativos, ajudando profissionais não especialistas em neuroimagem a interpretar o resultado |
+| Usuário principal adotado em IHC | Médico Clínico / Generalista (persona P01 — Dr. Marcos Andrade), sem expertise em neuroimagem e sem acesso imediato a um especialista |
+| Objetivo principal desse usuário | Diagnosticar Alzheimer com confiança e rapidez, compreendendo claramente a explicação do modelo, sem depender de um especialista disponível |
+| Interface/recorte explorado na disciplina | Visualizar a MRI com a explicação sobreposta, entender o score de confiança, comparar com exames anteriores do paciente, registrar a decisão com justificativa e encaminhar a um especialista quando necessário |
+| Relação com o escopo formal do TCC | extensão conceitual — aprofunda, com foco no médico clínico, a interface que já fazia parte do escopo formal do TCC |
 
 > **Importante:** a tabela acima explica a relação entre os dois trabalhos. Ela não altera o compromisso formal do TCC.
 
 ## Resumo do projeto pela perspectiva do usuário
 
-Escreva **um parágrafo curto e concreto** explicando: quem é o usuário escolhido, o que precisa alcançar, qual problema enfrenta ou qual atividade precisa executar, em qual contexto e como a contribuição do TCC se relaciona com essa situação.
+Um médico clínico generalista, sem expertise em neuroimagem, precisa diagnosticar Alzheimer com confiança e rapidez em pacientes com suspeita da doença, atuando em atenção primária ou hospital geral, com tempo limitado por consulta. Atualmente enfrenta filas de meses por um especialista, laudos de imagem sem justificativa técnica objetiva e discordância entre pareceres de diferentes profissionais, e recorre a exames cognitivos isolados (MMSE/MoCA) e a contatos informais com colegas especialistas — muitas vezes sem registro adequado do raciocínio clínico. O tema do TCC investiga um framework multimodal de inteligência artificial explicável (M-XAI Net) que combina imagens de MRI e dados clínicos tabulares para produzir diagnósticos apoiados em explicações compreensíveis. Para fins da disciplina de IHC, será explorada uma interface que permita a esse médico visualizar a explicação do modelo (imagem e biomarcadores), avaliar o grau de confiança da sugestão, comparar com exames anteriores do mesmo paciente e registrar sua decisão de forma auditável, podendo encaminhar o caso a um especialista quando necessário.
 
-Evite começar pela tecnologia.
-
-> **Estrutura sugerida:** “`{{tipo de usuário}}` precisa `{{objetivo}}` em `{{contexto}}`. Atualmente enfrenta `{{problema/limitação}}` e utiliza `{{processo/alternativa atual}}`. O tema do TCC investiga `{{contribuição técnica}}`. Para fins da disciplina de IHC, será explorada uma interface que permita `{{forma de uso da contribuição}}`.”
-
-Se alguma afirmação ainda não estiver sustentada por evidência, registre-a como hipótese na [Entrega 1](docs/01_conhecendo_o_problema.md).
+Algumas afirmações acima ainda são hipóteses (H01 a H07) e estão registradas na [Entrega 1](docs/01_conhecendo_o_problema.md) e na [Matriz de rastreabilidade](RASTREABILIDADE.md).
 
 ## Por que pensar em interface mesmo em TCCs técnicos?
 
@@ -103,7 +102,7 @@ O protótipo de IHC pode, portanto, funcionar como uma demonstração do potenci
 | 1 | [Conhecendo o projeto, o usuário e o problema](docs/01_conhecendo_o_problema.md) | 1 solução consolidada por equipe | 🟩 |
 | 2 | [Público-alvo e análise de concorrência](docs/02_analise_concorrencia.md) | no mínimo 1 concorrente/interface representativa por integrante + síntese | 🟩 |
 | 3 | [Personas, empatia, contexto e jornada](docs/03_personas_contexto_jornada.md) | 1 persona por integrante; demais artefatos consolidados | 🟩 |
-| 4 | [Cenários de análise/problema](docs/04_cenarios_problema.md) | 1 solução completa por integrante | ⬜ |
+| 4 | [Cenários de análise/problema](docs/04_cenarios_problema.md) | 1 solução completa por integrante | 🟨 |
 | 5 | [Análise de tarefas: HTA, GOMS e CTT](docs/05_analise_tarefas.md) | cada integrante: pelo menos 1 HTA + 1 GOMS + 1 CTT | ⬜ |
 | 6 | [Prototipação em papel](docs/06_prototipacao_papel.md) | 1 protótipo integrado por equipe | ⬜ |
 | 7 | [Coleta de dados e aspectos éticos](docs/07_coleta_dados.md) | soluções individuais + técnicas distintas; questionário entre as técnicas | ⬜ |

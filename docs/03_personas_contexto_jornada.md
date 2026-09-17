@@ -74,6 +74,7 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 - **Base de evidências:** Entrega 1 (itens 2.2, 2.4, 4.5, 5.x) e análise de concorrência da Entrega 2 (OHIF Viewer e BrainSee)
 - **Hipóteses da Entrega 1 relacionadas:** H03 (validação de casos complexos ou divergentes com explicação aprofundada)
 
+![Persona_02](https://github.com/rapha661/Alzheimer-XAI-ihc2026/blob/main/assets/03_personas/Peronsa_02.png)
 
 | Campo | Descrição |
 |---|---|
@@ -81,7 +82,7 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 | **Ocupação/papel** | Neurologista em centro de referência ou hospital universitário. |
 | **Conhecimento do domínio** | Alto — domínio total de neuroimagem (MRI) e testes cognitivos. |
 | **Experiência tecnológica** | Média-Alta — usa PACS e visualizadores DICOM; cético a IAs "caixa-preta". |
-| **Objetivos** | Confirmar a suspeita em casos difíceis e resolver dúvidas entre médicos. |
+| **Objetivos** | Avaliar casos incertos e dar a palavra final quando há opiniões diferentes. |
 | **Necessidades** | Visualizar destaques anatômicos (Grad-CAM), pesos dos dados (SHAP) e exportar laudo. |
 | **Dores/frustrações** | Receber diagnósticos prévios inconsistentes e ter que reavaliar a MRI do zero. |
 | **Motivadores** | Garantir a precisão diagnóstica precoce e ter respaldo técnico para a decisão. |
@@ -89,12 +90,13 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 | **Ambiente típico de uso** | Consultório especializado; desktop com tela de alta resolução integrada ao PACS. |
 | **Comportamentos** | Analisa cortes da MRI, cruza com testes cognitivos e emite o parecer final. |
 
+---
+
 **Decisões de design influenciadas por P02:**
 
 - **Controle de transparência no heatmap:** Permitir ajustar a opacidade do Grad-CAM (0% a 100%) para inspecionar o cérebro original.
 - **Exibição multimodal detalhada:** Exibir gráficos explicativos dos atributos clínicos (SHAP) além do score de risco.
 - **Navegação rápida por cortes:** Manter o scroll do mouse e ajustes de contraste padrão do fluxo de radiologia.
-- **Laudo de auditoria:** Permitir a geração de relatório em PDF com as explicações da IA para anexar ao prontuário.
 
 ### Persona P03 — Regina Albuquerque Marins
 

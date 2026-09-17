@@ -74,7 +74,7 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 - **Base de evidências:** Entrega 1 (itens 2.2, 2.4, 4.5, 5.x) e análise de concorrência da Entrega 2 (OHIF Viewer e BrainSee)
 - **Hipóteses da Entrega 1 relacionadas:** H03 (validação de casos complexos ou divergentes com explicação aprofundada)
 
-![Persona_02](https://github.com/rapha661/Alzheimer-XAI-ihc2026/blob/main/assets/03_personas/Peronsa_02.png)
+![Persona_02](https://github.com/rapha661/Alzheimer-XAI-ihc2026/blob/main/assets/03_personas/P02_vf.png)
 
 | Campo | Descrição |
 |---|---|

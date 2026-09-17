@@ -162,54 +162,86 @@ Bruno tem 32 anos e trabalha há oito como técnico em radiologia no setor de im
 
 ### Síntese das personas
 
-Explique diferenças entre os perfis e qual persona é prioritária. Evite personas duplicadas que só mudam nome/foto.
+| | P01 — Dr. Marcos Andrade | P02 — Dr. César Andrade de Melo | P03 — Regina Albuquerque Marins | P04 — Otávio Rezende Prado |
+|---|---|---|---|---|
+| Tipo | Primária | Secundária | Secundária (stakeholder) | Negativa |
+| Usa a interface de diagnóstico? | Sim — é o fluxo principal | Sim — em casos de validação/dúvida | Não — só relatório agregado (fora do escopo) | Não — e não deveria ter acesso |
+| O que só ele(a) traz | A atividade mais crítica (A03) e o objetivo priorizado desde a Entrega 1 | Profundidade técnica (SHAP detalhado, opacidade do heatmap) que P01 não precisa | Justifica por que o dashboard institucional fica fora do escopo de IHC | Define limites explícitos do que a interface nunca deve fazer |
+ 
+**P01 continua sendo a persona prioritária** do projeto — é quem realiza a atividade mais frequente e crítica (A03) e cujo objetivo (diagnosticar com confiança e rapidez) já havia sido escolhido na Entrega 1, item 7.2. **P02 é a persona secundária mais próxima do fluxo principal**, entrando na etapa de encaminhamento/validação da jornada. **P03 e P04 não competem com P01 pela interface principal** — elas existem para demarcar fronteiras: P03 mostra uma necessidade real, porém de outro produto (relatório institucional); P04 mostra uma pressão de negócio que a equipe decidiu **não** atender, protegendo a integridade da atividade clínica central. Nenhuma persona duplica outra — cada uma altera decisões de design diferentes.
 
 ## 2. Mapa de empatia — equipe
 
-**Persona escolhida:** {{P01}}  
-**Justificativa:** {{por que esse perfil é relevante}}
+**Persona escolhida:** P01 — Dr. Marcos Andrade
+**Justificativa:** é o usuário priorizado desde a Entrega 1 (item 7.2) — a atividade mais crítica do projeto (A03, interpretar explicações XAI) é dele.
 
 ![Mapa de empatia](../assets/03_personas/mapa_empatia.svg)
 
-Documente também em texto: o que vê; ouve; diz/faz; pensa/sente; dores; ganhos. Diferencie **evidência** de **hipótese**.
+#Documente também em texto: o que vê; ouve; diz/faz; pensa/sente; dores; ganhos. Diferencie **evidência** de **hipótese**.
+
+| Dimensão | Conteúdo | Evidência/Hipótese |
+|---|---|---|
+| **O que pensa e sente** | "Será que estou certo? Não quero atrasar nem errar o diagnóstico deste paciente." Sente-se sozinho ao decidir sem apoio técnico imediato. | [H] — inferido a partir do contexto de responsabilidade legal (Entrega 1, item 5.4) |
+| **O que ouve** | Colegas comentando casos de discordância entre especialistas; famílias de pacientes pedindo respostas rápidas; a instituição cobrando documentação para auditoria. | [F]/[H] — itens 4.5 e 5.5 |
+| **O que vê** | Fila de pacientes esperando; relatórios de radiologia em texto livre, sem score objetivo; prontuário eletrônico que não se conecta automaticamente ao resultado de imagem. | [F] — itens 4.1 e 4.2 |
+| **O que fala e faz** | Explica o diagnóstico ao paciente/família em linguagem simples; documenta a decisão; às vezes liga para um colega pedindo uma opinião informal. | [F]/[H] — item 5.4 |
+| **Dores** | Decidir sozinho, sem apoio técnico imediato; medo de errar o diagnóstico e responder por isso legalmente; informação insuficiente ou mal documentada no relatório de imagem. | [F] — itens 4.2, 5.6 |
+| **Necessidades** | Explicação clara e rápida, combinando imagem e dados clínicos; confiança calibrada (nem excesso, nem falta); forma fácil de documentar e, se necessário, encaminhar a um especialista. | [H] — H01/H03 da rastreabilidade |
 
 ## 3. Contexto de uso — consolidação
 
 | Dimensão | Descrição | Implicação de design |
 |---|---|---|
-| Usuários | {{...}} | {{...}} |
-| Tarefas | {{...}} | {{...}} |
-| Equipamentos | {{...}} | {{...}} |
-| Ambiente físico | {{...}} | {{...}} |
-| Ambiente social/organizacional | {{...}} | {{...}} |
-| Papéis/permissões/governança | {{...}} | {{...}} |
-| Volume de dados/histórico | {{...}} | {{...}} |
+| Usuários | Foco em P01 (Médico Clínico); P02 (Neurologista) participa em validação de casos complexos/divergentes; P03 e P04 **não** usam a interface de diagnóstico (confirmado pelas próprias personas) | Interface principal desenhada para o nível de conhecimento de P01; recursos mais técnicos (opacidade de heatmap, SHAP detalhado) reservados a um modo/papel de P02; nenhum acesso de P03/P04 a casos individuais |
+| Tarefas | A01 (preparar/abrir caso), A03 (interpretar explicação XAI — crítica) e A02 (registrar decisão) para P01; validação/ajuste fino e exportação de laudo para P02 | A03 deve ser o centro do design; A01 e A02 devem ser rápidas; funções avançadas de P02 podem ficar em uma camada "expandir detalhes", não na visão padrão |
+| Equipamentos | P01: desktop padrão de consultório; P02: workstation com tela de alta resolução integrada ao PACS | A visão padrão (P01) não pode depender de recursos de exibição especializados; a visão expandida (P02) pode aproveitar mais tela/resolução quando disponível |
+| Ambiente físico | P01: consultório com iluminação variável, uso pontual; P02: sala de leitura de radiologia, iluminação atenuada, uso contínuo por horas | Bom contraste em diferentes condições de luz; interface não pode assumir sala escura como padrão |
+| Ambiente social/organizacional | Responsabilidade legal do diagnóstico é do médico (P01/P02); a IA é apoio, nunca substituição — inclusive contra a expectativa explícita de P04; hospital exige documentação para auditoria; P03 precisa de evidência agregada para decidir sobre adoção | Linguagem sempre de "sugestão"; log automático de decisão; nenhuma informação de custo/faturamento na tela clínica (decisão motivada por P04) |
+| Papéis/permissões/governança | P01 decide; P02 valida quando acionado; P03/P04 não têm acesso a casos, imagens ou explicações individuais | Controle de acesso por perfil; relatórios institucionais (se existirem no futuro) serão agregados e anonimizados, nunca por paciente |
+| Volume de dados/histórico | Cada paciente pode ter mais de um exame ao longo do tempo; hospital lida com ~50-100 casos suspeitos/mês; P03 precisaria de visão agregada desse volume (fora do escopo desta disciplina) | Comparação longitudinal (F05) no nível do caso; nada de arquitetura de "big data" é necessário para o escopo priorizado |
 
 ## 4. Jornada do usuário — equipe
 
-**Persona:** {{P01}}  
-**Objetivo da jornada:** {{...}}  
-**Início e fim da jornada:** {{...}}
+**Persona:** P01 — Dr. Marcos Andrade
+**Objetivo da jornada:** diagnosticar com confiança um paciente com suspeita de Alzheimer e documentar a decisão, do primeiro sinal de alerta até o registro final (ou encaminhamento).
+**Início e fim da jornada:** início — paciente relata esquecimentos em consulta de rotina; fim — decisão registrada e comunicada ao paciente/família.
 
 | Etapa | Situação/ação | Objetivo | Pensamento/emoção | Dor | Oportunidade de design | Evidência |
 |---|---|---|---|---|---|---|
-| 1 | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
+| 1 (antes) | Percebe sinais de possível comprometimento cognitivo numa consulta de rotina | Decidir se investiga mais a fundo | "Isso pode ser só idade, ou pode ser algo sério" — incerteza inicial | Sem critério objetivo de triagem inicial | Fora do escopo direto da interface (etapa pré-exame) | [H] rotina clínica geral |
+| 2 (antes) | Solicita MMSE/MoCA e MRI; aguarda os resultados | Reunir dados suficientes para investigar | Paciência, mas consciente da demora do sistema de saúde | Fila de espera de meses | Fora do escopo da interface, mas o sistema poderia mostrar status do caso enquanto aguarda | [F] Entrega 1, item 4.2 |
+| 3 (durante) | Abre o caso na interface com os dados já prontos (MRI + MMSE/MoCA) | Iniciar a análise assistida por IA | Leve ansiedade; quer eficiência | Se o upload for confuso, perde tempo já escasso | Fluxo de abertura de caso simples e rápido (F01) | [F] Entrega 1, item 9.2 (F01) |
+| 4 (durante) | Visualiza a explicação (MRI + regiões destacadas + features clínicas) e o score de confiança | Entender o "porquê" da sugestão do modelo | Momento crítico — quer confiar, mas precisa entender, não só aceitar | Se a explicação for só um número, gera confiança falsa ou desconfiança | Explicação combinada, em linguagem clínica, com opção de aprofundar (F03/F08) | [H] H01/H03; Al-bakri et al., 2025 |
+| 5 (durante) | Compara com exame anterior do mesmo paciente, se existir | Avaliar se houve progressão | Mais seguro quando há dado longitudinal | Sem isso, decide "no escuro" sobre a evolução do quadro | Comparação de histórico (F05) | [F] Entrega 1, item 5.5 |
+| 6 (durante) | Decide: confirma o diagnóstico, ou marca como incerto e encaminha a um especialista (P02) | Tomar a melhor decisão possível dentro do tempo disponível | Alívio se confiante; ainda ansioso se incerto, mas aliviado por ter opção de escalar | Medo de decidir sozinho em caso limítrofe | Encaminhar a especialista como ação sempre visível (F07), nunca escondida nem bloqueada por score (reforçado por P04) | [F] Entrega 1, item 5.4 |
+| 7 (durante) | Registra a decisão com justificativa documentada | Cumprir a necessidade de rastreabilidade/compliance | Quer que seja rápido, não burocrático | Se for redundante/manual, gera atrito e risco de pular a etapa | Justificativa pré-preenchida a partir da explicação já vista, não digitada do zero (F06) | [F] Entrega 1, item 5.5 |
+| 8 (depois) | Comunica o resultado ao paciente/família em linguagem acessível | Transmitir a decisão com clareza e empatia | Quer evitar confusão como a do caso Maria Silva | Traduzir termos técnicos para leigos exige esforço extra | Fora do escopo direto de P01; resumo "para o paciente" gerável a partir do relatório é possibilidade futura | [F] Entrega 1, item 4.5 |
+| 9 (depois) | Se encaminhou, aguarda o retorno de P02 (Neurologista) e depois atualiza o caso | Fechar o ciclo com o parecer do especialista | Alívio por ter compartilhado a responsabilidade em um caso difícil | Se não houver espaço para atualizar o caso depois, a documentação fica incompleta | Permitir reabrir/atualizar um caso encaminhado com o parecer do especialista — **gap identificado nesta entrega, registrar como H06** | [H] nova, identificada nesta entrega |
 
-> A jornada pode incluir etapas **antes, durante e depois** do uso do produto. Não transforme a jornada em lista de telas.
+> A jornada inclui etapas antes, durante e depois do uso do produto — não é uma lista de telas.
 
 ## Síntese
 
-Quais necessidades e objetivos devem obrigatoriamente aparecer nos cenários e nas tarefas seguintes?
+Necessidades e objetivos que devem obrigatoriamente aparecer nos cenários e nas tarefas seguintes (Entregas 4 e 5):
+
+1. A explicação (visual + clínica) precisa estar sempre junto do score de confiança — nunca um número isolado (P01, P02).
+2. O fluxo de abertura de caso e registro de decisão precisa ser rápido — poucos cliques, linguagem simples (P01).
+3. A comparação com histórico do paciente deve estar sempre disponível quando existir exame anterior (P01).
+4. Encaminhar a um especialista deve ser uma ação visível e fácil a qualquer momento, **nunca bloqueada por um valor de score** (P01; reforçado como limite explícito por P04).
+5. P02 precisa de uma camada de detalhe técnico adicional (opacidade do heatmap, SHAP, exportação de laudo) que não deve poluir a tela padrão de P01.
+6. **Nenhuma informação de custo, faturamento ou produtividade por médico** deve aparecer na interface clínica (limite definido por P04).
+7. **Novo ponto identificado nesta entrega**: o caso deve poder ser reaberto/atualizado depois que o especialista responde a um encaminhamento — registrar como **H06** na rastreabilidade.
+8. **Segundo ponto novo**: existe uma hipótese de pressão institucional para usar a ferramenta como substituta do especialista, não apoio — registrar como **H07** (renumerada a partir da proposta original de P04 — confirmar com Nathan).
 
 ## Checklist
 
-- [ ] Existe pelo menos uma persona por integrante.
-- [ ] As personas não são apenas diferenças demográficas superficiais.
-- [ ] Está claro o que é dado real e o que é hipótese/proto-persona.
-- [ ] A persona não “validou por ficção” uma hipótese da Entrega 1; afirmações continuam marcadas como hipótese quando não há evidência.
-- [ ] Objetivos e dores têm consequência para o design.
-- [ ] Contexto de uso está coerente com a Entrega 1.
-- [ ] Em TCC sem interface original, a persona possui relação explícita com a contribuição técnica.
-- [ ] Papéis administrativos, técnicos e decisórios só foram criados quando possuem objetivos/tarefas diferentes.
-- [ ] Jornada possui etapas, dores e oportunidades e não é apenas wireflow.
-- [ ] IDs das personas foram adicionados à rastreabilidade.
+- [x] Existe pelo menos uma persona por integrante (P01 Paulo, P02 Ana Carolina, P03 Raphael, P04 Nathan).
+- [x] As personas não são apenas diferenças demográficas superficiais.
+- [x] Está claro o que é dado real e o que é hipótese/proto-persona.
+- [x] A persona não "validou por ficção" uma hipótese da Entrega 1; H03/H04 continuam marcadas como hipótese.
+- [x] Objetivos e dores têm consequência para o design.
+- [x] Contexto de uso está coerente com a Entrega 1.
+- [x] Em TCC sem interface original, a persona possui relação explícita com a contribuição técnica.
+- [x] Papéis administrativos, técnicos e decisórios só foram criados quando possuem objetivos/tarefas diferentes (P03, P04).
+- [x] Jornada possui etapas, dores e oportunidades e não é apenas wireflow.
+- [ ] IDs das personas foram adicionados à rastreabilidade — **pendente, próximo passo**.

@@ -1,8 +1,8 @@
 # Entrega 4 — Cenários de análise/problema
 
-**Data:** {17/09/2026}  
-**Status:** 🟨 Em andamento 
-**Responsabilidade:** 1 solução completa por integrante
+- **Data:** {17/09/2026}  
+- **Status:** 🟨 Em andamento 
+- **Responsabilidade:** 1 solução completa por integrante
 
 ## Objetivo da atividade
 
@@ -165,7 +165,7 @@ As questões seguem a técnica da aula e cobrem todos os elementos do cenário (
 
 ### 3. Cenário refinado
 
-Convenção: o texto em **negrito** foi acrescentado no refinamento, e o número entre colchetes indica a questão respondida naquele trecho.
+Tudo que está em **negrito** foi acrescentado no refinamento, e o número entre colchetes indica a questão respondida naquele trecho.
 
 Numa segunda-feira de manhã, Bruno Tavares Lima, técnico em radiologia, recebe no setor de imagem a Sra. Aparecida Souza, 74 anos, acompanhada do filho, Rogério. **A agenda do aparelho está cheia, com um paciente a cada meia hora, e o seguinte já aguarda na recepção [Q3].** O pedido médico diz apenas "RM de crânio — investigação de déficit cognitivo". **O pedido não indica protocolo, e o médico solicitante não está no hospital para ser consultado; a escolha fica com Bruno [Q6] [Q13].** Bruno usa o protocolo padrão de crânio que o setor aplica na maioria dos casos. **Esse protocolo não inclui a sequência volumétrica que permite avaliar com precisão o hipocampo, algo que Bruno só saberia se o pedido dissesse que se trata de investigação de Alzheimer [Q2].**
 
@@ -196,17 +196,78 @@ Três dias depois, o laudo volta com a observação "exame limitado por artefato
 - Confirmar se o laudo é feito por especialista de outra unidade (Q7), porque isso muda quem consome os dados preparados por Bruno.
 - Atualizar a `RASTREABILIDADE.md` com a ligação C03 → P04 → A01/F01 → H07.
 - Não desenhar ainda nenhuma tela: o cenário descreve apenas a situação atual.
-  
-> Repita para C02, C03... com autoria individual.
+
+# Cenário C04 — A dúvida sobre a autonomia do paciente
+
+- **Autor(a):** Ana Carolina Lazzuri  22.123.001-4
+- **Persona(s) relacionada(s):** P02 — Dr. César (Neurologista)  
+- **Necessidade relacionada:** Entender se os achados do exame de imagem realmente explicam as falhas de atenção e memória observadas no dia a dia para tomar uma decisão segura sobre a rotina do paciente  
+- **Situação concreta da Entrega 1 relacionada:** Dificuldade de relacionar o resultado genérico de um exame de imagem com as queixas práticas do paciente e seus testes de memória  
+- **Hipóteses ainda presentes:** H01, H05  
+
+
+### 1. Cenário inicial
+
+Em um fim de tarde, o Dr. César atende o Sr. Roberto, de 71 anos, que mora sozinho e foi levado à consulta por sua vizinha, Dona Lúcia. Lúcia relata que o vizinho quase provocou um acidente de carro recente por se confundir no trânsito e que ele tem esquecido panelas no fogo com frequência. O Sr. Roberto, no entanto, insiste que está bem e quer autorização médica para continuar dirigindo. César olha a ressonância do cérebro e o teste de memória do paciente. O laudo do exame de imagem diz apenas que o cérebro tem "alterações normais para a idade". Mas o teste de memória mostra que a atenção e o raciocínio do Sr. Roberto estão bem abaixo do esperado. César tenta olhar a imagem por conta própria para ver se encontra alguma região desgastada que justifique esses erros no trânsito, mas o laudo não aponta em qual parte da imagem ele deve prestar atenção. Sem conseguir conversar com o médico que fez o laudo e sem ter certeza se o problema de memória é grave o bastante, César fica num impasse: proibir o paciente de dirigir e tirar sua independência sem ter certeza, ou liberar e correr o risco de um acidente grave.
+
+
+### 2. Questões de refinamento
+
+| # | Questão | Por que precisa ser respondida | Fonte / Forma de obter resposta |
+|---|---|---|---|
+| Q1 | **(Objetivo — Por que)** Por que César precisa entender o exame de imagem em detalhes em vez de só ler o laudo? | O laudo diz que o exame está "normal", mas o comportamento do paciente na vida real indica perigo. | [F] Entrega 1 (divergência entre laudo e comportamento); [H] decisão de segurança. |
+| Q2 | **(Objetivo — O que é)** Quais informações César precisa cruzar para tomar essa decisão? | Identifica os dados necessários para avaliar a autonomia do paciente. | [F] Entrega 1 (imagens do cérebro, notas do teste de memória e relatos da vizinha). |
+| Q3 | **(Ambiente — Pressões)** O que pressiona o tempo de César durante a consulta? | Mostra o contexto de consulta cheia e a pressão para dar uma resposta imediata à família/vizinha. | [F] Entrega 1 (tempo curto de atendimento no ambulatório). |
+| Q4 | **(Ambiente — Tecnologias)** Que ferramentas o sistema oferece para ajudar César a comparar as informações? | Mostra que os sistemas atuais mostram o texto e a imagem em telas separadas, sem ligar uma coisa à outra. | [F] Entrega 1 (prontuário digital simples e programa de ver imagem). |
+| Q5 | **(Atores — De quem depende)** César consegue falar com o médico que fez o laudo para tirar a dúvida? | Mostra a falta de comunicação rápida entre os médicos do hospital. | [F] Entrega 1 (dificuldade de contato direto com o setor de exames). |
+| Q6 | **(Atores — Quem consome)** Quem é afetado pela decisão de César? | Mostra o impacto da decisão na vida e segurança do paciente e de outras pessoas no trânsito. | [F] Entrega 1 (o Sr. Roberto e a comunidade ao redor). |
+| Q7 | **(Planejamento — Estratégias)** Quais escolhas César tem diante dessa dúvida? | Mostra os caminhos possíveis quando não há clareza nos dados. | [H] Proibir de dirigir temporariamente, pedir um exame mais detalhado ou liberar com restrições. |
+| Q8 | **(Planejamento — Decisão errada)** Qual é o perigo de tomar a decisão errada aqui? | Dimensiona a gravidade da consequência social e de saúde. | [F] Entrega 1 (causar um acidente de trânsito ou tirar a autonomia de um idoso sem necessidade). |
+| Q9 | **(Ação — Como)** Como César tenta encontrar a resposta na imagem por conta própria? | Mostra a tentativa manual de procurar desgastes no cérebro olhando corte por corte. | [H] Olhar as fatias da imagem no computador tentando achar alguma alteração a olho nu. |
+| Q10 | **(Evento)** O que faz César parar e investigar mais a fundo? | O momento em que a história da vizinha contraria o laudo "normal". | [F] O relato dos episódios no trânsito e o resultado baixo no teste de memória. |
+| Q11 | **(Avaliação — Objetivo)** Como César vai saber se tomou a decisão certa? | Mostra como é difícil ter certeza imediata nesse tipo de caso. | [H] Apenas no acompanhamento das próximas consultas ou se ocorrer algum incidente. |
+| Q12 | **(Verificação)** O problema é a falta de conhecimento de César ou a falta de clareza sobre o que o laudo analisou? | Garante que o problema principal é a falta de transparência entre a imagem e o resultado. | [H] A ausência de indicação de quais partes do cérebro foram checadas no laudo. |
+
+
+### 3. Cenário refinado
+
+Tudo o que está em **negrito** foi acrescentado no refinamento.
+
+Em um fim de tarde, o Dr. César atende o Sr. Roberto, de 71 anos, que mora sozinho e foi levado à consulta por sua vizinha, Dona Lúcia **[Q6]**. Lúcia relata que o vizinho quase provocou um acidente de carro recente por se confundir no trânsito e que ele tem esquecido panelas no fogo com frequência **[Q10]**. O Sr. Roberto, no entanto, insiste que está bem e quer autorização médica para continuar dirigindo **[Q1]**. **Como a consulta está no final do expediente e há outro paciente aguardando, César precisa decidir a conduta rapidamente [Q3].**
+
+César olha a ressonância do cérebro e o teste de memória do paciente, **precisando abrir o resultado do teste em uma folha de papel e a imagem no computador [Q4]**. O laudo do exame de imagem diz apenas que o cérebro tem "alterações normais para a idade". Mas o teste de memória mostra que a atenção e o raciocínio do Sr. Roberto estão bem abaixo do esperado **[Q2, Q10]**. César tenta olhar a imagem por conta própria para ver se encontra alguma região desgastada que justifique esses erros no trânsito **[Q9]**, mas o laudo não aponta em qual parte da imagem ele deve prestar atenção **[Q12]**. **O texto do laudo é muito resumido e não explica se as áreas do cérebro responsáveis pela atenção e orientação espacial foram avaliadas com cuidado [Q12].**
+
+César tenta ligar para o setor que fez a ressonância para tirar dúvidas sobre a imagem, **mas ninguém atende no momento [Q5]**. **Diante dessa dúvida, César fica dividido entre três caminhos: proibir o paciente de dirigir imediatamente, pedir um novo exame de imagem mais caro ou apenas orientar a vizinha a vigiá-lo mais de perto [Q7].** Sem conseguir conversar com o médico que fez o laudo e sem ter certeza se o problema de memória é grave o bastante, César fica num impasse **[Q1, Q12]**. **Ele sabe que proibir o Sr. Roberto de dirigir sem uma prova clara vai causar um grande impacto na independência do idoso, enquanto liberar o carro pode resultar em um acidente grave na rua [Q8].** Sem tempo para investigar mais e sem certeza nos dados visuais do exame, César opta por proibir a direção temporariamente e pede para retornarem em três meses para novos testes, deixando o paciente frustrado e a vizinha preocupada com a rotina dele **[Q7, Q11]**.
+
+
+### 4. Elementos extraídos
+
+| Elemento | Evidência no cenário |
+|---|---|
+| **Ator(es)** | Dr. César (Neurologista); Sr. Roberto (paciente); Dona Lúcia (vizinha/acompanhante); Médico do laudo (indisponível). |
+| **Objetivo(s)** | Verificar se os dados do exame de imagem confirmam a perda de atenção para decidir se é seguro autorizar o paciente a continuar dirigindo e morando sozinho. |
+| **Contexto** | Consulta no fim do dia; paciente idoso que mora sozinho; divergência entre o laudo que diz "normal" e os erros graves no trânsito relatados pela vizinha. |
+| **Recursos/informações** | Exame de ressonância do cérebro; laudo em texto; resultado do teste de memória em papel; relato da vizinha sobre os quase acidentes. |
+| **Ações** | Ler o laudo; comparar as notas do teste com o relato do paciente; olhar as fatias da imagem no computador; tentar ligar para o setor de exames; proibir o paciente de dirigir temporariamente. |
+| **Problemas/rupturas** | O laudo não mostra em quais partes do cérebro se baseou; divergência entre o exame "normal" e a perda de memória real do paciente; falta de comunicação entre os médicos. |
+| **Consequências** | Perda da independência do paciente sem uma confirmação visual clara; insatisfação do paciente; necessidade de remarcar consulta em três meses. |
+
+
+### 5. Implicações para as próximas entregas
+
+- **Análise de Tarefas (Entrega 5):** Mapear a tarefa de "Avaliação de aptidão e autonomia do paciente", focando em como o médico cruza queixas do dia a dia (como dirigir) com testes cognitivos e imagens.
+- **Rastreabilidade:** Vincular este cenário (C04) à Persona **P02 (Dr. César - Neurologista)** e às Hipóteses H01/H05.
+- **Validação com Usuários (Entrega 7):** Entrevistar neurologistas para entender como eles lidam com situações em que precisam restringir tarefas do paciente (como dirigir) quando o laudo do exame vem como "normal para a idade".
+- **Regra de IHC:** Foco total nas dificuldades de processo do médico, sem sugerir telas ou soluções de tecnologia.
 
 ## Checklist
 
-- [ ] Há um cenário completo por integrante.
-- [ ] Cada cenário tem título, ator, objetivo, contexto e problema.
-- [ ] O cenário possui origem rastreável na Entrega 1 ou justifica claramente a inclusão de uma nova situação.
-- [ ] O texto descreve a situação atual, sem antecipar a solução.
+- [x] Há um cenário completo por integrante.
+- [x] Cada cenário tem título, ator, objetivo, contexto e problema.
+- [x] O cenário possui origem rastreável na Entrega 1 ou justifica claramente a inclusão de uma nova situação.
+- [x] O texto descreve a situação atual, sem antecipar a solução.
 - [ ] Para TCC sem interface original, o cenário descreve uma prática humana plausível relacionada à contribuição técnica, e não “a falta de uma tela”.
-- [ ] Questões de refinamento acrescentam informação nova.
-- [ ] O refinamento mostra claramente o que foi adicionado/alterado.
-- [ ] Cenários são diferentes o suficiente para cobrir objetivos/problemas relevantes.
-- [ ] Cada cenário está ligado a persona/necessidade na matriz de rastreabilidade.
+- [x] Questões de refinamento acrescentam informação nova.
+- [x] O refinamento mostra claramente o que foi adicionado/alterado.
+- [x] Cenários são diferentes o suficiente para cobrir objetivos/problemas relevantes.
+- [x] Cada cenário está ligado a persona/necessidade na matriz de rastreabilidade.

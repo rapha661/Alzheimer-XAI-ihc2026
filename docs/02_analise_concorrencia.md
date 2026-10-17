@@ -39,7 +39,7 @@ Retome o mapa inicial de alternativas e produtos citado na Entrega 1. Aqui a equ
 | Dashboards de BI — Tableau, Power BI (item 6.3) | ferramenta cotidiana | Usados por hospitais grandes para auditar performance agregada | [H] | descartar com justificativa — relevante para a persona P03 (gestora hospitalar), que está fora do escopo de IHC desta disciplina (ver Entrega 3); não analisado aqui |
 | Google Scholar, PubMed (item 6.3) | ferramenta cotidiana | Usados por pesquisadores/clínicos acadêmicos para busca de literatura | [F] | descartar com justificativa — ferramenta de busca acadêmica, não de apoio ao diagnóstico; fora da atividade A03 do médico clínico (P01) |
 | ADNI (item 6.2) | análogo (dataset, não interface) | Citado como base de dados de pesquisa usada por modelos de IA para Alzheimer | [F] | descartar com justificativa — é um repositório de dados, não um produto com interface a ser avaliado |
-| Prontuário eletrônico / EHR (item 6.3) | ferramenta cotidiana | Sistema obrigatório em hospitais, usado para documentação estruturada | [F] | descartar com justificativa nesta entrega — é infraestrutura genérica do hospital, não específica ao domínio de XAI/Alzheimer; volta a ser relevante nas Entregas 9–11 (integração do fluxo de registro de decisão) |
+| Prontuário eletrônico / EHR (item 6.3) | ferramenta cotidiana | Sistema obrigatório em hospitais, usado para documentação estruturada | [F] | descartar com justificativa nesta entrega — é infraestrutura genérica do hospital, não específica ao domínio de XAI/Alzheimer |
 
 Se uma hipótese da Entrega 1 for confirmada ou refutada durante esta análise, atualize `H01`, `H02`... em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 
@@ -67,11 +67,11 @@ Esta plataforma reconheceu alguns dos problemas que existiam nos ambientes médi
 
 #### Funcionalidades relevantes
 
-| Funcionalidade | Como é realizada | Evidência/print | Observação de IHC |
-|---|---|---|---|
-| Upload de dados tabulares | Botão que abre uma janela para upload de arquivos | `../assets/02_concorrencia/glasshealth_upload_chat.png` |---|
-| Chat com LLM para relatórios automáticos e direcionamento de diagnóstico | Aba na esquerda da tela com uma barra inferior onde pode digitar | `../assets/02_concorrencia/glasshealth_upload_chat.png` | Uso de fundo claro e preenchimento da altura completa da tela |
-| Dashboard de exibição de dados | Ao subir dados do paciente, há o preenchimento automático do dashboard exibindo estes mesmos | `../assets/02_concorrencia/glasshealth_upload_chat.png` | Elementos arredondados, informações importantes em negrito |
+| Funcionalidade | Como é realizada | Tipo de evidência | Evidência/print | Observação de IHC |
+|---|---|---|---|---|
+| Upload de dados tabulares | Botão que abre uma janela para upload de arquivos | Demonstração/vídeo institucional (descrito, não operado pela equipe) | `../assets/02_concorrencia/glasshealth_upload_chat.png` | — |
+| Chat com LLM para relatórios automáticos e direcionamento de diagnóstico | Aba na esquerda da tela com uma barra inferior onde pode digitar | Observado no frame do material demonstrativo | `../assets/02_concorrencia/glasshealth_upload_chat.png` | Uso de fundo claro e preenchimento da altura completa da tela |
+| Dashboard de exibição de dados | Ao subir dados do paciente, há o preenchimento automático do dashboard exibindo estes mesmos | Descrito pelo material demonstrativo (comportamento não observado diretamente pela equipe) | `../assets/02_concorrencia/glasshealth_upload_chat.png` | Elementos arredondados, informações importantes em negrito |
 
 #### Experiência do usuário e opiniões
 
@@ -101,8 +101,8 @@ Uso de cores claras, elementos arredondados, ícones de acordo com a tarefa ou c
 
 | Ponto | Evidência | Implicação para nosso projeto |
 |---|---|---|
-| Variar cores de fundo de acordo com o funcionalidade geral | `../assets/02_concorrencia/glasshealth_upload_chat.png` | Usar a mesma ideia para facilitar o olhar intuitivo do médico |
-| Uso de cores claras | `../assets/02_concorrencia/glasshealth_upload_chat.png` | Usar a mesma ideia para evitar um estranhamento inicial do usuário com a interface |
+| Variar cores de fundo de acordo com a funcionalidade geral | `../assets/02_concorrencia/glasshealth_upload_chat.png` | Candidato de design a validar: pode facilitar o olhar intuitivo do médico, mas precisa ser testado, não copiado diretamente |
+| Uso de cores claras | `../assets/02_concorrencia/glasshealth_upload_chat.png` | Candidato de design a validar: pode reduzir estranhamento inicial do usuário com a interface |
 
 ### Análise C02 — BrainSee (Darmiyan, Inc.)
 
@@ -120,18 +120,20 @@ BrainSee é um software de IA, desenvolvido pela Darmiyan Inc. É o produto de m
 
 #### Funcionalidades relevantes
 
-| Funcionalidade | Como é realizada | Evidência/print | Observação de IHC |
-|---|---|---|---|
-| Upload de dados do paciente | Médico faz upload do arquivo de MRI e insere manualmente os scores de MMSE e CDR-SB no portal web | Fonte: brainsee.ai/doctors ("Upload brain MRI scan files... Enter MMSE & CDRSB scores") — sem print, portal fechado a cadastro profissional | Fluxo de entrada muito próximo ao nosso F01 (abrir caso com MRI + dados clínicos) |
-| Geração de score de risco (0–100) | Processamento automático no servidor; resultado no mesmo dia; score <50 = baixo risco, >50 = alto risco | Fonte: brainsee.ai/doctors + BioSpace (release oficial) — sem print, portal fechado | Análogo ao nosso F04 (ver grau de confiança) — mas aqui é um único número de risco, não uma explicação de features |
-| Relatório de saída visualizável/baixável/imprimível (PDF) | "View/download BrainSee the analysis report (PDF)" dentro do próprio portal | Fonte: brainsee.ai/doctors — sem print, portal fechado | Relaciona-se a F06 (registrar decisão com justificativa) |
-| Tutorial e guia de interpretação | Material de apoio fornecido junto ao software, tanto para médicos quanto para pacientes/cuidadores | Fonte: Alzforum ("comes with a tutorial and interpretation guide for physicians, as well as a guide for patients and caregivers") — sem print | Reforça diretamente F08 (glossário/ajuda contextual) |
+| Funcionalidade | Como é realizada | Tipo de evidência | Evidência/print | Observação de IHC |
+|---|---|---|---|---|
+| Upload de dados do paciente | Médico faz upload do arquivo de MRI e insere manualmente os scores de MMSE e CDR-SB no portal web | Documentação oficial (texto) | brainsee.ai/doctors ("Upload brain MRI scan files... Enter MMSE & CDRSB scores") — sem print, portal fechado a cadastro profissional | Fluxo de entrada muito próximo ao nosso F01 (abrir caso com MRI + dados clínicos) |
+| Geração de score de risco (0–100) | Processamento automático no servidor; resultado no mesmo dia; score <50 = baixo risco, >50 = alto risco | Documentação oficial + imprensa especializada (texto) | brainsee.ai/doctors + BioSpace (release oficial) — sem print, portal fechado | Análogo ao nosso F04 (ver grau de confiança) — mas aqui é um único número de risco, não uma explicação de features |
+| Relatório de saída visualizável/baixável/imprimível (PDF) | "View/download BrainSee the analysis report (PDF)" dentro do próprio portal | Documentação oficial (texto) | brainsee.ai/doctors — sem print, portal fechado | Relaciona-se a F06 (registrar decisão com justificativa) |
+| Tutorial e guia de interpretação | Material de apoio fornecido junto ao software, tanto para médicos quanto para pacientes/cuidadores | Imprensa especializada (texto) | Alzforum ("comes with a tutorial and interpretation guide for physicians, as well as a guide for patients and caregivers") — sem print | Reforça diretamente F08 (glossário/ajuda contextual) |
 
-> **Nota metodológica**: o portal do BrainSee é fechado com acesso liberado após formulário de verificação profissional (CRM/licença, instituição), aprovado pela Darmiyan. Não há demo público do lado do médico (só um vídeo de imprensa sobre a aprovação da FDA, sem imagens da tela). Por isso as evidências acima são citações de fonte primária (site oficial + imprensa), não capturas de tela. Isso em si é um dado de IHC: o produto não expõe transparência de interface ao público, o que dificulta benchmarking externo — algo que podemos citar como diferencial se o nosso protótipo/documentação for mais aberta.
+> **Nota metodológica / limitação desta análise**: o portal do BrainSee é fechado com acesso liberado após formulário de verificação profissional (CRM/licença, instituição), aprovado pela Darmiyan. **Não existe nenhum print da interface operacional (tela de uso pelo médico) nesta análise.** A imagem `brainsee_portal.png.png` em `assets/02_concorrencia/` corresponde à página institucional/marketing do site, não ao fluxo clínico descrito nesta tabela — por isso não deve ser lida como comprovação visual do C02. Toda a tabela acima é baseada em documentação oficial e imprensa especializada (texto), nunca em observação direta da tela. Isso em si é um dado de IHC: o produto não expõe transparência de interface ao público, o que dificulta benchmarking externo — algo que podemos citar como diferencial se o nosso protótipo/documentação for mais aberta.
 
 #### Experiência do usuário e opiniões
 
- O que existe publicado é a validação clínica do escore: em estudo clínico, médicos não afiliados à Darmiyan usaram o software para prever o prognóstico de 107 pacientes com aMCI amnéstico, comparando a predição com os desfechos clínicos 5 anos depois;
+Tipo de evidência: estudo externo (não produzido pela equipe). O que existe publicado é a validação clínica do escore: em estudo clínico, médicos não afiliados à Darmiyan usaram o software para prever o prognóstico de 107 pacientes com aMCI amnéstico, comparando a predição com os desfechos clínicos 5 anos depois.
+
+Adicionalmente, um estudo independente de formato de explicação em IA clínica — **Al-bakri et al. (2025), publicado em periódico da área de diagnóstico (ver referência abaixo)** — testou diferentes formatos de explicação combinada (imagem + dados clínicos) com uma amostra pequena de 5 médicos e obteve 100% de "trust score" agregado, sendo 20% de confiança total e 80% de confiança apenas condicional. A amostra é pequena e não avalia o BrainSee especificamente, mas é usada nesta entrega como evidência externa (fraca, por n=5) que: (a) reforça parcialmente H01 (explicação combinada pode aumentar confiança), e (b) ao mesmo tempo produz indício contrário a H03, já que mesmo com explicação combinada a maioria dos médicos relatou confiança apenas condicional, não total. Esta é a referência que a matriz de rastreabilidade (`RASTREABILIDADE.md`, H01/H03) cita como "Entrega 2, C02".
 
 #### Preço/modelo de negócio
 
@@ -156,6 +158,10 @@ BrainSee é um software de IA, desenvolvido pela Darmiyan Inc. É o produto de m
 | Empresa fornece guia de interpretação junto ao produto | Confirmado em fonte jornalística (Alzforum) | Reforça a prioridade de F08 (ajuda/glossário) — mesmo um produto aprovado pela FDA sentiu necessidade de "traduzir" o resultado para o médico |
 | Preço alto de tabela (US$1.500) pode ser barreira de adoção, mesmo com desconto temporário | Fonte: Alzforum | Não é um problema de IHC diretamente, mas é contexto de mercado relevante para justificar por que uma alternativa mais acessível (como a proposta do M-XAI) tem valor de negócio, não só técnico |
 
+#### Referência adicional desta análise
+
+- **AL-BAKRI, et al.** Estudo formativo sobre formatos de explicação em IA clínica combinando imagem e dados tabulares, com avaliação de confiança (trust score) por médicos (n=5). 2025. Citado em `RASTREABILIDADE.md` (H01, H03).
+
 ### Análise C03 — OHIF Viewer
 
 **Autor(a):** Ana Carolina Lazzuri - 22.123.001-4
@@ -172,14 +178,14 @@ O OHIF Viewer é o visualizador web de exames DICOM mais usado para integrar mod
 
 #### Funcionalidades relevantes
 
-| Funcionalidade | Como é realizada | Evidência/print | Observação de IHC |
-|---|---|---|---|
-| Visualização de MRI em diferentes formatos (Axial, Sagital, Coronal) | *Viewports* divididos e sincronizados para navegar pelos planos da imagem. | https://github.com/rapha661/Alzheimer-XAI-ihc2026/blob/main/assets/02_concorrencia/Print_1_OHIF.png | O médico já espera usar o *scroll* do mouse para trocar de corte e arrastar para dar zoom/pan. |
-| Controle de Overlays de IA | Botão para ligar/desligar a camada de IA e barra para ajustar a transparência (0 a 100%). |https://github.com/rapha661/Alzheimer-XAI-ihc2026/blob/main/assets/02_concorrencia/Controle_opacidade.pngg * | O usuário precisa conseguir esconder o Grad-CAM para conferir a anatomia real por baixo. |
-| Painel de Dados do Paciente | Barra lateral retrátil com dados do paciente e métricas do exame. |https://github.com/rapha661/Alzheimer-XAI-ihc2026/blob/main/assets/02_concorrencia/Print_1_OHIF.png| Manter as informações na lateral evita poluição visual no centro da tela. |
-| Ajuste de Contraste (*Windowing*) | Arrastar o ponteiro sobre a imagem para alterar brilho e contraste em tempo real. |pendente* | A sobreposição da IA não pode quebrar a ajuste de contraste feito pelo médico. |
+| Funcionalidade | Como é realizada | Tipo de evidência | Evidência/print | Observação de IHC |
+|---|---|---|---|---|
+| Visualização de MRI em diferentes formatos (Axial, Sagital, Coronal) | *Viewports* divididos e sincronizados para navegar pelos planos da imagem. | Print da interface (observado diretamente) | `../assets/02_concorrencia/Print_1_OHIF.png` | O médico já espera usar o *scroll* do mouse para trocar de corte e arrastar para dar zoom/pan. |
+| Controle de Overlays de IA | Botão para ligar/desligar a camada de IA e barra para ajustar a transparência (0 a 100%). | Print da interface (observado diretamente) | `../assets/02_concorrencia/Controle_opacidade.png` | O usuário precisa conseguir esconder o Grad-CAM para conferir a anatomia real por baixo. |
+| Painel de Dados do Paciente | Barra lateral retrátil com dados do paciente e métricas do exame. | Print da interface (observado diretamente) | `../assets/02_concorrencia/Print_1_OHIF.png` | Manter as informações na lateral evita poluição visual no centro da tela. |
+| Ajuste de Contraste (*Windowing*) | Arrastar o ponteiro sobre a imagem para alterar brilho e contraste em tempo real. | Documentação oficial do OHIF (não operado/capturado pela equipe) | pendente* | [H] A sobreposição da IA não pode quebrar o ajuste de contraste feito pelo médico — ainda sem evidência direta que sustente isso. |
 
-*Obs: Não foi possível identificar todas as telas. Algumas telas só são visualizadas ao instalar/executar o visualizador de forma local para a inserção das imagens médicas.
+*Obs: Não foi possível identificar todas as telas. Algumas telas só são visualizadas ao instalar/executar o visualizador de forma local para a inserção das imagens médicas. Os caminhos de evidência apontam para os arquivos locais em `assets/02_concorrencia/`.
 
 #### Experiência do usuário e opiniões
 
@@ -199,10 +205,10 @@ Gratuito e open-source (licença MIT). É financiado pelo *National Cancer Insti
 
 | Ponto | Evidência | Implicação para nosso projeto |
 |---|---|---|
-| Ajuste de transparência do destaque visual | Slider de opacidade presente nas ferramentas de IA do OHIF | O M-XAI deve ter um controle simples para o médico ajustar a opacidade do Grad-CAM sobre a ressonância. |
-| Foco central na imagem com fundo escuro | Design nativo do OHIF em tom escuro  | Usar tema escuro na tela do exame para evitar fadiga visual e destacar o hipocampo. |
-| Poluição visual para o clínico geral | Excesso de botões de medição e calibração no topo da tela | Como nosso foco são profissionais da área da saúde, devemos manter apenas o básico: zoom, contraste, cortes e transparência da IA. |
-| Pouco espaço para dados clínicos fora da imagem | OHIF foca 100% na imagem e joga os dados em abas secundárias | O M-XAI é multimodal; precisamos dar o mesmo destaque visual para a explicação SHAP (dados do paciente) e para o Grad-CAM (imagem). |
+| Ajuste de transparência do destaque visual | Slider de opacidade presente nas ferramentas de IA do OHIF | Candidato (RC01): um controle simples para o médico ajustar a opacidade do Grad-CAM sobre a ressonância, a validar com o usuário. |
+| Foco central na imagem com fundo escuro | Design nativo do OHIF em tom escuro | Candidato (RC02, contextualizado): avaliar tema escuro na área do exame especificamente, não como regra global — ver tensão com C01. |
+| Poluição visual para o clínico geral | Excesso de botões de medição e calibração no topo da tela | Candidato (RC07): como o foco é o clínico geral (não o radiologista), investigar manter apenas o essencial — zoom, contraste, cortes e transparência da IA — mas confirmar com o usuário quais desses são de fato necessários. |
+| Pouco espaço para dados clínicos fora da imagem | OHIF foca 100% na imagem e joga os dados em abas secundárias | Como o M-XAI é multimodal, investigar se a explicação SHAP (dados do paciente) precisa de destaque visual equivalente ao do Grad-CAM (imagem) — hipótese de design, pendente de verificação com a tarefa real de A03. |
 
 ### Análise C04 — iatroX
 
@@ -220,12 +226,14 @@ O iatroX é uma plataforma de IA clínica, registrada como dispositivo médico C
 
 #### Funcionalidades relevantes
 
-| Funcionalidade | Como é realizada | Evidência/print | Observação de IHC |
-|---|---|---|---|
-| Chat de perguntas clínicas com citação de fontes (askiatroX) | Campo de texto (ou voz) onde o médico faz a pergunta; resposta estruturada aparece com "pills" de referência clicáveis que levam direto à guideline original | `../assets/02_concorrencia/pergunta_askiatroX.png` | Uso de citações como elementos de UI (não só texto corrido) parece ser o maior diferencial de confiança da plataforma |
-| Acesso gratuito sem login (20 perguntas de teste) | Botão de "perguntas grátis" que libera uso imediato da IA sem formulário ou verificação profissional | `../assets/02_concorrencia/gratis_askiatroX.png`| Contrasta diretamente com o portal fechado do BrainSee/Neuroreader — reduz fricção de primeiro uso |
-| Calculadoras clínicas dinâmicas (NEWS2, SOFA, Wells etc.) | Formulário de inputs específicos por calculadora, com conversão de unidade automática e faixa de interpretação clínica exibida junto ao resultado | `../assets/02_concorrencia/calculadora_ask.png`| Resultado numérico sempre vem acompanhado de banda de interpretação (ex.: "risco baixo/moderado/alto"), nunca um número isolado |
-| Expansão de raciocínio ("reasoning steps") por resposta | Botão para expandir a resposta padrão e ver passos de raciocínio, diagnósticos diferenciais e marcadores de confiança | `../assets/02_concorrencia/expansao_ask.png` | Camada opcional de profundidade (resposta curta por padrão, detalhe sob demanda) evita sobrecarregar o médico em consultas rápidas |
+| Funcionalidade | Como é realizada | Tipo de evidência | Evidência/print | Observação de IHC |
+|---|---|---|---|---|
+| Chat de perguntas clínicas com citação de fontes (askiatroX) | Campo de texto (ou voz) onde o médico faz a pergunta; resposta estruturada aparece com "pills" de referência clicáveis que levam direto à guideline original | Print mostra a interface inicial do campo de pergunta; **não mostra uma resposta já com as "pills" de citação** — o comportamento de citação vem da documentação oficial, não do print | `../assets/02_concorrencia/pergunta_askiatroX.png` | Uso de citações como elementos de UI (não só texto corrido) parece ser o maior diferencial de confiança da plataforma |
+| Acesso gratuito sem login (20 perguntas de teste) | Botão de "perguntas grátis" que libera uso imediato da IA sem formulário ou verificação profissional | Print da interface (observado diretamente) | `../assets/02_concorrencia/gratis_askiatroX.png`| Contrasta diretamente com o portal fechado do BrainSee/Neuroreader — reduz fricção de primeiro uso |
+| Calculadoras clínicas dinâmicas (NEWS2, SOFA, Wells etc.) | Formulário de inputs específicos por calculadora, com conversão de unidade automática e faixa de interpretação clínica exibida junto ao resultado | Print mostra o acesso à área de calculadoras; **não mostra claramente um resultado numérico já acompanhado da banda de interpretação** | `../assets/02_concorrencia/calculadora_ask.png`| Resultado numérico sempre vem acompanhado de banda de interpretação (ex.: "risco baixo/moderado/alto"), nunca um número isolado |
+| Expansão de raciocínio ("reasoning steps") por resposta | Botão para expandir a resposta padrão e ver passos de raciocínio, diagnósticos diferenciais e marcadores de confiança | Print mostra conteúdo detalhado/editorial da plataforma; **não demonstra de forma inequívoca os "reasoning steps" especificamente** | `../assets/02_concorrencia/expansao_ask.png` | Camada opcional de profundidade (resposta curta por padrão, detalhe sob demanda) evita sobrecarregar o médico em consultas rápidas |
+
+> **Nota metodológica:** os quatro prints comprovam que a equipe navegou por diferentes partes do produto, mas nem todos capturam exatamente o estado descrito na linha correspondente da tabela. Onde isso ocorre, a coluna "Tipo de evidência" torna explícito o que falta.
 
 
 #### Experiência do usuário e opiniões
@@ -282,24 +290,34 @@ Modelo de negócio focado em educação médica/exame (assinatura B2C individual
 
 ## 4. Síntese comparativa da equipe
 
-| Critério | C01 (Glass Health) | C02 (BrainSee) | C03 (OHIF Viewer) | C05 (iatroX) | Oportunidade para o projeto |
+| Critério | C01 (Glass Health) | C02 (BrainSee) | C03 (OHIF Viewer) | C04 (iatroX) | Oportunidade para o projeto |
 |---|---|---|---|---|---|
-| **Navegação** | Baseada em chat e abas de documentos. | Passo a passo direto: Envio → Análise → Relatório. | Telas divididas com navegação de imagens pelo *scroll* do mouse. | Chat de pergunta única, sem etapas — resposta aparece na mesma tela em segundos. | Usar o envio simples do C02 com a tela de visualização direta do C03. |
-| **Feedback/estado** | Respostas de texto em tempo real no chat. | Avisa quando o resultado do score está pronto. | Resposta imediata ao mexer no contraste e botão claro de IA ligada/desligada. | Tempo de resposta declarado abaixo de 20 segundos; resposta curta aparece primeiro, detalhe expande sob clique. | Mostrar na hora o ajuste de transparência e o status de carregamento da IA. |
-| **Prevenção de erro** | Campo de texto livre pode aceitar dados incompletos. | Bloqueia o envio se faltar algum teste ou imagem. | Avisa se o arquivo de imagem estiver corrompido. | Sistema recusa responder ("abstenção segura") quando a confiança é baixa ou a pergunta foge do escopo de guidelines do Reino Unido. | Validar os arquivos e exames antes de enviar para a IA não errar; considerar também abstenção do modelo em casos de baixa confiança, como o C05. |
-| **Terminologia** | Termos médicos do dia a dia da clínica geral. | Linguagem direta focada em probabilidade e testes. | Termos muito técnicos e avançados de radiologia. | Linguagem clínica direta, sempre amarrada ao nome da guideline de origem (NICE, CKS, SIGN, BNF). | Usar termos simples para o clínico geral e explicar nomes difíceis de IA em um glossário. |
-| **Acessibilidade** | Tela clara e focada em leitura de texto. | Visual limpo com opção de relatório fácil de ler e imprimir. | Tela escura nativa para não cansar a vista e destacar detalhes da imagem. | Acesso público, sem cadastro nem paywall na função clínica central. | Adotar tela escura na imagem do cérebro para não cansar a vista do médico; considerar também reduzir a barreira de primeiro acesso ao protótipo, como o C05. |
-| **Eficiência** | Agiliza a criação de relatórios. | Leitura rápida por meio de um score único. | Imagens carregam rápido no navegador. | Resposta média em menos de 20 segundos, otimizada para consulta rápida entre atendimentos. | Juntar a rapidez de resposta do C05 com a facilidade do mouse do C03. |
+| **Navegação** | Baseada em chat e abas de documentos. | Passo a passo direto: Envio → Análise → Relatório. | Telas divididas com navegação de imagens pelo *scroll* do mouse. | Chat de pergunta única, sem etapas — resposta aparece na mesma tela em segundos. | Considerar o envio simples do C02 combinado com a visualização direta do C03 como hipótese de design a validar. |
+| **Feedback/estado** | Respostas de texto em tempo real no chat. | Avisa quando o resultado do score está pronto. | Resposta imediata ao mexer no contraste e botão claro de IA ligada/desligada. | Tempo de resposta declarado abaixo de 20 segundos; resposta curta aparece primeiro, detalhe expande sob clique. | Investigar se mostrar na hora o ajuste de transparência e o status de carregamento da IA ajuda o médico clínico (a validar com usuário, não copiar diretamente). |
+| **Prevenção de erro** | Campo de texto livre pode aceitar dados incompletos. | Bloqueia o envio se faltar algum teste ou imagem. | Avisa se o arquivo de imagem estiver corrompido. | Sistema recusa responder ("abstenção segura") quando a confiança é baixa ou a pergunta foge do escopo de guidelines do Reino Unido. | Considerar validar arquivos/exames antes do envio e investigar abstenção do modelo em casos de baixa confiança (princípio do C04), como candidatas de design. |
+| **Terminologia** | Termos médicos do dia a dia da clínica geral. | Linguagem direta focada em probabilidade e testes. | Termos muito técnicos e avançados de radiologia. | Linguagem clínica direta, sempre amarrada ao nome da guideline de origem (NICE, CKS, SIGN, BNF). | Usar termos simples para o clínico geral e considerar um glossário para termos técnicos de IA — a validar com o público real. |
+| **Acessibilidade** | Tela clara e focada em leitura de texto. | Visual limpo com opção de relatório fácil de ler e imprimir. | Tela escura nativa para não cansar a vista e destacar detalhes da imagem. | Acesso público, sem cadastro nem paywall na função clínica central. | Avaliar tema escuro **especificamente na área de visualização da MRI** (não como regra global — ver RC02); considerar reduzir a barreira de primeiro acesso ao protótipo, como o C04. |
+| **Eficiência** | Agiliza a criação de relatórios. | Leitura rápida por meio de um score único. | Imagens carregam rápido no navegador. | Resposta média em menos de 20 segundos, otimizada para consulta rápida entre atendimentos. | Investigar como combinar rapidez de resposta (C04) com a facilidade de navegação por imagem (C03), como hipóteses de design a testar. |
 
 ## 5. Recomendações derivadas
 
-- **RC01:** Usar um controle de transparência (0% a 100%) no mapa de calor da ressonância — derivada do C03 (OHIF Viewer), permitindo que o médico veja a imagem real do cérebro por baixo do destaque da IA.
-- **RC02:** Adotar fundo escuro (*dark mode*) na tela do exame — derivada do C03 (OHIF Viewer), para não cansar a vista do médico e destacar as nuances de cinza da imagem.
-- **RC03:** Exibir a chance de diagnosticada em um score de risco simples — derivada do C02 (BrainSee), agilizando a leitura do caso durante consultas curtas.
-- **RC04:** Incluir um guia ou glossário explicativo junto com o resultado — derivada do C02 (BrainSee) e C01 (Glass Health), para ajudar o clínico geral a entender os termos da IA e explicar o quadro para o paciente.
-- **RC05:** Criar um formulário de envio de dados simples e em etapas (imagem + testes) — derivada do C02 (BrainSee), evitando que o sistema receba dados incompletos.
-- **RC06:** Colocar as informações do paciente e os gráficos em painéis laterais dobráveis — derivada do C03 (OHIF Viewer), mantendo a tela limpa e o foco principal no cérebro.
-- **RC07:** Manter apenas os botões essenciais na tela (zoom, contraste, cortes e transparência) — derivada de limitação do C03 (OHIF Viewer), evitando poluição visual para o clínico geral.
+As recomendações abaixo são **princípios/decisões candidatas a validar**, não soluções finais já definidas pela análise de concorrência. "O concorrente faz X" não significa "a persona do M-XAI precisa de X" — essa verificação ainda está pendente.
+
+- **RC01:** Considerar um controle de transparência (0% a 100%) no mapa de calor da ressonância — candidato derivado do C03 (OHIF Viewer), para permitir que o médico compare a imagem original com o destaque da IA. A validar se o médico clínico (diferente do radiologista do C03) realmente usa esse controle.
+- **RC02:** Avaliar fundo escuro (*dark mode*) **especificamente na área de visualização da MRI**, não como regra global da interface — candidato derivado do C03 (OHIF Viewer). Esta recomendação foi contextualizada porque o C01 (Glass Health) mostra o oposto (cores claras) funcionando bem para áreas de dados/chat; dark mode parece fazer sentido para a tarefa de inspecionar a imagem, não para toda a tela.
+- **RC03:** Investigar que tipo de síntese numérica (se houver) faz sentido para a saída específica do M-XAI, acompanhada sempre de evidência e interpretação — derivada do C02 (BrainSee). Importante: o score do BrainSee representa risco de progressão em 5 anos de um perfil específico de paciente, o que não é equivalente a probabilidade de "ter Alzheimer", confiança do modelo, probabilidade de a classificação estar correta, ou grau de evidência da explicação. O M-XAI precisa definir o que seu número efetivamente representa antes de decidir como apresentá-lo — não basta copiar um score 0–100. Princípio a reter: *oferecer síntese rápida sem ocultar a evidência e a incerteza que devem sustentar a decisão* (ligado a H03).
+- **RC04:** Considerar um guia ou glossário explicativo junto com o resultado — candidato derivado do C02 (BrainSee) e C01 (Glass Health), para ajudar o clínico geral a entender os termos da IA. A validar com o público real quanto detalhe é necessário.
+- **RC05:** Considerar um formulário de envio de dados em etapas (imagem + testes), com verificação de completude antes do envio — candidato derivado do C02 (BrainSee).
+- **RC06:** Considerar painéis laterais dobráveis para informações do paciente e gráficos — candidato derivado do C03 (OHIF Viewer), mantendo a tela limpa; **atenção**: o próprio C03 mostra o risco de informação importante ficar escondida se o painel ficar fechado por padrão.
+- **RC07:** Priorizar a imagem durante a tarefa de inspeção, reduzindo ferramentas não relevantes ao clínico geral — candidato derivado de limitação observada no C03 (OHIF Viewer), cujo excesso de ferramentas técnicas de radiologia não se aplica ao perfil prioritário do M-XAI (médico clínico, não radiologista).
+- **RC08 (novo — derivado do C04/iatroX):** Investigar apresentar a explicação em camadas — resumo/síntese primeiro, com Grad-CAM e SHAP detalhados disponíveis por expansão sob demanda — em vez de mostrar tudo de uma vez. Princípio observado no iatroX ("resposta curta por padrão, detalhe sob demanda").
+- **RC09 (novo — derivado do C04/iatroX):** Investigar como tornar a origem/rastreabilidade de uma informação visível dentro da própria explicação (ex.: cada feature do SHAP referenciando de onde vem o dado), e não apenas em rodapé ou documento separado — princípio de "citação embutida" observado no iatroX.
+- **RC10 (novo — derivado do C04/iatroX):** Sempre que o M-XAI exibir um valor numérico (score, probabilidade, confiança), acompanhá-lo de uma interpretação/banda contextual (ex.: "baixo/moderado/alto"), nunca de um número isolado — princípio observado tanto no iatroX quanto no BrainSee (RC03), reforçado como padrão recorrente em mais de uma referência.
+- **RC11 (novo — derivado do C04/iatroX):** Investigar como comunicar explicitamente os limites de generalização do modelo (ex.: dataset de treinamento, população representada) na própria interface — princípio observado no iatroX, que declara explicitamente ser "UK-gated". Relevante para o M-XAI por usar o dataset ADNI, predominantemente norte-americano.
+
+### Separação entre recomendação de interação e argumento comercial
+
+Preço, modelo de assinatura e acesso sem cadastro (observados em C01, C02 e C04) ajudam a entender o mercado, mas não geram decisão de IHC para o recorte desta disciplina com o mesmo peso de RC01–RC11. Argumentos de preço/negócio ficam registrados como contexto de mercado (ver seções de preço de cada análise), não como recomendação de design.
 
 ## Referências
 

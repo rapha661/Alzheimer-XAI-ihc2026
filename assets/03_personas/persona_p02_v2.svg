@@ -1,0 +1,83 @@
+<svg viewBox="0 0 900 755" width="900" height="755" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, sans-serif">
+  <title>P02 — Dr. César Andrade de Melo</title>
+  <defs>
+    <style>
+      .h1 { font: 700 26px 'Segoe UI', Arial, sans-serif; fill: #ffffff; }
+      .h2 { font: 600 15px 'Segoe UI', Arial, sans-serif; fill: #ffffff; opacity: 0.9; }
+      .quote { font: italic 500 15px 'Segoe UI', Arial, sans-serif; fill: #dcebf1; }
+      .label { font: 700 13px 'Segoe UI', Arial, sans-serif; fill: #1d4e6b; letter-spacing: 0.5px; }
+      .ev { font: 700 11px 'Segoe UI', Arial, sans-serif; fill: #3f8ca6; }
+      .body { font: 400 14px 'Segoe UI', Arial, sans-serif; fill: #2c3e46; }
+      .note { font: italic 400 12px 'Segoe UI', Arial, sans-serif; fill: #5b7480; }
+      .tag { font: 600 12px 'Segoe UI', Arial, sans-serif; fill: #ffffff; }
+      .footer { font: 600 12px 'Segoe UI', Arial, sans-serif; fill: #ffffff; }
+      .footer2 { font: 400 11px 'Segoe UI', Arial, sans-serif; fill: #cfe3ec; }
+    </style>
+  </defs>
+  <rect width="900" height="755" fill="#f4f8fa"/>
+
+  <rect x="0" y="0" width="900" height="140" fill="#1d4e6b"/>
+  <circle cx="90" cy="70" r="46" fill="#ffffff" opacity="0.15"/>
+  <circle cx="90" cy="58" r="18" fill="#ffffff"/>
+  <path d="M55 105 Q90 68 125 105 L125 112 L55 112 Z" fill="#ffffff"/>
+
+  <text x="160" y="52" class="h1">Dr. César Andrade de Melo</text>
+  <text x="160" y="77" class="h2">Médico Neurologista — Centro de Referência / Hospital Universitário</text>
+  <text x="160" y="106" class="quote">“Preciso entender o raciocínio da IA para auditar casos difíceis e respaldar o parecer final.”</text>
+
+  <rect x="690" y="26" width="180" height="28" rx="14" fill="#3f8ca6"/>
+  <text x="780" y="45" text-anchor="middle" class="tag">Persona Primária — P02</text>
+  <rect x="690" y="62" width="180" height="24" rx="12" fill="#2a6b85"/>
+  <text x="780" y="79" text-anchor="middle" class="tag" style="font-size:11px">Idade: 45–60 anos</text>
+
+  <text x="30" y="175" class="label">OCUPAÇÃO / PAPEL<tspan class="ev" dx="6">[F]</tspan></text>
+  <text x="30" y="196" class="body">Neurologista especialista em</text>
+  <text x="30" y="214" class="body">demências e desordens</text>
+  <text x="30" y="232" class="body">cognitivas</text>
+  <text x="30" y="266" class="label">CONHECIMENTO DO DOMÍNIO<tspan class="ev" dx="6">[H]</tspan></text>
+  <text x="30" y="287" class="body">Alto em neuroimagem e testes</text>
+  <text x="30" y="305" class="body">cognitivos, dentro da sua</text>
+  <text x="30" y="323" class="body">especialização; não</text>
+  <text x="30" y="341" class="body">necessariamente em IA/ML</text>
+  <text x="30" y="375" class="label">EXPERIÊNCIA TECNOLÓGICA<tspan class="ev" dx="6">[H]</tspan></text>
+  <text x="30" y="396" class="body">Média-alta — usa PACS e</text>
+  <text x="30" y="414" class="body">visualizadores DICOM;</text>
+  <text x="30" y="432" class="body">cético a IAs “caixa-preta”</text>
+  <text x="30" y="466" class="label">AMBIENTE TÍPICO DE USO<tspan class="ev" dx="6">[F/H]</tspan></text>
+  <text x="30" y="487" class="body">Consultório especializado;</text>
+  <text x="30" y="505" class="body">desktop de alta resolução</text>
+  <text x="30" y="523" class="body">integrado ao PACS</text>
+  <text x="320" y="175" class="label">OBJETIVOS<tspan class="ev" dx="6">[H]</tspan></text>
+  <text x="320" y="196" class="body">Avaliar casos incertos e dar</text>
+  <text x="320" y="214" class="body">a palavra final quando há</text>
+  <text x="320" y="232" class="body">opiniões diferentes</text>
+  <text x="320" y="266" class="label">NECESSIDADES<tspan class="ev" dx="6">[H]</tspan></text>
+  <text x="320" y="287" class="body">Ver destaques anatômicos</text>
+  <text x="320" y="305" class="body">(Grad-CAM), pesos dos dados</text>
+  <text x="320" y="323" class="body">(SHAP) e exportar laudo</text>
+  <text x="320" y="357" class="label">MOTIVADORES<tspan class="ev" dx="6">[H]</tspan></text>
+  <text x="320" y="378" class="body">Precisão diagnóstica precoce</text>
+  <text x="320" y="396" class="body">e respaldo técnico para a</text>
+  <text x="320" y="414" class="body">decisão</text>
+  <text x="610" y="175" class="label">DORES / FRUSTRAÇÕES<tspan class="ev" dx="6">[H]</tspan></text>
+  <text x="610" y="196" class="body">Receber diagnósticos prévios</text>
+  <text x="610" y="214" class="body">inconsistentes e ter que</text>
+  <text x="610" y="232" class="body">reavaliar a MRI do zero</text>
+  <text x="610" y="266" class="label">RESTRIÇÕES / ACESSIBILIDADE<tspan class="ev" dx="6">[H]</tspan></text>
+  <text x="610" y="287" class="body">Alta carga de casos por</text>
+  <text x="610" y="305" class="body">turno</text>
+  <text x="610" y="339" class="label">COMPORTAMENTOS RELEVANTES<tspan class="ev" dx="6">[H]</tspan></text>
+  <text x="610" y="360" class="body">Analisa cortes da MRI,</text>
+  <text x="610" y="378" class="body">cruza com testes cognitivos</text>
+  <text x="610" y="396" class="body">e emite o parecer final</text>
+  <line x1="30" y1="557" x2="870" y2="557" stroke="#c7d9df" stroke-width="1"/>
+  <text x="30" y="582" class="label">DECISÕES DE DESIGN INFLUENCIADAS POR P02 (HIPÓTESES)</text>
+  <text x="30" y="604" class="body">• [H] Ajuste de transparência do Grad-CAM (0% a 100%) para inspecionar a MRI original</text>
+  <text x="30" y="623" class="body">• [H] Gráficos dos atributos clínicos (SHAP) como camada extra de detalhe, além do score</text>
+  <text x="30" y="642" class="body">• [H] Navegação por cortes (scroll, contraste) como no fluxo de radiologia</text>
+  <text x="30" y="661" class="body">• [H] Laudo exportável para anexar ao prontuário</text>
+  <text x="30" y="682" class="note">Parte destas ideias veio da análise do OHIF Viewer (Entrega 2) — o concorrente usar não significa que P02 precise.</text>
+  <rect x="0" y="711" width="900" height="44" fill="#1d4e6b"/>
+  <text x="450" y="729" text-anchor="middle" class="footer">Base: Entrega 1 (itens 2.2, 2.4, 4.5) e Entrega 2 (OHIF Viewer, BrainSee) · Hipótese relacionada: H03</text>
+  <text x="450" y="746" text-anchor="middle" class="footer2">No fluxo: recebe os casos difíceis encaminhados por P01 e valida o parecer · [F] evidência da Entrega 1 · [H] hipótese da equipe</text>
+</svg>

@@ -1,0 +1,98 @@
+<svg viewBox="0 0 1000 865" width="1000" height="865" xmlns="http://www.w3.org/2000/svg">
+  <title>Mapa de Empatia — P01</title>
+  <defs>
+    <style>
+      .h1 { font: 700 22px 'Segoe UI', Arial, sans-serif; fill: #1d4e6b; }
+      .h2 { font: 600 14px 'Segoe UI', Arial, sans-serif; fill: #2c3e46; }
+      .qlabel { font: 700 15px 'Segoe UI', Arial, sans-serif; fill: #1d4e6b; }
+      .body { font: 400 13px 'Segoe UI', Arial, sans-serif; fill: #2c3e46; }
+      .tag { font: 700 11px 'Segoe UI', Arial, sans-serif; fill: #3f8ca6; }
+      .boxlabel { font: 700 14px 'Segoe UI', Arial, sans-serif; fill: #ffffff; }
+      .footer { font: 600 12px 'Segoe UI', Arial, sans-serif; fill: #ffffff; opacity: 0.9; }
+    </style>
+  </defs>
+
+  <rect width="1000" height="865" fill="#ffffff"/>
+
+  <!-- Header -->
+  <text x="40" y="42" class="h1">Mapa de Empatia — Persona P01</text>
+  <text x="40" y="66" class="h2">Nome: Dr. Marcos Andrade &#160;&#160;&#160;&#160; Idade: 30–45 anos &#160;&#160;&#160;&#160; Papel: Médico Clínico / Generalista</text>
+
+  <!-- Main frame -->
+  <rect x="40" y="90" width="920" height="470" fill="#f4f8fa" stroke="#c7d9df" stroke-width="1.5"/>
+
+  <!-- Diagonals from center to corners -->
+  <g stroke="#a9c2cc" stroke-width="1.5" stroke-dasharray="6,5">
+    <line x1="500" y1="325" x2="40" y2="90"/>
+    <line x1="500" y1="325" x2="960" y2="90"/>
+    <line x1="500" y1="325" x2="40" y2="560"/>
+    <line x1="500" y1="325" x2="960" y2="560"/>
+  </g>
+
+  <!-- Center face -->
+  <circle cx="500" cy="325" r="42" fill="#ffffff" stroke="#1d4e6b" stroke-width="2.5"/>
+  <circle cx="484" cy="316" r="4" fill="#1d4e6b"/>
+  <circle cx="516" cy="316" r="4" fill="#1d4e6b"/>
+  <path d="M480 340 Q500 355 520 340" fill="none" stroke="#1d4e6b" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- PENSA E SENTE (top) -->
+  <text x="500" y="118" text-anchor="middle" class="qlabel">O QUE PENSA E SENTE?</text>
+  <text x="500" y="140" text-anchor="middle" class="tag">[H]</text>
+  <text x="500" y="163" text-anchor="middle" class="body">"Será que estou certo? Não quero atrasar</text>
+  <text x="500" y="181" text-anchor="middle" class="body">nem errar o diagnóstico deste paciente."</text>
+  <text x="500" y="205" text-anchor="middle" class="body">Sente-se sozinho ao decidir sem apoio</text>
+  <text x="500" y="223" text-anchor="middle" class="body">técnico imediato.</text>
+
+  <!-- OUVE (left) -->
+  <text x="60" y="230" class="qlabel">O QUE OUVE?</text>
+  <text x="60" y="250" class="tag">[H]</text>
+  <text x="60" y="278" class="body">Colegas comentando casos de</text>
+  <text x="60" y="296" class="body">discordância entre especialistas.</text>
+  <text x="60" y="322" class="body">Famílias de pacientes pedindo</text>
+  <text x="60" y="340" class="body">respostas rápidas.</text>
+  <text x="60" y="366" class="body">A instituição cobrando</text>
+  <text x="60" y="384" class="body">documentação para auditoria.</text>
+
+  <!-- VÊ (right) -->
+  <text x="940" y="230" text-anchor="end" class="qlabel">O QUE VÊ?</text>
+  <text x="940" y="250" text-anchor="end" class="tag">[F]/[H]</text>
+  <text x="940" y="278" text-anchor="end" class="body">Fila de pacientes esperando</text>
+  <text x="940" y="296" text-anchor="end" class="body">atendimento.</text>
+  <text x="940" y="322" text-anchor="end" class="body">Relatórios de radiologia em texto</text>
+  <text x="940" y="340" text-anchor="end" class="body">livre, sem score objetivo.</text>
+  <text x="940" y="366" text-anchor="end" class="body">Prontuário que não se conecta ao</text>
+  <text x="940" y="384" text-anchor="end" class="body">resultado de imagem.</text>
+
+  <!-- FALA E FAZ (bottom) -->
+  <text x="500" y="440" text-anchor="middle" class="qlabel">O QUE FALA E FAZ?</text>
+  <text x="500" y="460" text-anchor="middle" class="tag">[H]</text>
+  <text x="500" y="483" text-anchor="middle" class="body">Explica o diagnóstico ao paciente e à família em linguagem simples.</text>
+  <text x="500" y="503" text-anchor="middle" class="body">Documenta a decisão no prontuário.</text>
+  <text x="500" y="523" text-anchor="middle" class="body">Às vezes liga para um colega pedindo uma opinião informal.</text>
+
+  <!-- Dores / Necessidades boxes -->
+  <rect x="40" y="585" width="450" height="240" fill="#1d4e6b"/>
+  <text x="60" y="618" class="boxlabel">QUAIS SÃO AS DORES?</text>
+  <text x="465" y="618" text-anchor="end" class="tag" fill="#cfe3ec" style="fill:#cfe3ec">[H]</text>
+  <text x="60" y="655" class="body" fill="#ffffff" style="fill:#ffffff">• Decidir sozinho, sem apoio técnico imediato</text>
+  <text x="60" y="683" class="body" fill="#ffffff" style="fill:#ffffff">• Medo de errar o diagnóstico e de responder</text>
+  <text x="60" y="701" class="body" fill="#ffffff" style="fill:#ffffff">&#160;&#160;por isso legalmente</text>
+  <text x="60" y="729" class="body" fill="#ffffff" style="fill:#ffffff">• Informação insuficiente ou mal documentada</text>
+  <text x="60" y="747" class="body" fill="#ffffff" style="fill:#ffffff">&#160;&#160;no relatório de imagem</text>
+
+  <rect x="510" y="585" width="450" height="240" fill="#3f8ca6"/>
+  <text x="530" y="618" class="boxlabel">QUAIS SÃO OS GANHOS?</text>
+  <text x="935" y="618" text-anchor="end" class="tag" style="fill:#eaf6f9">[H]</text>
+  <text x="530" y="655" class="body" fill="#ffffff" style="fill:#ffffff">• Sair da consulta seguro da decisão que tomou</text>
+  <text x="530" y="673" class="body" fill="#ffffff" style="fill:#ffffff">&#160;&#160;e de como explicá-la</text>
+  <text x="530" y="701" class="body" fill="#ffffff" style="fill:#ffffff">• Ter a decisão respaldada e documentada</text>
+  <text x="530" y="719" class="body" fill="#ffffff" style="fill:#ffffff">&#160;&#160;sem esforço extra</text>
+  <text x="530" y="747" class="body" fill="#ffffff" style="fill:#ffffff">• Saber quando e como passar o caso adiante,</text>
+  <text x="530" y="765" class="body" fill="#ffffff" style="fill:#ffffff">&#160;&#160;sem sentir que "falhou"</text>
+  <text x="530" y="793" class="body" fill="#ffffff" style="fill:#ffffff">• Ser visto pela família como quem explica,</text>
+  <text x="530" y="811" class="body" fill="#ffffff" style="fill:#ffffff">&#160;&#160;não só como quem dá o diagnóstico</text>
+
+  <!-- Footer -->
+  <rect x="0" y="840" width="1000" height="25" fill="#1d4e6b"/>
+  <text x="500" y="857" text-anchor="middle" class="footer">Base: Entrega 1 (itens 4.1, 4.2, 4.5, 5.4, 5.5) e Entrega 3 (P01) · Hipóteses relacionadas: H01, H03 · [F] evidência da Entrega 1 · [H] hipótese da equipe</text>
+</svg>

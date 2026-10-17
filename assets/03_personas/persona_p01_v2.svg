@@ -1,0 +1,83 @@
+<svg viewBox="0 0 900 661" width="900" height="661" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, sans-serif">
+  <title>P01 — Dr. Marcos Andrade</title>
+  <defs>
+    <style>
+      .h1 { font: 700 26px 'Segoe UI', Arial, sans-serif; fill: #ffffff; }
+      .h2 { font: 600 15px 'Segoe UI', Arial, sans-serif; fill: #ffffff; opacity: 0.9; }
+      .quote { font: italic 500 15px 'Segoe UI', Arial, sans-serif; fill: #dcebf1; }
+      .label { font: 700 13px 'Segoe UI', Arial, sans-serif; fill: #1d4e6b; letter-spacing: 0.5px; }
+      .ev { font: 700 11px 'Segoe UI', Arial, sans-serif; fill: #3f8ca6; }
+      .body { font: 400 14px 'Segoe UI', Arial, sans-serif; fill: #2c3e46; }
+      .note { font: italic 400 12px 'Segoe UI', Arial, sans-serif; fill: #5b7480; }
+      .tag { font: 600 12px 'Segoe UI', Arial, sans-serif; fill: #ffffff; }
+      .footer { font: 600 12px 'Segoe UI', Arial, sans-serif; fill: #ffffff; }
+      .footer2 { font: 400 11px 'Segoe UI', Arial, sans-serif; fill: #cfe3ec; }
+    </style>
+  </defs>
+  <rect width="900" height="661" fill="#f4f8fa"/>
+
+  <rect x="0" y="0" width="900" height="140" fill="#1d4e6b"/>
+  <circle cx="90" cy="70" r="46" fill="#ffffff" opacity="0.15"/>
+  <circle cx="90" cy="58" r="18" fill="#ffffff"/>
+  <path d="M55 105 Q90 68 125 105 L125 112 L55 112 Z" fill="#ffffff"/>
+
+  <text x="160" y="52" class="h1">Dr. Marcos Andrade</text>
+  <text x="160" y="77" class="h2">Médico Clínico — Atenção Primária / Hospital Geral</text>
+  <text x="160" y="106" class="quote">“Preciso decidir com confiança, sem ter que esperar meses por um especialista.”</text>
+
+  <rect x="690" y="26" width="180" height="28" rx="14" fill="#3f8ca6"/>
+  <text x="780" y="45" text-anchor="middle" class="tag">Persona Primária — P01</text>
+  <rect x="690" y="62" width="180" height="24" rx="12" fill="#2a6b85"/>
+  <text x="780" y="79" text-anchor="middle" class="tag" style="font-size:11px">Idade: 30–45 anos</text>
+
+  <text x="30" y="175" class="label">OCUPAÇÃO / PAPEL<tspan class="ev" dx="6">[F]</tspan></text>
+  <text x="30" y="196" class="body">Clínico generalista sem</text>
+  <text x="30" y="214" class="body">expertise em neuroimagem</text>
+  <text x="30" y="248" class="label">CONHECIMENTO DO DOMÍNIO<tspan class="ev" dx="6">[F/H]</tspan></text>
+  <text x="30" y="269" class="body">Médio — conhece critérios</text>
+  <text x="30" y="287" class="body">clínicos de AD (MMSE/MoCA),</text>
+  <text x="30" y="305" class="body">mas não interpreta MRI</text>
+  <text x="30" y="339" class="label">EXPERIÊNCIA TECNOLÓGICA<tspan class="ev" dx="6">[H]</tspan></text>
+  <text x="30" y="360" class="body">Média — usa prontuário</text>
+  <text x="30" y="378" class="body">eletrônico no dia a dia</text>
+  <text x="30" y="412" class="label">AMBIENTE TÍPICO DE USO<tspan class="ev" dx="6">[F]</tspan></text>
+  <text x="30" y="433" class="body">Consultório de atenção</text>
+  <text x="30" y="451" class="body">primária ou hospital geral;</text>
+  <text x="30" y="469" class="body">consultas com tempo limitado</text>
+  <text x="320" y="175" class="label">OBJETIVOS<tspan class="ev" dx="6">[F]</tspan></text>
+  <text x="320" y="196" class="body">Compreender a sugestão da IA</text>
+  <text x="320" y="214" class="body">e decidir com confiança</text>
+  <text x="320" y="232" class="body">proporcional, sem depender</text>
+  <text x="320" y="250" class="body">de especialista</text>
+  <text x="320" y="284" class="label">NECESSIDADES<tspan class="ev" dx="6">[H]</tspan></text>
+  <text x="320" y="305" class="body">Explicação clara (imagem +</text>
+  <text x="320" y="323" class="body">dados clínicos); confiança</text>
+  <text x="320" y="341" class="body">compreensível; documentar e</text>
+  <text x="320" y="359" class="body">encaminhar com facilidade</text>
+  <text x="320" y="393" class="label">MOTIVADORES<tspan class="ev" dx="6">[H]</tspan></text>
+  <text x="320" y="414" class="body">Cuidar bem do paciente,</text>
+  <text x="320" y="432" class="body">evitar erro, ter respaldo</text>
+  <text x="320" y="450" class="body">documental da decisão</text>
+  <text x="610" y="175" class="label">DORES / FRUSTRAÇÕES<tspan class="ev" dx="6">[H]</tspan></text>
+  <text x="610" y="196" class="body">Fila de espera por</text>
+  <text x="610" y="214" class="body">especialista; discordância</text>
+  <text x="610" y="232" class="body">entre pareceres; falta de</text>
+  <text x="610" y="250" class="body">justificativa técnica</text>
+  <text x="610" y="284" class="label">RESTRIÇÕES / ACESSIBILIDADE<tspan class="ev" dx="6">[F/H]</tspan></text>
+  <text x="610" y="305" class="body">Tempo curto por caso;</text>
+  <text x="610" y="323" class="body">iluminação variável;</text>
+  <text x="610" y="341" class="body">estação compartilhada</text>
+  <text x="610" y="375" class="label">COMPORTAMENTOS RELEVANTES<tspan class="ev" dx="6">[H]</tspan></text>
+  <text x="610" y="396" class="body">Aplica MMSE/MoCA; pode</text>
+  <text x="610" y="414" class="body">pedir opinião informal a</text>
+  <text x="610" y="432" class="body">um colega; registra a</text>
+  <text x="610" y="450" class="body">decisão no prontuário</text>
+  <line x1="30" y1="503" x2="870" y2="503" stroke="#c7d9df" stroke-width="1"/>
+  <text x="30" y="528" class="label">DECISÕES DE DESIGN INFLUENCIADAS POR P01</text>
+  <text x="30" y="550" class="body">• Explicação em linguagem clínica, nunca só jargão de ML (Grad-CAM/SHAP sem contexto)</text>
+  <text x="30" y="569" class="body">• Grau de confiança sempre acompanhado de explicação — nunca um número isolado</text>
+  <text x="30" y="588" class="body">• [H] Caminho para encaminhar a especialista acessível durante a decisão (forma a definir)</text>
+  <rect x="0" y="617" width="900" height="44" fill="#1d4e6b"/>
+  <text x="450" y="635" text-anchor="middle" class="footer">Base: Entrega 1 (itens 2.2, 2.4, 7.2, 7.3) e Entrega 2 (Al-bakri et al., 2025) · Hipótese relacionada: H03</text>
+  <text x="450" y="652" text-anchor="middle" class="footer2">No fluxo: interpreta a explicação e decide; aciona P02 em casos difíceis · [F] evidência da Entrega 1 · [H] hipótese da equipe</text>
+</svg>

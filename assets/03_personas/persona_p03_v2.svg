@@ -1,0 +1,86 @@
+<svg viewBox="0 0 900 718" width="900" height="718" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, sans-serif">
+  <title>P03 — Dra. Helena Siqueira Prado</title>
+  <defs>
+    <style>
+      .h1 { font: 700 26px 'Segoe UI', Arial, sans-serif; fill: #ffffff; }
+      .h2 { font: 600 15px 'Segoe UI', Arial, sans-serif; fill: #ffffff; opacity: 0.9; }
+      .quote { font: italic 500 15px 'Segoe UI', Arial, sans-serif; fill: #dcebf1; }
+      .label { font: 700 13px 'Segoe UI', Arial, sans-serif; fill: #1d4e6b; letter-spacing: 0.5px; }
+      .ev { font: 700 11px 'Segoe UI', Arial, sans-serif; fill: #3f8ca6; }
+      .body { font: 400 14px 'Segoe UI', Arial, sans-serif; fill: #2c3e46; }
+      .note { font: italic 400 12px 'Segoe UI', Arial, sans-serif; fill: #5b7480; }
+      .tag { font: 600 12px 'Segoe UI', Arial, sans-serif; fill: #ffffff; }
+      .footer { font: 600 12px 'Segoe UI', Arial, sans-serif; fill: #ffffff; }
+      .footer2 { font: 400 11px 'Segoe UI', Arial, sans-serif; fill: #cfe3ec; }
+    </style>
+  </defs>
+  <rect width="900" height="718" fill="#f4f8fa"/>
+
+  <rect x="0" y="0" width="900" height="140" fill="#1d4e6b"/>
+  <circle cx="90" cy="70" r="46" fill="#ffffff" opacity="0.15"/>
+  <circle cx="90" cy="58" r="18" fill="#ffffff"/>
+  <path d="M55 105 Q90 68 125 105 L125 112 L55 112 Z" fill="#ffffff"/>
+
+  <text x="160" y="52" class="h1">Dra. Helena Siqueira Prado</text>
+  <text x="160" y="77" class="h2">Radiologista — Serviço de Telerradiologia</text>
+  <text x="160" y="106" class="quote">“Sem a pergunta clínica, eu descrevo a imagem;</text><text x="160" y="125" class="quote">não consigo responder ao que o médico quer saber.” [H]</text>
+
+  <rect x="690" y="26" width="180" height="28" rx="14" fill="#5a7f95"/>
+  <text x="780" y="45" text-anchor="middle" class="tag">Persona Secundária — P03</text>
+  <rect x="690" y="62" width="180" height="24" rx="12" fill="#2a6b85"/>
+  <text x="780" y="79" text-anchor="middle" class="tag" style="font-size:11px">Idade: 35–50 anos</text>
+
+  <text x="30" y="175" class="label">OCUPAÇÃO / PAPEL<tspan class="ev" dx="6">[F/H]</tspan></text>
+  <text x="30" y="196" class="body">Radiologista; interpreta a</text>
+  <text x="30" y="214" class="body">MRI e emite o laudo para</text>
+  <text x="30" y="232" class="body">mais de um hospital</text>
+  <text x="30" y="266" class="label">CONHECIMENTO DO DOMÍNIO<tspan class="ev" dx="6">[F/H]</tspan></text>
+  <text x="30" y="287" class="body">Alto em imagem (atrofia,</text>
+  <text x="30" y="305" class="body">ventrículos, substância</text>
+  <text x="30" y="323" class="body">branca); pouco de IA/ML</text>
+  <text x="30" y="357" class="label">EXPERIÊNCIA TECNOLÓGICA<tspan class="ev" dx="6">[F]</tspan></text>
+  <text x="30" y="378" class="body">Alta — trabalha o dia todo</text>
+  <text x="30" y="396" class="body">no PACS, com zoom,</text>
+  <text x="30" y="414" class="body">windowing e medições</text>
+  <text x="30" y="448" class="label">AMBIENTE TÍPICO DE USO<tspan class="ev" dx="6">[F]</tspan></text>
+  <text x="30" y="469" class="body">Sala de leitura com luz</text>
+  <text x="30" y="487" class="body">atenuada; monitor duplo</text>
+  <text x="30" y="505" class="body">integrado ao PACS</text>
+  <text x="320" y="175" class="label">OBJETIVOS<tspan class="ev" dx="6">[H]</tspan></text>
+  <text x="320" y="196" class="body">Emitir laudo útil para quem</text>
+  <text x="320" y="214" class="body">decide, com segurança sobre</text>
+  <text x="320" y="232" class="body">o que afirma, sem atrasar</text>
+  <text x="320" y="250" class="body">a fila</text>
+  <text x="320" y="284" class="label">NECESSIDADES<tspan class="ev" dx="6">[H]</tspan></text>
+  <text x="320" y="305" class="body">Receber a pergunta clínica;</text>
+  <text x="320" y="323" class="body">referência objetiva para</text>
+  <text x="320" y="341" class="body">atrofia limítrofe; indicar</text>
+  <text x="320" y="359" class="body">o que foi avaliado</text>
+  <text x="320" y="393" class="label">MOTIVADORES<tspan class="ev" dx="6">[H]</tspan></text>
+  <text x="320" y="414" class="body">Precisão do laudo; não ser</text>
+  <text x="320" y="432" class="body">a causa de um diagnóstico</text>
+  <text x="320" y="450" class="body">atrasado</text>
+  <text x="610" y="175" class="label">DORES / FRUSTRAÇÕES<tspan class="ev" dx="6">[H]</tspan></text>
+  <text x="610" y="196" class="body">Pedido sem contexto clínico;</text>
+  <text x="610" y="214" class="body">atrofia limítrofe sem padrão</text>
+  <text x="610" y="232" class="body">objetivo; fila extensa; sem</text>
+  <text x="610" y="250" class="body">retorno do solicitante</text>
+  <text x="610" y="284" class="label">RESTRIÇÕES / ACESSIBILIDADE<tspan class="ev" dx="6">[F/H]</tspan></text>
+  <text x="610" y="305" class="body">Horas contínuas em luz</text>
+  <text x="610" y="323" class="body">atenuada; meta de</text>
+  <text x="610" y="341" class="body">produtividade por laudo</text>
+  <text x="610" y="375" class="label">COMPORTAMENTOS RELEVANTES<tspan class="ev" dx="6">[H]</tspan></text>
+  <text x="610" y="396" class="body">Usa linguagem cautelosa</text>
+  <text x="610" y="414" class="body">(“compatível com a idade”);</text>
+  <text x="610" y="432" class="body">pede para “correlacionar</text>
+  <text x="610" y="450" class="body">com dados clínicos”</text>
+  <line x1="30" y1="539" x2="870" y2="539" stroke="#c7d9df" stroke-width="1"/>
+  <text x="30" y="564" class="label">DECISÕES DE DESIGN INFLUENCIADAS POR P03 (HIPÓTESES)</text>
+  <text x="30" y="586" class="body">• [H] Explicação localizada e medidas (ex.: volume hipocampal) como referência nos casos limítrofes</text>
+  <text x="30" y="605" class="body">• [H] Pergunta clínica e dados preparados por P04 acompanhando a imagem até quem lauda</text>
+  <text x="30" y="624" class="body">• Linguagem técnica de imagem adequada a este perfil, diferente de P01 (Entrega 1, item 2.4)</text>
+  <text x="30" y="645" class="note">Secundária: usa a mesma visualização pensada para P01 e P02, sem fluxo próprio na interface.</text>
+  <rect x="0" y="674" width="900" height="44" fill="#1d4e6b"/>
+  <text x="450" y="692" text-anchor="middle" class="footer">Base: Entrega 1 (itens 2.2, 2.4, 4.1, 4.2, 4.3, 5.1–5.3) · Hipóteses relacionadas: H01, H08</text>
+  <text x="450" y="709" text-anchor="middle" class="footer2">No fluxo: lauda o exame preparado por P04; o laudo é lido por P01 e P02 · [F] evidência da Entrega 1 · [H] hipótese da equipe</text>
+</svg>

@@ -1,0 +1,85 @@
+<svg viewBox="0 0 900 697" width="900" height="697" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, sans-serif">
+  <title>P04 — Bruno Tavares Lima</title>
+  <defs>
+    <style>
+      .h1 { font: 700 26px 'Segoe UI', Arial, sans-serif; fill: #ffffff; }
+      .h2 { font: 600 15px 'Segoe UI', Arial, sans-serif; fill: #ffffff; opacity: 0.9; }
+      .quote { font: italic 500 15px 'Segoe UI', Arial, sans-serif; fill: #dcebf1; }
+      .label { font: 700 13px 'Segoe UI', Arial, sans-serif; fill: #1d4e6b; letter-spacing: 0.5px; }
+      .ev { font: 700 11px 'Segoe UI', Arial, sans-serif; fill: #3f8ca6; }
+      .body { font: 400 14px 'Segoe UI', Arial, sans-serif; fill: #2c3e46; }
+      .note { font: italic 400 12px 'Segoe UI', Arial, sans-serif; fill: #5b7480; }
+      .tag { font: 600 12px 'Segoe UI', Arial, sans-serif; fill: #ffffff; }
+      .footer { font: 600 12px 'Segoe UI', Arial, sans-serif; fill: #ffffff; }
+      .footer2 { font: 400 11px 'Segoe UI', Arial, sans-serif; fill: #cfe3ec; }
+    </style>
+  </defs>
+  <rect width="900" height="697" fill="#f4f8fa"/>
+
+  <rect x="0" y="0" width="900" height="140" fill="#1d4e6b"/>
+  <circle cx="90" cy="70" r="46" fill="#ffffff" opacity="0.15"/>
+  <circle cx="90" cy="58" r="18" fill="#ffffff"/>
+  <path d="M55 105 Q90 68 125 105 L125 112 L55 112 Z" fill="#ffffff"/>
+
+  <text x="160" y="52" class="h1">Bruno Tavares Lima</text>
+  <text x="160" y="77" class="h2">Técnico em Radiologia — Setor de Imagem / Preparação de Dados</text>
+  <text x="160" y="106" class="quote">“Se o exame sair ruim, ninguém percebe até o paciente já ter ido embora.” [H]</text>
+
+  <rect x="690" y="26" width="180" height="28" rx="14" fill="#3f8ca6"/>
+  <text x="780" y="45" text-anchor="middle" class="tag">Persona Primária — P04</text>
+  <rect x="690" y="62" width="180" height="24" rx="12" fill="#2a6b85"/>
+  <text x="780" y="79" text-anchor="middle" class="tag" style="font-size:11px">Idade: 28–40 anos</text>
+
+  <text x="30" y="175" class="label">OCUPAÇÃO / PAPEL<tspan class="ev" dx="6">[F]</tspan></text>
+  <text x="30" y="196" class="body">Técnico em radiologia;</text>
+  <text x="30" y="214" class="body">adquire, confere e envia</text>
+  <text x="30" y="232" class="body">exame e dados clínicos</text>
+  <text x="30" y="266" class="label">CONHECIMENTO DO DOMÍNIO<tspan class="ev" dx="6">[F]</tspan></text>
+  <text x="30" y="287" class="body">Alto em aquisição de MRI</text>
+  <text x="30" y="305" class="body">(sequências, artefatos);</text>
+  <text x="30" y="323" class="body">não interpreta diagnóstico</text>
+  <text x="30" y="357" class="label">EXPERIÊNCIA TECNOLÓGICA<tspan class="ev" dx="6">[H]</tspan></text>
+  <text x="30" y="378" class="body">Alta — opera o console do</text>
+  <text x="30" y="396" class="body">scanner, o PACS e o</text>
+  <text x="30" y="414" class="body">prontuário</text>
+  <text x="30" y="448" class="label">AMBIENTE TÍPICO DE USO<tspan class="ev" dx="6">[F/H]</tspan></text>
+  <text x="30" y="469" class="body">Setor de imagem: sala de</text>
+  <text x="30" y="487" class="body">comando do scanner e</text>
+  <text x="30" y="505" class="body">estação com PACS, em turnos</text>
+  <text x="320" y="175" class="label">OBJETIVOS<tspan class="ev" dx="6">[H]</tspan></text>
+  <text x="320" y="196" class="body">Entregar exame completo e</text>
+  <text x="320" y="214" class="body">com qualidade na primeira</text>
+  <text x="320" y="232" class="body">tentativa, com os dados do</text>
+  <text x="320" y="250" class="body">paciente certo</text>
+  <text x="320" y="284" class="label">NECESSIDADES<tspan class="ev" dx="6">[H]</tspan></text>
+  <text x="320" y="305" class="body">Saber o que o caso exige;</text>
+  <text x="320" y="323" class="body">conferir a qualidade com o</text>
+  <text x="320" y="341" class="body">paciente no setor; levar os</text>
+  <text x="320" y="359" class="body">dados sem redigitar</text>
+  <text x="320" y="393" class="label">MOTIVADORES<tspan class="ev" dx="6">[H]</tspan></text>
+  <text x="320" y="414" class="body">Evitar retrabalho e</text>
+  <text x="320" y="432" class="body">reconvocação; entregar um</text>
+  <text x="320" y="450" class="body">exame útil ao diagnóstico</text>
+  <text x="610" y="175" class="label">DORES / FRUSTRAÇÕES<tspan class="ev" dx="6">[H]</tspan></text>
+  <text x="610" y="196" class="body">Pedido médico pouco</text>
+  <text x="610" y="214" class="body">específico; artefato de</text>
+  <text x="610" y="232" class="body">movimento; erro percebido</text>
+  <text x="610" y="250" class="body">só no laudo (H07)</text>
+  <text x="610" y="284" class="label">RESTRIÇÕES / ACESSIBILIDADE<tspan class="ev" dx="6">[F/H]</tspan></text>
+  <text x="610" y="305" class="body">Agenda cheia no scanner;</text>
+  <text x="610" y="323" class="body">paciente agitado; proteção</text>
+  <text x="610" y="341" class="body">de dados (LGPD)</text>
+  <text x="610" y="375" class="label">COMPORTAMENTOS RELEVANTES<tspan class="ev" dx="6">[H]</tspan></text>
+  <text x="610" y="396" class="body">Confere imagens na hora;</text>
+  <text x="610" y="414" class="body">repete sequência se dá;</text>
+  <text x="610" y="432" class="body">copia dados do prontuário;</text>
+  <text x="610" y="450" class="body">liga para o radiologista</text>
+  <line x1="30" y1="539" x2="870" y2="539" stroke="#c7d9df" stroke-width="1"/>
+  <text x="30" y="564" class="label">DECISÕES DE DESIGN INFLUENCIADAS POR P04</text>
+  <text x="30" y="586" class="body">• Qualidade descrita em linguagem de aquisição (sequência, artefato), nunca em métricas do modelo</text>
+  <text x="30" y="605" class="body">• [H] Conferir sequências e dados obrigatórios antes do envio, com o paciente ainda no setor (H07)</text>
+  <text x="30" y="624" class="body">• [H] Dados clínicos vindos do prontuário, sem redigitação, com confirmação da identidade</text>
+  <rect x="0" y="653" width="900" height="44" fill="#1d4e6b"/>
+  <text x="450" y="671" text-anchor="middle" class="footer">Base: Entrega 1 (itens 2.2, 2.4, 3.2 — A01, 4.1, 4.2, 5.3) · Hipótese relacionada: H07</text>
+  <text x="450" y="688" text-anchor="middle" class="footer2">No fluxo: prepara e envia o caso antes de P01 interpretar a explicação · [F] evidência da Entrega 1 · [H] hipótese da equipe</text>
+</svg>

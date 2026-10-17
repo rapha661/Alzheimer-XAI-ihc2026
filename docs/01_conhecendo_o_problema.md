@@ -58,10 +58,10 @@ Uma hipótese explicitada é melhor do que uma suposição escondida.
 
 | Nome completo | Matrícula | GitHub |
 |---|---:|---|
-| Paulo Hudson | 22.222.013-9 | @Paulo Hudson
-| Ana Carolina | 22.123.001-4 | @lazzuriana08
-| Raphael | 22.123.014-7 | @rapha661
-| Nathan | 22.123.028-7 | @NathanGbl
+| Paulo Hudson Josué da Silva | 22.222.013-9 | @paulohudson
+| Ana Carolina Lazzuri | 22.123.001-4 | @lazzuriana08
+| Raphael Garavati Erbert | 22.123.014-7 | @rapha661
+| Nathan Gabriel da Fonseca Leite | 22.123.028-7 | @NathanGbl
 
 ## 0.2 Título atual do TCC
 
@@ -85,7 +85,7 @@ Marque e descreva:
 - [ ] componente embarcado/IoT;
 - [ ] outro: {{...}}.
 
-**Descrição:** 
+**Descrição:** [F] O TCC (Entrega 1, item 0.5) prevê um modelo multimodal de aprendizado de máquina (MRI + dados clínicos tabulares) com explicabilidade via Grad-CAM e SHAP, classificando o paciente em três estágios (CN/MCI/AD). O resultado principal é o modelo em si; a aplicação web é a forma prevista de expor esse modelo a um usuário humano.
 
 ## 0.5 O TCC já previa desenvolvimento de interface com usuário?
 
@@ -103,7 +103,7 @@ A interface será responsável por apresentar as etapas de envio dos dados, proc
 
 ## 1.1 Explique o TCC em uma frase, sem citar linguagem de programação, framework ou banco de dados.
 
-Interface que auxiliará um profissional da saúde a saber com mais clareza e objetividade no diagnóstico de alzheimer de um paciente utilizando inteligência artificial explicativa.
+Interface que apresenta a um profissional de saúde uma **sugestão explicada** de IA sobre a probabilidade de Alzheimer em um paciente, para que ele compreenda as evidências por trás dessa sugestão e **tome sua própria decisão diagnóstica** com mais clareza e objetividade — a decisão e a responsabilidade clínica continuam sendo do médico, não do sistema.
 
 ## 1.2 Qual situação, atividade ou problema do mundo real motivou o TCC?
 
@@ -111,7 +111,7 @@ Interface que auxiliará um profissional da saúde a saber com mais clareza e ob
 
 ## 1.3 Qual é a **capacidade/contribuição central** produzida pelo TCC?
 
-Nosso TCC melhora a confiabilidade por parte dos médicos em realizar uma análise de exames de alzheimer utilizando inteligência artificial por conta do XAI e a possibilidade de utilizar tanto imagens de MRI quanto dados tabulares de exames sanguíneos.
+[H] O TCC produz um modelo que gera uma **sugestão explicada** (não um diagnóstico fechado) sobre a probabilidade de Alzheimer, combinando imagens de MRI e dados tabulares clínicos, com explicabilidade via Grad-CAM e SHAP. A hipótese de valor é que essa explicação ajude o médico a avaliar — e não apenas aceitar — a sugestão do modelo (ver H01).
 
 ## 1.4 O que se espera que esteja diferente **para pessoas, organizações ou processos** se essa contribuição for bem-sucedida?
 
@@ -196,11 +196,11 @@ Habilitação de diagnósticos remotos com explicações que permitem supervisã
 
 | Perfil | Relação com a Contribuição | O que Faria | Classificação | Evidência/Status |
 |---|---|---|---|---|
-| **Médico Clínico / Generalista** | Usuário primário de diagnóstico | Interpretar explicações XAI; tomar decisões clínicas; validar contra conhecimento clínico | [F] | Literatura revisada; clínicos são usuários-chave de CAD systems |
-| **Neurologista / Especialista** | Validador técnico-clínico | Validar predições; refinar thresholds; supervisionar casos complexos; feedback para melhorias | [F] | Documentado em literatura médica sobre validação clínica |
-| **Radiologista / Neuroradiologista** | Operador técnico de imagem | Interpretar resultados; validar qualidade de MRI; integrar com PACS; avaliar localizações | [F] | Padrão em radiologia — avaliação de CAD systems por radiologistas |
-| **Técnico de Laboratório / Preparação de Dados** | Operador de entrada de dados | Preparar/validar dados de MRI; garantir qualidade de imagem; alimentar sistema corretamente | [F] | Necessário em toda pipeline de imagem médica |
-| **Pesquisador da área da saúde (não-médico)** | Investigador de metodologia | Validar métodos de explicação; comparar técnicas; pesquisa em interpretabilidade | [H] | Plausível — comunidade pesquisadora tem interesse em validação médica, mas integração é rara |
+| **Médico Clínico / Generalista** | Usuário primário de diagnóstico | Interpretar explicações XAI; tomar decisões clínicas; validar contra conhecimento clínico | [H] | Perfil previsto no escopo formal do TCC (item 0.5) |
+| **Neurologista / Especialista** | Validador técnico-clínico | Validar predições; refinar thresholds; supervisionar casos complexos; feedback para melhorias | [H] | Papel já ocupado na rede de encaminhamento atual (4.1)
+| **Radiologista / Neuroradiologista** | Operador técnico de imagem | Interpretar resultados; validar qualidade de MRI; integrar com PACS; avaliar localizações | [H] | Hoje é quem interpreta a MRI (4.1)
+| **Técnico de Laboratório / Preparação de Dados** | Operador de entrada de dados | Preparar/validar dados de MRI; garantir qualidade de imagem; alimentar sistema corretamente | [H] | Toda aquisição de imagem envolve um técnico (4.1)
+| **Pesquisador da área da saúde (não-médico)** | Investigador de metodologia | Validar métodos de explicação; comparar técnicas; pesquisa em interpretabilidade | [H] | Interesse plausível da comunidade pesquisadora
 
 
 
@@ -216,7 +216,7 @@ Habilitação de diagnósticos remotos com explicações que permitem supervisã
 | **Equipe de Pesquisa Clínica** | Identificação de candidatos para ensaios clínicos; inclusão/exclusão de pacientes | Potencialmente (acesso a resultados agregados) | ✓ Parcialmente |
 | **Autoridades de Saúde Pública** | Monitoramento epidemiológico; políticas de saúde baseadas em dados agregados | Não (acesso a dados agregados apenas) | ✓ Indiretamente afetado |
 | **Seguradoras** | Determinação de cobertura e autorização de tratamento | Não (via relatório clínico) | ✓ Afetado |
-| **Gestor Hospitalar / Diretor Clínico** *(realocado do 2.2)* | Decide sobre adoção/descontinuação da ferramenta; aloca recursos; avalia ROI | Não (consome relatórios agregados, não a tela de diagnóstico) | [H] Plausível, ainda não confirmado |
+| **Gestor Hospitalar / Diretor Clínico** *(realocado do 2.2)* | Decide sobre adoção/descontinuação da ferramenta; aloca recursos; avalia ROI | Não (consome relatórios agregados, não a tela de diagnóstico) | [H] Papel institucional plausível |
 | **Auditor Regulatório / Compliance Officer** *(realocado do 2.2)* | Verifica conformidade (LGPD/HIPAA); audita rastreabilidade das decisões | Não (acessa logs/documentação gerada, não a interface de uso) | [F] Obrigatório por regulação médica |
 
 ## 2.4 Que características desses perfis podem influenciar a interação?
@@ -294,36 +294,38 @@ Habilitação de diagnósticos remotos com explicações que permitem supervisã
 
 | ID | Atividade/objetivo | Quem realiza | Frequência/criticidade inicial | Status/evidência |
 |---|---|---|---|---|
-| A01 | Preparar e enviar os dados do paciente (MRI + dados clínicos) para análise | Técnico de Laboratório (preparo/upload); Médico Clínico (abertura do caso) | Alta/Diária — ocorre a cada novo caso (~50-100 suspeitas de Alzheimer/mês, ver 3.3); criticidade média-alta, pois a qualidade dos dados de entrada afeta todo o restante do processo | [F] baseado no processo atual descrito em 4.1 |
-| A02 | Registrar a decisão diagnóstica com justificativa documentada | Médico Clínico (principal); Neurologista (valida em casos críticos) | Alta/Diária — obrigatória ao final de cada caso concluído; criticidade muito alta, exigida para rastreabilidade e auditoria | [F] necessidade documentada em 5.5 (histórico, rastreabilidade e auditoria) |
-| A03 | Revisar e interpretar as explicações XAI (regiões da MRI + features clínicas) para apoiar o diagnóstico | Médico Clínico (foco do projeto); Neurologista (quando acionado para validação) | Alta/Diária — atividade mais frequente, ~5-10 min por caso; criticidade CRÍTICA — é a ponte entre o modelo e a decisão clínica | [H] detalhado em 3.3 e 3.4 |
+| A01 | Preparar e enviar os dados do paciente (MRI + dados clínicos) para análise | Técnico de Laboratório (preparo/upload); Médico Clínico (abertura do caso) | [H] volume e duração estimados pela equipe | [H] atividade inferida do processo atual (4.1) |
+| A02 | Registrar a decisão diagnóstica com justificativa documentada | Médico Clínico (principal); Neurologista (valida em casos críticos) | [H] uma vez por caso concluído; criticidade alta pela exigência de registro | [H] necessidade inferida de 5.5 (histórico, rastreabilidade e auditoria) |
+| A03 | Revisar e interpretar as explicações XAI (regiões da MRI + features clínicas) para apoiar o diagnóstico | Médico Clínico (foco do projeto); Neurologista (quando acionado para validação) | [H] hipótese de atividade mais frequente e crítica — ver 3.3/3.4 | [H] detalhado em 3.3 e 3.4 |
 
 
 ## 3.3 Qual atividade parece mais frequente? Por quê?
 
-[H] **A03 — Revisar e interpretar explicações XAI** é a atividade mais frequente.
+[H] **Hipótese da equipe:** A03 — Revisar e interpretar explicações XAI — é a atividade mais frequente.
 
-| Razão | Explicação |
+| Razão (hipotética) | Raciocínio da equipe |
 |---|---|
-| **Volume de casos** | Em hospital com 50-100 suspeitas de Alzheimer/mês, essa atividade ocorre diariamente, múltiplas vezes |
-| **Dependência crítica** | Cada novo paciente requer essa etapa específica; não pode ser pulada ou delegada ao sistema |
-| **Tempo investido** | Médico passa mais tempo nessa atividade do que em qualquer outra (geralmente 5-10 min por caso) |
-| **Gargalo de interface** | A velocidade e clareza dessa atividade determina throughput diagnóstico total |
-| **Repetitividade** | Diferente de outras atividades que podem ser rápidas ou puladas em casos óbvios, A03 precisa de atenção completa a cada caso |
+| **Volume de casos** | [H] Presumimos que o volume de suspeitas de Alzheimer seja alto o suficiente para tornar A03 diária |
+| **Dependência crítica** | [H] Cada novo paciente provavelmente requer essa etapa, por definição do fluxo |
+| **Tempo investido** | [H] Estimativa da equipe de 5-10 min por caso |
+| **Gargalo de interface** | [H] A velocidade/clareza dessa etapa deve determinar o throughput geral |
+| **Repetitividade** | [H] A03 exige atenção completa a cada caso, diferente de A01/A02 |
 
 ## 3.4 Qual parece mais crítica? Que consequência existe se for mal executada?
 
-[H] **A03 é simultaneamente a mais frequente e a mais crítica.**
+[H] **Hipótese da equipe: A03 é simultaneamente a mais frequente e a mais crítica**.
 
-**Por que A03 é a mais crítica:**
+**Por que a equipe acredita que A03 é a mais crítica:**
 
-1. É a ponte entre o modelo e a decisão clínica.
-2. Se o médico não entende as explicações, tudo falha depois dela.
-3. Não importa se o modelo está certo, se as explicações são incompreensíveis.
+1. [H] É a ponte entre o modelo e a decisão clínica.
+2. [H] Se o médico não entende as explicações, as demais etapas perdem sentido.
+3. [H] Não importa se o modelo está certo, se as explicações são incompreensíveis.
 
 ---
 
 # 4. Entendendo o problema ou processo atual
+
+Esta seção descreve o processo atual e seus problemas a partir de diretrizes e literatura gerais sobre o processo clínico — evitando definir o problema como "falta exatamente aquilo que o M-XAI oferece", o que o tornaria uma consequência da solução em vez de uma observação independente.
 
 ## 4.1 Como essas atividades são realizadas hoje, antes da interface imaginada na disciplina?
 
@@ -338,15 +340,15 @@ Habilitação de diagnósticos remotos com explicações que permitem supervisã
 
 | Problema | Tipo | Descrição | Impacto | Status |
 |---|---|---|---|---|
-| **Fila de espera longa** | Demorado | Pacientes esperam 6-12 meses por especialista/MRI especializada | Diagnóstico atrasado; progressão continua sem monitoramento | [F] Documentado em literatura |
-| **Falta de especialistas** | Sistêmico | Poucos neuroradiologistas; concentrados em centros urbanos; acesso desigual | Pacientes sem acesso; diagnósticos de qualidade variável por localização | [F] Disparidade geográfica conhecida |
-| **Interpretação subjetiva** | Confuso/Arriscado | Diferentes médicos interpretam mesma MRI diferentemente | Diagnósticos inconsistentes | [F] Alta divergência entre diagnósticos médicos|
-| **"Caixa preta" clínica** | Pouco Transparente | Médico não consegue explicar sistematicamente por que diagnosticou AD | Paciente desconfia; risco legal alto | [F] Relatado em feedback clínico |
-| **Falta de rastreabilidade** | Arriscado | Decisão sem log sistemático do raciocínio | Auditor não consegue validar | [F] Risco legal documentado |
-| **Inconsistência de qualidade** | Repetitivo/Arriscado | Nenhum padrão ouro objetivo; protocolos variam | Mesmo paciente pode receber diagnósticos diferentes | [F] Conhecido em prática clínica |
-| **Falsos negativos passam despercebidos** | Arriscado | Pacientes com Alzheimer inicial (especialmente MCI) não diagnosticados | Progressão irreversível | [H] Prevalência não quantificada |
-| **Documentação inadequada** | Pouco Transparente | Sem justificativa técnica das regiões cerebrais afetadas | Risco regulatório | [F] Requisito regulatório não atendido |
-| **Bias cognitivo não detectado** | Arriscado | Médico confirma diagnóstico prematuro | Erro sistemático | [H] Poucos estudos em AD |
+| **Fila de espera longa** | Demorado | Pacientes esperam meses por especialista/MRI especializada | Diagnóstico atrasado; progressão continua sem monitoramento | [H] Padrão conhecido de acesso a especialistas no SUS/saúde suplementar |
+| **Falta de especialistas** | Sistêmico | Poucos neuroradiologistas; concentrados em centros urbanos; acesso desigual | Pacientes sem acesso; diagnósticos de qualidade variável por localização | [H] Padrão conhecido de sistemas de saúde, mais acentuado em especialidades como a neurorradiologia |
+| **Interpretação subjetiva** | Confuso/Arriscado | Diferentes médicos interpretam mesma MRI diferentemente | Diagnósticos inconsistentes | [H] Variação entre diagnósticos é tema conhecido em radiologia |
+| **"Caixa preta" clínica** | Pouco Transparente | Médico não consegue explicar sistematicamente por que diagnosticou AD | Paciente desconfia; risco legal alto | [H] Formulação próxima da solução do TCC — por isso tratada como hipótese |
+| **Falta de rastreabilidade** | Arriscado | Decisão sem log sistemático do raciocínio | Auditor não consegue validar | [H] Decorre da exigência regulatória de documentação clínica (5.5) |
+| **Inconsistência de qualidade** | Repetitivo/Arriscado | Nenhum padrão ouro objetivo; protocolos variam | Mesmo paciente pode receber diagnósticos diferentes | [H] Decorre da ausência de padrão ouro objetivo na interpretação (4.3) |
+| **Falsos negativos passam despercebidos** | Arriscado | Pacientes com Alzheimer inicial (especialmente MCI) não diagnosticados | Progressão irreversível | [H] Risco maior em casos limítrofes de MCI (4.3) |
+| **Documentação inadequada** | Pouco Transparente | Sem justificativa técnica das regiões cerebrais afetadas | Risco regulatório | [H] Também próxima da solução do TCC 
+| **Bias cognitivo não detectado** | Arriscado | Médico confirma diagnóstico prematuro | Erro sistemático | [H] Poucos estudos em AD
 
 ## 4.3 Que informações o profissional precisa interpretar para tomar decisão?
 
@@ -372,7 +374,9 @@ Habilitação de diagnósticos remotos com explicações que permitem supervisã
 
 ## 4.5 Conte uma situação concreta
 
-### Narrativa: O Caso de Maria Silva
+*Maria Silva é uma personagem construída pela equipe para ilustrar como os problemas listados em 4.2 poderiam se combinar na prática — não é um caso real documentado.*
+
+### Narrativa ilustrativa: O Caso de Maria Silva (personagem hipotética)
 
 **Pessoa**: Maria Silva, 72 anos, aposentada, viúva há 3 anos.
 
@@ -384,24 +388,24 @@ Habilitação de diagnósticos remotos com explicações que permitem supervisã
 
 **Consequência**: Maria entra em ciclo depressivo, rejeita a medicação, e um ano depois um neuropsicólogo descobre que se tratava de depressão maior ("pseudodemência"), não Alzheimer. O diagnóstico é revisado e a medicação retirada — mas Maria já havia passado dois anos com o diagnóstico incorreto.
 
-**Raiz dos problemas**:
-- [F] Dois especialistas discordaram sem resolução — falta de padrão ouro objetivo.
-- [F] Nenhuma explicação clara do porquê do diagnóstico.
-- [F] Nenhuma quantificação de confiança (70%? 50%? 90%?).
-- [F] Processo extremamente demorado (7 meses), agravando o quadro.
+**Raízes dos problemas ilustradas pela narrativa (hipóteses):**
+- [H] Dois especialistas discordaram sem resolução — falta de padrão ouro objetivo.
+- [H] Nenhuma explicação clara do porquê do diagnóstico.
+- [H] Nenhuma quantificação de confiança (70%? 50%? 90%?).
+- [H] Processo demorado, agravando o quadro.
 - [H] Médico não conseguiu explicar a discordância a Maria — erosão de confiança.
 
 ## 4.6 Que evidência existe hoje?
 
 | Evidência/Fonte | O que sustenta | Limitação |
 | :--- | :--- | :--- |
-| **Estudos de variação entre profissionais** | [F] A interpretação de um mesmo exame por diferentes médicos varia significativamente, demonstrando que a concordância atual entre diagnósticos é apenas moderada. | A maioria dos estudos avalia médicos altamente especializados, não refletindo a realidade de postos de saúde ou médicos gerais. |
-| **Pesquisas sobre precisão dos laudos** | [F] Em testes clínicos, médicos concordam sobre o diagnóstico de Alzheimer em apenas 6 a cada 10 casos (60% a 80% de convergência). | Não reflete completamente a rotina diária fora dos grandes centros de pesquisa. |
-| **Levantamentos sobre tempo de atendimento** | [F] O tempo médio entre a realização do exame e a confirmação do diagnóstico varia de 6 a 12 meses. | [F] Documentado em dados de saúde; [H] nem todos os estudos comprovam o quanto esse atraso agrava a perda de memória. |
-| **Manuais e diretrizes médicas formais** | [F] Exigem a combinação de exame clínico de memória com imagens do cérebro para dar o diagnóstico. | Não orientam de forma objetiva como juntar e cruzar esses dois dados no dia a dia. |
-| **Guias da Sociedade de Radiologia** | [F] Detalham os sinais visuais esperados no cérebro com Alzheimer (como perda de volume). | Não oferecem uma pontuação exata de risco, dependendo totalmente do olhar visual do médico. |
-| **Pesquisas com Inteligência Artificial** | [F] Algoritmos de IA alcançam mais de 90% de acerto quando testados em bancos de dados de laboratório. | [F] Testados apenas em laboratório; [H] ainda não há provas de que os médicos confiem ou aceitem usar esses sistemas na prática diária. |
-| **Relatos e depoimentos de médicos** | [F] Profissionais relatam que sentem falta de dados objetivos e quantitativos nos laudos de imagem. | Depoimentos informais; faltam pesquisas estruturadas com grande volume de médicos. |
+| **Estudos de variação entre profissionais** | [H] A interpretação de um mesmo exame por diferentes médicos varia; concordância provavelmente apenas moderada. | Em geral avaliam médicos altamente especializados, não refletindo a realidade de médicos gerais. |
+| **Pesquisas sobre precisão dos laudos** | [H] A convergência entre laudos de diferentes profissionais tende a ser apenas parcial. | Os valores variam conforme a especialidade do profissional e o tipo de exame. |
+| **Levantamentos sobre tempo de atendimento** | [H] A espera por avaliação especializada costuma ser de meses (ver 4.2). | O tempo varia bastante por região e tipo de serviço (público ou privado). |
+| **Manuais e diretrizes médicas formais** | [H] Diretrizes provavelmente exigem combinar exame clínico de memória com imagens do cérebro para o diagnóstico. | Não orientam de forma objetiva como juntar e cruzar esses dois dados no dia a dia. |
+| **Guias da Sociedade de Radiologia** | [H] Guias provavelmente descrevem sinais visuais esperados (ex.: perda de volume). | Não oferecem uma pontuação exata de risco, dependendo totalmente do olhar visual do médico. |
+| **Pesquisas com Inteligência Artificial** | [H] Modelos de IA para Alzheimer reportam alta acurácia em estudos de laboratório (ver 6.2). | Resultados restritos a bancos de dados de pesquisa; [H] a confiança dos médicos nesses sistemas na prática diária é outra questão. |
+| **Relatos e depoimentos de médicos** | [H] Relatos informais de médicos apontam dificuldade em confiar em resultados de IA sem explicação. | Depoimentos informais; faltam pesquisas estruturadas com grande volume de médicos. |
 
 ---
 
@@ -494,12 +498,12 @@ Habilitação de diagnósticos remotos com explicações que permitem supervisã
 
 | Alternativa atual | Quem usa | Para quê | Status/evidência |
 |---|---|---|---|
-| **Consulta presencial com especialista** | Pacientes e clínicos referenciando | Diagnóstico de confiança/segunda opinião | [F] Padrão ouro; fila longa (6-12 meses) |
-| **Segunda opinião de radiologista experiente** | Médico clínico em caso de dúvida | Validar interpretação questionável | [F] Prática comum |
-| **IA "caixa preta"** | Hospitais com sistemas antigos | Apoio computado básico | [F] Pouca transparência |
-| **Discussão multidisciplinar em conferência** | Hospitais universitários | Consenso clínico em casos ambíguos | [F] Caro; não escalável |
-| **Protocolo estruturado em papel/planilha** | Alguns hospitais | Padronizar decisão diagnóstica | [H] Raramente usado |
-| **Consultoria externa especializada** | Pacientes particulares | Validar diagnóstico de AD | [F] Caro, acesso restrito |
+| **Consulta presencial com especialista** | Pacientes e clínicos referenciando | Diagnóstico de confiança/segunda opinião | [H] Padrão de referência no processo atual (4.1) |
+| **Segunda opinião de radiologista experiente** | Médico clínico em caso de dúvida | Validar interpretação questionável | [H] Prática comum entre clínicos |
+| **IA "caixa preta"** | Hospitais com sistemas antigos | Apoio computado básico | [H] Por analogia com CAD legados em geral |
+| **Discussão multidisciplinar em conferência** | Hospitais universitários | Consenso clínico em casos ambíguos | [H] Custo alto e pouca escalabilidade, por depender de vários especialistas |
+| **Protocolo estruturado em papel/planilha** | Alguns hospitais | Padronizar decisão diagnóstica | [H] Uso provavelmente raro |
+| **Consultoria externa especializada** | Pacientes particulares | Validar diagnóstico de AD | [H] Acesso restrito pelo custo |
 
 ## 6.2 Existem produtos que atuam na mesma área, mesmo sem serem equivalentes ao TCC?
 
@@ -559,13 +563,13 @@ Habilitação de diagnósticos remotos com explicações que permitem supervisã
 
 ## 7.1 Escolha o caminho do projeto
 
-### Resposta: Caminho A — TCC já possui iterface
+### Resposta: Caminho A — TCC já possui interface
 
 ## Recorte Escolhido
 O recorte funcional escolhido para o escopo da disciplina compreende o **Fluxo Principal de Consulta e Interpretação do Diagnóstico Explicável (Painel do Médico)**, abrangendo especificamente três etapas sequenciais:
 
 1. **Revisão e Entrada dos Dados Multimodais:** Confirmação e visualização dos dados do paciente recém-enviados (Ressonância Magnética + biomarcadores de exames de sangue e testes clínicos).
-2. **Visualização do Diagnóstico com IA Explicável (XAI):** Tela principal onde o médico analisa a estimativa de risco gerada pelo modelo acompanhada das justificativas visuais (ex: mapa de calor Grad-CAM destacando atrofias na imagem de MRI) e tabulares (ex: destaque dos biomarcadores mais relevantes via Feature Importance).
+2. **Visualização da Sugestão Explicada por IA (XAI):** Tela principal onde o médico analisa a **sugestão** (não diagnóstico fechado) de probabilidade gerada pelo modelo, acompanhada das justificativas visuais (ex: mapa de calor Grad-CAM destacando atrofias na imagem de MRI) e tabulares (ex: destaque dos biomarcadores mais relevantes via Feature Importance) — o papel do sistema é apoiar, o papel de diagnosticar permanece do médico.
 3. **Registro e Validação da Decisão Clínica:** Ação na qual o profissional de saúde valida, ajusta ou rejeita a recomendação da IA e registra sua justificativa médica no prontuário/laudo final.
 
 
@@ -579,19 +583,19 @@ O recorte funcional escolhido para o escopo da disciplina compreende o **Fluxo P
 
 ## 7.2 Qual perfil será priorizado no projeto de IHC?
 
-**Perfil escolhido:** Médico Clínico em contexto de atenção primária ou hospital geral, com expertise em neuroimagem
+**Perfil escolhido:** Médico Clínico em contexto de atenção primária ou hospital geral, **SEM** expertise em neuroimagem — é justamente a ausência dessa expertise que torna a explicação XAI necessária.
 
 **Por que esse perfil foi escolhido?**
 
-1. Maior volume de usuários em relação a radiologistas especializados.
-2. Ponto crítico de confiança: se o médico clínico não entender as explicações XAI, o sistema falha.
-3. É justamente o perfil para o qual o Feature-Augmented XAI foi pensado (melhorar compreensão de não especialistas em imagem).
-4. Reduz o tempo de diagnóstico ao não depender de especialista.
-5. Corresponde à atividade mais crítica identificada (A03 — interpretar explicações XAI).
+1. [H] Hipótese de maior volume de usuários em relação a radiologistas especializados.
+2. [H] Ponto crítico de confiança: se o médico clínico sem expertise em imagem não entender as explicações XAI, o valor do sistema para esse perfil se perde.
+3. [F] É o perfil para o qual a abordagem "Feature-Augmented" foi formulada no TCC (item 1.5) — melhorar a compreensão de quem não é especialista em imagem é a proposta central da contribuição técnica.
+4. [H] Hipótese de redução do tempo de diagnóstico ao não depender de especialista (H02).
+5. [H] Corresponde à atividade que a equipe hipotetiza ser a mais crítica (A03 — interpretar explicações XAI; ver 3.3/3.4).
 
 ## 7.3 Qual objetivo desse usuário será priorizado?
 
-**Objetivo escolhido:** tomar decisão diagnóstica de Alzheimer com confiança, rapidamente, sem esperar especialista, baseado em compreensão clara das explicações do sistema.
+**Objetivo escolhido:** compreender adequadamente a sugestão do sistema (suas evidências e limitações) para tomar a própria decisão diagnóstica de Alzheimer com uma confiança proporcional à situação, rapidamente, sem depender de ter um especialista disponível de imediato. O objetivo não é "aumentar a confiança" como um fim em si — uma interface mal projetada também pode gerar confiança excessiva — e sim ajudar o médico a **compreender** a sugestão e calibrar sua confiança de forma proporcional.
 
 **Por que esse objetivo?**
 - [F] Resolve problema real (tempo de diagnóstico).
@@ -601,15 +605,16 @@ O recorte funcional escolhido para o escopo da disciplina compreende o **Fluxo P
 
 ## 7.4 Que interface será explorada na disciplina?
 
-> Para fins da disciplina de IHC, será projetada uma interface que permita ao **médico clínico** utilizar as **explicações do modelo Feature-Augmented XAI** para **diagnosticar Alzheimer com confiança**, no contexto de **sala de consulta/escritório do hospital, com tempo limitado, sem acesso imediato a especialista**.
+> Para fins da disciplina de IHC, será projetada uma interface que permita ao **médico clínico sem expertise em neuroimagem** utilizar as **explicações do modelo Feature-Augmented XAI** para **avaliar a sugestão do sistema e tomar sua própria decisão diagnóstica com confiança proporcional à evidência disponível**, no contexto de **sala de consulta/escritório do hospital, com tempo limitado, sem acesso imediato a especialista**. O sistema sugere; o médico decide e assume a responsabilidade clínica.
 
-**O que a interface deve permitir:**
+**O que a interface deve permitir (núcleo obrigatório do recorte — ver seção 8):**
 1. Visualizar MRI + explicações sobrepostas.
-2. Entender quais regiões/features foram críticas para o diagnóstico.
+2. Entender quais regiões/features foram críticas para a sugestão do modelo (não "para o diagnóstico" — o diagnóstico é do médico).
 3. Entender o porquê (raciocínio clínico traduzido das features do modelo).
-4. Comparar com casos anteriores (quando disponível).
-5. Registrar decisão com justificativa documentada.
-6. Solicitar revisão por especialista, se necessário.
+4. Registrar a decisão do médico com justificativa documentada.
+5. Solicitar revisão por especialista, se necessário.
+
+**Funções de apoio, ainda hipotéticas (ver seção 8 para a separação completa):** comparar com casos anteriores do mesmo paciente.
 
 ## 7.5 Qual é a relação dessa interface com o TCC?
 
@@ -620,24 +625,29 @@ O recorte funcional escolhido para o escopo da disciplina compreende o **Fluxo P
 
 # 8. Levantando possibilidades de interação — sem desenhar ainda
 
-A equipe pode registrar possibilidades para investigação. Cada uma corresponde a uma tarefa identificada em seções anteriores.
+A equipe pode registrar possibilidades para investigação. Cada uma corresponde a uma tarefa identificada em seções anteriores. As possibilidades estão organizadas em quatro categorias (núcleo obrigatório / apoio / hipotético / fora de escopo), para que nenhuma seja tratada implicitamente como "o sistema da disciplina" sem essa separação explícita.
 
-| Possibilidade | Faz sentido? | Objetivo/tarefa que justificaria | Evidência atual |
+# 8. Levantando possibilidades de interação — sem desenhar ainda
+
+A equipe pode registrar possibilidades para investigação. Na coluna "Pode fazer sentido?", cada possibilidade foi classificada como **núcleo** (indispensável ao recorte), **apoio** (útil, mas não central), **talvez** (ainda sem tarefa que a justifique) ou **fora do escopo** desta disciplina.
+
+| Possibilidade | Pode fazer sentido? | Objetivo/tarefa que justificaria | Evidência atual |
 |---|---|---|---|
-| **Dashboard/visão geral de casos** | SIM | Médico vê lista de pacientes pendentes de diagnóstico; prioriza casos mais críticos | [F] Consulta histórico; [H] workflow comum em PACS |
-| **Configuração/parametrização do modelo** | NÃO | Médico clínico não deve configurar o modelo | [F] Fora do escopo — responsabilidade de pesquisador/TI, ambos fora da lista de personas priorizadas (2.2) |
-| **Entrada/upload/seleção de dados (MRI)** | SIM | Médico ou técnico faz upload de MRI para análise | [F] Padrão em PACS; envolve o Técnico de Laboratório (2.2) |
-| **Acompanhamento de processamento** | TALVEZ | Mostrar progresso se processamento levar mais que ~30s | [H] Depende da velocidade do algoritmo |
-| **Relatório/resultados formatado** | SIM | Diagnóstico em linguagem clínica clara; scores numéricos | [F] Padrão clínico |
-| **Histórico com busca/filtros** | SIM | Médico busca MRI anterior do mesmo paciente | [F] Crítico para continuidade |
-| **Comparação de resultados** | SIM | Lado a lado: exame atual vs. anterior; progressão de atrofia | [H] Auxilia detecção de progresso |
-| **Explicabilidade/detalhamento** | SIM (CRÍTICA) | Mostrar regiões/features importantes para o diagnóstico | [F] Atividade A03; diferencial central do TCC |
-| **Administração/configurações globais** | TALVEZ | Definir protocolo de uso, limiares de confiança | [H] Papel de administração não modelado como persona nesta disciplina (ver 2.2); registrado apenas como possibilidade futura |
-| **Usuários/perfis/permissões** | SIM | Controle de acesso por perfil; auditoria de quem fez o quê | [F] Requisito legal/compliance |
-| **CRUD de entidade do domínio** | NÃO | Médico clínico não edita diagnósticos retrospectivamente | [F] Fora do escopo — trilha de auditoria é imutável |
-| **Auditoria/logs** | SIM | Registro automático de quem abriu o caso, quando, qual diagnóstico | [F] Crítico para compliance regulatório |
-| **Alertas/ocorrências** | TALVEZ | Notificar quando um caso de baixa confiança recebe nova interpretação | [H] Possível, mas requisito não explícito ainda |
-| **Ajuda/documentação** | SIM | Tutorial interativo; glossário de termos técnicos | [H] Reduz curva de aprendizado, especialmente para o Médico Clínico |
+| Dashboard/visão geral | talvez | Priorizar vários casos pendentes ao mesmo tempo | [H] Nenhuma tarefa/persona atual exige priorizar múltiplos casos; o dashboard institucional de gestão fica fora do escopo (Entrega 3, P03) |
+| Configuração/parametrização | não — fora do escopo | Ajustar parâmetros do modelo | [F] Responsabilidade de pesquisador/equipe técnica, fora dos perfis priorizados (2.2) |
+| Entrada/upload/seleção de dados | sim — núcleo | A01 / F01 — abrir caso com MRI e dados clínicos | [H] Padrão comum em PACS; envolve o Técnico de Laboratório (2.2) |
+| Acompanhamento de processamento | talvez | Saber quando a análise do modelo fica pronta | [H] Depende do tempo de inferência, ainda não definido pelo TCC |
+| Relatório/resultados | sim — núcleo | A03 / F02–F04 — ver a sugestão, as regiões destacadas e o grau de confiança | [F] Escopo formal do TCC — consulta do resultado com sua explicação (item 0.5) |
+| Histórico com busca/filtros | sim — apoio | F05 — avaliar a progressão do paciente | [H] Útil apenas quando existe exame anterior; não faz parte do primeiro atendimento |
+| Comparação de resultados | sim — apoio | F05 — comparar o exame atual com o anterior | [H] Mesma condição do histórico: depende de exame anterior do paciente |
+| Explicabilidade/detalhamento | sim — núcleo | A03 — interpretar as explicações XAI (Grad-CAM + SHAP) | [F] Diferencial central do TCC (itens 0.5 e 1.5) |
+| Administração/configurações globais | não — fora do escopo | Gerenciar perfis e limiares do sistema | [H] Papel de administração não é modelado como persona nesta disciplina |
+| Usuários/perfis/permissões | não — fora do escopo | Controlar o acesso por perfil | [H] Necessário no produto real, mas a disciplina modela a interação do médico, não a administração do sistema |
+| CRUD de entidade do domínio | não | Editar um diagnóstico já registrado | [F] A trilha de auditoria deve ser imutável — editar destruiria a rastreabilidade (5.5) |
+| Auditoria/logs | sim — núcleo | A02 / F06 — registrar a decisão com justificativa auditável | [F] Cada diagnóstico deve ser documentado com justificativa (5.4); a consulta de logs em nível de sistema fica fora do escopo |
+| Alertas/ocorrências | talvez | Sinalizar casos de baixa confiança para revisão | [H] Possível, mas sem requisito explícito |
+| Ajuda/documentação | sim — apoio | F08 — reduzir a barreira de interpretação | [H] Reforçada pela Entrega 2 (Al-bakri et al., 2025: 80% dos médicos relataram confiança apenas condicional) |
+| Encaminhamento a especialista | sim — apoio | F07 — lidar com casos ambíguos | [F] A consulta ao neurologista em casos difíceis já faz parte do processo atual (5.4) |
 
 ---
 
@@ -647,11 +657,11 @@ A equipe pode registrar possibilidades para investigação. Cada uma corresponde
 
 | Benefício esperado | Problema/necessidade | Usuário | Status/evidência |
 |---|---|---|---|
-| Reduzir tempo até uma decisão diagnóstica inicial | Fila de meses por especialista | Médico clínico | [F] |
-| Explicar o "porquê" da sugestão, não só o resultado | "Caixa preta" clínica, falta de justificativa técnica | Médico clínico | [F] |
-| Gerar documentação/justificativa automática da decisão | Falta de rastreabilidade para auditoria | Médico clínico / Hospital | [F] |
-| Mostrar grau de confiança para apoiar decisão de escalonar | Casos ambíguos sem critério objetivo | Médico clínico | [H] |
-| Reduzir divergência de interpretação entre profissionais | Baixa concordância inter-observador | Médico clínico / Neurologista | [F] |
+| Reduzir tempo até uma decisão diagnóstica inicial | Fila de meses por especialista | Médico clínico | [H] ver 4.2 |
+| Explicar o "porquê" da sugestão, não só o resultado | "Caixa preta" clínica, falta de justificativa técnica | Médico clínico | [H] |
+| Gerar documentação/justificativa automática da decisão | Falta de rastreabilidade para auditoria | Médico clínico / Hospital | [H] |
+| Ajudar o médico a calibrar uma confiança **proporcional** à evidência (não simplesmente "mais confiança") — uma interface mal projetada também pode gerar confiança excessiva, então o objetivo de IHC é fazer o médico **compreender** a sugestão, não maximizar confiança a qualquer custo | Casos ambíguos sem critério objetivo; risco de confiança excessiva com interface mal projetada | Médico clínico | [H] — H01 deve ser investigada com essa distinção em mente |
+| Reduzir divergência de interpretação entre profissionais | Baixa concordância inter-observador | Médico clínico / Neurologista | [H] |
 
 ## 9.2 Que ações o usuário deverá conseguir realizar?
 
@@ -699,23 +709,23 @@ Registre em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 
 | Pergunta | Síntese atual |
 |---|---|
-| Qual é a contribuição central do TCC? | Modelo de IA explicável que combina MRI e dados clínicos tabulares para apoiar o diagnóstico de Alzheimer |
+| Qual é a contribuição central do TCC? | Modelo de IA explicável que combina MRI e dados clínicos tabulares para gerar uma sugestão explicada sobre Alzheimer |
 | O TCC já previa interface? | Sim — aplicação web para envio de dados e consulta de resultado |
-| Quem é o usuário prioritário de IHC? | Rede médica |
-| O que ele precisa alcançar? | Diagnosticar com confiança e rapidez, entendendo o porquê da sugestão |
-| Qual problema/atividade será estudado? | Interpretar as explicações XAI para apoiar a decisão diagnóstica |
-| Como isso acontece hoje? | Radiologista interpreta a MRI visualmente; médico combina com MMSE/histórico e julgamento pessoal, sem explicação estruturada |
+| Quem é o usuário prioritário de IHC? | **Médico Clínico/Generalista, sem expertise em neuroimagem** (ver 7.2) |
+| O que ele precisa alcançar? | Compreender adequadamente a sugestão do sistema para tomar sua própria decisão diagnóstica, com confiança proporcional à evidência, sem depender de especialista imediato |
+| Qual problema/atividade será estudado? | Interpretar as explicações XAI para apoiar (não substituir) a decisão diagnóstica |
+| Como isso acontece hoje? | [H] Hipótese: radiologista interpreta a MRI visualmente; médico combina com MMSE/histórico e julgamento pessoal, sem explicação estruturada |
 | Qual é o contexto de uso? | Hospital/consultório, tempo limitado, requisitos de privacidade e rastreabilidade |
-| Que interface/recorte será explorado? | Visualizar MRI + explicação + confiança, comparar histórico, registrar decisão, encaminhar especialista |
+| Que interface/recorte será explorado? | Núcleo: visualizar MRI + explicação, registrar decisão; apoio: encaminhar especialista, histórico (ver seção 8) |
 | Como a interface se relaciona ao TCC? | Extensão conceitual do app já previsto, com foco no médico clínico |
-| Quais pontos ainda são hipóteses? | H01, H02, H03, H04 |
+| Quais pontos ainda são hipóteses? | H01, H02, H03, H04, H05 |
 
 ### Delimitação
 
-**Dentro do escopo de IHC:** interação do médico com MRI, explicação, score de confiança, histórico e registro de decisão.
-**Fora do escopo de IHC:** configuração do modelo, infraestrutura, interface para pacientes, integração completa com EHR, auditoria em nível de sistema.
+**Dentro do escopo de IHC:** interação do médico com MRI, explicação, score/sugestão, registro de decisão (núcleo); encaminhamento e histórico (apoio).
+**Fora do escopo de IHC:** configuração do modelo, infraestrutura, interface para pacientes, integração completa com EHR, auditoria em nível de sistema, dashboard institucional de gestão (ver seção 8.4).
 **Dentro do escopo formal do TCC:** modelo multimodal M-XAI e app web básica.
-**Interface da disciplina será implementada no TCC?** não definido — depende de validação clínica preliminar e decisão da equipe/orientador.
+**Interface da disciplina será implementada no TCC?** não definido — depende de validação clínica preliminar e decisão da equipe/orientador. **A interface de IHC não é uma obrigação automática do TCC.**
 
 ---
 
@@ -766,8 +776,8 @@ Essa síntese ajuda a apresentar o projeto para público não especializado sem 
 
 - [x] Está clara a diferença entre tema do TCC, escopo formal do TCC e escopo de IHC.
 - [x] A equipe declarou se o TCC já previa interface.
-- [ ] Se não previa, foi derivado um usuário plausível e um objetivo de uso. (Não aplicavel)
-- [ ] A interface de IHC não foi apresentada como obrigação automática do TCC.
+- [x] Se não previa, foi derivado um usuário plausível e um objetivo de uso. (Não aplicável — o TCC já previa interface)
+- [x] A interface de IHC não foi apresentada como obrigação automática do TCC. (explicitado na Delimitação, seção 11)
 - [x] A contribuição do TCC foi descrita sem começar por tecnologias de implementação.
 - [x] Usuários diretos e stakeholders foram diferenciados.
 - [x] Foram considerados profissionais que configuram, administram, interpretam ou decidem, quando pertinente.
@@ -781,4 +791,4 @@ Essa síntese ajuda a apresentar o projeto para público não especializado sem 
 - [x] Afirmações relevantes estão marcadas `[F]`, `[H]` ou `[?]`.
 - [x] Hipóteses prioritárias receberam IDs e foram para a rastreabilidade.
 - [x] O recorte de IHC é viável para modelar, prototipar e avaliar no semestre.
-- [ ] A equipe consegue explicar problema humano → contribuição computacional → forma de uso.
+- [x] A equipe consegue explicar problema humano → contribuição computacional → forma de uso. (ver seção 13)

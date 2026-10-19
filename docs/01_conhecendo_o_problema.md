@@ -1,7 +1,7 @@
 # Entrega 1 — Conhecendo o projeto, o usuário e o problema
 
 - **Data:** 27/08/2026
-- **Status:** 🟩 Concluída
+- **Status:** 🟦 revisada após feedback
 - **Responsabilidade:** Desenvolver uma interface para intermediar o uso do modelo de inteligência artificial explicável que visa auxiliar no diagnóstico da doença de alzheimer por profissionais da área da saúde.
 
 ## Objetivo da atividade

@@ -1,5 +1,112 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="360" viewBox="0 0 960 360">
-<rect width="100%" height="100%" fill="#f6f8fa" stroke="#8c959f" stroke-width="4"/>
-<text x="480" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#24292f">PLACEHOLDER DE ARTEFATO</text>
-<text x="480" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#57606a">Substitua este arquivo pela evidência real da equipe.</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1629 595" width="1629" height="595" font-family="Arial, Helvetica, sans-serif">
+  <title>HTA T01 — Retomar a conduta do paciente já avaliado por especialista</title>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+    </marker>
+  </defs>
+  <rect width="1629" height="595" fill="#ffffff"/>
+    <line x1="864.0" y1="88" x2="864.0" y2="113.0" stroke="#000" stroke-width="1.2"/>
+  <line x1="229.0" y1="113.0" x2="1499.0" y2="113.0" stroke="#000" stroke-width="1.2"/>
+  <line x1="229.0" y1="113.0" x2="229.0" y2="149" stroke="#000" stroke-width="1.2" marker-end="url(#arr)"/>
+  <line x1="741.5" y1="113.0" x2="741.5" y2="149" stroke="#000" stroke-width="1.2" marker-end="url(#arr)"/>
+  <line x1="1308.0" y1="113.0" x2="1308.0" y2="149" stroke="#000" stroke-width="1.2" marker-end="url(#arr)"/>
+  <line x1="1499.0" y1="113.0" x2="1499.0" y2="149" stroke="#000" stroke-width="1.2" marker-end="url(#arr)"/>
+  <line x1="229.0" y1="208" x2="229.0" y2="233.0" stroke="#000" stroke-width="1.2"/>
+  <line x1="130.0" y1="233.0" x2="328.0" y2="233.0" stroke="#000" stroke-width="1.2"/>
+  <line x1="130.0" y1="233.0" x2="130.0" y2="269" stroke="#000" stroke-width="1.2" marker-end="url(#arr)"/>
+  <line x1="328.0" y1="233.0" x2="328.0" y2="269" stroke="#000" stroke-width="1.2" marker-end="url(#arr)"/>
+  <line x1="741.5" y1="208" x2="741.5" y2="233.0" stroke="#000" stroke-width="1.2"/>
+  <line x1="529.5" y1="233.0" x2="953.5" y2="233.0" stroke="#000" stroke-width="1.2"/>
+  <line x1="529.5" y1="233.0" x2="529.5" y2="269" stroke="#000" stroke-width="1.2" marker-end="url(#arr)"/>
+  <line x1="741.5" y1="233.0" x2="741.5" y2="269" stroke="#000" stroke-width="1.2" marker-end="url(#arr)"/>
+  <line x1="953.5" y1="233.0" x2="953.5" y2="269" stroke="#000" stroke-width="1.2" marker-end="url(#arr)"/>
+  <line x1="953.5" y1="328" x2="953.5" y2="353.0" stroke="#000" stroke-width="1.2"/>
+  <line x1="858.5" y1="353.0" x2="1048.5" y2="353.0" stroke="#000" stroke-width="1.2"/>
+  <line x1="858.5" y1="353.0" x2="858.5" y2="389" stroke="#000" stroke-width="1.2" marker-end="url(#arr)"/>
+  <line x1="1048.5" y1="353.0" x2="1048.5" y2="389" stroke="#000" stroke-width="1.2" marker-end="url(#arr)"/>
+  <line x1="1308.0" y1="208" x2="1308.0" y2="233.0" stroke="#000" stroke-width="1.2"/>
+  <line x1="1140.0" y1="233.0" x2="1476.0" y2="233.0" stroke="#000" stroke-width="1.2"/>
+  <line x1="1140.0" y1="233.0" x2="1140.0" y2="269" stroke="#000" stroke-width="1.2" marker-end="url(#arr)"/>
+  <line x1="1308.0" y1="233.0" x2="1308.0" y2="269" stroke="#000" stroke-width="1.2" marker-end="url(#arr)"/>
+  <line x1="1476.0" y1="233.0" x2="1476.0" y2="269" stroke="#000" stroke-width="1.2" marker-end="url(#arr)"/>
+  <rect x="738.5" y="30" width="251" height="58" fill="#ffffff" stroke="#000" stroke-width="1.2"/>
+  <text x="864.0" y="48.0" text-anchor="middle" font-size="13.5">0. Retomar a conduta do paciente</text>
+  <text x="864.0" y="64.0" text-anchor="middle" font-size="13.5">já avaliado por especialista</text>
+  <text x="864.0" y="80.0" text-anchor="middle" font-size="13.5">1&gt;2&gt;3&gt;4</text>
+  <rect x="142.5" y="150" width="173" height="58" fill="#ffffff" stroke="#000" stroke-width="1.2"/>
+  <text x="229.0" y="168.0" text-anchor="middle" font-size="13.5">1. Avaliar a situação</text>
+  <text x="229.0" y="184.0" text-anchor="middle" font-size="13.5">atual do paciente</text>
+  <text x="229.0" y="200.0" text-anchor="middle" font-size="13.5">1+2</text>
+  <rect x="40.0" y="270" width="180" height="58" fill="#ffffff" stroke="#000" stroke-width="1.2"/>
+  <text x="130.0" y="296.0" text-anchor="middle" font-size="13.5">1.1. Ouvir o relato do</text>
+  <text x="130.0" y="312.0" text-anchor="middle" font-size="13.5">filho sobre a piora</text>
+  <line x1="40.0" y1="333" x2="220.0" y2="333" stroke="#000" stroke-width="1.2"/>
+  <rect x="238.0" y="270" width="180" height="58" fill="#ffffff" stroke="#000" stroke-width="1.2"/>
+  <text x="328.0" y="296.0" text-anchor="middle" font-size="13.5">1.2. Reaplicar o teste</text>
+  <text x="328.0" y="312.0" text-anchor="middle" font-size="13.5">de memória (MMSE/MoCA)</text>
+  <line x1="238.0" y1="333" x2="418.0" y2="333" stroke="#000" stroke-width="1.2"/>
+  <rect x="648.0" y="150" width="187" height="58" fill="#ffffff" stroke="#000" stroke-width="1.2"/>
+  <text x="741.5" y="168.0" text-anchor="middle" font-size="13.5">2. Recuperar o contexto</text>
+  <text x="741.5" y="184.0" text-anchor="middle" font-size="13.5">do parecer anterior</text>
+  <text x="741.5" y="200.0" text-anchor="middle" font-size="13.5">1&gt;2&gt;3</text>
+  <rect x="436.0" y="270" width="187" height="58" fill="#ffffff" stroke="#000" stroke-width="1.2"/>
+  <text x="529.5" y="296.0" text-anchor="middle" font-size="13.5">2.1. Abrir o prontuário</text>
+  <text x="529.5" y="312.0" text-anchor="middle" font-size="13.5">do paciente</text>
+  <line x1="436.0" y1="333" x2="623.0" y2="333" stroke="#000" stroke-width="1.2"/>
+  <rect x="641.0" y="270" width="201" height="58" fill="#ffffff" stroke="#000" stroke-width="1.2"/>
+  <text x="741.5" y="296.0" text-anchor="middle" font-size="13.5">2.2. Localizar a anotação</text>
+  <text x="741.5" y="312.0" text-anchor="middle" font-size="13.5">do parecer</text>
+  <line x1="641.0" y1="333" x2="842.0" y2="333" stroke="#000" stroke-width="1.2"/>
+  <rect x="860.0" y="270" width="187" height="58" fill="#ffffff" stroke="#000" stroke-width="1.2"/>
+  <text x="953.5" y="288.0" text-anchor="middle" font-size="13.5">2.3. Obter os critérios</text>
+  <text x="953.5" y="304.0" text-anchor="middle" font-size="13.5">do neurologista</text>
+  <text x="953.5" y="320.0" text-anchor="middle" font-size="13.5">1/2</text>
+  <rect x="783.5" y="390" width="150" height="58" fill="#ffffff" stroke="#000" stroke-width="1.2"/>
+  <text x="858.5" y="416.0" text-anchor="middle" font-size="13.5">2.3.1. Ligar para</text>
+  <text x="858.5" y="432.0" text-anchor="middle" font-size="13.5">o neurologista</text>
+  <line x1="783.5" y1="453" x2="933.5" y2="453" stroke="#000" stroke-width="1.2"/>
+  <rect x="951.5" y="390" width="194" height="58" fill="#ffffff" stroke="#000" stroke-width="1.2"/>
+  <text x="1048.5" y="416.0" text-anchor="middle" font-size="13.5">2.3.2. Reconstruir pelos</text>
+  <text x="1048.5" y="432.0" text-anchor="middle" font-size="13.5">exames anteriores</text>
+  <line x1="951.5" y1="453" x2="1145.5" y2="453" stroke="#000" stroke-width="1.2"/>
+  <rect x="1225.0" y="150" width="166" height="58" fill="#ffffff" stroke="#000" stroke-width="1.2"/>
+  <text x="1308.0" y="176.0" text-anchor="middle" font-size="13.5">3. Decidir a conduta</text>
+  <text x="1308.0" y="192.0" text-anchor="middle" font-size="13.5">1/2/3</text>
+  <rect x="1065.0" y="270" width="150" height="58" fill="#ffffff" stroke="#000" stroke-width="1.2"/>
+  <text x="1140.0" y="296.0" text-anchor="middle" font-size="13.5">3.1. Solicitar</text>
+  <text x="1140.0" y="312.0" text-anchor="middle" font-size="13.5">novo exame</text>
+  <line x1="1065.0" y1="333" x2="1215.0" y2="333" stroke="#000" stroke-width="1.2"/>
+  <rect x="1233.0" y="270" width="150" height="58" fill="#ffffff" stroke="#000" stroke-width="1.2"/>
+  <text x="1308.0" y="296.0" text-anchor="middle" font-size="13.5">3.2. Reencaminhar</text>
+  <text x="1308.0" y="312.0" text-anchor="middle" font-size="13.5">ao neurologista</text>
+  <line x1="1233.0" y1="333" x2="1383.0" y2="333" stroke="#000" stroke-width="1.2"/>
+  <rect x="1401.0" y="270" width="150" height="58" fill="#ffffff" stroke="#000" stroke-width="1.2"/>
+  <text x="1476.0" y="296.0" text-anchor="middle" font-size="13.5">3.3. Conduzir sem</text>
+  <text x="1476.0" y="312.0" text-anchor="middle" font-size="13.5">o especialista</text>
+  <line x1="1401.0" y1="333" x2="1551.0" y2="333" stroke="#000" stroke-width="1.2"/>
+  <rect x="1409.0" y="150" width="180" height="58" fill="#ffffff" stroke="#000" stroke-width="1.2"/>
+  <text x="1499.0" y="176.0" text-anchor="middle" font-size="13.5">4. Registrar a decisão</text>
+  <text x="1499.0" y="192.0" text-anchor="middle" font-size="13.5">no prontuário</text>
+  <line x1="1409.0" y1="213" x2="1589.0" y2="213" stroke="#000" stroke-width="1.2"/>
+    <text x="40" y="520" font-size="12">elementos do HTA</text>
+  <rect x="40" y="532" width="96" height="30" fill="#fff" stroke="#000"/>
+  <text x="88" y="552" text-anchor="middle" font-size="12">objetivo</text>
+  <rect x="148" y="532" width="96" height="30" fill="#fff" stroke="#000"/>
+  <line x1="148" y1="567" x2="244" y2="567" stroke="#000"/>
+  <text x="196" y="552" text-anchor="middle" font-size="12">operação</text>
+  <text x="290" y="508" font-size="12">relações entre os subobjetivos que</text>
+  <text x="290" y="522" font-size="12">compõem um plano</text>
+  <rect x="290" y="532" width="96" height="34" fill="#fff" stroke="#000"/>
+  <text x="338" y="546" text-anchor="middle" font-size="12">objetivo</text>
+  <text x="338" y="560" text-anchor="middle" font-size="12">1>2</text>
+  <text x="338" y="580" text-anchor="middle" font-size="12" font-style="italic">sequencial</text>
+  <rect x="398" y="532" width="96" height="34" fill="#fff" stroke="#000"/>
+  <text x="446" y="546" text-anchor="middle" font-size="12">objetivo</text>
+  <text x="446" y="560" text-anchor="middle" font-size="12">1/2</text>
+  <text x="446" y="580" text-anchor="middle" font-size="12" font-style="italic">seleção</text>
+  <rect x="506" y="532" width="96" height="34" fill="#fff" stroke="#000"/>
+  <text x="554" y="546" text-anchor="middle" font-size="12">objetivo</text>
+  <text x="554" y="560" text-anchor="middle" font-size="12">1+2</text>
+  <text x="554" y="580" text-anchor="middle" font-size="12" font-style="italic">paralelo</text>
 </svg>

@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1328 700" width="1328" height="700" font-family="Arial, Helvetica, sans-serif">
+  <title>CTT T01 — Retomar a conduta do paciente já avaliado por especialista</title>
+  <rect width="1328" height="700" fill="#ffffff"/>
+    <line x1="663.4" y1="100.0" x2="182.1" y2="186.0" stroke="#333" stroke-width="1"/>
+  <line x1="663.4" y1="100.0" x2="660.7" y2="186.0" stroke="#333" stroke-width="1"/>
+  <line x1="663.4" y1="100.0" x2="846.0" y2="186.0" stroke="#333" stroke-width="1"/>
+  <line x1="663.4" y1="100.0" x2="1144.6" y2="186.0" stroke="#333" stroke-width="1"/>
+  <line x1="182.1" y1="276.0" x2="85.8" y2="346.0" stroke="#333" stroke-width="1"/>
+  <line x1="182.1" y1="276.0" x2="278.5" y2="346.0" stroke="#333" stroke-width="1"/>
+  <line x1="660.7" y1="276.0" x2="471.4" y2="346.0" stroke="#333" stroke-width="1"/>
+  <line x1="660.7" y1="276.0" x2="653.4" y2="346.0" stroke="#333" stroke-width="1"/>
+  <line x1="660.7" y1="276.0" x2="850.0" y2="346.0" stroke="#333" stroke-width="1"/>
+  <line x1="850.0" y1="436.0" x2="759.2" y2="506.0" stroke="#333" stroke-width="1"/>
+  <line x1="850.0" y1="436.0" x2="940.8" y2="506.0" stroke="#333" stroke-width="1"/>
+  <line x1="1144.6" y1="276.0" x2="1050.1" y2="346.0" stroke="#333" stroke-width="1"/>
+  <line x1="1144.6" y1="276.0" x2="1239.1" y2="346.0" stroke="#333" stroke-width="1"/>
+  <line x1="219.1" y1="213.0" x2="409.4" y2="213.0" stroke="#333" stroke-width="1"/>
+  <line x1="433.4" y1="213.0" x2="623.7" y2="213.0" stroke="#333" stroke-width="1"/>
+  <text x="421.4" y="218.0" text-anchor="middle" font-size="14" font-family="Consolas, Menlo, monospace">&gt;&gt;</text>
+  <line x1="697.7" y1="213.0" x2="738.8" y2="213.0" stroke="#333" stroke-width="1"/>
+  <line x1="778.8" y1="213.0" x2="820.0" y2="213.0" stroke="#333" stroke-width="1"/>
+  <text x="758.8" y="218.0" text-anchor="middle" font-size="14" font-family="Consolas, Menlo, monospace">[]&gt;&gt;</text>
+  <line x1="872.0" y1="213.0" x2="969.8" y2="213.0" stroke="#333" stroke-width="1"/>
+  <line x1="1009.8" y1="213.0" x2="1107.6" y2="213.0" stroke="#333" stroke-width="1"/>
+  <text x="989.8" y="218.0" text-anchor="middle" font-size="14" font-family="Consolas, Menlo, monospace">[]&gt;&gt;</text>
+  <line x1="111.8" y1="373.0" x2="166.1" y2="373.0" stroke="#333" stroke-width="1"/>
+  <line x1="198.1" y1="373.0" x2="252.5" y2="373.0" stroke="#333" stroke-width="1"/>
+  <text x="182.1" y="378.0" text-anchor="middle" font-size="14" font-family="Consolas, Menlo, monospace">|||</text>
+  <line x1="533.4" y1="373.0" x2="550.4" y2="373.0" stroke="#333" stroke-width="1"/>
+  <line x1="574.4" y1="373.0" x2="591.4" y2="373.0" stroke="#333" stroke-width="1"/>
+  <text x="562.4" y="378.0" text-anchor="middle" font-size="14" font-family="Consolas, Menlo, monospace">&gt;&gt;</text>
+  <line x1="715.4" y1="373.0" x2="744.2" y2="373.0" stroke="#333" stroke-width="1"/>
+  <line x1="784.2" y1="373.0" x2="813.0" y2="373.0" stroke="#333" stroke-width="1"/>
+  <text x="764.2" y="378.0" text-anchor="middle" font-size="14" font-family="Consolas, Menlo, monospace">[]&gt;&gt;</text>
+  <line x1="785.2" y1="533.0" x2="820.0" y2="533.0" stroke="#333" stroke-width="1"/>
+  <line x1="844.0" y1="533.0" x2="878.8" y2="533.0" stroke="#333" stroke-width="1"/>
+  <text x="832.0" y="538.0" text-anchor="middle" font-size="14" font-family="Consolas, Menlo, monospace">[]</text>
+  <line x1="1112.1" y1="373.0" x2="1138.6" y2="373.0" stroke="#333" stroke-width="1"/>
+  <line x1="1178.6" y1="373.0" x2="1205.1" y2="373.0" stroke="#333" stroke-width="1"/>
+  <text x="1158.6" y="378.0" text-anchor="middle" font-size="14" font-family="Consolas, Menlo, monospace">[]&gt;&gt;</text>
+  <path d="M637.375,70 c-10,0 -12,-14 -2,-17 c-4,-10 8,-17 15,-11 c3,-9 17,-9 20,0 c6,-6 18,-2 16,7 c10,1 11,15 1,17 c3,8 -7,14 -14,9 c-4,7 -16,7 -20,0 c-6,5 -17,2 -16,-5 z" stroke="#555" stroke-width="1.3" fill="#ffffff"/>
+  <text x="663.4" y="95.0" text-anchor="middle" font-size="13.5">Retomar a conduta do paciente</text>
+  <path d="M156.14999999999998,230 c-10,0 -12,-14 -2,-17 c-4,-10 8,-17 15,-11 c3,-9 17,-9 20,0 c6,-6 18,-2 16,7 c10,1 11,15 1,17 c3,8 -7,14 -14,9 c-4,7 -16,7 -20,0 c-6,5 -17,2 -16,-5 z" stroke="#555" stroke-width="1.3" fill="#ffffff"/>
+  <text x="182.1" y="255.0" text-anchor="middle" font-size="13.5">Avaliar a situação</text>
+  <text x="182.1" y="271.0" text-anchor="middle" font-size="13.5">atual</text>
+  <circle cx="85.79999999999995" cy="358" r="9" stroke="#555" stroke-width="1.3" fill="#ffffff"/><path d="M66.79999999999995,402 L66.79999999999995,382 Q66.79999999999995,369 78.79999999999995,369 L92.79999999999995,369 Q104.79999999999995,369 104.79999999999995,382 L104.79999999999995,402 Z" stroke="#555" stroke-width="1.3" fill="#ffffff"/><line x1="73.79999999999995" y1="381" x2="73.79999999999995" y2="402" stroke="#555" stroke-width="1.3"/><line x1="97.79999999999995" y1="381" x2="97.79999999999995" y2="402" stroke="#555" stroke-width="1.3"/>
+  <text x="85.8" y="415.0" text-anchor="middle" font-size="13.5">Ouvir o relato</text>
+  <text x="85.8" y="431.0" text-anchor="middle" font-size="13.5">do filho</text>
+  <circle cx="278.5" cy="358" r="9" stroke="#555" stroke-width="1.3" fill="#ffffff"/><path d="M259.5,402 L259.5,382 Q259.5,369 271.5,369 L285.5,369 Q297.5,369 297.5,382 L297.5,402 Z" stroke="#555" stroke-width="1.3" fill="#ffffff"/><line x1="266.5" y1="381" x2="266.5" y2="402" stroke="#555" stroke-width="1.3"/><line x1="290.5" y1="381" x2="290.5" y2="402" stroke="#555" stroke-width="1.3"/>
+  <text x="278.5" y="415.0" text-anchor="middle" font-size="13.5">Reaplicar o teste</text>
+  <text x="278.5" y="431.0" text-anchor="middle" font-size="13.5">de memória</text>
+  <path d="M634.7,230 c-10,0 -12,-14 -2,-17 c-4,-10 8,-17 15,-11 c3,-9 17,-9 20,0 c6,-6 18,-2 16,7 c10,1 11,15 1,17 c3,8 -7,14 -14,9 c-4,7 -16,7 -20,0 c-6,5 -17,2 -16,-5 z" stroke="#555" stroke-width="1.3" fill="#ffffff"/>
+  <text x="660.7" y="255.0" text-anchor="middle" font-size="13.5">Recuperar o contexto</text>
+  <text x="660.7" y="271.0" text-anchor="middle" font-size="13.5">do parecer</text>
+  <rect x="415.4" y="352" width="52" height="34" rx="12" stroke="#555" stroke-width="1.3" fill="#ffffff"/><rect x="420.4" y="356" width="42" height="26" rx="9" stroke="#555" stroke-width="1.3" fill="#ffffff"/><rect x="413.4" y="391" width="56" height="9" rx="4.5" stroke="#555" stroke-width="1.3" fill="#ffffff"/><circle cx="505.4" cy="358" r="9" stroke="#555" stroke-width="1.3" fill="#ffffff"/><path d="M486.4,402 L486.4,382 Q486.4,369 498.4,369 L512.4,369 Q524.4,369 524.4,382 L524.4,402 Z" stroke="#555" stroke-width="1.3" fill="#ffffff"/><line x1="493.4" y1="381" x2="493.4" y2="402" stroke="#555" stroke-width="1.3"/><line x1="517.4" y1="381" x2="517.4" y2="402" stroke="#555" stroke-width="1.3"/><path d="M460.4,374 l7,-7 v4 h12 v-4 l7,7 l-7,7 v-4 h-12 v4 z" fill="#8a8a8a" stroke="#777" stroke-width="0.8"/>
+  <text x="471.4" y="415.0" text-anchor="middle" font-size="13.5">Abrir o</text>
+  <text x="471.4" y="431.0" text-anchor="middle" font-size="13.5">prontuário</text>
+  <rect x="597.4" y="352" width="52" height="34" rx="12" stroke="#555" stroke-width="1.3" fill="#ffffff"/><rect x="602.4" y="356" width="42" height="26" rx="9" stroke="#555" stroke-width="1.3" fill="#ffffff"/><rect x="595.4" y="391" width="56" height="9" rx="4.5" stroke="#555" stroke-width="1.3" fill="#ffffff"/><circle cx="687.4" cy="358" r="9" stroke="#555" stroke-width="1.3" fill="#ffffff"/><path d="M668.4,402 L668.4,382 Q668.4,369 680.4,369 L694.4,369 Q706.4,369 706.4,382 L706.4,402 Z" stroke="#555" stroke-width="1.3" fill="#ffffff"/><line x1="675.4" y1="381" x2="675.4" y2="402" stroke="#555" stroke-width="1.3"/><line x1="699.4" y1="381" x2="699.4" y2="402" stroke="#555" stroke-width="1.3"/><path d="M642.4,374 l7,-7 v4 h12 v-4 l7,7 l-7,7 v-4 h-12 v4 z" fill="#8a8a8a" stroke="#777" stroke-width="0.8"/>
+  <text x="653.4" y="415.0" text-anchor="middle" font-size="13.5">Ler a anotação</text>
+  <text x="653.4" y="431.0" text-anchor="middle" font-size="13.5">do parecer</text>
+  <path d="M824.0,390 c-10,0 -12,-14 -2,-17 c-4,-10 8,-17 15,-11 c3,-9 17,-9 20,0 c6,-6 18,-2 16,7 c10,1 11,15 1,17 c3,8 -7,14 -14,9 c-4,7 -16,7 -20,0 c-6,5 -17,2 -16,-5 z" stroke="#555" stroke-width="1.3" fill="#ffffff"/>
+  <text x="850.0" y="415.0" text-anchor="middle" font-size="13.5">Obter os critérios</text>
+  <text x="850.0" y="431.0" text-anchor="middle" font-size="13.5">do neurologista</text>
+  <circle cx="759.1999999999999" cy="518" r="9" stroke="#555" stroke-width="1.3" fill="#ffffff"/><path d="M740.1999999999999,562 L740.1999999999999,542 Q740.1999999999999,529 752.1999999999999,529 L766.1999999999999,529 Q778.1999999999999,529 778.1999999999999,542 L778.1999999999999,562 Z" stroke="#555" stroke-width="1.3" fill="#ffffff"/><line x1="747.1999999999999" y1="541" x2="747.1999999999999" y2="562" stroke="#555" stroke-width="1.3"/><line x1="771.1999999999999" y1="541" x2="771.1999999999999" y2="562" stroke="#555" stroke-width="1.3"/>
+  <text x="759.2" y="575.0" text-anchor="middle" font-size="13.5">Ligar para o</text>
+  <text x="759.2" y="591.0" text-anchor="middle" font-size="13.5">neurologista</text>
+  <rect x="884.8000000000001" y="512" width="52" height="34" rx="12" stroke="#555" stroke-width="1.3" fill="#ffffff"/><rect x="889.8000000000001" y="516" width="42" height="26" rx="9" stroke="#555" stroke-width="1.3" fill="#ffffff"/><rect x="882.8000000000001" y="551" width="56" height="9" rx="4.5" stroke="#555" stroke-width="1.3" fill="#ffffff"/><circle cx="974.8000000000001" cy="518" r="9" stroke="#555" stroke-width="1.3" fill="#ffffff"/><path d="M955.8000000000001,562 L955.8000000000001,542 Q955.8000000000001,529 967.8000000000001,529 L981.8000000000001,529 Q993.8000000000001,529 993.8000000000001,542 L993.8000000000001,562 Z" stroke="#555" stroke-width="1.3" fill="#ffffff"/><line x1="962.8000000000001" y1="541" x2="962.8000000000001" y2="562" stroke="#555" stroke-width="1.3"/><line x1="986.8000000000001" y1="541" x2="986.8000000000001" y2="562" stroke="#555" stroke-width="1.3"/><path d="M929.8000000000001,534 l7,-7 v4 h12 v-4 l7,7 l-7,7 v-4 h-12 v4 z" fill="#8a8a8a" stroke="#777" stroke-width="0.8"/>
+  <text x="940.8" y="575.0" text-anchor="middle" font-size="13.5">Consultar exames</text>
+  <text x="940.8" y="591.0" text-anchor="middle" font-size="13.5">anteriores</text>
+  <circle cx="845.9999999999999" cy="198" r="9" stroke="#555" stroke-width="1.3" fill="#ffffff"/><path d="M826.9999999999999,242 L826.9999999999999,222 Q826.9999999999999,209 838.9999999999999,209 L852.9999999999999,209 Q864.9999999999999,209 864.9999999999999,222 L864.9999999999999,242 Z" stroke="#555" stroke-width="1.3" fill="#ffffff"/><line x1="833.9999999999999" y1="221" x2="833.9999999999999" y2="242" stroke="#555" stroke-width="1.3"/><line x1="857.9999999999999" y1="221" x2="857.9999999999999" y2="242" stroke="#555" stroke-width="1.3"/>
+  <text x="846.0" y="255.0" text-anchor="middle" font-size="13.5">Decidir a</text>
+  <text x="846.0" y="271.0" text-anchor="middle" font-size="13.5">conduta</text>
+  <path d="M1118.6,230 c-10,0 -12,-14 -2,-17 c-4,-10 8,-17 15,-11 c3,-9 17,-9 20,0 c6,-6 18,-2 16,7 c10,1 11,15 1,17 c3,8 -7,14 -14,9 c-4,7 -16,7 -20,0 c-6,5 -17,2 -16,-5 z" stroke="#555" stroke-width="1.3" fill="#ffffff"/>
+  <text x="1144.6" y="255.0" text-anchor="middle" font-size="13.5">Registrar a</text>
+  <text x="1144.6" y="271.0" text-anchor="middle" font-size="13.5">decisão</text>
+  <rect x="994.0999999999999" y="352" width="52" height="34" rx="12" stroke="#555" stroke-width="1.3" fill="#ffffff"/><rect x="999.0999999999999" y="356" width="42" height="26" rx="9" stroke="#555" stroke-width="1.3" fill="#ffffff"/><rect x="992.0999999999999" y="391" width="56" height="9" rx="4.5" stroke="#555" stroke-width="1.3" fill="#ffffff"/><circle cx="1084.1" cy="358" r="9" stroke="#555" stroke-width="1.3" fill="#ffffff"/><path d="M1065.1,402 L1065.1,382 Q1065.1,369 1077.1,369 L1091.1,369 Q1103.1,369 1103.1,382 L1103.1,402 Z" stroke="#555" stroke-width="1.3" fill="#ffffff"/><line x1="1072.1" y1="381" x2="1072.1" y2="402" stroke="#555" stroke-width="1.3"/><line x1="1096.1" y1="381" x2="1096.1" y2="402" stroke="#555" stroke-width="1.3"/><path d="M1039.1,374 l7,-7 v4 h12 v-4 l7,7 l-7,7 v-4 h-12 v4 z" fill="#8a8a8a" stroke="#777" stroke-width="0.8"/>
+  <text x="1050.1" y="415.0" text-anchor="middle" font-size="13.5">Digitar conduta</text>
+  <text x="1050.1" y="431.0" text-anchor="middle" font-size="13.5">e justificativa</text>
+  <rect x="1213.1" y="352" width="52" height="34" rx="12" stroke="#555" stroke-width="1.3" fill="#ffffff"/><rect x="1218.1" y="356" width="42" height="26" rx="9" stroke="#555" stroke-width="1.3" fill="#ffffff"/><rect x="1211.1" y="391" width="56" height="9" rx="4.5" stroke="#555" stroke-width="1.3" fill="#ffffff"/>
+  <text x="1239.1" y="415.0" text-anchor="middle" font-size="13.5">Gravar evolução</text>
+  <text x="1239.1" y="431.0" text-anchor="middle" font-size="13.5">no prontuário</text>
+  <line x1="30" y1="614.0" x2="1298" y2="614.0" stroke="#ddd"/>
+    <circle cx="60.0" cy="642" r="9" stroke="#555" stroke-width="1.3" fill="#ffffff"/><path d="M41.0,686 L41.0,666 Q41.0,653 53.0,653 L67.0,653 Q79.0,653 79.0,666 L79.0,686 Z" stroke="#555" stroke-width="1.3" fill="#ffffff"/><line x1="48.0" y1="665" x2="48.0" y2="686" stroke="#555" stroke-width="1.3"/><line x1="72.0" y1="665" x2="72.0" y2="686" stroke="#555" stroke-width="1.3"/>
+  <text x="90" y="656" font-size="12.5">tarefa do</text>
+  <text x="90" y="672" font-size="12.5">usuário</text>
+  <rect x="180.0" y="636" width="52" height="34" rx="12" stroke="#555" stroke-width="1.3" fill="#ffffff"/><rect x="185.0" y="640" width="42" height="26" rx="9" stroke="#555" stroke-width="1.3" fill="#ffffff"/><rect x="178.0" y="675" width="56" height="9" rx="4.5" stroke="#555" stroke-width="1.3" fill="#ffffff"/><circle cx="270.0" cy="642" r="9" stroke="#555" stroke-width="1.3" fill="#ffffff"/><path d="M251.0,686 L251.0,666 Q251.0,653 263.0,653 L277.0,653 Q289.0,653 289.0,666 L289.0,686 Z" stroke="#555" stroke-width="1.3" fill="#ffffff"/><line x1="258.0" y1="665" x2="258.0" y2="686" stroke="#555" stroke-width="1.3"/><line x1="282.0" y1="665" x2="282.0" y2="686" stroke="#555" stroke-width="1.3"/><path d="M225.0,658 l7,-7 v4 h12 v-4 l7,7 l-7,7 v-4 h-12 v4 z" fill="#8a8a8a" stroke="#777" stroke-width="0.8"/>
+  <text x="302" y="656" font-size="12.5">tarefa</text>
+  <text x="302" y="672" font-size="12.5">interativa</text>
+  <rect x="394.0" y="636" width="52" height="34" rx="12" stroke="#555" stroke-width="1.3" fill="#ffffff"/><rect x="399.0" y="640" width="42" height="26" rx="9" stroke="#555" stroke-width="1.3" fill="#ffffff"/><rect x="392.0" y="675" width="56" height="9" rx="4.5" stroke="#555" stroke-width="1.3" fill="#ffffff"/>
+  <text x="458" y="656" font-size="12.5">tarefa do</text>
+  <text x="458" y="672" font-size="12.5">sistema</text>
+  <path d="M553.0,674 c-10,0 -12,-14 -2,-17 c-4,-10 8,-17 15,-11 c3,-9 17,-9 20,0 c6,-6 18,-2 16,7 c10,1 11,15 1,17 c3,8 -7,14 -14,9 c-4,7 -16,7 -20,0 c-6,5 -17,2 -16,-5 z" stroke="#555" stroke-width="1.3" fill="#ffffff"/>
+  <text x="620" y="656" font-size="12.5">tarefa</text>
+  <text x="620" y="672" font-size="12.5">abstrata</text>
+  <text x="720" y="664" font-size="12.5">&gt;&gt; ativação · []&gt;&gt; ativação com passagem de informação · [] escolha · ||| concorrência</text>
+</svg>

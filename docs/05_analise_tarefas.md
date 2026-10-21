@@ -31,7 +31,7 @@ Um CRUD pode gerar tarefas relevantes, mas “cadastrar usuário” só merece m
 |---|---|---|---|---|
 | T01 | Retomar a conduta de um paciente já avaliado por especialista | P01/C02 | [H] frequência média (sempre que um caso encaminhado volta ao clínico); criticidade alta (a conduta é decidida sem o raciocínio já obtido) | Paulo Hudson Josué da Silva |
 | T02 | {{...}} | P03/C01 | {{...}} | Raphael Garavati Erbert |
-| T03 | {{...}} | P04/C03 | {{...}} | Nathan Gabriel da Fonseca Leite |
+| T03 | Realizar a aquisição de imagem de ressonância com qualidade diagnóstica e dados clínicos completos, dentro da agenda | P04/C03 | [H] frequência alta (a cada exame de investigação de demência); criticidade média-alta (a qualidade dos dados de entrada condiciona todo o restante do fluxo — Entrega 1, item 3.2) | Nathan Gabriel da Fonseca Leite |
 | T04 | {{...}} | P02/C04 | {{...}} | Ana Carolina Lazzuri |
 
 ---
@@ -256,6 +256,196 @@ Decidir a conduta e Ligar para o neurologista ficam fora do sistema — é por i
 | {{...}} | {{...}} | {{...}} |
 
 Identifique, quando aplicável, tarefas de usuário, sistema, interação e tarefas abstratas. Verifique se concorrência, escolha, habilitação, desabilitação e repetição estão representadas corretamente segundo a notação adotada em aula.
+
+---
+
+## HTA — T03 Realizar a aquisição de imagem de ressonância dentro da agenda
+
+**Autor(a):** Nathan Gabriel da Fonseca Leite — 221230287
+
+### Descrição da tarefa
+
+**Objetivo:** realizar a aquisição de imagem de ressonância com qualidade diagnóstica e dados clínicos completos, dentro da agenda (objetivo extraído do cenário C03, seção 4). **Ponto de início:** o paciente entra no setor de imagem com o pedido médico de investigação de déficit cognitivo. **Conclusão esperada:** o paciente é liberado com as imagens em qualidade diagnóstica adquiridas, os dados clínicos completos e a janela da agenda respeitada — sem necessidade de reconvocação. **Contexto:** setor de imagem hospitalar, escala com intervalos curtos entre pacientes [H, C03 Q1] e paciente idosa com dificuldade de cooperação (P04, cenário C03).
+
+O objetivo tem três critérios de sucesso que valem ao mesmo tempo, e é a tensão entre eles que torna a tarefa relevante para IHC:
+
+| Critério | Evidência no C03 |
+|---|---|
+| Qualidade diagnóstica | "exame limitado por artefato de movimento; ausência de sequência volumétrica" |
+| Dados clínicos completos | "dados clínicos incompletos"; transcrição manual sujeita a lapsos [H, Q4] |
+| Dentro da agenda | escala com intervalos curtos entre pacientes [H, Q1] |
+
+Os dois primeiros **competem** com o terceiro: repetir uma sequência melhora a imagem e consome a janela. Por isso a restrição de tempo entra no objetivo, e não apenas no contexto.
+
+A modelagem descreve como a tarefa é feita hoje, com o console do scanner, o PACS e o prontuário, e não com a interface que o projeto ainda vai propor. O envio do exame para análise fica fora do recorte: ele começa depois que a aquisição é encerrada, e é na liberação do paciente que a janela de correção se fecha.
+
+### Diagrama
+
+![HTA T03](../assets/05_tarefas/hta_t03.svg)
+
+### Decomposição e planos
+
+Cada plano é escrito dentro da caixa do objetivo e numera apenas os seus próprios subobjetivos (`1 > 2` sequencial, `1 / 2` seleção, `1 + 2` paralelo). No diagrama, as **operações** — as folhas da árvore — são marcadas com a linha dupla sob a caixa; as caixas sem essa linha são objetivos.
+
+| ID | Objetivo/operação | Plano/ordem | Problema ou decisão de design observada |
+|---|---|---|---|
+| 0 | Realizar a aquisição com qualidade diagnóstica e dados clínicos completos, dentro da agenda | 1 > 2 > 3 | **Input:** pedido médico e janela da agenda. **Feedback:** confirmação de que o exame está completo antes de liberar o paciente. **Problema:** esse retorno não existe — a falha só aparece dias depois, no laudo, porque o fluxo não tem validador precoce de qualidade no PACS [H, Q5]. **Recomendação:** antecipar a conferência para antes da liberação do paciente (H07). |
+| 1 | Preparar a aquisição | 1 > 2 > 3 | **Problema:** o pedido vem como "RM de crânio", sem indicar a suspeita, e a escolha do protocolo recai sobre o técnico — cuja autonomia formal para alterá-lo é uma questão em aberto [?, Q2]. |
+| 1.1 | Ler o pedido e identificar a suspeita | operação | **Input:** texto livre do pedido médico. **Problema:** informação incompleta na origem. |
+| 1.2 | Definir protocolo e dados obrigatórios | operação | **Feedback:** hoje inexistente — não há lista do que o caso exige. **Recomendação:** apresentar sequências e dados clínicos obrigatórios **antes** da aquisição (F03, `RASTREABILIDADE.md`). |
+| 1.3 | Estimar o tempo do protocolo na janela | operação | **Problema:** o técnico não sabe de antemão se o protocolo completo cabe na janela; descobre durante a aquisição [H, Q1]. **Recomendação:** exibir a duração estimada contra o tempo restante. |
+| 2 | Executar a aquisição | 1 + 2 (em qualquer ordem) | **Ação:** nada obriga os dados clínicos a esperarem as imagens; reuni-los enquanto o paciente é posicionado economiza janela. É por fazê-los **depois** que, no C03, a transcrição ocorre sob ritmo acelerado [H, Q4]. |
+| 2.1 | Adquirir as imagens | 1 > 2 > 3 | — |
+| 2.1.1 | Posicionar e orientar o paciente | operação | **Problema:** pacientes com declínio cognitivo têm dificuldade de permanecer imóveis. |
+| 2.1.2 | Executar as sequências do protocolo | operação | **Input:** protocolo definido em 1.2. **Feedback:** imagens no console. |
+| 2.1.3 | Garantir a qualidade diagnóstica | 1 / 2 / 3 | **Problema:** a escolha é feita sem critério escrito de quanto movimento é tolerável e sem saber quanto tempo resta. O conjunto de ações de contenção disponíveis na rotina é ele próprio uma lacuna [H, Q3]. Qual caminho se aplica é detalhado no GOMS (GOAL 2). **Recomendação:** indicar a qualidade em linguagem de aquisição (sequência, artefato, cobertura), nunca em métricas do modelo (Entrega 1, item 2.4). |
+| 2.1.3.1 | Conter o movimento e repetir a sequência | operação | **Ação:** orientar novamente a paciente ou aplicar contenções leves antes de repetir [H, Q3]; só é possível com o paciente ainda no aparelho e com folga na janela. |
+| 2.1.3.2 | Encurtar o protocolo preservando a sequência crítica | operação | **Problema:** depende de o serviço autorizar o técnico a ajustar o protocolo [?, Q2]. **Recomendação:** o sistema deve indicar qual sequência é indispensável para a suspeita, para que o corte não atinja justamente ela. |
+| 2.1.3.3 | Registrar a limitação do exame | operação | **Recomendação:** a limitação deve acompanhar o caso até quem lauda, e não ficar só no laudo final. |
+| 2.2 | Completar os dados clínicos | 1 > 2 > 3 | **Problema:** transcrição manual do prontuário para a requisição, sujeita a lapsos de digitação [H, Q4]. |
+| 2.2.1 | Importar dados do prontuário | operação | **Recomendação:** trazer idade, queixa, MMSE/MoCA e histórico sem redigitação. |
+| 2.2.2 | Confirmar a identidade do paciente | operação | **Problema:** risco de associar imagens e dados a pacientes diferentes (Entrega 1, item 5.3). **Recomendação:** confirmação explícita, feita por pessoa. |
+| 2.2.3 | Completar os dados que faltarem | operação | **Feedback:** indicar o que ainda falta, em vez de aceitar o caso incompleto em silêncio. |
+| 3 | Encerrar a aquisição | 1 > 2 | **Ação:** é o último momento em que a correção ainda é barata. |
+| 3.1 | Conferir qualidade e completude antes de liberar o paciente | operação | **Problema:** essa conferência não existe no fluxo atual — é o ponto exato da ruptura do C03 [H, Q5]. **Recomendação:** bloquear o encerramento enquanto houver item obrigatório pendente (F03). |
+| 3.2 | Liberar o paciente e registrar o tempo usado | operação | **Feedback:** registrar o tempo efetivo contra a janela alimenta o indicador de agenda do setor. |
+
+**Verificação do HTA:**
+
+- O objetivo 0 representa uma meta do usuário? Sim — é o estado que Bruno quer alcançar (exame adquirido, completo e dentro da janela), não uma função do sistema.
+- As subtarefas são necessárias e suficientes? Sim — retirar qualquer um dos três objetivos de primeiro nível impede alcançar o objetivo, e nenhuma outra etapa aparece no C03 dentro deste recorte.
+- Os **planos** indicam ordem, alternativa, repetição ou condição? Sim — há plano sequencial (0, 1, 2.1, 2.2 e 3), paralelo (2) e de seleção entre três caminhos (2.1.3).
+- A decomposição parou em nível útil para projeto de interação? Sim — as folhas são operações observáveis (ler, definir, estimar, posicionar, conter, importar, conferir, liberar). Descer até cliques pressuporia uma interface que só será projetada na Entrega 6.
+
+---
+
+## GOMS — T03 Realizar a aquisição de imagem de ressonância dentro da agenda
+
+**Autor(a):** Nathan Gabriel da Fonseca Leite — 221230287
+
+O GOMS reabre o ponto que o HTA marca apenas como seleção: **quando há mais de uma forma de atingir um subobjetivo, o que decide qual usar**. Dois subobjetivos têm métodos alternativos — obter imagens com qualidade diagnóstica (GOAL 2) e completar os dados clínicos (GOAL 3) —, e são exatamente os dois pontos do HTA com mais de um caminho possível. Nas regras de seleção de GOAL 2, o tempo restante na janela aparece como condição explícita: é ele que arbitra o conflito entre qualidade e agenda.
+
+### Modelo GOMS
+
+Notação da aula: `GOAL`, `METHOD`, `(SEL. RULE: ...)` logo abaixo de cada método, e `OP.` para os operadores, com a numeração herdada do nível acima.
+
+```
+GOAL 0: realizar a aquisição de imagem de ressonância com qualidade
+        diagnóstica e dados clínicos completos, dentro da agenda
+
+  GOAL 1: definir o que o caso exige e o tempo disponível
+      OP. 1.1: ler o pedido e identificar a suspeita clínica
+      OP. 1.2: perceber o protocolo e os dados clínicos obrigatórios
+      OP. 1.3: estimar o tempo do protocolo na janela da agenda
+
+  GOAL 2: obter imagens com qualidade diagnóstica
+
+      METHOD 2.A: conter o movimento e repetir a sequência
+      (SEL. RULE: paciente ainda no aparelho, tolera a repetição
+       e ainda há folga na janela da agenda)
+          OP. 2.A.1: perceber o artefato nas imagens
+          OP. 2.A.2: decidir que o problema é recuperável
+          OP. 2.A.3: orientar a paciente novamente
+          OP. 2.A.4: aplicar contenções leves, se necessário   [H, C03 Q3]
+          OP. 2.A.5: acionar o console e repetir a sequência
+          OP. 2.A.6: perceber o novo resultado
+
+      METHOD 2.B: encurtar o protocolo preservando a sequência crítica
+      (SEL. RULE: a janela da agenda está acabando, a sequência crítica
+       ainda não foi adquirida e o serviço autoriza o técnico a ajustar
+       o protocolo — condição em aberto, C03 Q2)
+          OP. 2.B.1: perceber o tempo restante
+          OP. 2.B.2: decidir qual sequência é crítica para a suspeita
+          OP. 2.B.3: suprimir as sequências acessórias
+          OP. 2.B.4: adquirir a sequência crítica
+
+      METHOD 2.C: registrar a limitação do exame
+      (SEL. RULE: a limitação é parcial e não atinge a região de interesse)
+          OP. 2.C.1: perceber a limitação
+          OP. 2.C.2: decidir que ela não impede a análise
+          OP. 2.C.3: clicar em "registrar limitação"
+          OP. 2.C.4: digitar o motivo
+
+      METHOD 2.D: reconvocar o paciente
+      (SEL. RULE: a janela acabou ou o paciente não tolera,
+       e o item faltante é obrigatório)
+          OP. 2.D.1: perceber que o item faltante é obrigatório
+          OP. 2.D.2: decidir que não há como corrigir agora
+          OP. 2.D.3: marcar novo exame na agenda
+          OP. 2.D.4: notificar o médico solicitante
+
+  GOAL 3: completar os dados clínicos do caso
+
+      METHOD 3.A: importar do prontuário
+      (SEL. RULE: os dados estão estruturados e disponíveis no prontuário)
+          OP. 3.A.1: selecionar o paciente
+          OP. 3.A.2: importar idade, queixa e MMSE
+          OP. 3.A.3: confirmar a identidade
+          OP. 3.A.4: perceber o que ficou faltando
+
+      METHOD 3.B: completar manualmente
+      (SEL. RULE: o dado só existe em evolução antiga ou em laudo
+       não estruturado)
+          OP. 3.B.1: procurar o dado no prontuário
+          OP. 3.B.2: digitar o valor no caso          [H, C03 Q4]
+          OP. 3.B.3: confirmar a identidade
+          OP. 3.B.4: perceber o que ficou faltando
+
+  GOAL 4: encerrar a aquisição dentro da janela
+      OP. 4.1: conferir qualidade e completude antes de liberar
+      OP. 4.2: liberar o paciente
+      OP. 4.3: registrar o tempo usado na janela da agenda
+```
+
+Os operadores estão em nível de tarefa (*perceber*, *decidir*, *orientar*, *acionar*, *clicar*, *digitar*, *confirmar*). A variante **GOMS-KLM** (K, P, H, B, M, R, com tempos somados) não foi aplicada porque pressupõe uma interface concreta cujas teclas e cliques possam ser cronometrados; ela fica registrada para a Entrega 11, onde será especialmente pertinente por o objetivo ter restrição de tempo.
+
+> **Sobre a forma do artefato:** o GOMS é um **modelo textual**. Diferente do HTA e do CTT, ele não se representa como diagrama de caixas e setas — a hierarquia é expressa pela indentação, como nos exemplos da aula. O mesmo modelo está tipografado em [`../assets/05_tarefas/goms_t03.svg`](../assets/05_tarefas/goms_t03.svg), para uso em slides e impressão.
+
+### Comparação entre os métodos de GOAL 2
+
+| Método | Custo na janela da agenda | Custo para o paciente | Qualidade diagnóstica resultante | Risco |
+|---|---|---|---|---|
+| 2.A Conter e repetir | Alto — consome o tempo restante | Permanecer mais tempo no aparelho | Preservada | Baixo — corrige o problema na origem |
+| 2.B Encurtar o protocolo | Baixo — cabe na janela | Nenhum | Preservada na região de interesse; perde achados acessórios | Médio — depende de acertar a sequência crítica e de haver autonomia para alterar o protocolo [?, Q2] |
+| 2.C Registrar limitação | Nenhum | Nenhum imediato | Comprometida, mas declarada | Alto — a limitação pode não chegar a quem decide |
+| 2.D Reconvocar | Nenhum agora; consome vaga futura | Nova viagem, acompanhante, semanas de atraso | Adiada | Alto — é o desfecho do cenário C03 |
+
+**O que o modelo mostra:** 2.A e 2.B são os únicos métodos que ainda entregam qualidade diagnóstica, e ambos só existem **enquanto o paciente está no aparelho**. Eles se distinguem pelo tempo: 2.A exige folga na janela, 2.B é a saída quando a folga acabou. Hoje, como a falta só é percebida dias depois (H07), o processo não escolhe entre eles — cai direto em 2.D, o método que mais custa ao paciente. A implicação de design é que a verificação precisa acontecer cedo o bastante para que 2.A e 2.B ainda sejam aplicáveis, e que a interface deve informar o tempo restante, já que é ele que distingue os dois. Em GOAL 3, 3.B existe apenas porque o prontuário não entrega o MMSE de forma estruturada — eliminar essa causa elimina o método mais lento e mais sujeito a erro [H, Q4].
+
+---
+
+## CTT — T03 Realizar a aquisição de imagem de ressonância dentro da agenda
+
+**Autor(a):** Nathan Gabriel da Fonseca Leite — 221230287
+
+### Descrição
+
+O CTT modela o mesmo objetivo sob a perspectiva temporal, distinguindo o que é feito pelo técnico, o que é feito pelo sistema e o que exige interação entre os dois. Ele mostra dois pontos que o HTA não representa: a **concorrência** entre adquirir as imagens e completar os dados clínicos, e a **desativação** da aquisição quando o paciente não tolera o exame.
+
+### Diagrama
+
+![CTT T03](../assets/05_tarefas/ctt_t03.svg)
+
+### Legenda e relações temporais usadas
+
+| Operador/relação | Significado no diagrama | Exemplo no modelo |
+|---|---|---|
+| `>>` ativação | A segunda tarefa só pode iniciar após a primeira terminar | "Completar dados clínicos" `>>` "Encerrar a aquisição" |
+| `[ ]>>` ativação com passagem de informação | Além de só iniciar depois, a segunda tarefa recebe a informação produzida pela primeira | "Preparar a aquisição" `[ ]>>` "Adquirir as imagens": o protocolo definido determina as sequências |
+| `[ ]` escolha | Ambas estão habilitadas, mas iniciar uma desabilita a outra | "Conter o movimento e repetir a sequência" `[ ]` "Encurtar o protocolo" `[ ]` "Registrar limitação do exame" — corresponde à seleção `1 / 2 / 3` do objetivo 2.1.3 do HTA e aos métodos 2.A, 2.B e 2.C do GOMS |
+| `\|\|\|` concorrência | As tarefas podem ser realizadas em qualquer ordem ou ao mesmo tempo | "Adquirir as imagens" `\|\|\|` "Completar dados clínicos" — corresponde ao plano `1 + 2` do objetivo 2 do HTA |
+| `[>` desativação | A primeira tarefa é completamente interrompida pela segunda | "Executar as sequências do protocolo" `[>` "Interromper por intolerância do paciente" — é o que acontece no C03, quando Dona Aparecida pede para sair |
+
+As demais relações da notação (`\| [ ] \|` concorrência com comunicação, `\|=\|` independência e `\|>` suspensão/retomada) não aparecem neste modelo porque nenhuma situação da tarefa as exige.
+
+**Tipos de tarefa no modelo** (os quatro tipos da notação, com os ícones da aula):
+
+- **Tarefas do usuário** (realizadas fora do sistema): ler o pedido médico; definir protocolo e dados obrigatórios; estimar o tempo na janela da agenda; posicionar e orientar o paciente.
+- **Tarefas do sistema** (processamento sem interação): validar qualidade diagnóstica; importar dados do prontuário; conferir qualidade e completude; registrar o tempo usado na janela.
+- **Tarefas interativas** (diálogo usuário–sistema): executar as sequências do protocolo; interromper por intolerância do paciente; conter o movimento e repetir a sequência; encurtar o protocolo; registrar limitação do exame; confirmar identidade do paciente; completar dados que faltarem; liberar o paciente.
+- **Tarefas abstratas** (composição que auxilia a decomposição): realizar a aquisição; preparar a aquisição; adquirir as imagens; completar dados clínicos; encerrar a aquisição.
+
+**O que o modelo revela:** validar a qualidade diagnóstica, importar os dados clínicos e conferir a completude estão tipadas como **tarefas do sistema**, mas hoje todas são feitas por pessoas — o técnico avalia a imagem no olho, transcreve manualmente os dados [H, Q4] e não faz conferência nenhuma antes de liberar o paciente [H, Q5]. "Estimar o tempo na janela da agenda" aparece como tarefa do **usuário** justamente porque nenhum sistema oferece esse dado hoje; convertê-la em tarefa do sistema é uma das oportunidades de design mais diretas deste modelo. A confirmação de identidade permanece como tarefa interativa porque a responsabilidade é humana e não deve ser automatizada em silêncio.
 
 ---
 

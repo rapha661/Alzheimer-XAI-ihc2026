@@ -424,7 +424,7 @@ O CTT modela o mesmo objetivo sob a perspectiva temporal, distinguindo o que é 
 
 ### Diagrama
 
-![CTT T03](../assets/05_tarefas/ctt_t03.svg)
+![CTT T03](../assets/05_tarefas/ctt_t03(1).svg)
 
 ### Legenda e relações temporais usadas
 

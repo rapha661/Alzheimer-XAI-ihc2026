@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1282" width="900" height="1282">
+<rect width="900" height="1282" fill="#ffffff"/>
+<text x="40" y="44" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="16.5" font-weight="700" fill="#1F3B54">GOMS — T03: Realizar a aquisição de imagem de ressonância com qualidade</text>
+<text x="40" y="66" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="16.5" font-weight="700" fill="#1F3B54">diagnóstica e dados clínicos completos, dentro da agenda</text>
+<line x1="40" y1="80" x2="860" y2="80" stroke="#C9D6E0" stroke-width="1.5"/>
+<text x="40" y="104" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#1F3B54">GOAL 0: realizar a aquisição de imagem de ressonância com qualidade diagnóstica</text>
+<text x="118" y="128" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#1F3B54">e dados clínicos completos, dentro da agenda</text>
+<text x="72" y="166" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#1F3B54">GOAL 1: definir o que o caso exige e o tempo disponível</text>
+<text x="132" y="189" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#12293B">OP. 1.1: ler o pedido e identificar a suspeita clínica</text>
+<text x="132" y="209" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#12293B">OP. 1.2: perceber o protocolo e os dados clínicos obrigatórios</text>
+<text x="132" y="229" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#12293B">OP. 1.3: estimar o tempo do protocolo na janela da agenda</text>
+<text x="72" y="263" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#1F3B54">GOAL 2: obter imagens com qualidade diagnóstica</text>
+<text x="132" y="286" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#2F6B8F">METHOD 2.A: conter o movimento e repetir a sequência</text>
+<text x="132" y="308" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#B03A2E" font-style="italic">(SEL. RULE: paciente ainda no aparelho, tolera a repetição e ainda há folga na janela da agenda)</text>
+<text x="196" y="328" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#12293B">OP. 2.A.1: perceber o artefato nas imagens</text>
+<text x="196" y="348" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#12293B">OP. 2.A.2: decidir que o problema é recuperável</text>
+<text x="196" y="368" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#12293B">OP. 2.A.3: orientar a paciente novamente</text>
+<text x="196" y="388" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#12293B">OP. 2.A.4: aplicar contenções leves, se necessário  [C03, Q3]</text>
+<text x="196" y="408" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#12293B">OP. 2.A.5: acionar o console e repetir a sequência</text>
+<text x="196" y="428" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#12293B">OP. 2.A.6: perceber o novo resultado</text>
+<text x="132" y="448" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#2F6B8F">METHOD 2.B: encurtar o protocolo preservando a sequência crítica</text>
+<text x="132" y="470" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#B03A2E" font-style="italic">(SEL. RULE: a janela da agenda está acabando, a sequência crítica ainda não foi adquirida</text>
+<text x="132" y="490" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#B03A2E" font-style="italic">e o serviço autoriza o técnico a ajustar o protocolo — condição em aberto, C03, Q2)</text>
+<text x="196" y="510" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#12293B">OP. 2.B.1: perceber o tempo restante</text>
+<text x="196" y="530" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#12293B">OP. 2.B.2: decidir qual sequência é crítica para a suspeita</text>
+<text x="196" y="550" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#12293B">OP. 2.B.3: suprimir as sequências acessórias</text>
+<text x="196" y="570" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#12293B">OP. 2.B.4: adquirir a sequência crítica</text>
+<text x="132" y="590" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#2F6B8F">METHOD 2.C: registrar a limitação do exame</text>
+<text x="132" y="612" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#B03A2E" font-style="italic">(SEL. RULE: a limitação é parcial e não atinge a região de interesse)</text>
+<text x="196" y="632" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#12293B">OP. 2.C.1: perceber a limitação</text>
+<text x="196" y="652" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#12293B">OP. 2.C.2: decidir que ela não impede a análise</text>
+<text x="196" y="672" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#12293B">OP. 2.C.3: clicar em "registrar limitação"</text>
+<text x="196" y="692" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#12293B">OP. 2.C.4: digitar o motivo</text>
+<text x="132" y="712" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#2F6B8F">METHOD 2.D: reconvocar o paciente</text>
+<text x="132" y="734" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#B03A2E" font-style="italic">(SEL. RULE: a janela acabou ou o paciente não tolera, e o item faltante é obrigatório)</text>
+<text x="196" y="754" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#12293B">OP. 2.D.1: perceber que o item faltante é obrigatório</text>
+<text x="196" y="774" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#12293B">OP. 2.D.2: decidir que não há como corrigir agora</text>
+<text x="196" y="794" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#12293B">OP. 2.D.3: marcar novo exame na agenda</text>
+<text x="196" y="814" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#12293B">OP. 2.D.4: notificar o médico solicitante</text>
+<text x="72" y="848" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#1F3B54">GOAL 3: completar os dados clínicos do caso</text>
+<text x="132" y="871" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#2F6B8F">METHOD 3.A: importar do prontuário</text>
+<text x="132" y="893" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#B03A2E" font-style="italic">(SEL. RULE: os dados estão estruturados e disponíveis no prontuário eletrônico)</text>
+<text x="196" y="913" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#12293B">OP. 3.A.1: selecionar o paciente</text>
+<text x="196" y="933" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#12293B">OP. 3.A.2: importar idade, queixa e MMSE</text>
+<text x="196" y="953" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#12293B">OP. 3.A.3: confirmar a identidade</text>
+<text x="196" y="973" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#12293B">OP. 3.A.4: perceber o que ficou faltando</text>
+<text x="132" y="993" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#2F6B8F">METHOD 3.B: completar manualmente</text>
+<text x="132" y="1015" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#B03A2E" font-style="italic">(SEL. RULE: o dado só existe em evolução antiga ou em laudo não estruturado)</text>
+<text x="196" y="1035" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#12293B">OP. 3.B.1: procurar o dado no prontuário</text>
+<text x="196" y="1055" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#12293B">OP. 3.B.2: digitar o valor no caso</text>
+<text x="196" y="1075" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#12293B">OP. 3.B.3: confirmar a identidade</text>
+<text x="196" y="1095" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#12293B">OP. 3.B.4: perceber o que ficou faltando</text>
+<text x="72" y="1129" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#1F3B54">GOAL 4: encerrar a aquisição dentro da janela</text>
+<text x="132" y="1152" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#12293B">OP. 4.1: conferir qualidade e completude antes de liberar</text>
+<text x="132" y="1172" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#12293B">OP. 4.2: liberar o paciente</text>
+<text x="132" y="1192" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#12293B">OP. 4.3: registrar o tempo usado na janela da agenda</text>
+<line x1="40" y1="1236" x2="860" y2="1236" stroke="#C9D6E0" stroke-width="1.5"/>
+<text x="40" y="1258" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11.5" fill="#4A5A66">GOAL = objetivo · METHOD = método · SEL. RULE = regra de seleção · OP. = operador (nível de tarefa)</text>
+</svg>

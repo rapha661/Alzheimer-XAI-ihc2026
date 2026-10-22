@@ -1,7 +1,7 @@
 # Entrega 5 — Análise de tarefas: HTA, GOMS e CTT
 
 **Data:** {{22/10/2026}}  
-**Status:** 🟨 em andamento  
+**Status:** 🟦 Concluído 
 **Responsabilidade:** cada integrante modela pelo menos 1 HTA, 1 GOMS e 1 CTT. As três técnicas podem abordar a mesma funcionalidade ou funcionalidades distintas, conforme a orientação da disciplina.
 
 ## Objetivo da atividade

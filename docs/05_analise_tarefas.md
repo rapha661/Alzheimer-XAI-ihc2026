@@ -1,6 +1,6 @@
 # Entrega 5 — Análise de tarefas: HTA, GOMS e CTT
 
-**Data:** {{dd/mm/aaaa}}  
+**Data:** {{22/10/2026}}  
 **Status:** 🟨 em andamento  
 **Responsabilidade:** cada integrante modela pelo menos 1 HTA, 1 GOMS e 1 CTT. As três técnicas podem abordar a mesma funcionalidade ou funcionalidades distintas, conforme a orientação da disciplina.
 
@@ -32,7 +32,7 @@ Um CRUD pode gerar tarefas relevantes, mas “cadastrar usuário” só merece m
 | T01 | Retomar a conduta de um paciente já avaliado por especialista | P01/C02 | [H] frequência média (sempre que um caso encaminhado volta ao clínico); criticidade alta (a conduta é decidida sem o raciocínio já obtido) | Paulo Hudson Josué da Silva |
 | T02 | Laudar uma RM de investigação cognitiva com atrofia hipocampal limítrofe, dentro do prazo da fila | P03/C01 | [H] frequência alta (toda RM de investigação de demência passa pelo laudo; fila de 41 exames no C01); criticidade alta (o laudo é o que P01 e P02 leem — uma frase genérica num caso limítrofe pode atrasar o diagnóstico, H08) | Raphael Garavati Erbert |
 | T03 | Realizar a aquisição de imagem de ressonância com qualidade diagnóstica e dados clínicos completos, dentro da agenda | P04/C03 | [H] frequência alta (a cada exame de investigação de demência); criticidade média-alta (a qualidade dos dados de entrada condiciona todo o restante do fluxo — Entrega 1, item 3.2) | Nathan Gabriel da Fonseca Leite |
-| T04 | {{...}} | P02/C04 | {{...}} | Ana Carolina Lazzuri |
+| T04 | Decidir a conduta sobre a autonomia do paciente diante de evidências conflitantes | P02/C04 | [H] frequência média (casos limítrofes em que a família relata episódios que os testes não mostram); criticidade alta (o erro nos dois sentidos afeta a segurança e a liberdade do paciente — Entrega 1, item 5.6) | Ana Carolina Lazzuri |
 
 ---
 
@@ -569,6 +569,135 @@ As demais relações da notação (`\| [ ] \|` concorrência com comunicação, 
 **O que o modelo revela:** validar a qualidade diagnóstica, importar os dados clínicos e conferir a completude estão tipadas como **tarefas do sistema**, mas hoje todas são feitas por pessoas — o técnico avalia a imagem no olho, transcreve manualmente os dados [H, Q4] e não faz conferência nenhuma antes de liberar o paciente [H, Q5]. "Estimar o tempo na janela da agenda" aparece como tarefa do **usuário** justamente porque nenhum sistema oferece esse dado hoje; convertê-la em tarefa do sistema é uma das oportunidades de design mais diretas deste modelo. A confirmação de identidade permanece como tarefa interativa porque a responsabilidade é humana e não deve ser automatizada em silêncio.
 
 ---
+## HTA — T04 Decidir a conduta sobre a autonomia do paciente diante de evidências conflitantes
+
+**Autor(a):** Ana Carolina Lazzuri — 22.123.001-4
+
+### Descrição da tarefa
+
+**Objetivo:** decidir se o Sr. Roberto pode continuar dirigindo e morando com a autonomia atual, ou se é preciso emitir um laudo restritivo (suspensão da CNH e maior supervisão em casa). **Ponto de início:** o paciente volta à consulta com a filha, que relata episódios recentes (se perdeu voltando da padaria, lapsos nas contas domésticas), enquanto o prontuário mostra MMSE estável e um laudo de MRI limítrofe. **Conclusão esperada:** uma conduta definida (laudo restritivo, avaliação neuropsicológica complementar ou manutenção da autonomia com reavaliação), explicada ao paciente e à filha e registrada no prontuário com a justificativa. **Contexto:** consultório neurológico especializado, decisão de alto impacto ético e pessoal, sem um protocolo no sistema para ponderar o relato da família frente aos escores e ao laudo (P02, cenário C04).
+
+A modelagem descreve como a tarefa é feita hoje, com o prontuário eletrônico e a conversa com a família.
+
+### Diagrama
+
+![HTA T04](https://github.com/rapha661/Alzheimer-XAI-ihc2026/blob/main/assets/05_tarefas/hta-t04.jpeg)
+
+### Decomposição e planos
+
+| ID | Objetivo/operação | Plano/ordem | Problema ou decisão de design observada |
+|---|---|---|---|
+| 0 | Decidir a conduta sobre a autonomia do paciente | 1 > 2 > 3 > 4 | **Input:** relato da filha, escores de MMSE e laudo de MRI apontando em direções diferentes. **Feedback:** a conduta fica explicada à família e registrada com justificativa. **Problema:** os dados objetivos e o relato não aparecem juntos em lugar nenhum; o confronto acontece só na cabeça do médico. |
+| 1 | Reunir as evidências do caso | 1 + 2 (em qualquer ordem) | — |
+| 1.1 | Ouvir o relato da filha | operação | **Input:** episódios do dia a dia (se perder na rua, errar contas, insistir em dirigir). **Problema:** o relato é oral e não fica registrado de forma estruturada; nas consultas seguintes ele depende do que o médico anotou em texto livre [H]. |
+| 1.2 | Revisar os dados do prontuário | 1 + 2 (em qualquer ordem) | — |
+| 1.2.1 | Consultar os escores de MMSE | operação | **Feedback:** pontuação estável em relação à consulta anterior. **Problema:** o escore total não mostra quais domínios cognitivos variaram, e é justamente aí que os episódios relatados poderiam aparecer [H]. |
+| 1.2.2 | Ler o laudo de MRI | operação | **Feedback:** achados limítrofes de declínio leve. |
+| 2 | Confrontar as evidências | 1 > 2 | — |
+| 2.1 | Comparar escores com os episódios relatados | operação | **Problema:** não há protocolo no sistema para ponderar o relato frente às métricas (C04, Q2); o peso de cada fonte fica a critério da experiência pessoal do médico. **Recomendação:** apresentar a evolução dos escores e dos achados de imagem lado a lado com o relato registrado, com a data de cada episódio. |
+| 2.2 | Ponderar risco de acidente e dano da restrição | operação | **Problema:** um erro nos dois sentidos tem consequência relevante: liberar um condutor inapto ou restringir sem necessidade a liberdade do paciente [F] (Entrega 1, item 5.6). |
+| 3 | Definir a conduta | 1 / 2 / 3 (conforme o resultado do confronto em 2) | **Problema:** a escolha é feita sob incerteza, sem apoio para justificar o peso dado a cada evidência. |
+| 3.1 | Emitir laudo restritivo | operação | **Problema:** exige respaldo legal e normativo (CFM, legislação de trânsito) que o médico precisa conhecer de antemão (C04, Q1) [H]. |
+| 3.2 | Solicitar avaliação neuropsicológica | operação | **Decisão observada:** é a alternativa que adia a restrição até haver evidência mais forte (C04, Q3). **Problema:** o paciente continua dirigindo enquanto a avaliação não sai. |
+| 3.3 | Manter a autonomia e reavaliar no retorno | operação | **Problema:** a efetividade e a aceitação da conduta só aparecem nos retornos dos meses seguintes (C04, Q5). |
+| 4 | Comunicar e registrar a decisão | 1 + 2 (em qualquer ordem) | — |
+| 4.1 | Explicar a conduta ao paciente e à filha | operação | **Problema:** a família não usa o sistema (H05); tudo o que ela entende da decisão depende da explicação oral do médico. |
+| 4.2 | Registrar decisão e justificativa no prontuário | operação | **Problema:** o conflito entre a avaliação objetiva e a narrativa familiar é registrado em texto livre, sem campo próprio (C04, Q4). **Recomendação:** registrar quais evidências sustentaram a decisão e qual era a divergência, para que o próximo retorno parta desse ponto. |
+
+**Verificação do HTA:**
+
+- O objetivo 0 representa uma meta do usuário? Sim — decidir a conduta sobre a autonomia é o que o Dr. César precisa alcançar na consulta, não uma função do sistema.
+- As subtarefas são necessárias e suficientes? Sim — cobrem o que o cenário C04 mostra, da chegada do paciente com a filha ao registro da conduta.
+- Os **planos** indicam ordem, alternativa, repetição ou condição? Sim — há planos sequenciais (0 e 2), de seleção (3) e paralelos (1, 1.2 e 4).
+- A decomposição parou em nível útil para projeto de interação? Sim — as operações são ações que o médico reconhece; o nível de cliques e teclas fica para o GOMS.
+
+---
+
+## GOMS — T04 Decidir a conduta sobre a autonomia do paciente diante de evidências conflitantes
+
+**Autor(a):** Ana Carolina Lazzuri — 22.123.001-4
+
+Notação da aula: `GOAL`, `METHOD`, `(SEL. RULE: ...)` logo abaixo de cada método, e `OP.` para os operadores, com a numeração herdada do nível acima.
+
+```text
+GOAL 0: decidir a conduta sobre a autonomia do paciente
+  GOAL 1: reunir as evidências do caso
+    OP. 1.1: ouvir o relato da filha sobre os episódios recentes
+    GOAL 1.2: revisar os dados do prontuário
+      GOAL 1.2.1: consultar os escores de MMSE
+        OP. 1.2.1.1: deslocar o cursor para a aba de testes cognitivos
+        OP. 1.2.1.2: clicar na aba de testes cognitivos
+        OP. 1.2.1.3: ler o escore atual e o da consulta anterior
+      GOAL 1.2.2: ler o laudo de MRI
+        METHOD 1.2.2.A: ler só a conclusão do laudo no prontuário
+        (SEL. RULE: o laudo é conclusivo)
+          OP. 1.2.2.A.1: deslocar o cursor para a aba de exames
+          OP. 1.2.2.A.2: clicar no laudo de MRI
+          OP. 1.2.2.A.3: ler a conclusão do laudo
+        METHOD 1.2.2.B: conferir as imagens no visualizador
+        (SEL. RULE: o laudo é limítrofe e o médico quer conferir os achados)
+          OP. 1.2.2.B.1: deslocar o cursor para "abrir imagens"
+          OP. 1.2.2.B.2: clicar em "abrir imagens"
+          OP. 1.2.2.B.3: aguardar o carregamento no visualizador DICOM
+          OP. 1.2.2.B.4: percorrer os cortes de interesse
+          OP. 1.2.2.B.5: comparar o que viu com a conclusão do laudo
+  GOAL 2: confrontar as evidências
+    OP. 2.1: comparar o escore estável com os episódios relatados
+    OP. 2.2: ponderar o risco de acidente e o dano de uma restrição precipitada
+  GOAL 3: definir a conduta
+    METHOD 3.A: emitir laudo restritivo
+    (SEL. RULE: o relato e os dados objetivos indicam risco claro ao dirigir)
+      OP. 3.A.1: deslocar o cursor para "documentos"
+      OP. 3.A.2: clicar em "novo laudo"
+      OP. 3.A.3: digitar a recomendação de suspensão da direção e de supervisão domiciliar
+      OP. 3.A.4: digitar a fundamentação clínica
+      OP. 3.A.5: clicar em "assinar e imprimir"
+    METHOD 3.B: solicitar avaliação neuropsicológica
+    (SEL. RULE: o relato e os dados objetivos divergem e não há segurança para restringir)
+      OP. 3.B.1: deslocar o cursor para "solicitar exame"
+      OP. 3.B.2: clicar em "solicitar exame"
+      OP. 3.B.3: selecionar "avaliação neuropsicológica"
+      OP. 3.B.4: digitar a justificativa clínica
+      OP. 3.B.5: clicar em "enviar pedido"
+    METHOD 3.C: manter a autonomia e reavaliar no retorno
+    (SEL. RULE: os episódios relatados são isolados e os dados objetivos seguem estáveis)
+      OP. 3.C.1: definir o intervalo do retorno
+      OP. 3.C.2: orientar a filha sobre os sinais que devem ser observados
+  GOAL 4: comunicar e registrar a decisão
+    OP. 4.1: explicar a conduta ao paciente e à filha
+    GOAL 4.2: registrar a decisão no prontuário
+      OP. 4.2.1: deslocar o cursor para o campo de evolução
+      OP. 4.2.2: digitar a decisão, as evidências consideradas e a divergência encontrada
+      OP. 4.2.3: clicar em "salvar"
+      OP. 4.2.4: verificar se a evolução aparece na lista
+```
+
+---
+
+## CTT — T04 Decidir a conduta sobre a autonomia do paciente diante de evidências conflitantes
+
+**Autor(a):** Ana Carolina Lazzuri — 22.123.001-4
+
+### Descrição
+
+A árvore mostra a mesma tarefa do ponto de vista da ordem temporal e de quem executa cada parte. **Tarefas abstratas** (nuvem): Decidir a conduta sobre a autonomia, Reunir as evidências, Revisar os dados do prontuário, Definir a conduta, Comunicar e registrar e Registrar no prontuário. **Tarefas do usuário** (pessoa): Ouvir o relato da filha, Confrontar as evidências, Manter a autonomia e reavaliar e Explicar a conduta à família. **Tarefas interativas** (monitor + pessoa): Consultar os escores de MMSE, Ler o laudo de MRI, Emitir laudo restritivo, Solicitar avaliação neuropsicológica e Digitar decisão e justificativa. **Tarefa do sistema** (monitor): Gravar evolução.
+
+Confrontar as evidências é tarefa do usuário: o prontuário mostra os escores e o laudo, mas o relato da filha não está no sistema e nada ajuda a colocar as três fontes lado a lado. A parte mais difícil da tarefa acontece fora do sistema, e só a conclusão volta para ele no registro.
+
+### Diagrama
+
+![CTT T04](https://github.com/rapha661/Alzheimer-XAI-ihc2026/blob/main/assets/05_tarefas/CTT-T04.jpeg)
+
+### Legenda e relações temporais usadas
+
+| Operador/relação | Significado no diagrama | Exemplo no modelo |
+|---|---|---|
+| `[]>>` ativação com passagem de informação | A segunda tarefa começa depois da primeira e usa a informação produzida por ela | Reunir as evidências `[]>>` Confrontar as evidências; Confrontar as evidências `[]>>` Definir a conduta; Definir a conduta `[]>>` Comunicar e registrar; Digitar decisão `[]>>` Gravar evolução |
+| `[]` escolha | As alternativas estão disponíveis, mas quando uma começa as outras são descartadas | Emitir laudo restritivo `[]` Solicitar avaliação neuropsicológica `[]` Manter a autonomia e reavaliar |
+| `\|\|\|` concorrência | Podem ser feitas em qualquer ordem ou ao mesmo tempo | Ouvir o relato da filha `\|\|\|` Revisar os dados do prontuário; Explicar a conduta à família `\|\|\|` Registrar no prontuário |
+| `\|=\|` independência de ordem | Podem ser feitas em qualquer ordem, mas uma de cada vez | Consultar os escores de MMSE `\|=\|` Ler o laudo de MRI |
+
+---
 
 ## Síntese da equipe
 
@@ -580,13 +709,13 @@ Quais problemas de interação, oportunidades e requisitos apareceram a partir d
 
 ## Checklist
 
-- [ ] Cada integrante produziu ao menos 1 HTA, 1 GOMS e 1 CTT.
-- [ ] Cada artefato identifica autor e tarefa.
-- [ ] Diagramas são legíveis e possuem fonte editável quando possível.
-- [ ] HTA contém planos, não apenas árvore de tópicos.
-- [ ] GOMS distingue Goals, Operators, Methods e Selection Rules.
-- [ ] CTT usa operadores temporais e tipos de tarefa coerentes.
-- [ ] Há texto explicando cada diagrama.
+- [x] Cada integrante produziu ao menos 1 HTA, 1 GOMS e 1 CTT.
+- [x] Cada artefato identifica autor e tarefa.
+- [x] Diagramas são legíveis e possuem fonte editável quando possível.
+- [x] HTA contém planos, não apenas árvore de tópicos.
+- [x] GOMS distingue Goals, Operators, Methods e Selection Rules.
+- [x] CTT usa operadores temporais e tipos de tarefa coerentes.
+- [x] Há texto explicando cada diagrama.
 - [ ] Tarefas estão ligadas a cenários/personas na rastreabilidade.
-- [ ] Em TCC técnico, as tarefas descrevem o que a pessoa faz com a contribuição/resultados, não passos internos do código.
-- [ ] CRUDs, relatórios, filtros e atividades administrativas foram escolhidos por relevância ao objetivo do usuário.
+- [x] Em TCC técnico, as tarefas descrevem o que a pessoa faz com a contribuição/resultados, não passos internos do código.
+- [x] CRUDs, relatórios, filtros e atividades administrativas foram escolhidos por relevância ao objetivo do usuário.

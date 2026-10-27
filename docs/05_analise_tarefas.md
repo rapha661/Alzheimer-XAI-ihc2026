@@ -56,8 +56,8 @@ A modelagem descreve como a tarefa é feita hoje, com o prontuário eletrônico 
 |---|---|---|---|
 | 0 | Retomar a conduta do paciente já avaliado por especialista | 1 > 2 > 3 > 4 | **Input:** o paciente volta com o filho relatando piora; no prontuário há só uma anotação breve do parecer. **Feedback:** a conduta fica registrada com justificativa. **Problema:** o parecer foi obtido por canal informal e o raciocínio do especialista não foi registrado. |
 | 1 | Avaliar a situação atual do paciente | 1 + 2 (em qualquer ordem) | — |
-| 1.1 | Ouvir o relato do filho sobre a piora | operação | **Input:** relato da família sobre as últimas semanas. |
-| 1.2 | Reaplicar o teste de memória (MMSE/MoCA) | operação | **Feedback:** novo escore, que só tem valor se puder ser comparado ao anterior. |
+| 1.1 | Ouvir o relato do filho sobre a piora | operação | **Ação:** o médico ouve o que o filho observou nas últimas semanas. **Problema:** o relato é oral e só fica no prontuário se o médico anotar em texto livre [H]. |
+| 1.2 | Reaplicar o teste de memória (MMSE/MoCA) | operação | **Ação:** o médico aplica o teste e calcula o escore. **Problema:** o novo escore só tem valor se puder ser comparado ao anterior. **Recomendação:** mostrar o escore anterior e o atual lado a lado. |
 | 2 | Recuperar o contexto do parecer anterior | 1 > 2 > 3 | — |
 | 2.1 | Abrir o prontuário do paciente | operação | — |
 | 2.2 | Localizar a anotação do parecer | operação | **Problema:** a anotação é uma nota de rodapé, misturada às anotações de rotina; o prontuário não distingue um parecer de especialista de uma anotação comum [H]. **Recomendação:** registrar o parecer em um lugar próprio do caso, visível quando o caso é retomado. |
@@ -90,16 +90,16 @@ A modelagem descreve como a tarefa é feita hoje, com o prontuário eletrônico 
 ### Métodos, operadores e regras de seleção
 
 - **Method M1:** perguntar diretamente ao neurologista (para G2.3 — obter os critérios do neurologista)
-  - Operators: discar o número do neurologista; aguardar o atendimento; perguntar quais exames revisou e por que descartou Alzheimer; guardar a resposta na memória
+  - Operators: discar o número do neurologista; aguardar o atendimento; perguntar quais exames revisou e por que descartou Alzheimer; guardar a resposta na memória; verificar que a resposta cobre os exames revisados e o motivo de ter descartado Alzheimer
 - **Method M2:** reconstruir o raciocínio pelos exames anteriores (para G2.3)
-  - Operators: deslocar o cursor para a aba de exames; clicar no laudo de MRI anterior; ler a conclusão do laudo; clicar no resultado do MMSE anterior; comparar o MMSE anterior com o atual; inferir o critério usado pelo neurologista
+  - Operators: deslocar o cursor para a aba de exames; clicar no laudo de MRI anterior; ler a conclusão do laudo; clicar no resultado do MMSE anterior; ler o escore anterior; comparar o MMSE anterior com o atual; comparar a conclusão do laudo e a variação do MMSE com a nota "sem AD por ora, reavaliar"; verificar se o que foi reconstruído explica a nota do neurologista
 - **Selection Rule SR1:** usar M1 quando o neurologista está disponível e a consulta permite esperar; usar M2 quando o neurologista não atende ou a consulta não permite esperar.
 - **Method M3:** solicitar novo exame (para G3 — decidir a conduta)
-  - Operators: deslocar o cursor para "solicitar exame"; clicar em "solicitar exame"; selecionar o tipo de exame; digitar a justificativa clínica; clicar em "enviar pedido"
+  - Operators: deslocar o cursor para "solicitar exame"; clicar em "solicitar exame"; selecionar o tipo de exame; digitar a justificativa clínica; clicar em "enviar pedido"; verificar que o pedido aparece na lista de pedidos do paciente
 - **Method M4:** reencaminhar ao neurologista (para G3)
-  - Operators: deslocar o cursor para "encaminhamento"; clicar em "encaminhamento"; selecionar a especialidade "neurologia"; digitar o motivo; clicar em "enviar"
+  - Operators: deslocar o cursor para "encaminhamento"; clicar em "encaminhamento"; selecionar a especialidade "neurologia"; digitar o motivo; clicar em "enviar"; verificar que o encaminhamento aparece como enviado
 - **Method M5:** conduzir sem o especialista (para G3)
-  - Operators: definir a conduta (por exemplo, reavaliar em um intervalo menor); explicar a conduta ao paciente e ao filho
+  - Operators: escolher o intervalo do retorno; explicar a conduta ao paciente e ao filho; verificar que o paciente e o filho confirmam ter entendido a conduta e o prazo do retorno
 - **Selection Rule SR2:** usar M3 quando os exames anteriores não explicam a piora relatada; usar M4 quando o raciocínio anterior não foi recuperado e a piora é significativa; usar M5 quando o raciocínio foi recuperado e a piora é compatível com o quadro já avaliado.
 
 Modelo completo, no formato da aula (Barbosa e Silva, 2010). Os subobjetivos sem alternativa (G1, G2.1, G2.2 e G4) têm só operadores; os métodos acima aparecem dentro de G2.3 e G3. Os operadores sobre o prontuário assumem um prontuário eletrônico genérico, com busca, abas e botão de salvar [H].
@@ -109,16 +109,19 @@ GOAL 0: retomar a conduta do paciente já avaliado por especialista
   GOAL 1: avaliar a situação atual do paciente
     OP. 1.1: ouvir o relato do filho sobre a piora da memória
     OP. 1.2: aplicar o MMSE/MoCA
+    OP. 1.3: verificar que o relato cobre o período da piora e que o escore atual foi calculado
   GOAL 2: recuperar o contexto do parecer anterior
     GOAL 2.1: abrir o prontuário do paciente
       OP. 2.1.1: deslocar o cursor para o campo de busca de pacientes
       OP. 2.1.2: digitar o nome do paciente
       OP. 2.1.3: clicar no registro do paciente
+      OP. 2.1.4: verificar que o nome e a data de nascimento na tela são os do paciente
     GOAL 2.2: localizar a anotação do parecer
       OP. 2.2.1: deslocar o cursor para a aba de evoluções
       OP. 2.2.2: clicar na aba de evoluções
       OP. 2.2.3: rolar a lista até a data do encaminhamento
       OP. 2.2.4: ler a nota "neuro: sem AD por ora, reavaliar"
+      OP. 2.2.5: verificar que a nota lida é a do parecer do neurologista (data do encaminhamento)
     GOAL 2.3: obter os critérios do neurologista
       METHOD 2.3.A: perguntar diretamente ao neurologista
       (SEL. RULE: o neurologista está disponível e a consulta permite esperar)
@@ -126,14 +129,17 @@ GOAL 0: retomar a conduta do paciente já avaliado por especialista
         OP. 2.3.A.2: aguardar o atendimento
         OP. 2.3.A.3: perguntar quais exames revisou e por que descartou Alzheimer
         OP. 2.3.A.4: guardar a resposta na memória
+        OP. 2.3.A.5: verificar que a resposta cobre os exames revisados e o motivo de ter descartado Alzheimer
       METHOD 2.3.B: reconstruir o raciocínio pelos exames anteriores
       (SEL. RULE: o neurologista não atende ou a consulta não permite esperar)
         OP. 2.3.B.1: deslocar o cursor para a aba de exames
         OP. 2.3.B.2: clicar no laudo de MRI anterior
         OP. 2.3.B.3: ler a conclusão do laudo
         OP. 2.3.B.4: clicar no resultado do MMSE anterior
-        OP. 2.3.B.5: comparar o MMSE anterior com o atual
-        OP. 2.3.B.6: inferir o critério usado pelo neurologista
+        OP. 2.3.B.5: ler o escore do MMSE anterior
+        OP. 2.3.B.6: comparar o MMSE anterior com o atual
+        OP. 2.3.B.7: comparar a conclusão do laudo e a variação do MMSE com a nota "sem AD por ora, reavaliar"
+        OP. 2.3.B.8: verificar se o que foi reconstruído explica a nota do neurologista
   GOAL 3: decidir a conduta
     METHOD 3.A: solicitar novo exame
     (SEL. RULE: os exames anteriores não explicam a piora relatada)
@@ -142,6 +148,7 @@ GOAL 0: retomar a conduta do paciente já avaliado por especialista
       OP. 3.A.3: selecionar o tipo de exame
       OP. 3.A.4: digitar a justificativa clínica
       OP. 3.A.5: clicar em "enviar pedido"
+      OP. 3.A.6: verificar que o pedido aparece na lista de pedidos do paciente
     METHOD 3.B: reencaminhar ao neurologista
     (SEL. RULE: o raciocínio anterior não foi recuperado e a piora é significativa)
       OP. 3.B.1: deslocar o cursor para "encaminhamento"
@@ -149,10 +156,12 @@ GOAL 0: retomar a conduta do paciente já avaliado por especialista
       OP. 3.B.3: selecionar a especialidade "neurologia"
       OP. 3.B.4: digitar o motivo do encaminhamento
       OP. 3.B.5: clicar em "enviar"
+      OP. 3.B.6: verificar que o encaminhamento aparece como enviado
     METHOD 3.C: conduzir sem o especialista
     (SEL. RULE: o raciocínio foi recuperado e a piora é compatível com o quadro já avaliado)
-      OP. 3.C.1: definir a conduta (por exemplo, reavaliar em um intervalo menor)
+      OP. 3.C.1: escolher o intervalo do retorno
       OP. 3.C.2: explicar a conduta ao paciente e ao filho
+      OP. 3.C.3: verificar que o paciente e o filho confirmam ter entendido a conduta e o prazo do retorno
   GOAL 4: registrar a decisão no prontuário
     OP. 4.1: deslocar o cursor para o campo de evolução
     OP. 4.2: digitar a conduta e a justificativa

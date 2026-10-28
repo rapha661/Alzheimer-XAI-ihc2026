@@ -625,10 +625,10 @@ A modelagem descreve como a tarefa é feita hoje, com o prontuário eletrônico 
 |---|---|---|---|
 | 0 | Decidir a conduta sobre a autonomia do paciente | 1 > 2 > 3 > 4 | **Input:** relato da filha, escores de MMSE e laudo de MRI apontando em direções diferentes. **Feedback:** a conduta fica explicada à família e registrada com justificativa. **Problema:** os dados objetivos e o relato não aparecem juntos em lugar nenhum; o confronto acontece só na cabeça do médico. |
 | 1 | Reunir as evidências do caso | 1 + 2 (em qualquer ordem) | — |
-| 1.1 | Ouvir o relato da filha | operação | **Input:** episódios do dia a dia (se perder na rua, errar contas, insistir em dirigir). **Problema:** o relato é oral e não fica registrado de forma estruturada; nas consultas seguintes ele depende do que o médico anotou em texto livre [H]. |
+| 1.1 | Ouvir o relato da filha | operação | **Ação:** o médico ouve os episódios do dia a dia (se perder na rua, errar contas, insistir em dirigir). **Problema:** o relato é oral e não fica registrado de forma estruturada; nas consultas seguintes ele depende do que o médico anotou em texto livre [H]. |
 | 1.2 | Revisar os dados do prontuário | 1 + 2 (em qualquer ordem) | — |
-| 1.2.1 | Consultar os escores de MMSE | operação | **Feedback:** pontuação estável em relação à consulta anterior. **Problema:** o escore total não mostra quais domínios cognitivos variaram, e é justamente aí que os episódios relatados poderiam aparecer [H]. |
-| 1.2.2 | Ler o laudo de MRI | operação | **Feedback:** achados limítrofes de declínio leve. |
+| 1.2.1 | Consultar os escores de MMSE | operação | **Ação:** o médico compara o escore atual com o da consulta anterior e vê pontuação estável. **Problema:** o escore total não mostra quais domínios cognitivos variaram, e é justamente aí que os episódios relatados poderiam aparecer [H]. |
+| 1.2.2 | Ler o laudo de MRI | operação | **Ação:** o médico lê a conclusão do laudo, que indica achados limítrofes de declínio leve. |
 | 2 | Confrontar as evidências | 1 > 2 | — |
 | 2.1 | Comparar escores com os episódios relatados | operação | **Problema:** não há protocolo no sistema para ponderar o relato frente às métricas (C04, Q2); o peso de cada fonte fica a critério da experiência pessoal do médico. **Recomendação:** apresentar a evolução dos escores e dos achados de imagem lado a lado com o relato registrado, com a data de cada episódio. |
 | 2.2 | Ponderar risco de acidente e dano da restrição | operação | **Problema:** um erro nos dois sentidos tem consequência relevante: liberar um condutor inapto ou restringir sem necessidade a liberdade do paciente [F] (Entrega 1, item 5.6). |
@@ -664,12 +664,14 @@ GOAL 0: decidir a conduta sobre a autonomia do paciente
         OP. 1.2.1.1: deslocar o cursor para a aba de testes cognitivos
         OP. 1.2.1.2: clicar na aba de testes cognitivos
         OP. 1.2.1.3: ler o escore atual e o da consulta anterior
+        OP. 1.2.1.4: verificar que o escore lido é o do MMSE mais recente
       GOAL 1.2.2: ler o laudo de MRI
         METHOD 1.2.2.A: ler só a conclusão do laudo no prontuário
         (SEL. RULE: o laudo é conclusivo)
           OP. 1.2.2.A.1: deslocar o cursor para a aba de exames
           OP. 1.2.2.A.2: clicar no laudo de MRI
           OP. 1.2.2.A.3: ler a conclusão do laudo
+          OP. 1.2.2.A.4: verificar que o laudo lido é o da MRI mais recente do paciente
         METHOD 1.2.2.B: conferir as imagens no visualizador
         (SEL. RULE: o laudo é limítrofe e o médico quer conferir os achados)
           OP. 1.2.2.B.1: deslocar o cursor para "abrir imagens"
@@ -677,9 +679,18 @@ GOAL 0: decidir a conduta sobre a autonomia do paciente
           OP. 1.2.2.B.3: aguardar o carregamento no visualizador DICOM
           OP. 1.2.2.B.4: percorrer os cortes de interesse
           OP. 1.2.2.B.5: comparar o que viu com a conclusão do laudo
+          OP. 1.2.2.B.6: verificar se as imagens e a conclusão do laudo concordam
+    OP. 1.3: verificar que o relato, o escore e o laudo estão reunidos
   GOAL 2: confrontar as evidências
-    OP. 2.1: comparar o escore estável com os episódios relatados
-    OP. 2.2: ponderar o risco de acidente e o dano de uma restrição precipitada
+    GOAL 2.1: comparar escores e laudo com os episódios relatados
+      OP. 2.1.1: recuperar da memória os episódios relatados pela filha
+      OP. 2.1.2: comparar a variação do MMSE com os episódios relatados
+      OP. 2.1.3: comparar a conclusão do laudo de MRI com os episódios relatados
+      OP. 2.1.4: verificar se as três fontes apontam na mesma direção ou divergem
+    GOAL 2.2: ponderar o risco de acidente e o dano de uma restrição
+      OP. 2.2.1: recuperar da memória as diretrizes de trânsito e do CFM sobre restrição [H, Q1]
+      OP. 2.2.2: comparar o risco de acidente indicado pelos episódios com o dano de uma restrição sem respaldo
+      OP. 2.2.3: verificar se o conjunto das evidências sustenta ou não uma restrição
   GOAL 3: definir a conduta
     METHOD 3.A: emitir laudo restritivo
     (SEL. RULE: o relato e os dados objetivos indicam risco claro ao dirigir)
@@ -688,6 +699,7 @@ GOAL 0: decidir a conduta sobre a autonomia do paciente
       OP. 3.A.3: digitar a recomendação de suspensão da direção e de supervisão domiciliar
       OP. 3.A.4: digitar a fundamentação clínica
       OP. 3.A.5: clicar em "assinar e imprimir"
+      OP. 3.A.6: verificar que o laudo aparece assinado na lista de documentos do paciente
     METHOD 3.B: solicitar avaliação neuropsicológica
     (SEL. RULE: o relato e os dados objetivos divergem e não há segurança para restringir)
       OP. 3.B.1: deslocar o cursor para "solicitar exame"
@@ -695,12 +707,16 @@ GOAL 0: decidir a conduta sobre a autonomia do paciente
       OP. 3.B.3: selecionar "avaliação neuropsicológica"
       OP. 3.B.4: digitar a justificativa clínica
       OP. 3.B.5: clicar em "enviar pedido"
+      OP. 3.B.6: verificar que o pedido aparece como enviado na lista de pedidos do paciente
     METHOD 3.C: manter a autonomia e reavaliar no retorno
     (SEL. RULE: os episódios relatados são isolados e os dados objetivos seguem estáveis)
-      OP. 3.C.1: definir o intervalo do retorno
+      OP. 3.C.1: escolher o intervalo do retorno
       OP. 3.C.2: orientar a filha sobre os sinais que devem ser observados
+      OP. 3.C.3: verificar que a filha repete os sinais a observar e o prazo do retorno
   GOAL 4: comunicar e registrar a decisão
-    OP. 4.1: explicar a conduta ao paciente e à filha
+    GOAL 4.1: explicar a conduta ao paciente e à filha
+      OP. 4.1.1: explicar a conduta e o motivo
+      OP. 4.1.2: verificar que o paciente e a filha confirmam ter entendido a conduta
     GOAL 4.2: registrar a decisão no prontuário
       OP. 4.2.1: deslocar o cursor para o campo de evolução
       OP. 4.2.2: digitar a decisão, as evidências consideradas e a divergência encontrada
@@ -745,7 +761,7 @@ Quais problemas de interação, oportunidades e requisitos apareceram a partir d
 
 **T03 (Nathan):** as três técnicas convergem no mesmo ponto de ruptura — entre encerrar a aquisição e liberar o paciente não existe nenhuma conferência de qualidade e completude (HTA, objetivo 3), e é isso que elimina os dois únicos métodos que ainda preservam a qualidade diagnóstica (GOMS, 2.A e 2.B, ambos válidos só com o paciente no aparelho), empurrando o processo para a reconvocação (2.D); o CTT, modelado sobre o processo atual, mostra por que a conferência não acontece — avaliar se a imagem serve é tarefa do usuário feita a olho no console, consultar o prontuário e transcrever os dados são tarefas interativas manuais, e o sistema só executa a varredura e arquiva o estudo, sem verificar o que foi produzido. Requisitos candidatos, ainda hipóteses: [H] uma conferência de qualidade e completude acontece antes da liberação do paciente, bloqueando o encerramento enquanto houver item obrigatório pendente (H07, F03); [H] as sequências e os dados clínicos obrigatórios do caso são apresentados antes da aquisição; [H] a duração estimada do protocolo aparece contra o tempo restante da janela, já que é esse dado que distingue repetir de encurtar o protocolo (GOMS, 2.A e 2.B); [H] os dados clínicos chegam à requisição sem redigitação, mantendo a conferência de identidade feita por pessoa; [H] a limitação aceita em 2.C fica registrada e acompanha o estudo até quem lauda; [?] o sistema indica qual sequência é crítica para a suspeita, o que depende de o serviço autorizar o técnico a ajustar o protocolo (C03, Q2). Tarefa candidata para o protótipo e o teste de usabilidade: encerrar a aquisição conferindo qualidade e completude antes de liberar o paciente.
 
-**T04 (Ana Carolina):** as três técnicas mostram o mesmo problema: o confronto entre as evidências (relato da família, escores e laudo de MRI) acontece só na cabeça do médico, sem apoio do sistema. O HTA mostra que o relato é oral e que o MMSE total não indica quais domínios variaram (1.1 e 1.2.1), e que a decisão é tomada sem protocolo para ponderar cada fonte (2.1 e 3). No GOMS, as regras de seleção de GOAL 3 dependem do resultado de GOAL 2, que só tem operadores mentais (comparar e ponderar). No CTT, "Confrontar as evidências" é tarefa do usuário: só a conclusão volta ao sistema, no registro da evolução. O foco é o confronto das evidências, não a avaliação de aptidão para dirigir. Requisitos candidatos, ainda hipóteses: [H] o relato da família fica registrado de forma estruturada, com a data de cada episódio; [H] escores (por domínio) e achados de imagem aparecem lado a lado com o relato; [H] a explicação localizada indica em que regiões da imagem o achado se apoia, ligando o laudo às queixas (H01); [H] a decisão é registrada com as evidências consideradas e a divergência encontrada. Tarefa candidata para o protótipo e o teste de usabilidade: confrontar evidências divergentes de um caso e registrar a conduta com a justificativa.
+**T04 (Ana Carolina):** as três técnicas mostram o mesmo problema: o confronto entre as evidências (relato da família, escores e laudo de MRI) acontece só na cabeça do médico, sem apoio do sistema. O HTA mostra que o relato é oral e que o MMSE total não indica quais domínios variaram (1.1 e 1.2.1), e que a decisão é tomada sem protocolo para ponderar cada fonte (2.1 e 3). No GOMS, as regras de seleção de GOAL 3 dependem do resultado de GOAL 2, que só tem operadores mentais (recuperar, comparar e verificar). No CTT, "Confrontar as evidências" é tarefa do usuário: só a conclusão volta ao sistema, no registro da evolução. O foco é o confronto das evidências, não a avaliação de aptidão para dirigir. Requisitos candidatos, ainda hipóteses: [H] o relato da família fica registrado de forma estruturada, com a data de cada episódio; [H] escores (por domínio) e achados de imagem aparecem lado a lado com o relato; [H] a explicação localizada indica em que regiões da imagem o achado se apoia, ligando o laudo às queixas (H01); [H] a decisão é registrada com as evidências consideradas e a divergência encontrada. Tarefa candidata para o protótipo e o teste de usabilidade: confrontar evidências divergentes de um caso e registrar a conduta com a justificativa.
 
 ## Checklist
 

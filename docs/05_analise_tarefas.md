@@ -210,6 +210,8 @@ Decidir a conduta e Ligar para o neurologista ficam fora do sistema — é por i
 O objetivo tem dois critérios que competem entre si: **utilidade/segurança** do laudo e **prazo**. Num caso limítrofe, cada passo que aumenta a segurança (buscar contexto, graduar, medir) custa tempo da fila. É essa tensão que torna a tarefa relevante para IHC, e é ela que empurra o laudo para a frase cautelosa do C01.
  
 A modelagem descreve como a tarefa é feita hoje, no PACS do serviço de telerradiologia, e não com a interface que o projeto ainda vai propor.
+
+**Por que esta tarefa pertence ao recorte do projeto.** O recorte de IHC é o uso da explicação de IA para apoiar decisões clínicas, e o laudo de Helena é a primeira decisão da cadeia: é o texto que P01 e P02 leem antes de interpretar a explicação do modelo. A modelagem localiza o ponto exato em que uma referência objetiva poderia ajudar — a avaliação do hipocampo (HTA 2.3, GOMS 2.7) e a escolha da conclusão (HTA 3, GOMS 3) — e também o limite dessa ajuda: a medida e a região destacada entram como insumo da leitura, e quem classifica, decide e assina continua sendo a radiologista. Se uma solução futura entregar uma conclusão pronta no lugar desse julgamento, ela deixa de responder a H08 e passa a criar outro problema (responsabilidade pelo laudo).
  
 ### Diagrama
  
@@ -221,17 +223,17 @@ Planos escritos dentro da caixa de cada objetivo (`1>2` sequencial, `1/2` seleç
  
 | ID | Objetivo/operação | Plano/ordem | Problema ou decisão de design observada |
 |---|---|---|---|
-| 0 | Laudar a RM de investigação cognitiva com um laudo útil e seguro, dentro do prazo da fila | 1 > 2 > 3 > 4 | **Input:** exame na fila com o pedido “RM de crânio — investigação de déficit cognitivo” e prazo por exame [H, Q1]. **Feedback:** o laudo sai da fila — mas ninguém informa se ele serviu a quem pediu [?, Q6]. **Problema:** “útil” faz parte do objetivo e nunca é verificado; a tarefa termina na liberação, não na resposta à pergunta clínica. |
+| 0 | Laudar a RM de investigação cognitiva com um laudo útil e seguro, dentro do prazo da fila | 1 > 2 > 3 > 4 | **Input:** exame na fila com o pedido “RM de crânio — investigação de déficit cognitivo” e prazo por exame [H, Q1]. **Feedback:** o laudo sai da fila — mas ninguém informa se ele serviu a quem pediu [?, Q6]. **Plano:** 1 > 2 > 3 > 4 — contextualizar o exame, depois avaliar as imagens, depois redigir a conclusão e, por fim, liberar. **Problema:** “útil” faz parte do objetivo e nunca é verificado; a tarefa termina na liberação, não na resposta à pergunta clínica. |
 | 1 | Contextualizar o exame | 1 > 2 > 3 | **Problema:** o contexto que decide a leitura de um caso limítrofe (queixa, MMSE/MoCA, exame anterior) não chega a quem lauda (H08). |
 | 1.1 | Abrir o exame na fila de laudos | operação | **Problema:** exames de urgência (ex.: suspeita de AVC) passam na frente e encurtam o tempo dos casos de demência [H, Q5]; a fila não distingue casos que pedem investigação mais longa. |
-| 1.2 | Ler o pedido e os dados clínicos | operação | **Input:** pedido em texto livre e só a idade no campo clínico, resumidos pelo técnico do hospital de origem [F, Q3]. **Recomendação:** a pergunta clínica e os dados mínimos (queixa, MMSE/MoCA, histórico) acompanham a imagem até quem lauda. |
+| 1.2 | Ler o pedido e os dados clínicos | operação | **Ação:** Helena lê o pedido em texto livre e o campo clínico, que traz só a idade — dados resumidos pelo técnico do hospital de origem [F, Q3]. **Problema:** a leitura confirma o que falta (queixa, MMSE/MoCA, histórico), mas não oferece onde buscá-lo. **Recomendação:** a pergunta clínica e os dados mínimos (queixa, MMSE/MoCA, histórico) acompanham a imagem até quem lauda. |
 | 1.3 | Obter o contexto que falta | 1 / 2 (conforme haja canal com o solicitante e folga no prazo) | **Problema:** a seleção quase sempre cai em 1.3.2 — a alternativa 1.3.1 existe no papel, não na rotina. |
 | 1.3.1 | Contatar o médico solicitante | operação | **Problema:** não há canal ágil; o solicitante está em outro hospital e raramente fala com a radiologista [?, Q6]. **Recomendação:** um canal de dúvida ligado ao próprio exame, assíncrono, que não trave a fila. |
 | 1.3.2 | Prosseguir só com os dados recebidos | operação | **Problema:** é o caminho do C01; a incerteza não desaparece, só passa para as etapas 2 e 3. |
 | 2 | Avaliar as imagens | 1 + 2 > 3 (1 e 2 em qualquer ordem; depois 3) | **Ação:** a busca pelo exame anterior pode correr enquanto os cortes são percorridos; a avaliação do hipocampo depende das duas. |
-| 2.1 | Percorrer os cortes e descrever os achados gerais | operação | **Input:** RM no PACS, com zoom e janelamento (P03). **Feedback:** impressão de hipocampos “um pouco reduzidos”, insuficiente para afirmar atrofia na idade do paciente. |
+| 2.1 | Percorrer os cortes e descrever os achados gerais | operação | **Ação:** Helena percorre a RM no PACS com zoom e janelamento (P03) e descreve ventrículos, sulcos e substância branca. **Problema:** a impressão que resulta — hipocampos “um pouco reduzidos” — não basta para afirmar atrofia na idade do paciente; a dúvida segue para 2.3. |
 | 2.2 | Buscar exame anterior para comparar | operação | **Problema:** exames feitos em outro hospital não estão no PACS do serviço; no C01 não há anterior. **Recomendação:** comparação longitudinal quando houver exame anterior (F05). |
-| 2.3 | Avaliar o volume hipocampal | 1 / 2 / 3 (conforme o grau de dúvida e o tempo restante) | **Problema:** quanto mais objetivo o método, mais tempo ele custa; no caso limítrofe, quem escolhe é a fila, não a dúvida. Os critérios estão no GOMS (GOAL 2.6). |
+| 2.3 | Avaliar o volume hipocampal | 1 / 2 / 3 (conforme o grau de dúvida e o tempo restante) | **Problema:** quanto mais objetivo o método, mais tempo ele custa; no caso limítrofe, quem escolhe é a fila, não a dúvida. Os critérios estão no GOMS (GOAL 2.7). |
 | 2.3.1 | Estimar visualmente | operação | **Problema:** julgamento subjetivo, que varia entre leitores [F, Entrega 1, item 4.2]. |
 | 2.3.2 | Graduar por escala visual (ex.: MTA) | operação | **Problema:** o limiar de normalidade da escala muda com a idade; num caso limítrofe a nota fica justamente na fronteira [H, Q4]. |
 | 2.3.3 | Medir com a régua linear do PACS | operação | **Problema:** o PACS só tem medidas lineares, sem volumetria nem referência normativa [H, Q2]; medir à mão consome um tempo que a fila não tem [H, Q1]. **Recomendação:** referência objetiva (volume hipocampal e região destacada) como apoio à leitura, nunca no lugar dela. |
@@ -239,7 +241,7 @@ Planos escritos dentro da caixa de cada objetivo (`1>2` sequencial, `1/2` seleç
 | 3.1 | Afirmar atrofia hipocampal | operação | **Problema:** sem referência objetiva, risco de falso positivo — e de responder por ele (P03 quer respaldo técnico para o que escreve). |
 | 3.2 | Declarar compatível com a faixa etária | operação | **Problema:** risco de falso negativo — é o laudo “normal para a idade” que aparece no C04. |
 | 3.3 | Usar frase cautelosa e pedir correlação clínica | operação | **Problema:** é a escolha do C01; devolve a dúvida a P01, que não interpreta RM. **Recomendação:** registrar o que foi avaliado, por qual método e que dúvida ficou, em vez de uma frase genérica. |
-| 4 | Liberar o laudo e abrir o próximo exame | operação | **Feedback:** inexistente — sem retorno do solicitante nem auditoria de laudos inconclusivos [?, Q6]. **Recomendação:** fechar o ciclo: saber o que foi feito com o laudo dos casos limítrofes. |
+| 4 | Liberar o laudo e abrir o próximo exame | operação | **Ação:** Helena assina e libera o laudo; a única confirmação que recebe é o exame sair da fila. **Problema:** não há retorno do solicitante nem auditoria de laudos inconclusivos [?, Q6] — ela não sabe se o laudo respondeu à dúvida de quem pediu. **Recomendação:** fechar o ciclo: saber o que foi feito com o laudo dos casos limítrofes. |
  
 **Verificação do HTA:**
  
@@ -247,112 +249,137 @@ Planos escritos dentro da caixa de cada objetivo (`1>2` sequencial, `1/2` seleç
 - As subtarefas são necessárias e suficientes? Sim — cobrem o C01 da abertura do exame à liberação; sem 1, 2 ou 3 o objetivo não é atingido.
 - Os planos indicam ordem, alternativa, repetição ou condição? Sim — sequencial (0 e 1), paralelo seguido de sequência (2: 1+2>3) e seleção (1.3, 2.3 e 3).
 - A decomposição parou em nível útil? Sim — as folhas são ações que a radiologista reconhece (ler, percorrer, graduar, medir, redigir, liberar); cliques ficam para o GOMS.
+- Auditoria nó a nó (revisão pós-feedback): todo nó decomposto tem dois ou mais filhos e um plano que cita exatamente esses filhos — 0 (1–4), 1 (1.1–1.3), 1.3 (1.3.1–1.3.2), 2 (2.1–2.3), 2.3 (2.3.1–2.3.3) e 3 (3.1–3.3); toda folha tem a linha dupla; `Input`, `Feedback` e `Plano` ficam só na tarefa 0, e nas filhas o que importa aparece como ação, problema ou recomendação.
+
 ---
  
 ## GOMS — T02 Laudar uma RM de investigação cognitiva com atrofia limítrofe dentro do prazo da fila
  
 **Autor(a):** Raphael Garavati Erbert — 22.123.014-7
  
-O GOMS abre os três pontos que o HTA marca como seleção (1.3, 2.3 e 3) e mostra **o que decide cada escolha**. A leitura mais importante está na regra de GOAL 3: ela depende do que GOAL 1.5 e GOAL 2.6 produziram.
- 
+O GOMS abre os três pontos que o HTA marca como seleção (1.3, 2.3 e 3) e mostra **o que decide cada escolha**. A leitura mais importante está na regra de GOAL 3: ela depende do que GOAL 1.6 e GOAL 2.7 produziram.
+
+**Revisão pós-feedback.** Todo Goal e todo Method termina agora num operador de verificação: depois da última ação, o operador final diz como Helena sabe que aquele objetivo foi atingido — perceber na tela que o texto digitado é a conclusão pretendida, que o exame saiu da fila, que a resposta do solicitante trouxe o que faltava. Os operadores que escondiam uma decisão clínica inteira (“decidir se há atrofia”, “decidir laudar sem a pergunta clínica”) foram trocados por primitivas concretas: classificar a redução em três categorias, abrir os anexos e constatar que não há dado clínico. Com as verificações inseridas, os subobjetivos foram renumerados (o antigo GOAL 1.5 virou 1.6; os antigos 2.5 e 2.6 viraram 2.6 e 2.7).
+
 ### Goal
- 
+
 `G0: laudar a RM de investigação cognitiva com um laudo útil e seguro, dentro do prazo da fila`
- 
+
 ### Métodos, operadores e regras de seleção
- 
-- **Method M1:** contatar o médico solicitante (para G1.5 — obter o contexto que falta)
-  - Operators: procurar o contato no pedido; ligar ou escrever para o hospital de origem; aguardar a resposta; guardar a pergunta clínica na memória
-- **Method M2:** prosseguir com os dados recebidos (para G1.5)
-  - Operators: decidir laudar sem a pergunta clínica
+
+- **Method M1:** contatar o médico solicitante (para G1.6 — obter o contexto que falta)
+  - Operators: procurar o contato no pedido; ligar ou escrever para o hospital de origem; perguntar a dúvida clínica e o resultado do MMSE/MoCA; aguardar a resposta; guardar a pergunta clínica na memória; verificar que a resposta trouxe a dúvida clínica e o escore que faltavam
+- **Method M2:** prosseguir com os dados recebidos (para G1.6)
+  - Operators: clicar na aba de anexos do exame; verificar que os anexos não trazem dado clínico além da idade e da frase do pedido
 - **Selection Rule SR1:** usar M1 quando o pedido traz contato direto do solicitante e o prazo permite esperar; usar M2 quando não há canal ágil ou o prazo não permite esperar (caso do C01).
-- **Method M3:** estimar visualmente (para G2.6 — avaliar o volume hipocampal)
-  - Operators: comparar os hipocampos com a referência mental da idade; decidir se há atrofia
-- **Method M4:** graduar por escala visual (MTA) (para G2.6)
-  - Operators: selecionar o corte coronal; comparar fissura coroidea e corno temporal com a escala; atribuir a nota; comparar a nota com o limiar da idade
-- **Method M5:** medir com a régua linear do PACS (para G2.6)
-  - Operators: clicar na ferramenta de régua; arrastar a régua sobre cada hipocampo; comparar as medidas com a referência que lembrar
+- **Method M3:** estimar visualmente (para G2.7 — avaliar o volume hipocampal)
+  - Operators: observar hipocampos e cornos temporais nos cortes abertos; comparar o aspecto com a referência mental de um cérebro da mesma idade; classificar a redução como evidente, ausente ou duvidosa; verificar se a classificação é segura o bastante para escolher a conclusão
+- **Method M4:** graduar por escala visual (MTA) (para G2.7)
+  - Operators: selecionar o corte coronal; comparar fissura coroidea e corno temporal com a escala; atribuir a nota; lembrar o limiar da escala para a idade do paciente; comparar a nota com o limiar; verificar se a nota fica claramente de um lado do limiar ou exatamente na fronteira
+- **Method M5:** medir com a régua linear do PACS (para G2.7)
+  - Operators: clicar na ferramenta de régua; arrastar a régua sobre cada hipocampo; ler os valores na tela; comparar os valores com a referência que lembrar; verificar se as medidas ficam fora da referência ou dentro da margem de dúvida
 - **Selection Rule SR2:** usar M3 quando a redução é evidente ou claramente ausente para a idade, ou quando o prazo já estourou; usar M4 quando a redução é discreta e há tempo para graduar [H, Q4]; usar M5 quando a dúvida persiste depois da escala e o prazo ainda permite medir [H, Q1, Q2].
 - **Method M6:** afirmar atrofia hipocampal (para G3 — redigir a conclusão)
 - **Method M7:** declarar compatível com a faixa etária (para G3)
 - **Method M8:** frase cautelosa e correlação clínica (para G3)
-  - Operators (M6–M8): digitar a conclusão correspondente
-- **Selection Rule SR3:** usar M6 quando G2.6 deu segurança de que a redução excede a esperada para a idade; usar M7 quando deu segurança de que está dentro do esperado; usar M8 quando a dúvida persiste, sem pergunta clínica (M2) e sem medida conclusiva (G2.6) — caso do C01.
-Modelo completo, no formato da aula (Barbosa e Silva, 2010). Os operadores sobre o PACS assumem um PACS genérico, com fila de laudos, aba de histórico e régua linear [H, Q2]. GOAL 2 lista os passos em sequência, mas percorrer os cortes e buscar o exame anterior podem ocorrer em qualquer ordem (plano 1+2 do HTA).
- 
+  - Operators (M6–M8): digitar a conclusão correspondente; reler a conclusão na tela; verificar que o texto registrado corresponde à conclusão que Helena pretendia documentar
+- **Selection Rule SR3:** usar M6 quando G2.7 deu segurança de que a redução excede a esperada para a idade; usar M7 quando deu segurança de que está dentro do esperado; usar M8 quando a dúvida persiste, sem pergunta clínica (M2) e sem medida conclusiva (G2.7) — caso do C01.
+
+Modelo completo, no formato da aula (Barbosa e Silva, 2010). Os operadores sobre o PACS assumem um PACS genérico, com fila de laudos, aba de anexos, aba de histórico e régua linear [H, Q2]. GOAL 2 lista os passos em sequência, mas percorrer os cortes e buscar o exame anterior podem ocorrer em qualquer ordem (plano 1+2 do HTA).
+
 ```text
 GOAL 0: laudar a RM de investigação cognitiva com um laudo útil e seguro, dentro do prazo da fila
   GOAL 1: contextualizar o exame
     OP. 1.1: deslocar o cursor para a fila de laudos
     OP. 1.2: clicar duas vezes no próximo exame
     OP. 1.3: ler o pedido “RM de crânio — investigação de déficit cognitivo”
-    OP. 1.4: ler o campo de dados clínicos (só a idade)
-    GOAL 1.5: obter o contexto que falta
-      METHOD 1.5.A: contatar o médico solicitante
+    OP. 1.4: ler o campo de dados clínicos
+    OP. 1.5: verificar que o campo traz só a idade (faltam queixa, MMSE/MoCA e histórico)
+    GOAL 1.6: obter o contexto que falta
+      METHOD 1.6.A: contatar o médico solicitante
       (SEL. RULE: o pedido traz um contato direto do solicitante e o prazo permite esperar a resposta)
-        OP. 1.5.A.1: procurar o contato do solicitante no pedido
-        OP. 1.5.A.2: ligar ou escrever para o hospital de origem
-        OP. 1.5.A.3: aguardar a resposta
-        OP. 1.5.A.4: guardar a pergunta clínica na memória
-      METHOD 1.5.B: prosseguir com os dados recebidos
+        OP. 1.6.A.1: procurar o contato do solicitante no pedido
+        OP. 1.6.A.2: ligar ou escrever para o hospital de origem
+        OP. 1.6.A.3: perguntar qual é a dúvida clínica e o resultado do MMSE/MoCA
+        OP. 1.6.A.4: aguardar a resposta
+        OP. 1.6.A.5: guardar a pergunta clínica na memória
+        OP. 1.6.A.6: verificar que a resposta trouxe a dúvida clínica e o escore que faltavam
+      METHOD 1.6.B: prosseguir com os dados recebidos
       (SEL. RULE: não há canal ágil com o solicitante ou o prazo não permite esperar — caso do C01)
-        OP. 1.5.B.1: decidir laudar sem a pergunta clínica
+        OP. 1.6.B.1: clicar na aba de anexos do exame
+        OP. 1.6.B.2: verificar que os anexos não trazem dado clínico além da idade e da frase do pedido
   GOAL 2: avaliar as imagens
     OP. 2.1: girar a roda do mouse para percorrer os cortes
     OP. 2.2: ajustar janela e zoom sobre os lobos temporais
     OP. 2.3: perceber ventrículos, sulcos e substância branca
     OP. 2.4: digitar a descrição dos achados gerais
-    GOAL 2.5: buscar exame anterior
-      OP. 2.5.1: clicar na aba de histórico do paciente no PACS
-      OP. 2.5.2: verificar se há exame anterior (no C01, não há)
-    GOAL 2.6: avaliar o volume hipocampal
-      METHOD 2.6.A: estimar visualmente
+    OP. 2.5: verificar na tela que a descrição corresponde ao que foi percebido nos cortes
+    GOAL 2.6: buscar exame anterior
+      OP. 2.6.1: clicar na aba de histórico do paciente no PACS
+      OP. 2.6.2: verificar se há exame anterior (no C01, não há)
+    GOAL 2.7: avaliar o volume hipocampal
+      METHOD 2.7.A: estimar visualmente
       (SEL. RULE: a redução é evidente, ou claramente ausente, para a idade — ou o prazo já estourou)
-        OP. 2.6.A.1: comparar os hipocampos com a referência mental da idade
-        OP. 2.6.A.2: decidir se há atrofia
-      METHOD 2.6.B: graduar por escala visual (MTA)
+        OP. 2.7.A.1: observar hipocampos e cornos temporais nos cortes já abertos
+        OP. 2.7.A.2: comparar o aspecto com a referência mental de um cérebro da mesma idade
+        OP. 2.7.A.3: classificar a redução como evidente, ausente ou duvidosa
+        OP. 2.7.A.4: verificar se a classificação é segura o bastante para escolher a conclusão
+      METHOD 2.7.B: graduar por escala visual (MTA)
       (SEL. RULE: a redução é discreta e há tempo para graduar no corte coronal [H, Q4])
-        OP. 2.6.B.1: selecionar o corte coronal na altura dos hipocampos
-        OP. 2.6.B.2: comparar fissura coroidea e corno temporal com a escala
-        OP. 2.6.B.3: atribuir a nota da escala
-        OP. 2.6.B.4: comparar a nota com o limiar esperado para a idade
-      METHOD 2.6.C: medir com a régua linear do PACS
+        OP. 2.7.B.1: selecionar o corte coronal na altura dos hipocampos
+        OP. 2.7.B.2: comparar fissura coroidea e corno temporal com a escala
+        OP. 2.7.B.3: atribuir a nota da escala
+        OP. 2.7.B.4: lembrar o limiar da escala para a faixa etária do paciente
+        OP. 2.7.B.5: comparar a nota com esse limiar
+        OP. 2.7.B.6: verificar se a nota fica claramente de um lado do limiar ou exatamente na fronteira
+      METHOD 2.7.C: medir com a régua linear do PACS
       (SEL. RULE: a dúvida persiste depois da escala e o prazo ainda permite medir [H, Q1, Q2])
-        OP. 2.6.C.1: clicar na ferramenta de régua
-        OP. 2.6.C.2: arrastar a régua sobre o hipocampo direito
-        OP. 2.6.C.3: arrastar a régua sobre o hipocampo esquerdo
-        OP. 2.6.C.4: comparar as medidas com a referência que lembrar
+        OP. 2.7.C.1: clicar na ferramenta de régua
+        OP. 2.7.C.2: arrastar a régua sobre o hipocampo direito
+        OP. 2.7.C.3: arrastar a régua sobre o hipocampo esquerdo
+        OP. 2.7.C.4: ler os dois valores na tela
+        OP. 2.7.C.5: comparar os valores com a referência que lembrar
+        OP. 2.7.C.6: verificar se as medidas ficam fora da referência ou dentro da margem de dúvida
   GOAL 3: redigir a conclusão do laudo
     METHOD 3.A: afirmar atrofia hipocampal
-    (SEL. RULE: GOAL 2.6 deu segurança de que a redução excede a esperada para a idade)
+    (SEL. RULE: GOAL 2.7 deu segurança de que a redução excede a esperada para a idade)
       OP. 3.A.1: digitar “atrofia hipocampal” com o grau observado
+      OP. 3.A.2: reler a conclusão na tela
+      OP. 3.A.3: verificar que o texto registrado afirma a atrofia e o grau que Helena pretendia documentar
     METHOD 3.B: declarar compatível com a faixa etária
-    (SEL. RULE: GOAL 2.6 deu segurança de que a redução está dentro do esperado)
+    (SEL. RULE: GOAL 2.7 deu segurança de que a redução está dentro do esperado)
       OP. 3.B.1: digitar “volume hipocampal compatível com a faixa etária”
+      OP. 3.B.2: reler a conclusão na tela
+      OP. 3.B.3: verificar que o texto registrado corresponde à normalidade que Helena pretendia documentar
     METHOD 3.C: frase cautelosa e correlação clínica
-    (SEL. RULE: a dúvida persiste, sem pergunta clínica (1.5.B) e sem medida conclusiva (2.6) — caso do C01)
+    (SEL. RULE: a dúvida persiste, sem pergunta clínica (1.6.B) e sem medida conclusiva (2.7) — caso do C01)
       OP. 3.C.1: digitar “redução volumétrica hipocampal discreta, que pode ser compatível com a faixa etária”
       OP. 3.C.2: digitar “correlacionar com dados clínicos”
+      OP. 3.C.3: reler a conclusão na tela
+      OP. 3.C.4: verificar que o texto registrado deixa explícita a dúvida que Helena pretendia devolver ao solicitante
   GOAL 4: liberar o laudo
-    OP. 4.1: reler o texto do laudo
+    OP. 4.1: reler o texto completo do laudo
     OP. 4.2: clicar em “assinar e liberar”
-    OP. 4.3: verificar que o exame saiu da fila
+    OP. 4.3: verificar que o exame aparece como liberado e saiu da fila
     OP. 4.4: clicar duas vezes no próximo exame
+    OP. 4.5: verificar que a tela de laudo abriu com o próximo exame
 ```
- 
-### Comparação entre os métodos de GOAL 2.6
- 
-| Método (GOAL 2.6) | Custo no prazo da fila | Objetividade | Resultado num caso limítrofe | Uso hoje |
+
+**Sobre os operadores cognitivos.** “Classificar a redução como evidente, ausente ou duvidosa” continua sendo um julgamento clínico, mas é uma ação mental única e concreta no nível desta análise: escolher uma de três categorias olhando a imagem. O raciocínio que a sustenta é justamente o que os métodos B e C detalham. Já “decidir laudar sem a pergunta clínica” não era uma ação — era a própria regra de seleção de 1.6.B repetida como operador, por isso saiu.
+
+### Comparação entre os métodos de GOAL 2.7
+
+| Método (GOAL 2.7) | Custo no prazo da fila | Objetividade | Resultado num caso limítrofe | Uso hoje |
 |---|---|---|---|---|
-| 2.6.A Estimar visualmente | Quase nenhum | Baixa — referência mental de cada leitor | Mantém a dúvida | Padrão quando a fila aperta |
-| 2.6.B Escala visual (MTA) | Baixo — um corte coronal | Média — escala padronizada, julgamento ainda visual | Nota na fronteira do limiar da idade | Quando sobra algum tempo [H, Q4] |
-| 2.6.C Régua linear do PACS | Alto — medir os dois lados à mão | Média — dá um número, mas sem norma para comparar | Medida sem referência no próprio PACS | Raro [H, Q1, Q2] |
- 
-**O que o modelo mostra:** a regra de seleção de GOAL 3 usa como entrada o resultado de GOAL 1.5 e de GOAL 2.6. Quando 1.5 cai em B (sem pergunta clínica) e 2.6 termina em A ou B (sem medida conclusiva), a única regra satisfeita é a de 3.C. A frase cautelosa do C01 não é descuido da radiologista: é a saída que o próprio modelo prevê para essas condições.
- 
-**Implicação de design:** para mudar o laudo é preciso mudar as condições das regras, não o texto. Trazer a pergunta clínica junto do exame torna 1.5 desnecessário; uma referência objetiva barata (volume hipocampal calculado, com a região destacada) faz 2.6.C caber no prazo e permite chegar a 3.A ou 3.B com respaldo.
- 
-O GOMS-KLM não foi aplicado: a etapa crítica (GOAL 2.6) é sobretudo cognitiva, e a interface que mudaria esse custo ainda vai ser projetada — o cálculo fica para a avaliação da Entrega 11.
+| 2.7.A Estimar visualmente | Quase nenhum | Baixa — referência mental de cada leitor | A verificação final (2.7.A.4) falha: a classificação fica em “duvidosa” | Padrão quando a fila aperta |
+| 2.7.B Escala visual (MTA) | Baixo — um corte coronal | Média — escala padronizada, julgamento ainda visual | A verificação (2.7.B.6) mostra a nota na fronteira do limiar da idade | Quando sobra algum tempo [H, Q4] |
+| 2.7.C Régua linear do PACS | Alto — medir os dois lados à mão | Média — dá um número, mas sem norma para comparar | A verificação (2.7.C.6) cai na margem de dúvida: o número existe, a referência não | Raro [H, Q1, Q2] |
+
+**O que o modelo mostra:** a regra de seleção de GOAL 3 usa como entrada o resultado de GOAL 1.6 e de GOAL 2.7. Quando 1.6 cai em B (sem pergunta clínica) e a verificação final de 2.7 não dá segurança, a única regra satisfeita é a de 3.C. A frase cautelosa do C01 não é descuido da radiologista: é a saída que o próprio modelo prevê para essas condições. Os operadores de verificação deixam isso mais visível do que antes — é neles que Helena percebe que a dúvida não se resolveu.
+
+**Implicação de design:** para mudar o laudo é preciso mudar as condições das regras, não o texto. Trazer a pergunta clínica junto do exame torna 1.6 desnecessário; uma referência objetiva barata (volume hipocampal calculado, com a região destacada) faz a verificação de 2.7 passar dentro do prazo e permite chegar a 3.A ou 3.B com respaldo. A verificação continua sendo de Helena: a medida entra como insumo do julgamento, não como conclusão pronta.
+
+O GOMS-KLM não foi aplicado: a etapa crítica (GOAL 2.7) é sobretudo cognitiva, e a interface que mudaria esse custo ainda vai ser projetada — o cálculo fica para a avaliação da Entrega 11.
  
 ---
  
@@ -362,7 +389,13 @@ O GOMS-KLM não foi aplicado: a etapa crítica (GOAL 2.6) é sobretudo cognitiva
  
 ### Descrição
  
-O CTT modela a mesma tarefa pela ordem temporal e por quem executa cada parte. Ele mostra dois pontos que o HTA e o GOMS não representam: a **suspensão** do laudo por um exame de urgência, que depois é retomado (`|>`), e o fato de que a avaliação do hipocampo e a decisão da conclusão acontecem **fora do sistema**.
+O CTT modela a mesma tarefa pela ordem temporal e por quem executa cada parte, **no processo atual** (o PACS de hoje, sem a interface que o projeto ainda vai propor). Ele mostra três pontos que o HTA e o GOMS não representam:
+
+- **o gatilho que vem do mundo:** o hospital de origem envia a RM e o pedido; o PACS os recebe e coloca o exame na fila de laudos. Essa tarefa do sistema existe hoje e é o que leva Helena a abrir o exame — por isso ela está no primeiro nível da árvore, ligada ao laudo por `[]>>`: o exame e o pedido recebidos são a informação com que o laudo começa (revisão pós-feedback, item 5);
+- a **suspensão** do laudo por um exame de urgência, que depois é retomado (`|>`);
+- o fato de que a avaliação do hipocampo e a decisão da conclusão acontecem **fora do sistema**.
+
+Para a leitura ficar inequívoca, a suspensão foi colocada num nível próprio: “Laudar o exame recebido” é a tarefa abstrata que agrupa “Elaborar o laudo” `|>` “Atender exame de urgência”. Assim fica claro que a urgência interrompe a elaboração do laudo, e não o recebimento do exame.
  
 ### Diagrama
  
@@ -373,20 +406,21 @@ O CTT modela a mesma tarefa pela ordem temporal e por quem executa cada parte. E
 | Operador/relação | Significado no diagrama | Exemplo no modelo |
 |---|---|---|
 | `>>` ativação | A segunda tarefa só começa quando a primeira termina | Abrir exame da fila `>>` Ler pedido e dados clínicos; Redigir o laudo `>>` Liberar o laudo |
-| `[]>>` ativação com passagem de informação | A segunda começa depois e usa a informação da primeira | Contextualizar `[]>>` Avaliar as imagens `[]>>` Redigir; Buscar exame anterior `[]>>` Avaliar o hipocampo; Decidir a conclusão `[]>>` Digitar o laudo; Liberar `[]>>` Enviar ao hospital |
-| `[]` escolha | Ao iniciar uma, as outras são descartadas | Estimar visualmente `[]` Graduar por escala visual `[]` Medir com régua linear — o mesmo ponto de HTA 2.3 e GOMS 2.6 |
+| `[]>>` ativação com passagem de informação | A segunda começa depois e usa a informação da primeira | Receber na fila a RM enviada pelo hospital de origem `[]>>` Laudar o exame recebido; Contextualizar `[]>>` Avaliar as imagens `[]>>` Redigir; Buscar exame anterior `[]>>` Avaliar o hipocampo; Decidir a conclusão `[]>>` Digitar o laudo; Liberar `[]>>` Enviar ao hospital |
+| `[]` escolha | Ao iniciar uma, as outras são descartadas | Estimar visualmente `[]` Graduar por escala visual `[]` Medir com régua linear — o mesmo ponto de HTA 2.3 e GOMS 2.7 |
 | `\|\|\|` concorrência | Em qualquer ordem ou ao mesmo tempo | Percorrer os cortes `\|\|\|` Buscar exame anterior — o plano 1+2 do HTA 2 |
 | `\|>` suspensão/retomada | A segunda interrompe a primeira, que continua de onde parou | Elaborar o laudo `\|>` Atender exame de urgência [H, Q5] |
  
 As demais relações da notação (`|[]|` concorrência com comunicação, `|=|` independência e `[>` desativação) não aparecem porque nenhuma situação da tarefa as exige.
  
-**Tipos de tarefa no modelo** (os quatro tipos da notação, com os ícones da aula):
+**Tipos de tarefa no modelo** (os quatro tipos da notação, com os ícones da aula). Todos descrevem quem executa a tarefa **hoje**:
  
 - **Tarefas do usuário** (realizadas fora do sistema): estimar visualmente; graduar por escala visual; decidir a conclusão.
-- **Tarefas do sistema** (processamento sem interação): enviar laudo ao hospital de origem.
+- **Tarefas do sistema** (processamento sem interação): receber na fila a RM enviada pelo hospital de origem; enviar laudo ao hospital de origem. Os dois processamentos já existem no PACS de um serviço de telerradiologia — nenhum é funcionalidade futura.
 - **Tarefas interativas** (diálogo usuário–sistema): abrir exame da fila; ler pedido e dados clínicos; percorrer os cortes; buscar exame anterior; medir com régua linear; digitar o laudo; liberar o laudo; atender exame de urgência.
-- **Tarefas abstratas** (composição que auxilia a decomposição): laudar a RM; elaborar o laudo; contextualizar o exame; avaliar as imagens; avaliar o hipocampo; redigir o laudo.
-**O que o modelo revela:** duas das três formas de avaliar o hipocampo e a decisão da conclusão são tarefas do usuário — acontecem na cabeça da radiologista, sem apoio do sistema, e é ali que o caso limítrofe se resolve. A única tarefa do sistema é transportar o laudo pronto. A suspensão (|>) mostra outro ponto: quando a urgência acaba, Helena retoma um caso cuja dúvida não ficou registrada em lugar nenhum. Oportunidades: tornar “Avaliar o hipocampo” interativa, com referência objetiva calculada, e preservar o estado da avaliação na retomada.
+- **Tarefas abstratas** (composição que auxilia a decomposição): laudar a RM; laudar o exame recebido; elaborar o laudo; contextualizar o exame; avaliar as imagens; avaliar o hipocampo; redigir o laudo.
+
+**O que o modelo revela:** o sistema entra na tarefa nas duas pontas — recebe o exame e transporta o laudo pronto — e fica de fora do meio. Duas das três formas de avaliar o hipocampo e a decisão da conclusão são tarefas do usuário: acontecem na cabeça da radiologista, sem apoio do sistema, e é ali que o caso limítrofe se resolve. O gatilho também mostra o que *não* chega: o exame entra na fila com a imagem e um pedido de uma linha, sem a pergunta clínica — a mesma lacuna que o HTA marca em 1.2 e o GOMS em 1.5. A suspensão (`|>`) mostra outro ponto: quando a urgência acaba, Helena retoma um caso cuja dúvida não ficou registrada em lugar nenhum. Oportunidades para as próximas entregas (não fazem parte do modelo atual): fazer a pergunta clínica viajar com o exame já no recebimento, tornar “Avaliar o hipocampo” interativa, com referência objetiva calculada, e preservar o estado da avaliação na retomada.
 ---
 
 ## HTA — T03 Realizar a aquisição de imagem de ressonância dentro da agenda
@@ -757,7 +791,7 @@ Quais problemas de interação, oportunidades e requisitos apareceram a partir d
 
 **T01 (Paulo):** as três técnicas apontam o mesmo ponto de ruptura — o parecer do especialista não fica registrado de forma recuperável (HTA 2.2 e 2.3), o que força o médico a um método que exige uma inferência que ele não domina (GOMS, M2) e deixa as etapas críticas fora do sistema (CTT). Requisitos candidatos, ainda hipóteses: [H] o parecer do especialista fica registrado no próprio caso, com os exames e achados que o sustentaram, e aparece quando o caso é retomado (H06); [H] o teste de memória anterior e o atual aparecem lado a lado; [H] a nova conduta fica ligada ao parecer anterior. Tarefa candidata para o protótipo e o teste de usabilidade: retomar um caso e localizar o parecer anterior.
 
-**T02 (Raphael):** as três técnicas chegam ao mesmo ponto — num caso limítrofe, a conclusão do laudo é decidida sem contexto clínico e sem referência objetiva. O HTA mostra três seleções em cadeia (1.3, 2.3 e 3); o GOMS mostra que a regra que leva à frase cautelosa (3.C) é a única satisfeita quando falta a pergunta clínica (1.5.B) e a medida (2.6); o CTT mostra que a avaliação do hipocampo e a decisão da conclusão são tarefas do usuário, sem apoio do sistema, e que a urgência suspende o laudo sem guardar a dúvida. Requisitos candidatos, ainda hipóteses: [H] a pergunta clínica e os dados mínimos acompanham o exame até quem lauda; [H] uma referência objetiva (volume hipocampal com a região destacada) apoia a leitura, sem substituí-la; [H] o laudo permite registrar o que foi avaliado, por qual método e qual dúvida ficou; [H] o estado da avaliação é preservado quando o laudo é suspenso. Tarefa candidata para o protótipo e o teste de usabilidade: avaliar o hipocampo de um caso limítrofe com a referência objetiva e redigir a conclusão.
+**T02 (Raphael):** as três técnicas chegam ao mesmo ponto — num caso limítrofe, a conclusão do laudo é decidida sem contexto clínico e sem referência objetiva. O HTA mostra três seleções em cadeia (1.3, 2.3 e 3); o GOMS mostra que a regra que leva à frase cautelosa (3.C) é a única satisfeita quando falta a pergunta clínica (1.6.B) e a verificação final da avaliação do hipocampo (2.7) não dá segurança — é nesse operador de verificação que Helena percebe que a dúvida não se resolveu; o CTT mostra que o sistema só atua nas pontas (recebe o exame, sem a pergunta clínica, e envia o laudo), que a avaliação do hipocampo e a decisão da conclusão são tarefas do usuário, sem apoio do sistema, e que a urgência suspende o laudo sem guardar a dúvida. Requisitos candidatos, ainda hipóteses: [H] a pergunta clínica e os dados mínimos acompanham o exame até quem lauda; [H] uma referência objetiva (volume hipocampal com a região destacada) apoia a leitura, sem substituí-la; [H] o laudo permite registrar o que foi avaliado, por qual método e qual dúvida ficou; [H] o estado da avaliação é preservado quando o laudo é suspenso. Tarefa candidata para o protótipo e o teste de usabilidade: avaliar o hipocampo de um caso limítrofe com a referência objetiva e redigir a conclusão.
 
 **T03 (Nathan):** as três técnicas convergem no mesmo ponto de ruptura — entre encerrar a aquisição e liberar o paciente não existe nenhuma conferência de qualidade e completude (HTA, objetivo 3), e é isso que elimina os dois únicos métodos que ainda preservam a qualidade diagnóstica (GOMS, 2.A e 2.B, ambos válidos só com o paciente no aparelho), empurrando o processo para a reconvocação (2.D); o CTT, modelado sobre o processo atual, mostra por que a conferência não acontece — avaliar se a imagem serve é tarefa do usuário feita a olho no console, consultar o prontuário e transcrever os dados são tarefas interativas manuais, e o sistema só executa a varredura e arquiva o estudo, sem verificar o que foi produzido. Requisitos candidatos, ainda hipóteses: [H] uma conferência de qualidade e completude acontece antes da liberação do paciente, bloqueando o encerramento enquanto houver item obrigatório pendente (H07, F03); [H] as sequências e os dados clínicos obrigatórios do caso são apresentados antes da aquisição; [H] a duração estimada do protocolo aparece contra o tempo restante da janela, já que é esse dado que distingue repetir de encurtar o protocolo (GOMS, 2.A e 2.B); [H] os dados clínicos chegam à requisição sem redigitação, mantendo a conferência de identidade feita por pessoa; [H] a limitação aceita em 2.C fica registrada e acompanha o estudo até quem lauda; [?] o sistema indica qual sequência é crítica para a suspeita, o que depende de o serviço autorizar o técnico a ajustar o protocolo (C03, Q2). Tarefa candidata para o protótipo e o teste de usabilidade: encerrar a aquisição conferindo qualidade e completude antes de liberar o paciente.
 
@@ -772,6 +806,6 @@ Quais problemas de interação, oportunidades e requisitos apareceram a partir d
 - [x] GOMS distingue Goals, Operators, Methods e Selection Rules.
 - [x] CTT usa operadores temporais e tipos de tarefa coerentes.
 - [x] Há texto explicando cada diagrama.
-- [ ] Tarefas estão ligadas a cenários/personas na rastreabilidade.
+- [x] Tarefas estão ligadas a cenários/personas na rastreabilidade.
 - [x] Em TCC técnico, as tarefas descrevem o que a pessoa faz com a contribuição/resultados, não passos internos do código.
 - [x] CRUDs, relatórios, filtros e atividades administrativas foram escolhidos por relevância ao objetivo do usuário.

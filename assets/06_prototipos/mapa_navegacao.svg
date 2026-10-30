@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1858 680" width="1858" height="680" font-family="Arial, Helvetica, sans-serif">
+  <title>Mapa de navegação das telas e estados — Entrega 6</title>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#555"/></marker>
+    <marker id="arr2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#888"/></marker>
+  </defs>
+  <rect width="1858" height="680" fill="#ffffff"/>
+  <text x="30" y="36" font-size="16" font-weight="bold">Mapa de navegação — telas e estados P01–P10</text>
+  <path d="M208,239 L300,239" fill="none" stroke="#555" stroke-width="1.2" marker-end="url(#arr)"/>
+  <text x="254" y="233" font-size="11" fill="#333" text-anchor="middle">Entrar</text>
+  <path d="M119,268 L119,410" fill="none" stroke="#555" stroke-width="1.2" marker-end="url(#arr)"/>
+  <text x="125" y="343" font-size="11" fill="#333" text-anchor="start">senha errada</text>
+  <path d="M389,268 L389,410" fill="none" stroke="#555" stroke-width="1.2" marker-end="url(#arr)"/>
+  <text x="395" y="343" font-size="11" fill="#333" text-anchor="start">busca ou filtro</text>
+  <text x="395" y="356" font-size="11" fill="#333" text-anchor="start">sem resultado</text>
+  <path d="M478,239 L500,239 L500,109 L570,109" fill="none" stroke="#555" stroke-width="1.2" marker-end="url(#arr)"/>
+  <text x="535" y="103" font-size="11" fill="#333" text-anchor="middle">abrir caso</text>
+  <path d="M478,239 L570,239" fill="none" stroke="#555" stroke-width="1.2" marker-end="url(#arr)"/>
+  <text x="524" y="233" font-size="11" fill="#333" text-anchor="middle">abrir caso</text>
+  <path d="M478,239 L500,239 L500,439 L570,439" fill="none" stroke="#555" stroke-width="1.2" marker-end="url(#arr)"/>
+  <text x="535" y="433" font-size="11" fill="#333" text-anchor="middle">Novo caso</text>
+  <path d="M478,258 L520,258 L520,335 L1469,335 L1469,268" fill="none" stroke="#555" stroke-width="1.2" marker-end="url(#arr)"/>
+  <text x="1461" y="329" font-size="11" fill="#333" text-anchor="end">abrir caso concluído</text>
+  <path d="M748,109 L840,109" fill="none" stroke="#555" stroke-width="1.2" marker-end="url(#arr)"/>
+  <text x="794" y="90" font-size="11" fill="#333" text-anchor="middle">Registrar</text>
+  <text x="794" y="103" font-size="11" fill="#333" text-anchor="middle">decisão</text>
+  <path d="M748,239 L790,239 L790,126 L840,126" fill="none" stroke="#555" stroke-width="1.2" marker-end="url(#arr)"/>
+  <path d="M1018,109 L1110,109" fill="none" stroke="#555" stroke-width="1.2" marker-end="url(#arr)"/>
+  <text x="1064" y="90" font-size="11" fill="#333" text-anchor="middle">Revisar e</text>
+  <text x="1064" y="103" font-size="11" fill="#333" text-anchor="middle">registrar</text>
+  <path d="M1288,109 L1380,109" fill="none" stroke="#555" stroke-width="1.2" marker-end="url(#arr)"/>
+  <text x="1334" y="90" font-size="11" fill="#333" text-anchor="middle">Registrar</text>
+  <text x="1334" y="103" font-size="11" fill="#333" text-anchor="middle">decisão</text>
+  <path d="M1558,109 L1600,109 L1600,164 L1650,164" fill="none" stroke="#555" stroke-width="1.2" marker-end="url(#arr)"/>
+  <text x="1606" y="103" font-size="11" fill="#333" text-anchor="start">Relatório</text>
+  <path d="M1558,239 L1600,239 L1600,184 L1650,184" fill="none" stroke="#555" stroke-width="1.2" marker-end="url(#arr)"/>
+  <path d="M748,439 L840,439" fill="none" stroke="#555" stroke-width="1.2" marker-end="url(#arr)"/>
+  <text x="794" y="420" font-size="11" fill="#333" text-anchor="middle">Enviar para</text>
+  <text x="794" y="433" font-size="11" fill="#333" text-anchor="middle">análise</text>
+  <path d="M659,468 L659,540" fill="none" stroke="#555" stroke-width="1.2" marker-end="url(#arr)"/>
+  <text x="665" y="508" font-size="11" fill="#333" text-anchor="start">Enviar com campos</text>
+  <text x="665" y="521" font-size="11" fill="#333" text-anchor="start">pendentes</text>
+  <path d="M1018,439 L1110,439" fill="none" stroke="#555" stroke-width="1.2" marker-end="url(#arr)"/>
+  <text x="1064" y="433" font-size="11" fill="#333" text-anchor="middle">falha</text>
+  <path d="M929,410 L929,300 L718,300 L718,268" fill="none" stroke="#888" stroke-dasharray="5 4" stroke-width="1.2" marker-end="url(#arr2)"/>
+  <text x="935" y="380" font-size="11" fill="#666" text-anchor="start">análise concluída (P03 ou P04)</text>
+  <path d="M1199,468 L1199,505 L790,505 L790,452 L748,452" fill="none" stroke="#888" stroke-dasharray="5 4" stroke-width="1.2" marker-end="url(#arr2)"/>
+  <text x="1000" y="520" font-size="11" fill="#666" text-anchor="middle">reenviar a série correta</text>
+  <rect x="30" y="210" width="178" height="58" rx="6" fill="#ffffff" stroke="#222" stroke-width="1.3"/>
+  <text x="119.0" y="234" text-anchor="middle" font-size="13" font-weight="bold">P01 Entrar</text>
+  <text x="119.0" y="252" text-anchor="middle" font-size="11.5" fill="#444">login</text>
+  <rect x="30" y="410" width="178" height="58" rx="6" fill="#fff4f2" stroke="#c0392b" stroke-width="1.3"/>
+  <text x="119.0" y="434" text-anchor="middle" font-size="13" font-weight="bold">P01b Senha incorreta</text>
+  <text x="119.0" y="452" text-anchor="middle" font-size="11.5" fill="#444">mensagem de erro</text>
+  <rect x="300" y="210" width="178" height="58" rx="6" fill="#ffffff" stroke="#222" stroke-width="1.3"/>
+  <text x="389.0" y="234" text-anchor="middle" font-size="13" font-weight="bold">P02 Casos</text>
+  <text x="389.0" y="252" text-anchor="middle" font-size="11.5" fill="#444">lista, busca e filtros</text>
+  <rect x="300" y="410" width="178" height="58" rx="6" fill="#fff4f2" stroke="#c0392b" stroke-width="1.3"/>
+  <text x="389.0" y="434" text-anchor="middle" font-size="13" font-weight="bold">P02c Nenhum caso</text>
+  <text x="389.0" y="452" text-anchor="middle" font-size="11.5" fill="#444">busca sem resultado</text>
+  <rect x="570" y="80" width="178" height="58" rx="6" fill="#ffffff" stroke="#222" stroke-width="1.3"/>
+  <text x="659.0" y="104" text-anchor="middle" font-size="13" font-weight="bold">P03 Caso com sugestão</text>
+  <text x="659.0" y="122" text-anchor="middle" font-size="11.5" fill="#444">mapa, probabilidades, limites</text>
+  <rect x="570" y="210" width="178" height="58" rx="6" fill="#fff4f2" stroke="#c0392b" stroke-width="1.3"/>
+  <text x="659.0" y="234" text-anchor="middle" font-size="13" font-weight="bold">P04 Confiança baixa</text>
+  <text x="659.0" y="252" text-anchor="middle" font-size="11.5" fill="#444">aviso e volumetria imputada</text>
+  <rect x="570" y="410" width="178" height="58" rx="6" fill="#ffffff" stroke="#222" stroke-width="1.3"/>
+  <text x="659.0" y="434" text-anchor="middle" font-size="13" font-weight="bold">P07 Novo caso</text>
+  <text x="659.0" y="452" text-anchor="middle" font-size="11.5" fill="#444">paciente, RM, dados clínicos</text>
+  <rect x="570" y="540" width="178" height="58" rx="6" fill="#fff4f2" stroke="#c0392b" stroke-width="1.3"/>
+  <text x="659.0" y="564" text-anchor="middle" font-size="13" font-weight="bold">P07b Campos pendentes</text>
+  <text x="659.0" y="582" text-anchor="middle" font-size="11.5" fill="#444">erros de validação</text>
+  <rect x="840" y="80" width="178" height="58" rx="6" fill="#ffffff" stroke="#222" stroke-width="1.3"/>
+  <text x="929.0" y="104" text-anchor="middle" font-size="13" font-weight="bold">P05 Sua decisão</text>
+  <text x="929.0" y="122" text-anchor="middle" font-size="11.5" fill="#444">concordância, conclusão, justif.</text>
+  <rect x="840" y="410" width="178" height="58" rx="6" fill="#ffffff" stroke="#222" stroke-width="1.3"/>
+  <text x="929.0" y="434" text-anchor="middle" font-size="13" font-weight="bold">P08 Analisando o exame</text>
+  <text x="929.0" y="452" text-anchor="middle" font-size="11.5" fill="#444">processamento</text>
+  <rect x="1110" y="80" width="178" height="58" rx="6" fill="#ffffff" stroke="#222" stroke-width="1.3"/>
+  <text x="1199.0" y="104" text-anchor="middle" font-size="13" font-weight="bold">P05d Confirmar registro</text>
+  <text x="1199.0" y="122" text-anchor="middle" font-size="11.5" fill="#444">diálogo de confirmação</text>
+  <rect x="1110" y="410" width="178" height="58" rx="6" fill="#fff4f2" stroke="#c0392b" stroke-width="1.3"/>
+  <text x="1199.0" y="434" text-anchor="middle" font-size="13" font-weight="bold">P09 Falha na análise</text>
+  <text x="1199.0" y="452" text-anchor="middle" font-size="11.5" fill="#444">série não é T1 volumétrica</text>
+  <rect x="1380" y="80" width="178" height="58" rx="6" fill="#ffffff" stroke="#222" stroke-width="1.3"/>
+  <text x="1469.0" y="104" text-anchor="middle" font-size="13" font-weight="bold">P05e Decisão registrada</text>
+  <text x="1469.0" y="122" text-anchor="middle" font-size="11.5" fill="#444">imutável, nome e horário</text>
+  <rect x="1380" y="210" width="178" height="58" rx="6" fill="#ffffff" stroke="#222" stroke-width="1.3"/>
+  <text x="1469.0" y="234" text-anchor="middle" font-size="13" font-weight="bold">P10 Caso concluído</text>
+  <text x="1469.0" y="252" text-anchor="middle" font-size="11.5" fill="#444">decisão já registrada</text>
+  <rect x="1650" y="145" width="178" height="58" rx="6" fill="#ffffff" stroke="#222" stroke-width="1.3"/>
+  <text x="1739.0" y="169" text-anchor="middle" font-size="13" font-weight="bold">P06 Relatório</text>
+  <text x="1739.0" y="187" text-anchor="middle" font-size="11.5" fill="#444">imprimível</text>
+  <rect x="30" y="644" width="26" height="16" rx="3" fill="#fff" stroke="#222"/>
+  <text x="64" y="656" font-size="12">tela / estado principal</text>
+  <rect x="230" y="644" width="26" height="16" rx="3" fill="#fff4f2" stroke="#c0392b"/>
+  <text x="264" y="656" font-size="12">estado de erro, aviso ou vazio</text>
+  <line x1="480" y1="652" x2="520" y2="652" stroke="#555" marker-end="url(#arr)"/>
+  <text x="528" y="656" font-size="12">ação do usuário (controle que muda o estado)</text>
+  <line x1="830" y1="652" x2="870" y2="652" stroke="#888" stroke-dasharray="5 4" marker-end="url(#arr2)"/>
+  <text x="878" y="656" font-size="12">mudança de estado feita pelo sistema ou retorno</text>
+</svg>

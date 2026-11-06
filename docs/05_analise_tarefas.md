@@ -462,14 +462,17 @@ Cada plano é escrito dentro da caixa do objetivo e numera apenas os seus própr
 | 2.1 | Adquirir as imagens | 1 > 2 > 3 | — |
 | 2.1.1 | Posicionar e orientar o paciente | operação | **Problema:** pacientes com declínio cognitivo têm dificuldade de permanecer imóveis. |
 | 2.1.2 | Executar as sequências do protocolo | operação | **Ação:** o técnico aciona no console as sequências definidas em 1.2 e acompanha as imagens à medida que são reconstruídas. |
-| 2.1.3 | Garantir a qualidade diagnóstica | 1 / 2 / 3 | **Problema:** a escolha é feita sem critério escrito de quanto movimento é tolerável e sem saber quanto tempo resta. O conjunto de ações de contenção disponíveis na rotina é ele próprio uma lacuna [H, Q3]. Qual caminho se aplica é detalhado no GOMS (GOAL 2). **Recomendação:** indicar a qualidade em linguagem de aquisição (sequência, artefato, cobertura), nunca em métricas do modelo (Entrega 1, item 2.4). |
+| 2.1.3 | Garantir a qualidade diagnóstica | 1 / 2 / 3 / 4 | **Problema:** a escolha é feita sem critério escrito de quanto movimento é tolerável e sem saber quanto tempo resta. O conjunto de ações de contenção disponíveis na rotina é ele próprio uma lacuna [H, Q3]. Qual caminho se aplica é detalhado no GOMS (GOAL 2). **Recomendação:** indicar a qualidade em linguagem de aquisição (sequência, artefato, cobertura), nunca em métricas do modelo (Entrega 1, item 2.4). |
 | 2.1.3.1 | Conter o movimento e repetir a sequência | operação | **Ação:** orientar novamente a paciente pelo interfone ou aplicar contenções leves antes de repetir [H, Q3]. **Condição:** só é possível com o paciente ainda no aparelho e com folga na janela. |
 | 2.1.3.2 | Encurtar o protocolo preservando a sequência crítica | operação | **Condição:** depende de o serviço autorizar o técnico a ajustar o protocolo [?, Q2]. **Recomendação:** o sistema deve indicar qual sequência é indispensável para a suspeita, para que o corte não atinja justamente ela. |
 | 2.1.3.3 | Encerrar aceitando a limitação | operação | **Ação:** no C03 é o que acontece — o técnico encerra com a limitação observada, mas ela não fica registrada em lugar nenhum. **Recomendação:** permitir que a limitação acompanhe o estudo até quem lauda. |
-| 2.2 | Reunir os dados clínicos | 1 > 2 > 3 | **Problema:** transcrição manual do prontuário para a requisição, sujeita a lapsos de digitação [H, Q4]. |
-| 2.2.1 | Localizar os dados no prontuário | operação | **Problema:** idade, queixa e escore ficam em telas diferentes, e o escore pode estar no texto de uma evolução antiga. |
-| 2.2.2 | Conferir a identidade do paciente | operação | **Problema:** risco de associar imagens e dados a pacientes diferentes (Entrega 1, item 5.3). **Recomendação:** manter a confirmação explícita, feita por pessoa. |
-| 2.2.3 | Transcrever os dados para a requisição | operação | **Ação:** o técnico redigita na requisição o que leu no prontuário. **Problema:** é a etapa onde o escore acaba ficando em branco [H, Q4]. **Recomendação:** trazer os dados sem redigitação. |
+| 2.1.3.4 | Reconvocar o paciente | operação | **Ação:** marcar nova data na agenda e justificar, quando a sequência faltante for obrigatória e não houver como obtê-la nesta sessão. **Problema:** é o desfecho do C03 e o mais caro para o paciente — no cenário, a decisão nem chega a ser tomada no setor, porque o problema só aparece dias depois. |
+| 2.2 | Reunir os dados clínicos | 1 > 2 > 3 | **Problema:** transcrição manual do prontuário para a requisição, sujeita a lapsos [H, Q4]. |
+| 2.2.1 | Abrir o prontuário e conferir a identidade | operação | **Problema:** risco de associar imagens e dados a pacientes diferentes (Entrega 1, item 5.3). **Recomendação:** manter a conferência explícita, feita por pessoa. |
+| 2.2.2 | Obter os valores do caso | 1 / 2 — copiar dos campos estruturados **ou** procurar em evolução antiga | **Problema:** o caminho depende de onde o dado está, e o técnico só descobre ao abrir o prontuário. É este o ponto que o GOMS detalha em GOAL 3. |
+| 2.2.2.1 | Copiar dos campos estruturados | operação | **Condição:** só possível quando idade, queixa e escore estão em campos próprios. |
+| 2.2.2.2 | Procurar em evolução antiga | operação | **Problema:** é o caminho em que o escore se perde — está no texto de uma evolução que o técnico pode não encontrar [H, Q4]. **Recomendação:** trazer os dados sem redigitação elimina este caminho. |
+| 2.2.3 | Transcrever os dados para a requisição | operação | **Ação:** o técnico redigita na requisição o que leu no prontuário. **Problema:** é a etapa onde o escore acaba ficando em branco [H, Q4]. |
 | 3 | Encerrar a aquisição | 1 > 2 | **Problema:** não há nenhuma verificação entre o fim da aquisição e a saída do paciente; depois de 3.1, os caminhos de correção baratos deixam de existir. **Recomendação:** é exatamente aqui que a conferência de qualidade e completude deveria ser inserida (H07). |
 | 3.1 | Liberar o paciente | operação | **Condição:** é o ponto sem retorno da tarefa — a partir daí, só resta reconvocar. |
 | 3.2 | Enviar o estudo e a requisição ao PACS | operação | **Ação:** no C03 isso acontece depois que a paciente já saiu. **Problema:** o estudo entra na fila de laudo sem que ninguém tenha conferido se está completo. |
@@ -477,8 +480,8 @@ Cada plano é escrito dentro da caixa do objetivo e numera apenas os seus própr
 **Verificação do HTA:**
 
 - O objetivo 0 representa uma meta do usuário? Sim — é o estado que Bruno quer alcançar (exame adquirido, completo e dentro da janela), não uma função do sistema.
-- As subtarefas são necessárias e suficientes? Sim — retirar qualquer um dos três objetivos de primeiro nível impede alcançar o objetivo, e nenhuma outra etapa aparece no C03 dentro deste recorte.
-- Os **planos** indicam ordem, alternativa, repetição ou condição? Sim — há plano sequencial (0, 1, 2.1, 2.2 e 3), paralelo (2) e de seleção entre três caminhos (2.1.3).
+- As subtarefas são necessárias e suficientes? Sim — retirar qualquer um dos três objetivos de primeiro nível impede alcançar o objetivo, e nenhuma outra etapa aparece no C03 dentro deste recorte. Todo nó decomposto tem ao menos dois filhos.
+- Os **planos** indicam ordem, alternativa, repetição ou condição? Sim — há plano sequencial (0, 1, 2.1, 2.2 e 3), paralelo (2) e de seleção em dois pontos: entre quatro caminhos em 2.1.3 e entre dois em 2.2.2. Os dois pontos de seleção são exatamente os dois Goals que o GOMS detalha com `METHOD` e `SEL. RULE`.
 - Todo nó decomposto tem ao menos dois filhos, e o plano referencia exatamente os filhos daquele nó? Sim — 1, 2, 2.1, 2.1.3, 2.2 e 3 têm dois ou três filhos cada, e nenhum plano cita subtarefa de outro nível.
 - A decomposição parou em nível útil para projeto de interação? Sim — as folhas são operações observáveis (ler, definir, estimar, posicionar, conter, localizar, transcrever, liberar, enviar). Descer até cliques pressuporia uma interface que só será projetada na Entrega 6.
 
@@ -622,20 +625,39 @@ O modelo mostra dois pontos que o HTA não representa: a **concorrência** entre
 |---|---|---|
 | `>>` ativação | A segunda tarefa só pode iniciar após a primeira terminar | "Reunir os dados clínicos" `>>` "Encerrar a aquisição" |
 | `[ ]>>` ativação com passagem de informação | Além de só iniciar depois, a segunda tarefa recebe a informação produzida pela primeira | "Preparar a aquisição" `[ ]>>` "Adquirir as imagens": o protocolo definido determina as sequências; "Acionar a sequência no console" `[ ]>>` "Varrer e reconstruir as imagens" |
-| `[ ]` escolha | Ambas estão habilitadas, mas iniciar uma desabilita a outra | "Conter o movimento e repetir a sequência" `[ ]` "Encurtar o protocolo" `[ ]` "Encerrar aceitando a limitação" — corresponde à seleção `1 / 2 / 3` do objetivo 2.1.3 do HTA e aos métodos 2.A, 2.B e 2.C do GOMS |
-| `\|\|\|` concorrência | As tarefas podem ser realizadas em qualquer ordem ou ao mesmo tempo | "Adquirir as imagens" `\|\|\|` "Reunir os dados clínicos" — corresponde ao plano `1 + 2` do objetivo 2 do HTA |
+| `[ ]` escolha | Ambas estão habilitadas, mas iniciar uma desabilita a outra | Em "Garantir a qualidade diagnóstica": "Conter o movimento e repetir a sequência" `[ ]` "Encurtar o protocolo" `[ ]` "Encerrar aceitando a limitação" `[ ]` "Reconvocar o paciente" — os quatro caminhos da seleção `1 / 2 / 3 / 4` do objetivo 2.1.3 do HTA e os métodos 2.A a 2.D do GOMS. Em "Reunir os dados clínicos": "Copiar dos campos estruturados" `[ ]` "Procurar em evolução antiga" — a seleção `1 / 2` do objetivo 2.2.2 e os métodos 3.A e 3.B |
+| `\|\|\|` concorrência | As tarefas podem ser realizadas em qualquer ordem ou ao mesmo tempo | "Adquirir as imagens" `\|\|\|` "Reunir os dados clínicos", **dentro** da tarefa abstrata "Executar a aquisição" — mesma posição do plano `1 + 2` do objetivo 2 do HTA |
 | `[>` desativação | A primeira tarefa é completamente interrompida pela segunda | "Varrer e reconstruir as imagens" `[>` "Interromper por intolerância do paciente" — é o que acontece no C03, quando Dona Aparecida pede para sair |
 
 As demais relações da notação (`\| [ ] \|` concorrência com comunicação, `\|=\|` independência e `\|>` suspensão/retomada) não aparecem neste modelo porque nenhuma situação da tarefa as exige.
 
 **Tipos de tarefa no modelo** (os quatro tipos da notação, com os ícones da aula):
 
-- **Tarefas do usuário** (realizadas fora do sistema): ler o pedido médico; definir o protocolo da aquisição; estimar o tempo na janela da agenda; posicionar e orientar o paciente; avaliar visualmente as imagens no console; conferir a identidade do paciente; liberar o paciente.
+- **Tarefas do usuário** (realizadas fora do sistema): ler o pedido médico; definir o protocolo da aquisição; estimar o tempo na janela da agenda; posicionar e orientar o paciente; avaliar visualmente as imagens; liberar o paciente.
 - **Tarefas do sistema** (processamento que o sistema realiza de fato, sem interação): varrer e reconstruir as imagens, feita pelo scanner; arquivar o estudo no PACS. São as duas únicas etapas automatizadas no fluxo de hoje.
-- **Tarefas interativas** (diálogo usuário–sistema): acionar a sequência no console; interromper por intolerância do paciente; conter o movimento e repetir a sequência; encurtar o protocolo; encerrar aceitando a limitação; consultar o prontuário; transcrever os dados na requisição; enviar o estudo ao PACS.
-- **Tarefas abstratas** (composição que auxilia a decomposição): realizar a aquisição; preparar a aquisição; adquirir as imagens; executar a varredura; lidar com a qualidade; reunir os dados clínicos; encerrar a aquisição.
+- **Tarefas interativas** (diálogo usuário–sistema): acionar a sequência no console; interromper por intolerância do paciente; conter o movimento e repetir a sequência; encurtar o protocolo; encerrar aceitando a limitação; reconvocar o paciente; abrir o prontuário e conferir a identidade; copiar dos campos estruturados; procurar em evolução antiga; transcrever os dados na requisição; enviar o estudo ao PACS.
+- **Tarefas abstratas** (composição que auxilia a decomposição): realizar a aquisição; preparar a aquisição; executar a aquisição; adquirir as imagens; executar a varredura; garantir a qualidade diagnóstica; reunir os dados clínicos; encerrar a aquisição.
 
 **O que o modelo revela:** quase tudo que decide a qualidade do exame está do lado humano. Avaliar se a imagem serve é tarefa do usuário, feita a olho no console e sem critério escrito; consultar o prontuário e transcrever os dados são tarefas interativas manuais, onde o escore se perde [H, Q4]; e estimar o tempo restante da janela é tarefa do usuário porque nenhum sistema oferece esse dado. O sistema só aparece em dois pontos, a varredura e o arquivamento, e em nenhum deles verifica o que foi produzido. Entre "Liberar o paciente" e "Enviar o estudo ao PACS" não há nenhuma tarefa de conferência — essa ausência é a ruptura do C03, e é o que as próximas entregas devem atacar.
+
+
+### Coerência com o HTA e o GOMS
+
+Os três modelos descrevem o mesmo objetivo, então os pontos de **seleção** e de **paralelismo** precisam estar nos mesmos lugares. A tabela é a verificação dessa correspondência:
+
+| Fato modelado | HTA | GOMS | CTT |
+|---|---|---|---|
+| Imagens e dados clínicos podem ser entrelaçados | plano `1 + 2` do objetivo 2 ("Executar a aquisição") | — (a notação não expressa concorrência) | `\|\|\|` entre "Adquirir as imagens" e "Reunir os dados clínicos", dentro de "Executar a aquisição" |
+| Há quatro saídas para o problema de qualidade | plano `1 / 2 / 3 / 4` do objetivo 2.1.3 | `METHOD` 2.A, 2.B, 2.C e 2.D | `[ ]` entre as quatro tarefas de "Garantir a qualidade diagnóstica" |
+| Há dois caminhos para obter o dado clínico | plano `1 / 2` do objetivo 2.2.2 | `METHOD` 3.A e 3.B | `[ ]` entre "Copiar dos campos estruturados" e "Procurar em evolução antiga" |
+| O que decide entre as saídas | — (a notação não expressa condição) | `SEL. RULE` de cada método | — (a notação não expressa condição) |
+| O paciente pode interromper o exame | — | `SEL. RULE` de 2.D | `[>` em "Interromper por intolerância do paciente" |
+| Quem executa cada tarefa | — | — | tipos de tarefa (usuário, sistema, interativa, abstrata) |
+
+**Diferenças de granularidade que são deliberadas, não divergências.** O CTT separa "Executar as sequências do protocolo" (operação única no HTA) em "Acionar a sequência no console", que é interativa, e "Varrer e reconstruir as imagens", que é do sistema — a distinção só existe porque o CTT precisa dizer quem executa. No GOMS, a conferência de identidade e a transcrição aparecem **dentro** dos métodos 3.A e 3.B, porque cada método precisa ser um caminho completo que termina em verificação; no HTA elas estão fatoradas como 2.2.1 e 2.2.3, por serem comuns aos dois caminhos.
+
+As três lacunas marcadas com "—" são esperadas e justificam o uso das três técnicas: HTA e CTT não expressam **condições**, e o GOMS não expressa **quem executa** nem **concorrência**.
+
 
 ---
 

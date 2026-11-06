@@ -1,14 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2224 762" width="2224" height="762">
-<rect width="2224" height="762" fill="#ffffff"/>
-<text x="1112.0" y="38" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="19" font-weight="700" fill="#1F3B54">HTA — T03: Realizar a aquisição de imagem de ressonância com qualidade</text>
-<text x="1112.0" y="64" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="19" font-weight="700" fill="#1F3B54">diagnóstica e dados clínicos completos, dentro da agenda</text>
-<rect x="1066.0" y="100" width="212" height="85" fill="#ffffff" stroke="#1F3B54" stroke-width="2"/>
-<text x="1172.0" y="119" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">0. Realizar a aquisição com qualidade</text>
-<text x="1172.0" y="135" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">diagnóstica e dados clínicos completos,</text>
-<text x="1172.0" y="151" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">dentro da agenda</text>
-<text x="1172.0" y="169" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1F3B54">1 &gt; 2 &gt; 3</text>
-<path d="M 1172.0 185 V 215" fill="none" stroke="#1F3B54" stroke-width="1.6"/>
-<path d="M 392.0 215 H 1952.0" fill="none" stroke="#1F3B54" stroke-width="1.6"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2464 762" width="2464" height="762">
+<rect width="2464" height="762" fill="#ffffff"/>
+<text x="1232.0" y="38" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="19" font-weight="700" fill="#1F3B54">HTA — T03: Realizar a aquisição de imagem de ressonância com qualidade</text>
+<text x="1232.0" y="64" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="19" font-weight="700" fill="#1F3B54">diagnóstica e dados clínicos completos, dentro da agenda</text>
+<rect x="1186.0" y="100" width="212" height="85" fill="#ffffff" stroke="#1F3B54" stroke-width="2"/>
+<text x="1292.0" y="119" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">0. Realizar a aquisição com qualidade</text>
+<text x="1292.0" y="135" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">diagnóstica e dados clínicos completos,</text>
+<text x="1292.0" y="151" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">dentro da agenda</text>
+<text x="1292.0" y="169" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1F3B54">1 &gt; 2 &gt; 3</text>
+<path d="M 1292.0 185 V 215" fill="none" stroke="#1F3B54" stroke-width="1.6"/>
+<path d="M 392.0 215 H 2192.0" fill="none" stroke="#1F3B54" stroke-width="1.6"/>
 <path d="M 392.0 215 V 248" fill="none" stroke="#1F3B54" stroke-width="1.6"/>
 <path d="M 387.0 247 L 392.0 257 L 397.0 247 Z" fill="#1F3B54"/>
 <rect x="286.0" y="257" width="212" height="53" fill="#ffffff" stroke="#1F3B54" stroke-width="2"/>
@@ -34,13 +34,13 @@
 <line x1="526.0" y1="438" x2="738.0" y2="438" stroke="#1F3B54" stroke-width="2"/>
 <text x="632.0" y="401" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">1.3. Estimar o tempo do</text>
 <text x="632.0" y="417" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">protocolo na janela</text>
-<path d="M 1232.0 215 V 248" fill="none" stroke="#1F3B54" stroke-width="1.6"/>
-<path d="M 1227.0 247 L 1232.0 257 L 1237.0 247 Z" fill="#1F3B54"/>
-<rect x="1126.0" y="257" width="212" height="53" fill="#ffffff" stroke="#1F3B54" stroke-width="2"/>
-<text x="1232.0" y="276" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">2. Executar a aquisição</text>
-<text x="1232.0" y="294" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1F3B54">1 + 2</text>
-<path d="M 1232.0 310 V 340" fill="none" stroke="#1F3B54" stroke-width="1.6"/>
-<path d="M 872.0 340 H 1592.0" fill="none" stroke="#1F3B54" stroke-width="1.6"/>
+<path d="M 1352.0 215 V 248" fill="none" stroke="#1F3B54" stroke-width="1.6"/>
+<path d="M 1347.0 247 L 1352.0 257 L 1357.0 247 Z" fill="#1F3B54"/>
+<rect x="1246.0" y="257" width="212" height="53" fill="#ffffff" stroke="#1F3B54" stroke-width="2"/>
+<text x="1352.0" y="276" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">2. Executar a aquisição</text>
+<text x="1352.0" y="294" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1F3B54">1 + 2</text>
+<path d="M 1352.0 310 V 340" fill="none" stroke="#1F3B54" stroke-width="1.6"/>
+<path d="M 872.0 340 H 1832.0" fill="none" stroke="#1F3B54" stroke-width="1.6"/>
 <path d="M 872.0 340 V 373" fill="none" stroke="#1F3B54" stroke-width="1.6"/>
 <path d="M 867.0 372 L 872.0 382 L 877.0 372 Z" fill="#1F3B54"/>
 <rect x="766.0" y="382" width="212" height="53" fill="#ffffff" stroke="#1F3B54" stroke-width="2"/>
@@ -65,69 +65,89 @@
 <rect x="1006.0" y="523" width="212" height="69" fill="#ffffff" stroke="#1F3B54" stroke-width="2"/>
 <text x="1112.0" y="542" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">2.1.3. Garantir a</text>
 <text x="1112.0" y="558" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">qualidade diagnóstica</text>
-<text x="1112.0" y="576" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1F3B54">1 / 2 / 3</text>
+<text x="1112.0" y="576" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1F3B54">1 / 2 / 3 / 4</text>
 <path d="M 1112.0 592 V 622" fill="none" stroke="#1F3B54" stroke-width="1.6"/>
-<path d="M 872.0 622 H 1352.0" fill="none" stroke="#1F3B54" stroke-width="1.6"/>
-<path d="M 872.0 622 V 655" fill="none" stroke="#1F3B54" stroke-width="1.6"/>
-<path d="M 867.0 654 L 872.0 664 L 877.0 654 Z" fill="#1F3B54"/>
-<rect x="766.0" y="664" width="212" height="52" fill="#ffffff" stroke="#1F3B54" stroke-width="2"/>
-<line x1="766.0" y1="720" x2="978.0" y2="720" stroke="#1F3B54" stroke-width="2"/>
-<text x="872.0" y="683" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">2.1.3.1. Conter o movimento</text>
-<text x="872.0" y="699" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">e repetir a sequência</text>
-<path d="M 1112.0 622 V 655" fill="none" stroke="#1F3B54" stroke-width="1.6"/>
-<path d="M 1107.0 654 L 1112.0 664 L 1117.0 654 Z" fill="#1F3B54"/>
-<rect x="1006.0" y="664" width="212" height="52" fill="#ffffff" stroke="#1F3B54" stroke-width="2"/>
-<line x1="1006.0" y1="720" x2="1218.0" y2="720" stroke="#1F3B54" stroke-width="2"/>
-<text x="1112.0" y="683" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">2.1.3.2. Encurtar o protocolo</text>
-<text x="1112.0" y="699" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">preservando a sequência crítica</text>
-<path d="M 1352.0 622 V 655" fill="none" stroke="#1F3B54" stroke-width="1.6"/>
-<path d="M 1347.0 654 L 1352.0 664 L 1357.0 654 Z" fill="#1F3B54"/>
-<rect x="1246.0" y="664" width="212" height="52" fill="#ffffff" stroke="#1F3B54" stroke-width="2"/>
-<line x1="1246.0" y1="720" x2="1458.0" y2="720" stroke="#1F3B54" stroke-width="2"/>
-<text x="1352.0" y="683" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">2.1.3.3. Encerrar aceitando</text>
-<text x="1352.0" y="699" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">a limitação</text>
-<path d="M 1592.0 340 V 373" fill="none" stroke="#1F3B54" stroke-width="1.6"/>
-<path d="M 1587.0 372 L 1592.0 382 L 1597.0 372 Z" fill="#1F3B54"/>
-<rect x="1486.0" y="382" width="212" height="69" fill="#ffffff" stroke="#1F3B54" stroke-width="2"/>
-<text x="1592.0" y="401" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">2.2. Reunir os dados</text>
-<text x="1592.0" y="417" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">clínicos</text>
-<text x="1592.0" y="435" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1F3B54">1 &gt; 2 &gt; 3</text>
-<path d="M 1592.0 451 V 481" fill="none" stroke="#1F3B54" stroke-width="1.6"/>
-<path d="M 1352.0 481 H 1832.0" fill="none" stroke="#1F3B54" stroke-width="1.6"/>
-<path d="M 1352.0 481 V 514" fill="none" stroke="#1F3B54" stroke-width="1.6"/>
-<path d="M 1347.0 513 L 1352.0 523 L 1357.0 513 Z" fill="#1F3B54"/>
-<rect x="1246.0" y="523" width="212" height="52" fill="#ffffff" stroke="#1F3B54" stroke-width="2"/>
-<line x1="1246.0" y1="579" x2="1458.0" y2="579" stroke="#1F3B54" stroke-width="2"/>
-<text x="1352.0" y="542" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">2.2.1. Localizar os dados</text>
-<text x="1352.0" y="558" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">no prontuário</text>
+<path d="M 752.0 622 H 1472.0" fill="none" stroke="#1F3B54" stroke-width="1.6"/>
+<path d="M 752.0 622 V 655" fill="none" stroke="#1F3B54" stroke-width="1.6"/>
+<path d="M 747.0 654 L 752.0 664 L 757.0 654 Z" fill="#1F3B54"/>
+<rect x="646.0" y="664" width="212" height="52" fill="#ffffff" stroke="#1F3B54" stroke-width="2"/>
+<line x1="646.0" y1="720" x2="858.0" y2="720" stroke="#1F3B54" stroke-width="2"/>
+<text x="752.0" y="683" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">2.1.3.1. Conter o movimento</text>
+<text x="752.0" y="699" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">e repetir a sequência</text>
+<path d="M 992.0 622 V 655" fill="none" stroke="#1F3B54" stroke-width="1.6"/>
+<path d="M 987.0 654 L 992.0 664 L 997.0 654 Z" fill="#1F3B54"/>
+<rect x="886.0" y="664" width="212" height="52" fill="#ffffff" stroke="#1F3B54" stroke-width="2"/>
+<line x1="886.0" y1="720" x2="1098.0" y2="720" stroke="#1F3B54" stroke-width="2"/>
+<text x="992.0" y="683" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">2.1.3.2. Encurtar o protocolo</text>
+<text x="992.0" y="699" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">preservando a sequência crítica</text>
+<path d="M 1232.0 622 V 655" fill="none" stroke="#1F3B54" stroke-width="1.6"/>
+<path d="M 1227.0 654 L 1232.0 664 L 1237.0 654 Z" fill="#1F3B54"/>
+<rect x="1126.0" y="664" width="212" height="52" fill="#ffffff" stroke="#1F3B54" stroke-width="2"/>
+<line x1="1126.0" y1="720" x2="1338.0" y2="720" stroke="#1F3B54" stroke-width="2"/>
+<text x="1232.0" y="683" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">2.1.3.3. Encerrar aceitando</text>
+<text x="1232.0" y="699" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">a limitação</text>
+<path d="M 1472.0 622 V 655" fill="none" stroke="#1F3B54" stroke-width="1.6"/>
+<path d="M 1467.0 654 L 1472.0 664 L 1477.0 654 Z" fill="#1F3B54"/>
+<rect x="1366.0" y="664" width="212" height="52" fill="#ffffff" stroke="#1F3B54" stroke-width="2"/>
+<line x1="1366.0" y1="720" x2="1578.0" y2="720" stroke="#1F3B54" stroke-width="2"/>
+<text x="1472.0" y="683" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">2.1.3.4. Reconvocar</text>
+<text x="1472.0" y="699" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">o paciente</text>
+<path d="M 1832.0 340 V 373" fill="none" stroke="#1F3B54" stroke-width="1.6"/>
+<path d="M 1827.0 372 L 1832.0 382 L 1837.0 372 Z" fill="#1F3B54"/>
+<rect x="1726.0" y="382" width="212" height="69" fill="#ffffff" stroke="#1F3B54" stroke-width="2"/>
+<text x="1832.0" y="401" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">2.2. Reunir os dados</text>
+<text x="1832.0" y="417" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">clínicos</text>
+<text x="1832.0" y="435" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1F3B54">1 &gt; 2 &gt; 3</text>
+<path d="M 1832.0 451 V 481" fill="none" stroke="#1F3B54" stroke-width="1.6"/>
+<path d="M 1592.0 481 H 2072.0" fill="none" stroke="#1F3B54" stroke-width="1.6"/>
 <path d="M 1592.0 481 V 514" fill="none" stroke="#1F3B54" stroke-width="1.6"/>
 <path d="M 1587.0 513 L 1592.0 523 L 1597.0 513 Z" fill="#1F3B54"/>
 <rect x="1486.0" y="523" width="212" height="52" fill="#ffffff" stroke="#1F3B54" stroke-width="2"/>
 <line x1="1486.0" y1="579" x2="1698.0" y2="579" stroke="#1F3B54" stroke-width="2"/>
-<text x="1592.0" y="542" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">2.2.2. Conferir a identidade</text>
-<text x="1592.0" y="558" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">do paciente</text>
+<text x="1592.0" y="542" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">2.2.1. Abrir o prontuário e</text>
+<text x="1592.0" y="558" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">conferir a identidade</text>
 <path d="M 1832.0 481 V 514" fill="none" stroke="#1F3B54" stroke-width="1.6"/>
 <path d="M 1827.0 513 L 1832.0 523 L 1837.0 513 Z" fill="#1F3B54"/>
-<rect x="1726.0" y="523" width="212" height="52" fill="#ffffff" stroke="#1F3B54" stroke-width="2"/>
-<line x1="1726.0" y1="579" x2="1938.0" y2="579" stroke="#1F3B54" stroke-width="2"/>
-<text x="1832.0" y="542" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">2.2.3. Transcrever os dados</text>
-<text x="1832.0" y="558" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">para a requisição</text>
-<path d="M 1952.0 215 V 248" fill="none" stroke="#1F3B54" stroke-width="1.6"/>
-<path d="M 1947.0 247 L 1952.0 257 L 1957.0 247 Z" fill="#1F3B54"/>
-<rect x="1846.0" y="257" width="212" height="53" fill="#ffffff" stroke="#1F3B54" stroke-width="2"/>
-<text x="1952.0" y="276" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">3. Encerrar a aquisição</text>
-<text x="1952.0" y="294" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1F3B54">1 &gt; 2</text>
-<path d="M 1952.0 310 V 340" fill="none" stroke="#1F3B54" stroke-width="1.6"/>
-<path d="M 1832.0 340 H 2072.0" fill="none" stroke="#1F3B54" stroke-width="1.6"/>
-<path d="M 1832.0 340 V 373" fill="none" stroke="#1F3B54" stroke-width="1.6"/>
-<path d="M 1827.0 372 L 1832.0 382 L 1837.0 372 Z" fill="#1F3B54"/>
-<rect x="1726.0" y="382" width="212" height="36" fill="#ffffff" stroke="#1F3B54" stroke-width="2"/>
-<line x1="1726.0" y1="422" x2="1938.0" y2="422" stroke="#1F3B54" stroke-width="2"/>
-<text x="1832.0" y="401" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">3.1. Liberar o paciente</text>
+<rect x="1726.0" y="523" width="212" height="69" fill="#ffffff" stroke="#1F3B54" stroke-width="2"/>
+<text x="1832.0" y="542" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">2.2.2. Obter os valores</text>
+<text x="1832.0" y="558" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">do caso</text>
+<text x="1832.0" y="576" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1F3B54">1 / 2</text>
+<path d="M 1832.0 592 V 622" fill="none" stroke="#1F3B54" stroke-width="1.6"/>
+<path d="M 1712.0 622 H 1952.0" fill="none" stroke="#1F3B54" stroke-width="1.6"/>
+<path d="M 1712.0 622 V 655" fill="none" stroke="#1F3B54" stroke-width="1.6"/>
+<path d="M 1707.0 654 L 1712.0 664 L 1717.0 654 Z" fill="#1F3B54"/>
+<rect x="1606.0" y="664" width="212" height="52" fill="#ffffff" stroke="#1F3B54" stroke-width="2"/>
+<line x1="1606.0" y1="720" x2="1818.0" y2="720" stroke="#1F3B54" stroke-width="2"/>
+<text x="1712.0" y="683" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">2.2.2.1. Copiar dos</text>
+<text x="1712.0" y="699" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">campos estruturados</text>
+<path d="M 1952.0 622 V 655" fill="none" stroke="#1F3B54" stroke-width="1.6"/>
+<path d="M 1947.0 654 L 1952.0 664 L 1957.0 654 Z" fill="#1F3B54"/>
+<rect x="1846.0" y="664" width="212" height="52" fill="#ffffff" stroke="#1F3B54" stroke-width="2"/>
+<line x1="1846.0" y1="720" x2="2058.0" y2="720" stroke="#1F3B54" stroke-width="2"/>
+<text x="1952.0" y="683" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">2.2.2.2. Procurar em</text>
+<text x="1952.0" y="699" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">evolução antiga</text>
+<path d="M 2072.0 481 V 514" fill="none" stroke="#1F3B54" stroke-width="1.6"/>
+<path d="M 2067.0 513 L 2072.0 523 L 2077.0 513 Z" fill="#1F3B54"/>
+<rect x="1966.0" y="523" width="212" height="52" fill="#ffffff" stroke="#1F3B54" stroke-width="2"/>
+<line x1="1966.0" y1="579" x2="2178.0" y2="579" stroke="#1F3B54" stroke-width="2"/>
+<text x="2072.0" y="542" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">2.2.3. Transcrever os dados</text>
+<text x="2072.0" y="558" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">para a requisição</text>
+<path d="M 2192.0 215 V 248" fill="none" stroke="#1F3B54" stroke-width="1.6"/>
+<path d="M 2187.0 247 L 2192.0 257 L 2197.0 247 Z" fill="#1F3B54"/>
+<rect x="2086.0" y="257" width="212" height="53" fill="#ffffff" stroke="#1F3B54" stroke-width="2"/>
+<text x="2192.0" y="276" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">3. Encerrar a aquisição</text>
+<text x="2192.0" y="294" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#1F3B54">1 &gt; 2</text>
+<path d="M 2192.0 310 V 340" fill="none" stroke="#1F3B54" stroke-width="1.6"/>
+<path d="M 2072.0 340 H 2312.0" fill="none" stroke="#1F3B54" stroke-width="1.6"/>
 <path d="M 2072.0 340 V 373" fill="none" stroke="#1F3B54" stroke-width="1.6"/>
 <path d="M 2067.0 372 L 2072.0 382 L 2077.0 372 Z" fill="#1F3B54"/>
-<rect x="1966.0" y="382" width="212" height="52" fill="#ffffff" stroke="#1F3B54" stroke-width="2"/>
-<line x1="1966.0" y1="438" x2="2178.0" y2="438" stroke="#1F3B54" stroke-width="2"/>
-<text x="2072.0" y="401" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">3.2. Enviar o estudo e a</text>
-<text x="2072.0" y="417" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">requisição ao PACS</text>
+<rect x="1966.0" y="382" width="212" height="36" fill="#ffffff" stroke="#1F3B54" stroke-width="2"/>
+<line x1="1966.0" y1="422" x2="2178.0" y2="422" stroke="#1F3B54" stroke-width="2"/>
+<text x="2072.0" y="401" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">3.1. Liberar o paciente</text>
+<path d="M 2312.0 340 V 373" fill="none" stroke="#1F3B54" stroke-width="1.6"/>
+<path d="M 2307.0 372 L 2312.0 382 L 2317.0 372 Z" fill="#1F3B54"/>
+<rect x="2206.0" y="382" width="212" height="52" fill="#ffffff" stroke="#1F3B54" stroke-width="2"/>
+<line x1="2206.0" y1="438" x2="2418.0" y2="438" stroke="#1F3B54" stroke-width="2"/>
+<text x="2312.0" y="401" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">3.2. Enviar o estudo e a</text>
+<text x="2312.0" y="417" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#12293B">requisição ao PACS</text>
 </svg>

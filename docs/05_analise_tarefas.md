@@ -1,7 +1,7 @@
 # Entrega 5 — Análise de tarefas: HTA, GOMS e CTT
 
 - **Data:** {{22/10/2026}}  
-- **Status:** 🟩 concluída
+- **Status:** 🟦 revisada pós feedback
 - **Responsabilidade:** cada integrante modela pelo menos 1 HTA, 1 GOMS e 1 CTT. As três técnicas podem abordar a mesma funcionalidade ou funcionalidades distintas, conforme a orientação da disciplina.
 
 ## Objetivo da atividade
@@ -713,71 +713,112 @@ Notação da aula: `GOAL`, `METHOD`, `(SEL. RULE: ...)` logo abaixo de cada mét
 
 ```text
 GOAL 0: decidir a conduta sobre a autonomia do paciente
+
   GOAL 1: reunir as evidências do caso
-    OP. 1.1: ouvir o relato da filha sobre os episódios recentes
-    GOAL 1.2: revisar os dados do prontuário
-      GOAL 1.2.1: consultar os escores de MMSE
-        OP. 1.2.1.1: deslocar o cursor para a aba de testes cognitivos
-        OP. 1.2.1.2: clicar na aba de testes cognitivos
-        OP. 1.2.1.3: ler o escore atual e o da consulta anterior
-        OP. 1.2.1.4: verificar que o escore lido é o do MMSE mais recente
-      GOAL 1.2.2: ler o laudo de MRI
-        METHOD 1.2.2.A: ler só a conclusão do laudo no prontuário
-        (SEL. RULE: o laudo é conclusivo)
-          OP. 1.2.2.A.1: deslocar o cursor para a aba de exames
-          OP. 1.2.2.A.2: clicar no laudo de MRI
-          OP. 1.2.2.A.3: ler a conclusão do laudo
-          OP. 1.2.2.A.4: verificar que o laudo lido é o da MRI mais recente do paciente
-        METHOD 1.2.2.B: conferir as imagens no visualizador
-        (SEL. RULE: o laudo é limítrofe e o médico quer conferir os achados)
-          OP. 1.2.2.B.1: deslocar o cursor para "abrir imagens"
-          OP. 1.2.2.B.2: clicar em "abrir imagens"
-          OP. 1.2.2.B.3: aguardar o carregamento no visualizador DICOM
-          OP. 1.2.2.B.4: percorrer os cortes de interesse
-          OP. 1.2.2.B.5: comparar o que viu com a conclusão do laudo
-          OP. 1.2.2.B.6: verificar se as imagens e a conclusão do laudo concordam
-    OP. 1.3: verificar que o relato, o escore e o laudo estão reunidos
+
+    METHOD 1.A: ouvir o relato da filha e depois revisar os dados do prontuário
+    (SEL. RULE: a consulta começa com a atualização das informações fornecidas pela acompanhante)
+      GOAL 1.1: ouvir o relato da filha
+        OP. 1.1.1: solicitar à filha que relate os episódios recentes envolvendo o paciente
+        OP. 1.1.2: ouvir os relatos sobre esquecimentos, desorientação e dificuldades nas atividades cotidianas
+        OP. 1.1.3: esclarecer as circunstâncias dos episódios relatados
+
+      GOAL 1.2: revisar os dados do prontuário
+        OP. 1.2.1: acessar o prontuário eletrônico do paciente
+
+        METHOD 1.2.A: consultar os escores de MMSE e depois ler o laudo de MRI
+        (SEL. RULE: o médico inicia a revisão pelos resultados dos testes cognitivos)
+          GOAL 1.2.1: consultar os escores de MMSE
+            OP. 1.2.1.1: acessar a seção de testes cognitivos
+            OP. 1.2.1.2: localizar os resultados atual e anterior do MMSE
+            OP. 1.2.1.3: ler as pontuações e verificar suas respectivas datas
+
+          GOAL 1.2.2: ler o laudo de MRI
+            OP. 1.2.2.1: acessar a seção de exames de imagem
+            OP. 1.2.2.2: abrir o laudo de MRI
+            OP. 1.2.2.3: ler a conclusão do laudo
+            OP. 1.2.2.4: verificar se o laudo corresponde ao exame mais recente
+
+        METHOD 1.2.B: ler o laudo de MRI e depois consultar os escores de MMSE
+        (SEL. RULE: o médico inicia a revisão pelos resultados dos exames de imagem)
+          GOAL 1.2.2: ler o laudo de MRI
+            OP. 1.2.2.1: acessar a seção de exames de imagem
+            OP. 1.2.2.2: abrir o laudo de MRI
+            OP. 1.2.2.3: ler a conclusão do laudo
+            OP. 1.2.2.4: verificar se o laudo corresponde ao exame mais recente
+
+          GOAL 1.2.1: consultar os escores de MMSE
+            OP. 1.2.1.1: acessar a seção de testes cognitivos
+            OP. 1.2.1.2: localizar os resultados atual e anterior do MMSE
+            OP. 1.2.1.3: ler as pontuações e verificar suas respectivas datas
+
+    METHOD 1.B: revisar os dados do prontuário e depois ouvir o relato da filha
+    (SEL. RULE: o médico prefere consultar o histórico clínico antes de ouvir a acompanhante)
+      GOAL 1.2: revisar os dados do prontuário
+      GOAL 1.1: ouvir o relato da filha
+
   GOAL 2: confrontar as evidências
-    GOAL 2.1: comparar escores e laudo com os episódios relatados
-      OP. 2.1.1: recuperar da memória os episódios relatados pela filha
-      OP. 2.1.2: comparar a variação do MMSE com os episódios relatados
-      OP. 2.1.3: comparar a conclusão do laudo de MRI com os episódios relatados
-      OP. 2.1.4: verificar se as três fontes apontam na mesma direção ou divergem
+
+    GOAL 2.1: comparar os escores de MMSE com os episódios relatados
+      OP. 2.1.1: recuperar os episódios relatados pela filha
+      OP. 2.1.2: comparar o escore atual do MMSE com o resultado anterior
+      OP. 2.1.3: relacionar a evolução dos escores com os episódios relatados
+      OP. 2.1.4: considerar a conclusão do laudo de MRI na avaliação do quadro
+      OP. 2.1.5: verificar se as evidências apresentam concordância ou divergência
+
     GOAL 2.2: ponderar o risco de acidente e o dano de uma restrição
-      OP. 2.2.1: recuperar da memória as diretrizes de trânsito e do CFM sobre restrição [H, Q1]
-      OP. 2.2.2: comparar o risco de acidente indicado pelos episódios com o dano de uma restrição sem respaldo
-      OP. 2.2.3: verificar se o conjunto das evidências sustenta ou não uma restrição
+      OP. 2.2.1: avaliar os riscos associados aos episódios relatados pela família
+      OP. 2.2.2: considerar as consequências de manter a autonomia diante dos riscos identificados
+      OP. 2.2.3: considerar os impactos de uma possível restrição sobre a autonomia do paciente
+      OP. 2.2.4: ponderar os riscos das alternativas consideradas
+
   GOAL 3: definir a conduta
+
     METHOD 3.A: emitir laudo restritivo
-    (SEL. RULE: o relato e os dados objetivos indicam risco claro ao dirigir)
-      OP. 3.A.1: deslocar o cursor para "documentos"
-      OP. 3.A.2: clicar em "novo laudo"
-      OP. 3.A.3: digitar a recomendação de suspensão da direção e de supervisão domiciliar
-      OP. 3.A.4: digitar a fundamentação clínica
-      OP. 3.A.5: clicar em "assinar e imprimir"
-      OP. 3.A.6: verificar que o laudo aparece assinado na lista de documentos do paciente
+    (SEL. RULE: as evidências indicam risco significativo à segurança do paciente ou de terceiros)
+      OP. 3.A.1: acessar a seção de documentos do paciente
+      OP. 3.A.2: selecionar a opção de emissão de novo laudo
+      OP. 3.A.3: registrar a recomendação de restrição da autonomia
+      OP. 3.A.4: inserir a fundamentação clínica da decisão
+      OP. 3.A.5: assinar e emitir o laudo
+      OP. 3.A.6: verificar se o documento foi registrado no prontuário
+
     METHOD 3.B: solicitar avaliação neuropsicológica
-    (SEL. RULE: o relato e os dados objetivos divergem e não há segurança para restringir)
-      OP. 3.B.1: deslocar o cursor para "solicitar exame"
-      OP. 3.B.2: clicar em "solicitar exame"
-      OP. 3.B.3: selecionar "avaliação neuropsicológica"
-      OP. 3.B.4: digitar a justificativa clínica
-      OP. 3.B.5: clicar em "enviar pedido"
-      OP. 3.B.6: verificar que o pedido aparece como enviado na lista de pedidos do paciente
+    (SEL. RULE: existem divergências entre as evidências e não há segurança suficiente para estabelecer uma restrição)
+      OP. 3.B.1: acessar a seção de solicitação de exames
+      OP. 3.B.2: selecionar a opção de nova solicitação
+      OP. 3.B.3: selecionar avaliação neuropsicológica
+      OP. 3.B.4: inserir a justificativa clínica
+      OP. 3.B.5: enviar a solicitação
+      OP. 3.B.6: verificar se o pedido foi registrado no prontuário
+
     METHOD 3.C: manter a autonomia e reavaliar no retorno
-    (SEL. RULE: os episódios relatados são isolados e os dados objetivos seguem estáveis)
-      OP. 3.C.1: escolher o intervalo do retorno
-      OP. 3.C.2: orientar a filha sobre os sinais que devem ser observados
-      OP. 3.C.3: verificar que a filha repete os sinais a observar e o prazo do retorno
+    (SEL. RULE: os episódios relatados são isolados e as evidências não justificam uma restrição imediata)
+      OP. 3.C.1: definir o intervalo para a próxima consulta
+      OP. 3.C.2: estabelecer os sinais e comportamentos que deverão ser acompanhados
+      OP. 3.C.3: orientar o paciente e a filha sobre os sinais que devem ser observados
+      OP. 3.C.4: confirmar a compreensão das orientações e do prazo de retorno
+
   GOAL 4: comunicar e registrar a decisão
-    GOAL 4.1: explicar a conduta ao paciente e à filha
-      OP. 4.1.1: explicar a conduta e o motivo
-      OP. 4.1.2: verificar que o paciente e a filha confirmam ter entendido a conduta
-    GOAL 4.2: registrar a decisão no prontuário
-      OP. 4.2.1: deslocar o cursor para o campo de evolução
-      OP. 4.2.2: digitar a decisão, as evidências consideradas e a divergência encontrada
-      OP. 4.2.3: clicar em "salvar"
-      OP. 4.2.4: verificar se a evolução aparece na lista
+
+    METHOD 4.A: explicar a conduta ao paciente e à filha antes de registrar a decisão
+    (SEL. RULE: o médico prioriza comunicar a decisão imediatamente após defini-la)
+      GOAL 4.1: explicar a conduta ao paciente e à filha
+        OP. 4.1.1: explicar a conduta definida e sua justificativa
+        OP. 4.1.2: esclarecer as dúvidas do paciente e da acompanhante
+        OP. 4.1.3: verificar se ambos compreenderam a decisão
+
+      GOAL 4.2: registrar a decisão e a justificativa no prontuário
+        OP. 4.2.1: acessar o campo de evolução do prontuário
+        OP. 4.2.2: registrar a conduta definida e as evidências consideradas
+        OP. 4.2.3: registrar a justificativa e as divergências identificadas
+        OP. 4.2.4: salvar o registro
+        OP. 4.2.5: verificar se a evolução foi registrada corretamente
+
+    METHOD 4.B: registrar a decisão no prontuário antes de explicar a conduta ao paciente e à filha
+    (SEL. RULE: o médico prioriza documentar a decisão enquanto as evidências e a justificativa estão recentes)
+      GOAL 4.2: registrar a decisão e a justificativa no prontuário
+      GOAL 4.1: explicar a conduta ao paciente e à filha
 ```
 
 ---

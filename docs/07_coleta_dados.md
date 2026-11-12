@@ -32,7 +32,10 @@ Antes de decidir “que dados coletar”, retome os itens `[H]` e `[?]` da Entre
 
 | ID | Hipótese/lacuna | Evidência atual | Decisão que depende da resposta | Prioridade |
 |---|---|---|---|---|
-| H01 | {{...}} | {{...}} | {{...}} | alta / média / baixa |
+| H01 | A explicação combinada (mapa de atenção na imagem e peso da imagem e dos dados clínicos) ajuda o profissional a compreender a sugestão do modelo e a calibrar sua confiança melhor do que um score isolado | [H] Premissa central da Entrega 1, item 1.3. As personas P01 e P02 e os cenários C01 e C04 mostram necessidades e situações ilustrativas, mas ainda não há evidência primária com profissionais | Definir quais explicações devem ser apresentadas, em que nível de detalhe e como comunicar limitações sem induzir confiança excessiva | alta |
+| H02 | A explicação combinada pode reduzir o tempo necessário para avaliar um caso em comparação com a consulta de um score isolado ou com o fluxo atual | [H] Entrega 1, hipótese H02; a estimativa de 5 a 10 minutos para A03 é uma estimativa da equipe, ainda não medida | Verificar se a apresentação multimodal agiliza a tarefa; a redução efetiva de tempo deverá ser medida posteriormente com protótipo e tarefa comparável | média |
+| H03 | O médico clínico compreende o score de confiança e as explicações sem treinamento extenso | [H] Entrega 1, hipótese H03, e necessidades atribuídas à P01 na Entrega 3; ainda não houve teste direto de compreensão com o público priorizado | Definir linguagem, explicações auxiliares, avisos, exemplos e necessidade de treinamento | alta |
+| H06 | O raciocínio de um especialista consultado informalmente precisa ser preservado e recuperável quando o caso retorna ao médico que acompanha o paciente | [H] Persona P01 e cenário C02 da Entrega 4 descrevem a perda de contexto após um parecer telefônico resumido; T01 da Entrega 5 modela a retomada do caso. São situações construídas pela equipe, não relatos observados | Definir quais informações de um parecer precisam ser registradas, como identificar sua origem e como recuperar o histórico na retomada do caso | média |
 | H07 | Problemas de qualidade da MRI e dados clínicos incompletos só são percebidos depois que o paciente sai do setor, gerando reconvocação e atraso no diagnóstico | Nenhuma evidência primária. O cenário C03 é construído a partir dos itens 4.1 e 4.2 da Entrega 1 (variabilidade de protocolos e inconsistência de qualidade), não de relato de campo | Se sustentada, justifica deslocar a conferência de qualidade e completude para antes da liberação do paciente (F03) e torna essa a tarefa do protótipo de T03. Se refutada, o problema central de P04 deixa de existir e a persona precisa ser revista | **alta** |
 | H09 | Serviços de imagem não reservam tempo adicional na escala para pacientes idosos com suspeita de declínio cognitivo | `[H]`, suposta a partir de normas operacionais genéricas de setor de imagem (origem: C03, questão de refinamento Q1) | Define se "dentro da agenda" é de fato uma restrição concreta do objetivo de T03 ou um pressuposto nosso. Afeta a meta de usabilidade da Entrega 8, que hoje prevê tempo de tarefa | alta |
 | H10 | O técnico não tem autonomia formal para alterar o protocolo padrão quando o pedido médico vem genérico | `[F]` parcial (Entrega 1, item 2.4); `[?]` quanto às diretrizes do corpo clínico (origem: C03 Q2) | Decide se o método 2.B do GOMS (encurtar o protocolo preservando a sequência crítica) é um caminho real ou inviável. Se for inviável, a recomendação de indicar a sequência crítica muda de destinatário | **alta** |
@@ -47,25 +50,41 @@ Antes de decidir “que dados coletar”, retome os itens `[H]` e `[?]` da Entre
 
 > **Responsabilidade:** solução individual por integrante.
 
-### A01 — {{autor}}
+### A01 — Paulo Hudson Josué da Silva
 
-**Autor(a):** {{nome — matrícula}}
+**Autor(a):** Paulo Hudson Josué da Silva — 22.222.013-9  
+**Persona/cenário:** P01 — Dr. Marcos Andrade / C02 — "O parecer que se perdeu" / tarefa T01  
+**Hipóteses sob investigação:** H01, H02, H03 e H06
 
 #### Que dados coletar?
 
 | Dado/informação | Hipótese/lacuna relacionada | Por que é necessário | Qual decisão de design pode afetar |
 |---|---|---|---|
-| {{...}} | {{H01/H02/...}} | {{...}} | {{...}} |
+| Área de atuação, tempo de experiência e frequência com que atende pessoas com queixas cognitivas ou suspeita de demência | H03 | Verifica se o perfil de médico clínico/generalista previsto na Entrega 1 realiza de fato a atividade imaginada e qual é sua familiaridade com o domínio | Nível de linguagem clínica, quantidade de explicações e necessidade de orientação inicial |
+| Ferramentas utilizadas para consultar MRI, laudos, testes cognitivos, histórico e pareceres de outros profissionais | H02, H06 | Identifica o fluxo atual, os sistemas acessados e as eventuais trocas entre prontuário, PACS, telefone e registros livres | Organização do fluxo, ponto de entrada das informações e necessidade real de integração |
+| Informações consultadas antes de decidir: laudo/imagem, MMSE ou MoCA, histórico clínico, relato familiar e parecer especializado | H01, H06 | Mostra quais evidências participam da decisão e quais costumam faltar ou chegar tarde | Hierarquia e agrupamento das informações clínicas e explicativas |
+| Interpretação das probabilidades, da faixa de confiança e dos limites de uma sugestão de IA apresentada no exemplo sintético (telas P03 e P04 da Entrega 6) | H01, H03 | Verifica o que o médico entende espontaneamente e quais interpretações equivocadas podem surgir | Vocabulário, apresentação do score, avisos e explicações auxiliares |
+| Compreensão do mapa de atenção sobre o corte da MRI (Grad-CAM) e do peso da imagem e dos dados clínicos na sugestão (SHAP) | H01, H03 | Investiga se a explicação multimodal é compreensível e útil para quem não é especialista em neuroimagem | Nível de detalhe, legenda, tradução para linguagem clínica e possibilidade de consultar detalhes adicionais |
+| Etapas e tempo que o médico estima gastar para reunir evidências e avaliar um caso | H02 | Verifica a percepção de esforço e de demora do fluxo atual; a entrevista não mede objetivamente eventual ganho de tempo | Priorização das informações e definição posterior de tarefa e métrica para teste com protótipo |
+| Como o parecer de outro profissional é recebido, registrado e recuperado quando o paciente retorna | H06 | Testa se a ruptura descrita em C02 ocorre e quais informações do raciocínio especializado precisam ser preservadas | Histórico do caso, registro da origem do parecer e mecanismo de retomada/encaminhamento |
+| Erros considerados críticos e situações em que o médico decide não seguir uma sugestão automatizada ou solicitar revisão | H01, H03 | Identifica riscos de confiança excessiva, falsa segurança e limites de atuação do sistema | Avisos, apresentação de incerteza e acesso à revisão por especialista |
 
 #### De quem coletar?
 
 | Perfil/stakeholder | Critério de inclusão | Relação com persona/público |
 |---|---|---|
-| {{...}} | {{...}} | {{...}} |
+| Médico(a) clínico(a) ou generalista em atenção primária ou hospital geral | Atende adultos/idosos e já participou de avaliação de queixas cognitivas ou investigação de suspeita de demência; não é exigida experiência prévia com IA explicável | Corresponde à P01, perfil priorizado na Entrega 1 |
+| Médico(a) de área próxima, como geriatria ou medicina de família, caso autorizado pelo docente | Atua na avaliação de queixas cognitivas, mas não corresponde exatamente ao perfil primário | Participante proxy; seus dados serão identificados separadamente e não serão apresentados como fala de P01 |
+
+O instrumento foi preparado para 3 a 5 profissionais, por conveniência; sua aplicação depende de acesso a médicos clínicos, que a equipe não tem por via institucional. A amostra pequena e não probabilística permite aprofundar práticas e dificuldades, mas não representa todos os médicos clínicos.
 
 #### Aspectos éticos
 
-Analise voluntariedade, consentimento, minimização de dados, privacidade, riscos, gravação, anonimização, armazenamento e descarte. Não responda apenas “sim, por causa da LGPD”: explique **quais dados e riscos existem neste projeto**.
+A participação será voluntária, mediante explicação do objetivo, duração e uso acadêmico das informações e aceite antes da entrevista. A conduta segue as Resoluções CNS 466/2012 e 510/2016 e a LGPD (Lei 13.709/2018). O participante poderá deixar de responder qualquer pergunta ou encerrar a conversa sem justificativa. A entrevista não avaliará competência profissional nem desempenho individual.
+
+Não serão solicitados nomes, iniciais, datas, números de prontuário, imagens, laudos reais ou qualquer dado que permita identificar pacientes. Ao descrever um caso anterior, o profissional será orientado a retirar detalhes identificadores e a relatar apenas o fluxo e o tipo de informação consultada. Para discutir a interpretação de uma explicação, será utilizado somente exemplo sintético, identificado como fictício, sem finalidade diagnóstica.
+
+A gravação de áudio será opcional e dependerá de autorização específica; na ausência de autorização, serão feitas apenas anotações. Não serão gravadas telas nem imagens clínicas. Os registros serão codificados, sem associação com nome ou instituição, e o acesso ficará restrito aos integrantes da equipe e ao docente. Trechos eventualmente citados serão revisados para remover elementos identificadores. Os arquivos de trabalho serão descartados ao término da disciplina. Há risco de desconforto ao relatar dificuldades ou erros do fluxo profissional; por isso, as perguntas serão formuladas sobre a rotina e não sobre culpa individual.
 
 ### A03 — Nathan Gabriel da Fonseca Leite
 
@@ -172,28 +191,71 @@ Sim, o projeto precisa considerar aspectos éticos: a coleta envolve pessoas dir
 
 > Cada integrante deve preparar uma técnica/instrumento completo. As técnicas devem ser diferentes entre si e **questionário deve estar entre as técnicas escolhidas**, conforme o enunciado da disciplina.
 
-### Instrumento I01 — {{nome da técnica}}
+### Instrumento I01 — Entrevista semiestruturada com médicos clínicos
 
-**Autor(a):** {{nome — matrícula}}  
-**Técnica:** questionário / entrevista semiestruturada / observação / grupo focal / outra autorizada  
-**Objetivo:** {{...}}  
-**Público:** {{...}}
+**Autor(a):** Paulo Hudson Josué da Silva — 22.222.013-9  
+**Técnica:** entrevista semiestruturada  
+**Objetivo:** compreender como médicos clínicos/generalistas avaliam atualmente casos com suspeita de declínio cognitivo, quais informações e ferramentas utilizam e como interpretariam uma sugestão multimodal explicada por IA. Investigar H01, H02, H03 e H06.  
+**Público:** médicos clínicos/generalistas de atenção primária ou hospital geral que já tenham participado da avaliação de queixas cognitivas.  
+**Duração estimada:** 30 a 40 minutos por participante.
 
 #### Procedimento padronizado de aplicação
 
-1. {{preparação}}
-2. {{apresentação/consentimento}}
-3. {{aplicação}}
-4. {{encerramento}}
-5. {{armazenamento/anonimização}}
+1. **Preparação.** Convidar de 3 a 5 profissionais que atendam aos critérios de inclusão. Preparar roteiro, ficha de anotações e um exemplo sintético de resultado (sem dados de paciente real). Fazer um pré-teste do roteiro para verificar clareza e duração.
+2. **Apresentação/consentimento.** Explicar o objetivo acadêmico, a duração, a voluntariedade, o uso dos registros e a possibilidade de não responder. Solicitar consentimento antes de iniciar, com o termo adaptado de [`../instrumentos/termo_consentimento_modelo.md`](../instrumentos/termo_consentimento_modelo.md). Explicar que a entrevista não avalia a competência do profissional.
+3. **Aplicação.** Seguir os blocos do roteiro, começando pelo processo atual sem apresentar a solução. Somente depois, mostrar o exemplo sintético de explicação XAI e perguntar o que o participante entende, o que considera útil e o que permanece incerto. Usar perguntas de aprofundamento sem sugerir respostas.
+4. **Encerramento.** Perguntar se há algum aspecto importante não abordado, resumir os principais pontos entendidos pelo entrevistador e permitir que o participante corrija a interpretação.
+5. **Armazenamento/anonimização.** Registrar as respostas por código (M01, M02 etc.). Gravar áudio somente com autorização específica; caso contrário, utilizar anotações. Remover referências a pacientes, instituições e profissionais antes da análise.
 
 #### Instrumento
 
-Cole aqui o questionário/roteiro completo ou forneça link **mais uma cópia textual no repositório**.
+**Abertura ao participante**
+
+“Obrigado por participar. Esta entrevista faz parte de uma atividade acadêmica de Interação Humano-Computador. Nosso objetivo é compreender como ocorre a avaliação de pacientes com queixas cognitivas e como profissionais interpretam informações clínicas, exames de imagem e possíveis explicações geradas por IA. Não estamos avaliando sua atuação e não há respostas certas ou erradas. Não compartilhe dados que identifiquem pacientes ou colegas. Sua participação é voluntária e você pode interromper a entrevista quando desejar.”
+
+**Bloco 1 — Perfil e contexto de atuação**
+
+1. Qual é sua área de atuação e em que tipo de serviço trabalha?
+2. Há quanto tempo atua nessa área?
+3. Com que frequência participa da avaliação de pessoas com queixa de memória, declínio cognitivo ou suspeita de demência?
+4. Qual costuma ser sua participação no processo: avaliação inicial, solicitação de exames, interpretação de resultados, acompanhamento ou encaminhamento?
+
+**Bloco 2 — Processo atual**
+
+5. Sem mencionar dados identificáveis, descreva como costuma conduzir a avaliação de um caso com suspeita de declínio cognitivo, desde a primeira consulta até a decisão ou encaminhamento.
+6. Quais informações costuma consultar antes de tomar uma decisão? Como utiliza MRI/laudo, MMSE ou MoCA, histórico clínico e relatos de familiares?
+7. Quais ferramentas ou sistemas utiliza para acessar essas informações? Há necessidade de alternar entre sistemas, documentos ou contatos com outros profissionais?
+8. Quais informações costumam estar ausentes ou ser difíceis de localizar?
+9. Em que situações procura a opinião de um neurologista ou outro especialista? Como recebe e registra esse parecer?
+10. Quando o paciente retorna após uma avaliação especializada anterior, como recupera o raciocínio e os dados que fundamentaram o parecer?
+
+**Bloco 3 — Interpretação de uma explicação sintética**
+
+*Apresentar as telas P03 e P04 da Entrega 6, identificadas como material de estudo com dados simulados: probabilidade de cada classe (CN × DA) com a faixa de confiança, mapa de atenção sobre um corte axial da MRI, peso da imagem e dos dados clínicos na sugestão e limites do modelo.*
+
+11. O que você entende a partir das informações apresentadas? O que considera que o resultado está sugerindo?
+12. O que a probabilidade e a faixa de confiança significam para você? Que informação adicional seria necessária para interpretá-lo adequadamente?
+13. O que você entende pelo mapa de atenção sobre a imagem? O destaque permite concluir algo por si só? O que ainda precisaria ser verificado?
+14. Ao observar quanto a sugestão veio da imagem e quanto veio dos dados clínicos, o que fica claro e o que precisa de explicação?
+15. Quais informações do exemplo ajudariam sua avaliação? Quais seriam pouco úteis ou poderiam induzir a uma interpretação equivocada?
+16. Que limitações ou incertezas você gostaria de conhecer antes de considerar a sugestão do modelo?
+
+**Bloco 4 — Uso, tempo e continuidade**
+
+17. Em qual etapa do seu fluxo atual uma explicação como essa poderia ser consultada? Em que situação não seria apropriado utilizá-la?
+18. Em sua percepção, essa forma de apresentação poderia alterar o tempo gasto para avaliar o caso? O que poderia acelerar ou tornar o processo mais demorado?
+19. Quais informações deveriam permanecer registradas para que você ou outro profissional pudesse compreender a decisão em um retorno futuro?
+20. Há alguma situação em que a explicação deveria levar o médico a solicitar revisão de um especialista, em vez de tomar uma decisão com as informações disponíveis?
+
+**Encerramento**
+
+21. Existe alguma informação, dificuldade ou prática da rotina que não foi abordada e que você considera importante para esse projeto?
 
 #### Como os dados serão analisados
 
-{{ex.: distribuição de respostas, codificação temática, agrupamento de problemas}}
+As respostas serão organizadas por código de participante e analisadas por codificação temática. Os temas iniciais serão: perfil e contexto de atuação; fluxo e ferramentas atuais; informações consultadas e ausentes; interpretação do score; compreensão do mapa de atenção e do peso de cada modalidade; percepção de tempo; continuidade do parecer; riscos e situações de encaminhamento.
+
+Será feita uma matriz que relacione cada tema às hipóteses H01, H02, H03 e H06. Respostas divergentes serão mantidas e comparadas, sem forçar consenso. A entrevista permite investigar percepção de tempo, mas não comprova redução objetiva; H02 precisará ser medida em teste posterior com protótipo e tarefa comparável.
 
 ### Instrumento I03 — Questionário sobre a rotina de aquisição de RM de crânio
  
@@ -424,6 +486,8 @@ As demais hipóteses seguem a mesma lógica: H09 é respondida por 3.5, 3.6 e pe
 ## Síntese
 
 > Cada integrante acrescenta aqui o parágrafo da sua coleta.
+
+**A01 / I01 (Paulo) — P01, médico clínico.** A entrevista investigará se o médico clínico/generalista participa da avaliação descrita, quais dados e ferramentas utiliza e como interpreta as probabilidades, a faixa de confiança, o mapa de atenção e o peso de cada modalidade. H01 deverá ser sustentada, refutada ou refinada conforme a explicação ajude, não ajude ou ajude apenas em determinadas condições a compreender e calibrar a confiança. H03 será avaliada pela compreensão espontânea e pelas dúvidas relatadas. H06 será sustentada, refutada ou refinada conforme a prática de registro e recuperação de pareceres corresponda ao cenário C02. H02 será apenas refinada nesta etapa: a entrevista recolhe percepção sobre tempo, mas a redução efetiva deverá ser medida posteriormente com protótipo.
 
 **A03 / I03 (Nathan) — lacunas que o questionário pretende reduzir.** O conjunto P04 + C03 + T03 foi construído inteiramente por inferência a partir dos itens 4.1 e 4.2 da Entrega 1: nenhum técnico em radiologia foi ouvido até aqui. O questionário cobre as cinco categorias de dados de Barbosa e Silva e ataca quatro lacunas nesta ordem de prioridade: (1) **se o problema existe** — em que momento uma falha de qualidade ou de dado clínico é percebida, e com que frequência isso gera reconvocação; (2) **se o técnico é o decisor** que a persona supõe, isto é, quem define o protocolo, se há autonomia formal para alterá-lo e se ele se sente autorizado a usá-la; (3) **qual o repertório real** de ações diante de movimento, com que vocabulário o técnico nomeia o problema e qual gravidade ele próprio atribui a cada tipo de falha; (4) **se parte da solução já existe**, na forma de sinalização automática no console ou no PACS.
 

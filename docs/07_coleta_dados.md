@@ -196,15 +196,15 @@ Cole aqui o questionário/roteiro completo ou forneça link **mais uma cópia te
 {{ex.: distribuição de respostas, codificação temática, agrupamento de problemas}}
 
 ### Instrumento I03 — Questionário sobre a rotina de aquisição de RM de crânio
-
+ 
 **Autor(a):** Nathan Gabriel da Fonseca Leite — 22.123.028-7  
 **Técnica:** questionário autoaplicado, assíncrono, em formulário on-line (Google Forms)  
 **Objetivo:** verificar H07 — se problemas de qualidade de imagem e de dados clínicos só são percebidos depois que o paciente deixa o setor — e testar as hipóteses H09 a H14, mapeando o que o técnico pode fazer e o que ele decide no momento da aquisição.  
 **Público:** técnicos(as) em radiologia que operam RM há pelo menos 6 meses e realizam exames de crânio com indicação de investigação de declínio cognitivo.  
 **Duração estimada:** 12 minutos.
-
+ 
 **Método correto para o objetivo.** Das sete técnicas apresentadas em aula, a escolha se justifica por eliminação:
-
+ 
 | Técnica | Por que não foi escolhida |
 |---|---|
 | Entrevista | Dá profundidade, mas com dois ou três participantes não distingue problema estrutural de caso isolado — e H07 é uma afirmação de **frequência** |
@@ -213,159 +213,157 @@ Cole aqui o questionário/roteiro completo ou forneça link **mais uma cópia te
 | Classificação de cartões | Serve a arquitetura de informação, que ainda não temos — cabe na Entrega 9 |
 | Estudo de campo / investigação contextual | **Tecnicamente a melhor opção**: tornaria explícito o conhecimento tácito que a Entrega 5 tentou modelar por inferência. Inviável por falta de acesso institucional a um setor de imagem, e a limitação está registrada |
 | **Questionário** | Escolhido. H07 pede frequência; H09, H10 e H14 dependem de normas e sistemas que **variam entre serviços**, e só a variação entre muitos respondentes revela isso. Não exige acesso presencial |
-
+ 
 A contrapartida é conhecida e aceita: questionário é mais superficial que entrevista. Ela é compensada por três perguntas abertas ao final e pela previsão de que, se algum resultado ficar ambíguo, a equipe solicite ao docente autorização para uma entrevista de aprofundamento com um ou dois respondentes voluntários.
-
+ 
 A `RASTREABILIDADE.md` registrava "entrevista com técnicos e radiologistas" como forma de investigar H07; a mudança está anotada lá.
-
+ 
 #### Procedimento padronizado de aplicação
-
+ 
 O **protocolo de execução** descrito abaixo é o instrumento mais importante desta coleta: é ele que garante que qualquer integrante da equipe aplique o questionário do mesmo modo e que os dados sejam comparáveis.
-
-1. **Preparação.** Montar o formulário no Google Forms com a coleta de e-mail **desativada** e sem nenhuma pergunta de identificação — o Google Forms não disponibiliza endereço IP a quem cria o formulário —, respostas não obrigatórias (exceto o aceite) e lógica de encerramento para quem não atende ao critério de inclusão. Aplicar pré-teste com 2 respondentes do perfil, cronometrando o tempo e marcando termos ambíguos ou perguntas que induzam; ajustar e registrar no repositório o que mudou entre a versão pré-teste e a final.
+ 
+1. **Preparação.** Montar o formulário no Google Forms com a coleta de e-mail **desativada** (o Google Forms não fornece o endereço IP aos responsáveis), respostas não obrigatórias (exceto o aceite) e lógica de encerramento para quem não atende ao critério de inclusão. Aplicar pré-teste com 2 respondentes do perfil, cronometrando o tempo e marcando termos ambíguos ou perguntas que induzam; ajustar e registrar no repositório o que mudou entre a versão pré-teste e a final.
 2. **Apresentação e consentimento.** A Seção 0 traz o termo adaptado de `../instrumentos/termo_consentimento_modelo.md`. O formulário só avança após aceite explícito; quem recusa é direcionado ao encerramento sem registro de resposta.
 3. **Aplicação.** Divulgação do link em grupos profissionais de técnicos em radiologia e por indicação do corpo docente, **sem intermediação de chefias**, com texto de convite padronizado — o mesmo em todos os canais, para não enviesar quem responde. Janela de coleta de 15 dias corridos, com um único lembrete no oitavo dia.
 4. **Encerramento.** Tela de agradecimento com contato da equipe e informação de que os resultados agregados ficarão disponíveis no repositório público do projeto.
 5. **Armazenamento e anonimização.** Exportar as respostas para planilha de acesso restrito aos quatro integrantes e ao docente. Revisar manualmente as respostas abertas, removendo nomes de pessoas e de serviços antes de qualquer citação. Publicar apenas dados agregados e trechos anonimizados. Descartar a base ao término da disciplina.
-
 #### Instrumento
-
+ 
 > Cópia textual integral. A marcação entre colchetes ao final de cada pergunta indica a hipótese investigada e a categoria de dados correspondente (C1 a C5, conforme a seção "Que dados coletar?"). **Essas marcações não aparecem para o respondente.**
-
+ 
 ---
-
+ 
 **Seção 0 — Convite e consentimento**
-
+ 
 Você está sendo convidado(a) a responder um questionário sobre a rotina de aquisição de ressonância magnética de crânio. Ele faz parte de um trabalho acadêmico da disciplina de Interação Humano-Computador do Centro Universitário FEI, em um projeto que estuda apoio computacional ao diagnóstico de Alzheimer.
-
+ 
 Queremos entender **como o trabalho acontece hoje**, no seu serviço. Não estamos avaliando você nem o seu serviço, e não há resposta certa ou errada.
-
+ 
 - A participação é voluntária e você pode encerrar a qualquer momento fechando a página.
 - Nenhuma pergunta é obrigatória, além deste aceite.
-- **Não coletamos** seu nome, e-mail, telefone, número de registro profissional nem o nome do serviço onde você trabalha. O formulário não coleta seu e-mail, e o Google Forms não nos fornece seu endereço IP.
+- **Não coletamos** seu nome, e-mail, telefone, número de registro profissional nem o nome do serviço onde você trabalha. O formulário não coleta e-mail, e o endereço IP não é fornecido à equipe.
 - Não há gravação de áudio, vídeo ou tela.
 - Tempo estimado: 12 minutos.
 - As respostas ficam em arquivo de acesso restrito à equipe e ao professor da disciplina, e são descartadas ao fim do semestre. No repositório público do projeto publicamos apenas resultados agregados e trechos de resposta já anonimizados.
 - Você não recebe benefício direto por participar. O que buscamos é entender uma rotina que só conhecemos de fora.
-- Dúvidas: {{e-mail de contato da equipe}}.
-
+- Dúvidas: paulo.hudson012345awd6@gmail.com, rgaravatierbert@gmail.com, nathangabriel.f.leite@gmail.com ou lazzurianacarolina@gmail.com.
 **0.1** Li as informações acima e concordo em participar. *(única pergunta obrigatória)*
 ☐ Sim, concordo  ☐ Não desejo participar → *encerra o formulário*
-
+ 
 ---
-
+ 
 **Seção 1 — Sobre a sua atuação**
-
+ 
 **1.1** Há quanto tempo você atua com ressonância magnética? *[C1]*
 ☐ Menos de 6 meses → *encerra*  ☐ 6 meses a 1 ano  ☐ 1 a 3 anos  ☐ 4 a 10 anos  ☐ Mais de 10 anos
-
+ 
 **1.2** Em que tipo de serviço você atua atualmente? *[C1]*
 ☐ Público  ☐ Privado  ☐ Ambos  ☐ Outro  ☐ Prefiro não responder
-
+ 
 **1.3** Durante os exames, há radiologista presente no local? *[C1 — reproduz a condição do C03]*
 ☐ Sim, sempre  ☐ Na maior parte do tempo  ☐ Raramente  ☐ Não; o laudo é feito remotamente ou em outra unidade  ☐ Não sei
-
+ 
 **1.4** Com que frequência você realiza RM de crânio com indicação de investigação de declínio cognitivo, demência ou Alzheimer? *[critério de inclusão]*
 ☐ Diariamente  ☐ Algumas vezes por semana  ☐ Algumas vezes por mês  ☐ Raramente  ☐ Nunca → *encerra*
-
+ 
 **1.5** Você recebeu alguma formação específica sobre protocolos de investigação de demência? *[C1, H10, H12]*
 ☐ Sim, treinamento formal  ☐ Sim, orientação informal de colegas ou do radiologista  ☐ Não  ☐ Não sei
-
+ 
 ---
-
+ 
 **Seção 2 — Sistemas que você usa**
-
+ 
 **2.1** Quais sistemas você utiliza na rotina de um exame de crânio? *(pode marcar mais de uma)* *[C2, H13]*
 ☐ Console do equipamento  ☐ PACS  ☐ RIS ou sistema de agendamento  ☐ Prontuário eletrônico  ☐ Requisição em papel  ☐ Outro: ____
-
+ 
 **2.2** Como a qualidade da imagem é avaliada no seu serviço, antes de o exame seguir para laudo? *(pode marcar mais de uma)* *[C2, H12]*
 ☐ Avaliação visual do técnico no console  ☐ Critério escrito do serviço  ☐ Recurso do próprio equipamento que sinaliza problemas  ☐ Conferência por radiologista antes do envio  ☐ Não há avaliação antes do laudo  ☐ Não sei
-
+ 
 ---
-
+ 
 **Seção 3 — Antes do exame: pedido e protocolo**
-
+ 
 **3.1** Nesses exames, com que frequência o pedido médico informa a suspeita clínica (por exemplo, "investigação de Alzheimer")? *[C3, H10]*
 ☐ Sempre  ☐ Na maioria das vezes  ☐ Em cerca de metade  ☐ Raramente  ☐ Nunca  ☐ Não sei
-
+ 
 **3.2** Na prática, quem define quais sequências serão adquiridas? *(pode marcar mais de uma)* *[C3, H10, H11]*
 ☐ Eu mesmo(a)  ☐ Radiologista do serviço  ☐ Médico solicitante, por contato prévio  ☐ Protocolo fixo do equipamento, sem escolha  ☐ Outro: ____  ☐ Não sei
-
+ 
 **3.3** No seu serviço, o técnico pode alterar o protocolo padrão — incluir ou retirar sequências — sem autorização prévia de um médico? *[C3, H10]*
 ☐ Sim, livremente  ☐ Sim, em situações previstas em norma  ☐ Somente com autorização caso a caso  ☐ Não  ☐ Não sei
-
+ 
 **3.4** Existe no seu serviço um protocolo **escrito** específico para investigação de demência? *[C3, H10, H12]*
 ☐ Sim, escrito e disponível na rotina  ☐ Existe, mas não é consultado na prática  ☐ Não existe  ☐ Não sei
-
+ 
 **3.5** Quanto tempo é reservado na agenda para uma RM de crânio no seu serviço? *[C4, H09]*
 ☐ Menos de 20 minutos  ☐ 20 a 30 minutos  ☐ 31 a 45 minutos  ☐ Mais de 45 minutos  ☐ Varia muito  ☐ Não sei
-
+ 
 **3.6** Pacientes idosos ou com dificuldade de cooperação recebem tempo adicional na agenda? *[C4, H09]*
 ☐ Sim, sempre  ☐ Sim, quando isso é sinalizado antes  ☐ Não  ☐ Não sei
-
+ 
 ---
-
+ 
 **Seção 4 — Durante o exame: movimento e qualidade**
-
+ 
 **4.1** Em exames de crânio de pacientes idosos, com que frequência o movimento do paciente compromete ao menos uma sequência? *[C4, H12]*
 ☐ Em quase todos  ☐ Na maioria  ☐ Em cerca de metade  ☐ Em poucos  ☐ Raramente ou nunca  ☐ Não sei
-
+ 
 **4.2** Quando percebe movimento durante a aquisição, quais recursos você usa na prática? *(pode marcar mais de uma)* *[C4, H12]*
 ☐ Orientar novamente o paciente pelo interfone  ☐ Pedir que um acompanhante permaneça na sala  ☐ Usar coxins, faixas ou contenções leves  ☐ Trocar por uma sequência mais rápida  ☐ Usar recurso de correção de movimento do equipamento  ☐ Repetir a sequência  ☐ Encerrar o exame como está  ☐ Outro: ____
-
+ 
 **4.3** O que costuma limitar a decisão de repetir uma sequência? *(pode marcar mais de uma)* *[C4, H09, H12]*
 ☐ Tolerância do paciente  ☐ Horário do próximo paciente na agenda  ☐ Orientação do serviço  ☐ Nada limita; repito quantas vezes for necessário  ☐ Outro: ____
-
+ 
 **4.4** Existe no seu serviço algum critério **escrito** para decidir se uma imagem com artefato é aceitável? *[C4, H12]*
 ☐ Sim, há critério escrito  ☐ Não; é julgamento do técnico  ☐ Não; quem decide é o radiologista  ☐ Não sei
-
+ 
 **4.5** Como você e seus colegas costumam se referir, no dia a dia, à imagem prejudicada por movimento do paciente? Escreva o termo que vocês realmente usam. *[C1 — jargão]* *(aberta curta, opcional)*
-
+ 
 ---
-
+ 
 **Seção 5 — Dados clínicos que acompanham o exame**
-
+ 
 **5.1** Quais informações clínicas costumam acompanhar o exame até quem vai laudar? *(pode marcar mais de uma)* *[C4, H13]*
 ☐ Idade  ☐ Queixa ou motivo do exame  ☐ Resultado de teste cognitivo (MMSE, MoCA ou similar)  ☐ Medicações em uso  ☐ Histórico familiar  ☐ Nenhuma além do que está no pedido  ☐ Não sei
-
+ 
 **5.2** Como essas informações chegam à requisição de laudo? *[C4, H13]*
 ☐ Eu as digito a partir do prontuário  ☐ Já vêm preenchidas pelo médico solicitante  ☐ São importadas automaticamente do prontuário  ☐ Não são registradas  ☐ Outro: ____  ☐ Não sei
-
+ 
 **5.3** Quando precisa buscar uma informação clínica no prontuário, com que frequência você não consegue localizá-la? *[C4, H13]*
 ☐ Sempre  ☐ Frequentemente  ☐ Às vezes  ☐ Raramente  ☐ Nunca  ☐ Não faço esse tipo de busca
-
+ 
 **5.4** Já aconteceu de um exame seguir para laudo com dado clínico faltando ou trocado? *[C4, H13]* *(opcional)*
 ☐ Sim, em exames que realizei  ☐ Já vi acontecer no serviço  ☐ Não que eu saiba  ☐ Não sei  ☐ Prefiro não responder
-
+ 
 ---
-
+ 
 **Seção 6 — Depois do exame: como o problema aparece**
-
+ 
 **6.1** Quando um exame de crânio sai com problema — artefato, sequência faltante ou dado clínico incompleto —, em que momento isso **costuma** ser percebido? *[C4, **H07** — pergunta central]*
 ☐ Ainda durante o exame, com o paciente no aparelho  ☐ Logo depois, com o paciente ainda no setor  ☐ Depois que o paciente saiu, mas antes do laudo  ☐ Somente quando o laudo aponta o problema  ☐ Varia muito  ☐ Não sei
-
+ 
 **6.2** Nos últimos 6 meses, com que frequência um paciente precisou ser chamado de volta para refazer ou completar uma RM de crânio? *[C4, H07]* *(opcional)*
 ☐ Nenhuma vez  ☐ 1 a 2 vezes  ☐ 3 a 5 vezes  ☐ Mais de 5 vezes  ☐ Não sei  ☐ Prefiro não responder
-
+ 
 **6.3** Quando isso acontece, quanto tempo costuma passar até o paciente ser reconvocado? *[C4, H07]*
 ☐ No mesmo dia  ☐ Alguns dias  ☐ Algumas semanas  ☐ Mais de um mês  ☐ Varia muito  ☐ Não sei
-
+ 
 **6.4** O console do equipamento ou o PACS sinaliza automaticamente algo sobre a qualidade da imagem ou sobre campos obrigatórios não preenchidos? *[C2, H14]*
 ☐ Sim  ☐ Não  ☐ Não sei
-
+ 
 **6.5** Se respondeu "sim", descreva brevemente o que o sistema sinaliza. *[C2, H14]* *(aberta, opcional)*
-
+ 
 **6.6** Antes de o paciente deixar o setor, existe alguma conferência do exame? *[C4, H07]*
 ☐ Sim, feita por mim, de forma estruturada  ☐ Sim, feita por mim, de forma informal  ☐ Sim, feita por outro profissional  ☐ Não há conferência antes da liberação  ☐ Não sei
-
+ 
 ---
-
+ 
 **Seção 7 — Gravidade e percepções**
-
+ 
 **7.1** Na sua avaliação, qual é a gravidade de cada situação abaixo para o resultado final do exame? *[C4 — gravidade dos erros; H07, H13]*
-
+ 
 *(escala por linha: sem impacto · impacto pequeno · impacto moderado · impacto grande · crítico · não sei)*
-
+ 
 | Situação |
 |---|
 | Artefato de movimento fora da região de interesse |
@@ -373,11 +371,11 @@ Queremos entender **como o trabalho acontece hoje**, no seu serviço. Não estam
 | Ausência de uma sequência prevista no protocolo |
 | Resultado de teste cognitivo ausente na requisição |
 | Paciente precisar ser reconvocado para refazer o exame |
-
+ 
 **7.2** Indique o quanto concorda com cada afirmação. *[C5 — motivações, atitudes e valores; H07, H09, H10, H11]*
-
+ 
 *(escala por linha: concordo plenamente · concordo parcialmente · não concordo nem discordo · discordo parcialmente · discordo totalmente)*
-
+ 
 | Afirmação |
 |---|
 | Tenho autonomia para decidir como conduzir a aquisição quando o paciente não colabora |
@@ -385,43 +383,42 @@ Queremos entender **como o trabalho acontece hoje**, no seu serviço. Não estam
 | Prefiro seguir o protocolo padrão a ajustar a aquisição caso a caso |
 | As informações de que preciso para preparar o exame chegam até mim de forma completa |
 | Mudanças nos sistemas que uso costumam atrapalhar mais do que ajudar |
-
+ 
 ---
-
+ 
 **Seção 8 — Relato livre**
-
+ 
 **8.1** Se puder, descreva a última vez em que um exame de crânio precisou ser refeito ou complementado. O que aconteceu e em que momento o problema foi notado? *[H07]* *(aberta, opcional)*
-
+ 
 **8.2** Na sua experiência, o que poderia ter evitado esse retrabalho? *(aberta, opcional)*
-
+ 
 **8.3** Há algo sobre essa rotina que as perguntas acima não cobriram e que você considera importante? *(aberta, opcional)*
-
+ 
 Obrigado pela participação.
-
+ 
 ---
-
+ 
 #### Como os dados serão analisados
-
+ 
 **Fechadas de escolha e faixa.** Distribuição de frequência por pergunta, em números absolutos e com percentuais apenas se n ≥ 10. Três cruzamentos estão previstos, porque são eles que separam "problema estrutural" de "problema de um serviço":
-
+ 
 - **6.1 × 1.3** — o momento de detecção muda conforme haja ou não radiologista no local? É o teste mais direto de H07 no contexto do C03.
 - **6.1 × 6.6** — serviços com alguma conferência antes da liberação detectam mais cedo?
 - **3.3 × 1.2** — a autonomia sobre o protocolo varia entre serviço público e privado?
-
 **Escalas (7.1 e 7.2).** Distribuição por item e mediana, tratadas como ordinais — sem média aritmética, que não se aplica a Likert. Em 7.1 interessa a **ordenação** de gravidade atribuída pelos próprios técnicos: se "reconvocação" não for o item mais grave na percepção deles, a prioridade que demos ao requisito F03 precisa ser revista. Em 7.2, as respostas de autonomia e de tempo são confrontadas com as perguntas normativas equivalentes (3.3 e 3.5/3.6): divergência entre norma e percepção é achado, não ruído.
-
+ 
 **Critério de decisão sobre H07, definido antes da coleta** para não ajustar a régua ao resultado:
-
+ 
 | Resultado em 6.1 | Veredito sobre H07 |
 |---|---|
 | Maioria responde "depois que o paciente saiu" ou "somente quando o laudo aponta" | **sustentada** — a janela de correção existe e é perdida; T03 e F03 seguem |
 | Maioria responde "ainda durante o exame" ou "com o paciente ainda no setor" | **refutada** — o problema do C03 não é geral; P04 e T03 precisam ser revistos |
 | Respostas divididas, ou "varia muito" como maioria | **refinada** — identificar na análise cruzada qual condição separa os dois grupos, e reescrever H07 com essa condição |
-
+ 
 As demais hipóteses seguem a mesma lógica: H09 é respondida por 3.5, 3.6 e pelo item de tempo em 7.2; H10 por 3.1, 3.2 e 3.3; H11 por 3.2 (cruzada com o instrumento do integrante de P03/T02); H12 por 2.2, 4.1 a 4.4; H13 por 5.1 a 5.4; H14 por 6.4 e 6.5.
-
+ 
 **Abertas (4.5, 6.5, 8.1 a 8.3).** Codificação temática em dois passos: primeiro marcar, em cada relato, o momento em que o problema foi notado e a causa atribuída; depois agrupar os códigos e contar ocorrências. A 4.5 recebe tratamento à parte: os termos coletados formam um pequeno glossário do vocabulário real do técnico, que alimenta os rótulos de qualidade nas Entregas 9 e 11. Os relatos servem para explicar os números das fechadas e para encontrar causas que não previmos — e é nesse segundo ponto que eles podem derrubar o cenário, não só confirmá-lo.
-
+ 
 **O que a análise não pode fazer.** Amostra de conveniência e autorrelatada: os resultados descrevem quem respondeu, não a categoria profissional. Nenhum número daqui vai para o repositório sem a nota de limitação de amostra ao lado.
 
 ## Síntese

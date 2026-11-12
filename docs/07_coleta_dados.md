@@ -1,7 +1,7 @@
 # Entrega 7 — Coleta de dados, necessidades e aspectos éticos
 
 **Data:** 05/11/2026  
-**Status:** 🟨 em andamento
+**Status:** 🟡 em andamento
 
 ## Objetivo da atividade
 
@@ -69,11 +69,11 @@ Analise voluntariedade, consentimento, minimização de dados, privacidade, risc
 
 ### A03 — Nathan Gabriel da Fonseca Leite
 
-**Autor(a):** Nathan Gabriel da Fonseca Leite — 221230287  
+**Autor(a):** Nathan Gabriel da Fonseca Leite — 22.123.028-7  
 **Persona/cenário:** P04 — Bruno Tavares Lima / C03 — "O exame que precisou ser refeito" / tarefa T03  
 **Hipóteses sob investigação:** H07 e H09 a H14 (derivadas das questões de refinamento do C03)
 
-O ponto de partida é desconfortável e precisa ser dito: **a persona P04 e o cenário C03 foram construídos sem nenhum contato com técnicos em radiologia**. Eles derivam dos itens 4.1 e 4.2 da Entrega 1 e de inferência nossa sobre como um setor de imagem funciona. A coleta aqui não serve para confirmar o que já escrevemos — serve para descobrir se esse profissional, essa tarefa e esse problema existem como os descrevemos. É plenamente possível que a resposta seja não.
+A persona P04 e o cenário C03 foram construídos sem contato com técnicos em radiologia: derivam dos itens 4.1 e 4.2 da Entrega 1 e de inferência da equipe sobre o funcionamento de um setor de imagem. Por isso, a coleta não busca confirmar o que foi escrito, e sim verificar se esse profissional, essa tarefa e esse problema existem como foram descritos. A resposta pode ser negativa.
 
 #### Que dados coletar?
 
@@ -83,7 +83,7 @@ Organizado pelas cinco categorias de Barbosa e Silva (2010). Cada linha aponta a
 
 | Dado/informação | Hipótese | Por que é necessário | Qual decisão de design pode afetar |
 |---|---|---|---|
-| Tempo de atuação com ressonância magnética (em faixas) | todas | Separa quem fala da rotina consolidada de quem está em formação; a autonomia percebida tende a variar com a experiência | Define se P04 (8 anos de prática) é um perfil representativo ou um caso particular |
+| Tempo de atuação com ressonância magnética (em faixas) | todas | Separa quem fala da rotina consolidada de quem está em formação; a autonomia percebida tende a variar com a experiência | Define se P04 é um perfil representativo ou um caso particular |
 | Formação específica em protocolos de investigação de demência (formal, informal ou inexistente) | H10, H12 | Testa se o conhecimento do caso vem de norma ou de prática pessoal | Indica se a interface deve apresentar o protocolo exigido ou apenas apoiar quem já o conhece |
 | **Jargão** usado para nomear o problema de imagem causado por movimento | H12 | A Entrega 1 (item 2.4) determina que a qualidade seja expressa em linguagem de aquisição, nunca em métricas do modelo. Só sabemos qual é essa linguagem perguntando | Vocabulário dos rótulos de qualidade na interface (Entregas 9 e 11) |
 
@@ -122,7 +122,7 @@ Organizado pelas cinco categorias de Barbosa e Silva (2010). Cada linha aponta a
 |---|---|---|---|
 | Autonomia percebida para conduzir a aquisição quando o paciente não colabora | H10, H11 | Autonomia formal (norma) e autonomia percebida (prática) podem divergir, e é a segunda que governa o comportamento | Se o técnico não se sente autorizado, uma interface que ofereça a decisão a ele não será usada |
 | Percepção de tempo disponível para conferir o exame antes de liberar o paciente | H07, H09 | Testa pelo ângulo da atitude a mesma restrição que H09 testa pelo ângulo da norma | Viabilidade de inserir uma conferência antes da liberação sem que ela seja ignorada |
-| **Atitude diante de mudança de sistema**: preferência por seguir o protocolo padrão e percepção sobre mudanças anteriores nas ferramentas | H11 | Barbosa e Silva chamam de atitudes e valores: o usuário explora novas formas de trabalhar ou evita? | Grau de mudança que a solução pode propor sem ser rejeitada; necessidade de treinamento (Entrega 12) |
+| **Atitude diante de mudança de sistema**: preferência por seguir o protocolo padrão e percepção sobre mudanças anteriores nas ferramentas | H11 | Barbosa e Silva chamam de atitudes e valores: o usuário explora novas formas de trabalhar ou evita? | Grau de mudança que a solução pode propor sem ser rejeitada; necessidade de treinamento |
 
 #### De quem coletar?
 
@@ -132,9 +132,9 @@ As quatro perguntas de investigação de público (Barbosa e Silva, 2010) respon
 
 **Quem será afetado por ele?** O **paciente**, que é quem arca com a reconvocação e com o atraso no diagnóstico, e que não é usuário nem será consultado nesta coleta — a decisão de não envolvê-lo está registrada em H05, e o ônus que ele carrega é o principal argumento de relevância social deste projeto. Também são afetados a radiologista que recebe o estudo, o médico solicitante que aguarda o laudo e a central de agendamento, que absorve a vaga extra.
 
-**Quem é responsável por decidir quais objetivos o sistema deve apoiar e quais funcionalidades ter?** Hoje, **nós** — e esse é exatamente o problema que esta coleta tenta corrigir. Os objetivos de T03 foram definidos pela equipe a partir de inferência, sem nenhum profissional do setor de imagem na decisão. Num projeto real, esse papel caberia à coordenação do setor de imagem junto ao corpo clínico. Enquanto isso não existir, qualquer funcionalidade proposta é hipótese nossa, não requisito levantado.
+**Quem é responsável por decidir quais objetivos o sistema deve apoiar e quais funcionalidades ter?** Hoje, a própria equipe, a partir de inferência; é essa lacuna que a coleta busca reduzir. Os objetivos de T03 foram definidos pela equipe a partir de inferência, sem nenhum profissional do setor de imagem na decisão. Num projeto real, esse papel caberia à coordenação do setor de imagem junto ao corpo clínico. Enquanto isso não existir, qualquer funcionalidade proposta é hipótese nossa, não requisito levantado.
 
-**Quem definiu os processos a serem apoiados?** Não sabemos, e é o que **H11** investiga. O protocolo de aquisição é presumivelmente definido pelo corpo clínico ou pela radiologia; a escala do equipamento, pela central de agendamento; o fluxo de laudo, pelo serviço. Enquanto essa distribuição não estiver clara, não há como saber que decisões a interface pode propor automatizar sem invadir a competência de outro profissional.
+**Quem definiu os processos a serem apoiados?** Ainda não se sabe; é o que a H11 investiga. O protocolo de aquisição é presumivelmente definido pelo corpo clínico ou pela radiologia; a escala do equipamento, pela central de agendamento; o fluxo de laudo, pelo serviço. Enquanto essa distribuição não estiver clara, não há como saber que decisões a interface pode propor automatizar sem invadir a competência de outro profissional.
 
 | Perfil/stakeholder | Critério de inclusão | Relação com persona/público |
 |---|---|---|
@@ -148,9 +148,9 @@ As quatro perguntas de investigação de público (Barbosa e Silva, 2010) respon
 
 #### Aspectos éticos
 
-Sim, o projeto precisa considerar aspectos éticos: a coleta envolve pessoas diretamente (os técnicos que respondem) e indiretamente (pacientes e colegas mencionados nos relatos). A análise segue os quatro princípios da **Resolução 196/96 do Conselho Nacional de Saúde**, citada em aula. Trata-se de pesquisa com objetivo técnico e didático, não de pesquisa científica submetida a comitê de ética — a resolução orienta a conduta, e esse limite está declarado ao final.
+Sim, o projeto precisa considerar aspectos éticos: a coleta envolve pessoas diretamente (os técnicos que respondem) e indiretamente (pacientes e colegas mencionados nos relatos). A análise segue os quatro princípios da **Resolução 196/96 do Conselho Nacional de Saúde**, citada em aula, hoje substituída pelas Resoluções CNS 466/2012 e 510/2016, que mantêm esses princípios. O tratamento dos dados também observa a Lei Geral de Proteção de Dados (Lei 13.709/2018). Trata-se de pesquisa com objetivo técnico e didático, não de pesquisa científica submetida a comitê de ética — a resolução orienta a conduta, e esse limite está declarado ao final.
 
-**Princípio da não maleficência — evitar danos previsíveis, imediatos e tardios.** O dano previsível aqui não é físico nem clínico: é **profissional**. Várias perguntas tocam em falha de trabalho — exame refeito, dado clínico trocado, ausência de conferência antes de liberar o paciente. Se uma resposta puder ser ligada a quem a deu, o participante fica exposto diante do empregador, e o dano é tardio. Por isso: não são coletados nome, e-mail, telefone, número de registro profissional, nome do serviço, cidade ou cargo específico; o formulário é configurado para **não registrar e-mail nem endereço IP**; as perguntas de caracterização ficam em faixas amplas, nunca em valores que permitam cruzamento identificador; e as perguntas sobre erro são formuladas como **frequência na rotina do serviço**, não como culpa individual. Os relatos abertos podem conter, sem intenção, nome de pessoa ou de serviço, e passam por revisão manual de anonimização antes de qualquer citação — o que não puder ser anonimizado não é citado.
+**Princípio da não maleficência — evitar danos previsíveis, imediatos e tardios.** O dano previsível aqui não é físico nem clínico: é **profissional**. Várias perguntas tocam em falha de trabalho — exame refeito, dado clínico trocado, ausência de conferência antes de liberar o paciente. Se uma resposta puder ser ligada a quem a deu, o participante fica exposto diante do empregador, e o dano é tardio. Por isso: não são coletados nome, e-mail, telefone, número de registro profissional, nome do serviço, cidade ou cargo específico; o formulário **não coleta e-mail**, e o Google Forms não fornece o endereço IP aos responsáveis; as perguntas de caracterização ficam em faixas amplas, nunca em valores que permitam cruzamento identificador; e as perguntas sobre erro são formuladas como **frequência na rotina do serviço**, não como culpa individual. Os relatos abertos podem conter, sem intenção, nome de pessoa ou de serviço, e passam por revisão manual de anonimização antes de qualquer citação — o que não puder ser anonimizado não é citado.
 
 **Princípio da justiça e equidade — relevância social e minimização do ônus.** O ônus para o participante é de 12 minutos, sem deslocamento e sem exposição. A relevância social está do outro lado da cadeia: quem paga pelo problema que investigamos é o paciente idoso que precisa voltar ao hospital e esperar semanas a mais pelo diagnóstico. O participante não recebe benefício direto, e isso é dito a ele com franqueza no convite — não prometemos que o trabalho mudará a rotina dele. O retorno oferecido é concreto e modesto: os resultados agregados ficam públicos no repositório do projeto.
 
@@ -197,7 +197,7 @@ Cole aqui o questionário/roteiro completo ou forneça link **mais uma cópia te
 
 ### Instrumento I03 — Questionário sobre a rotina de aquisição de RM de crânio
 
-**Autor(a):** Nathan Gabriel da Fonseca Leite — 221230287  
+**Autor(a):** Nathan Gabriel da Fonseca Leite — 22.123.028-7  
 **Técnica:** questionário autoaplicado, assíncrono, em formulário on-line (Google Forms)  
 **Objetivo:** verificar H07 — se problemas de qualidade de imagem e de dados clínicos só são percebidos depois que o paciente deixa o setor — e testar as hipóteses H09 a H14, mapeando o que o técnico pode fazer e o que ele decide no momento da aquisição.  
 **Público:** técnicos(as) em radiologia que operam RM há pelo menos 6 meses e realizam exames de crânio com indicação de investigação de declínio cognitivo.  
@@ -222,7 +222,7 @@ A `RASTREABILIDADE.md` registrava "entrevista com técnicos e radiologistas" com
 
 O **protocolo de execução** descrito abaixo é o instrumento mais importante desta coleta: é ele que garante que qualquer integrante da equipe aplique o questionário do mesmo modo e que os dados sejam comparáveis.
 
-1. **Preparação.** Montar o formulário no Google Forms com coleta de e-mail e de IP **desativadas**, respostas não obrigatórias (exceto o aceite) e lógica de encerramento para quem não atende ao critério de inclusão. Aplicar pré-teste com 2 respondentes do perfil, cronometrando o tempo e marcando termos ambíguos ou perguntas que induzam; ajustar e registrar no repositório o que mudou entre a versão pré-teste e a final.
+1. **Preparação.** Montar o formulário no Google Forms com a coleta de e-mail **desativada** e sem nenhuma pergunta de identificação — o Google Forms não disponibiliza endereço IP a quem cria o formulário —, respostas não obrigatórias (exceto o aceite) e lógica de encerramento para quem não atende ao critério de inclusão. Aplicar pré-teste com 2 respondentes do perfil, cronometrando o tempo e marcando termos ambíguos ou perguntas que induzam; ajustar e registrar no repositório o que mudou entre a versão pré-teste e a final.
 2. **Apresentação e consentimento.** A Seção 0 traz o termo adaptado de `../instrumentos/termo_consentimento_modelo.md`. O formulário só avança após aceite explícito; quem recusa é direcionado ao encerramento sem registro de resposta.
 3. **Aplicação.** Divulgação do link em grupos profissionais de técnicos em radiologia e por indicação do corpo docente, **sem intermediação de chefias**, com texto de convite padronizado — o mesmo em todos os canais, para não enviesar quem responde. Janela de coleta de 15 dias corridos, com um único lembrete no oitavo dia.
 4. **Encerramento.** Tela de agradecimento com contato da equipe e informação de que os resultados agregados ficarão disponíveis no repositório público do projeto.
@@ -242,7 +242,7 @@ Queremos entender **como o trabalho acontece hoje**, no seu serviço. Não estam
 
 - A participação é voluntária e você pode encerrar a qualquer momento fechando a página.
 - Nenhuma pergunta é obrigatória, além deste aceite.
-- **Não coletamos** seu nome, e-mail, telefone, número de registro profissional nem o nome do serviço onde você trabalha. O formulário está configurado para não registrar e-mail nem endereço IP.
+- **Não coletamos** seu nome, e-mail, telefone, número de registro profissional nem o nome do serviço onde você trabalha. O formulário não coleta seu e-mail, e o Google Forms não nos fornece seu endereço IP.
 - Não há gravação de áudio, vídeo ou tela.
 - Tempo estimado: 12 minutos.
 - As respostas ficam em arquivo de acesso restrito à equipe e ao professor da disciplina, e são descartadas ao fim do semestre. No repositório público do projeto publicamos apenas resultados agregados e trechos de resposta já anonimizados.

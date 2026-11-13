@@ -1,7 +1,7 @@
 # Entrega 7 — Coleta de dados, necessidades e aspectos éticos
 
 **Data:** 05/11/2026  
-**Status:** 🟡 em andamento
+**Status:** 🟨 em andamento
 
 ## Objetivo da atividade
 
@@ -85,6 +85,40 @@ A participação será voluntária, mediante explicação do objetivo, duração
 Não serão solicitados nomes, iniciais, datas, números de prontuário, imagens, laudos reais ou qualquer dado que permita identificar pacientes. Ao descrever um caso anterior, o profissional será orientado a retirar detalhes identificadores e a relatar apenas o fluxo e o tipo de informação consultada. Para discutir a interpretação de uma explicação, será utilizado somente exemplo sintético, identificado como fictício, sem finalidade diagnóstica.
 
 A gravação de áudio será opcional e dependerá de autorização específica; na ausência de autorização, serão feitas apenas anotações. Não serão gravadas telas nem imagens clínicas. Os registros serão codificados, sem associação com nome ou instituição, e o acesso ficará restrito aos integrantes da equipe e ao docente. Trechos eventualmente citados serão revisados para remover elementos identificadores. Os arquivos de trabalho serão descartados ao término da disciplina. Há risco de desconforto ao relatar dificuldades ou erros do fluxo profissional; por isso, as perguntas serão formuladas sobre a rotina e não sobre culpa individual.
+
+### A02 — Ana Carolina Lazzuri
+
+**Autor(a):** Ana Carolina Lazzuri — 22.123.001-4  
+**Persona/cenário:** P02 — Dr. César Andrade de Melo / C04 — "A dúvida sobre a autonomia do paciente" / tarefa T04  
+**Hipóteses sob investigação:** H01
+
+#### Que dados coletar?
+
+| Dado/informação | Hipótese/lacuna relacionada | Por que é necessário | Qual decisão de design pode afetar |
+|---|---|---|---|
+| Área de especialização, experiência com comprometimento cognitivo/demências e contexto de atuação | H01 | Caracteriza o conhecimento de domínio dos neurologistas que avaliam casos com evidências clínicas divergentes | Define o nível de detalhe técnico e o vocabulário adequado à apresentação das explicações para esse perfil |
+| Fluxo utilizado para avaliar pacientes com queixas cognitivas quando o relato familiar, os testes cognitivos e o laudo de MRI apresentam informações divergentes | H01 | Investiga como o neurologista reúne e confronta as evidências antes de avaliar a autonomia do paciente | Organização das evidências e apresentação de divergências, sem impor uma regra automática de decisão |
+| Como os episódios relatados pela família são obtidos, registrados e considerados diante de escores cognitivos estáveis e de um laudo de MRI limítrofe | H01 | Verifica como informações sobre o funcionamento cotidiano do paciente participam da avaliação clínica descrita em C04 | Forma de apresentar e contextualizar os relatos familiares junto às demais evidências |
+| Critérios utilizados para ponderar o risco de acidente e os possíveis impactos de uma restrição da autonomia | H01 | Identifica quais evidências e informações são consideradas relevantes em uma decisão com consequências para a segurança e a liberdade do paciente | Apresentação das evidências e dos limites da sugestão do modelo, preservando a decisão clínica do neurologista |
+| Situações em que considera necessária uma avaliação neuropsicológica complementar ou uma reavaliação posterior | H01 | Investiga quais incertezas levam o profissional a buscar informações adicionais antes de definir uma conduta | Apresentação das limitações do resultado e apoio à identificação de situações que exigem avaliação complementar |
+| Interpretação das probabilidades, da faixa de confiança, do mapa de atenção e do peso de cada modalidade no exemplo sintético | H01 | Investiga se a explicação multimodal ajuda o neurologista a compreender a sugestão do modelo e reconhecer o que ela não permite concluir | Nível técnico, detalhamento progressivo, legendas e explicações auxiliares |
+| Como o neurologista registra e comunica ao paciente e à família a justificativa, as incertezas e as orientações relacionadas à conduta | H01 | Identifica quais informações precisam ser compreendidas e preservadas após uma decisão que afeta a autonomia do paciente | Conteúdo da justificativa apresentada e informações que devem permanecer disponíveis para acompanhamento |
+| Erros considerados críticos ao interpretar recomendações de IA em casos com evidências divergentes | H01 | Identifica riscos de interpretação indevida ou de atribuição ao modelo de conclusões que dependem de avaliação clínica e funcional | Avisos, indicação de incerteza e limites explícitos da sugestão automatizada |
+
+#### De quem coletar?
+
+| Perfil/stakeholder | Critério de inclusão | Relação com persona/público |
+|---|---|---|
+| Neurologistas com atuação em demências, comprometimento cognitivo ou ambulatório de cognição | Formação e atuação em neurologia, com experiência clínica na avaliação de queixas cognitivas e de alterações funcionais; participação voluntária | Corresponde à P02, responsável pela avaliação especializada de casos complexos |
+| Neurologistas que acompanham pacientes idosos com queixas cognitivas em ambulatórios ou consultórios especializados | Atuam na avaliação de alterações cognitivas e funcionais e na definição de acompanhamento ou avaliação complementar | Perfil correspondente ao contexto de atuação de P02; diferenças de contexto serão registradas na análise |
+
+#### Aspectos éticos
+
+A participação será voluntária, com apresentação do objetivo, duração e dinâmica do grupo antes do aceite. Nenhum participante será obrigado a compartilhar casos próprios ou opiniões. A conversa utilizará exclusivamente uma situação clínica sintética relacionada à avaliação da autonomia de uma pessoa idosa diante de informações divergentes, sem dados de pacientes reais. Os participantes serão instruídos a não mencionar nomes, instituições, datas, números de prontuário ou outros elementos que identifiquem pacientes ou colegas.
+
+Como o cenário aborda decisões que podem afetar a segurança, a liberdade e a autonomia do paciente, a discussão não será utilizada para avaliar condutas individuais nem para solicitar justificativas sobre casos reais. O grupo focal envolve um risco específico: comentários feitos por um participante são ouvidos pelos demais, de modo que a equipe não consegue garantir integralmente o sigilo entre participantes. Essa limitação será informada no consentimento e será solicitado que todos mantenham a confidencialidade da discussão.
+
+A gravação de áudio somente ocorrerá se todos os participantes autorizarem; caso contrário, serão utilizadas anotações sem identificação nominal. Não haverá gravação de vídeo ou tela. Os registros serão codificados, armazenados em local de acesso restrito aos quatro integrantes e ao docente e descartados ao término da disciplina. A divulgação apresentará temas agregados e falas anonimizadas, sem atribuição individual. O moderador evitará induzir respostas e dará espaço equivalente aos participantes, reduzindo a exposição de pessoas mais reservadas ou a predominância de participantes mais falantes.
 
 ### A03 — Nathan Gabriel da Fonseca Leite
 
@@ -256,6 +290,71 @@ Sim, o projeto precisa considerar aspectos éticos: a coleta envolve pessoas dir
 As respostas serão organizadas por código de participante e analisadas por codificação temática. Os temas iniciais serão: perfil e contexto de atuação; fluxo e ferramentas atuais; informações consultadas e ausentes; interpretação do score; compreensão do mapa de atenção e do peso de cada modalidade; percepção de tempo; continuidade do parecer; riscos e situações de encaminhamento.
 
 Será feita uma matriz que relacione cada tema às hipóteses H01, H02, H03 e H06. Respostas divergentes serão mantidas e comparadas, sem forçar consenso. A entrevista permite investigar percepção de tempo, mas não comprova redução objetiva; H02 precisará ser medida em teste posterior com protótipo e tarefa comparável.
+
+### Instrumento I02 — Grupo de foco com neurologistas
+
+**Autor(a):** Ana Carolina Lazzuri — 22.123.001-4  
+**Técnica:** grupo de foco, com discussão moderada  
+**Objetivo:** compreender como neurologistas avaliam a autonomia de pacientes com queixas cognitivas quando existem divergências entre relatos familiares, testes cognitivos e achados de MRI; identificar quais evidências consideram relevantes, como ponderam os riscos envolvidos e como interpretam uma sugestão multimodal explicada por IA. Investigar H01.  
+**Público:** neurologistas com experiência na avaliação de declínio cognitivo, comprometimento cognitivo leve ou demências.  
+**Duração estimada:** 60 a 90 minutos, com 3 a 6 participantes.
+
+#### Procedimento padronizado de aplicação
+
+1. **Preparação.** Convidar de 3 a 6 neurologistas sem relação hierárquica direta entre si (a sessão pode ser on-line, para viabilizar a participação no mesmo horário), preparar roteiro de moderação, uma vinheta clínica sintética sobre autonomia e ficha de registro. Definir um moderador e um integrante responsável pelas anotações. Não utilizar casos reais identificáveis.
+2. **Apresentação/consentimento.** Explicar objetivo, duração, voluntariedade, gravação opcional e limites de confidencialidade do grupo. Solicitar consentimento individual, com o termo adaptado de [`../instrumentos/termo_consentimento_modelo.md`](../instrumentos/termo_consentimento_modelo.md). Informar que os participantes não devem compartilhar informações que identifiquem pacientes, serviços ou colegas.
+3. **Aplicação.** Conduzir a discussão em blocos: rotina de avaliação da autonomia, análise da vinheta sintética com evidências divergentes, interpretação de uma explicação XAI ilustrativa e comunicação/acompanhamento da conduta. O moderador deverá distribuir a fala, evitar indução e impedir que uma única pessoa domine a sessão.
+4. **Encerramento.** Solicitar uma última observação individual, resumir os principais pontos de convergência e divergência e permitir correções. Reforçar a confidencialidade da discussão.
+5. **Armazenamento/anonimização.** Registrar as contribuições com códigos (N01, N02 etc.). Gravar áudio somente se todos autorizarem; caso contrário, utilizar anotações. Remover dados identificáveis e não atribuir opiniões a participantes na divulgação.
+
+#### Instrumento
+
+**Abertura do moderador**
+
+“Esta discussão busca entender como neurologistas avaliam situações em que relatos sobre o funcionamento cotidiano de uma pessoa idosa divergem dos resultados de testes cognitivos e de exames de imagem. Também queremos compreender como interpretam informações de apoio à decisão. Não estamos avaliando condutas individuais nem buscando consenso obrigatório. O caso apresentado é fictício. Pedimos que não sejam citados nomes, datas, instituições ou detalhes que identifiquem pacientes, colegas ou serviços. Todos podem discordar, deixar de responder ou interromper a participação.”
+
+**Bloco 1 — Rotina de avaliação da autonomia**
+
+1. Como costuma avaliar a autonomia de uma pessoa idosa que apresenta queixas de memória ou declínio cognitivo?
+2. Quais informações considera necessárias para avaliar o funcionamento cotidiano do paciente, além dos resultados de testes cognitivos e exames de imagem?
+3. Como obtém e considera relatos de familiares sobre episódios de desorientação ou dificuldade em atividades cotidianas?
+4. Quais elementos ajudam a decidir se é necessário complementar a avaliação, acompanhar o paciente por um período ou considerar alguma restrição de autonomia?
+
+**Bloco 2 — Discussão de um caso sintético**
+
+*Apresentar uma vinheta fictícia: pessoa idosa que deseja continuar dirigindo; a filha relata que o paciente se perdeu ao voltar da padaria e apresentou dificuldades recentes para administrar contas domésticas; o resultado do MMSE permanece estável em relação à avaliação anterior e o laudo de MRI descreve achados limítrofes. Não apresentar diagnóstico correto ou resposta esperada.*
+
+5. Quais informações adicionais seriam necessárias antes de avaliar a situação apresentada?
+6. Como vocês confrontariam os episódios relatados pela filha com os resultados dos testes cognitivos e o laudo de MRI?
+7. Quais riscos precisam ser ponderados ao considerar a manutenção da autonomia ou uma possível restrição?
+8. Em quais circunstâncias uma avaliação neuropsicológica complementar ou uma reavaliação posterior seria adequada?
+
+**Bloco 3 — Interpretação de explicação XAI**
+
+*Apresentar as telas P03 e P04 da Entrega 6: probabilidade de cada classe (CN × DA) com a faixa de confiança, mapa de atenção (Grad-CAM) sobre um corte axial, peso da imagem e dos dados clínicos (SHAP) e limites do modelo. Informar que os dados são simulados e não representam um resultado clínico real.*
+
+9. O que vocês entendem da sugestão, das probabilidades e da faixa de confiança apresentadas? O que não é possível concluir apenas com essas informações?
+10. O mapa de atenção sobre a MRI ajuda a compreender a sugestão? Que ressalvas seriam necessárias?
+11. A indicação de quanto a sugestão veio da imagem e dos dados clínicos está em linguagem adequada? Que termos ou parâmetros precisariam de contextualização?
+12. A explicação ajuda a avaliar criticamente a sugestão ou pode gerar confiança indevida? Por quê?
+13. Essa sugestão permite concluir algo sobre a capacidade funcional ou a autonomia do paciente? Que limites precisam ficar explícitos para evitar essa interpretação?
+
+**Bloco 4 — Comunicação, registro e acompanhamento**
+
+14. Quais informações considera importante registrar para justificar uma decisão sobre a autonomia do paciente?
+15. Como costuma explicar ao paciente e à família uma decisão que envolve incertezas ou recomendações de acompanhamento?
+16. Quais sinais ou mudanças no funcionamento cotidiano devem ser acompanhados em uma reavaliação?
+17. Que informações apresentadas pela ferramenta seriam úteis para apoiar sua avaliação e quais seriam desnecessárias ou poderiam atrapalhar?
+
+**Encerramento**
+
+18. Qual aspecto importante da avaliação da autonomia ou da interpretação das explicações não foi discutido?
+
+#### Como os dados serão analisados
+
+As anotações e, quando autorizada, a transcrição do áudio serão analisadas por codificação temática. Os temas incluirão: informações necessárias para avaliar a autonomia; uso de relatos familiares; confronto entre evidências clínicas e funcionais; ponderação de riscos; compreensão da sugestão, do score e das explicações; limites percebidos do modelo; comunicação da decisão e acompanhamento do paciente.
+
+Serão registradas convergências e divergências entre participantes. A concordância durante o grupo não será tratada como validação clínica nem como representação de todos os neurologistas, pois a interação coletiva pode influenciar as respostas e a amostra será de conveniência. A análise verificará se a explicação multimodal acrescenta elementos úteis à compreensão do resultado e quais conclusões os neurologistas consideram inadequado atribuir ao modelo.
 
 ### Instrumento I03 — Questionário sobre a rotina de aquisição de RM de crânio
  
@@ -488,6 +587,8 @@ As demais hipóteses seguem a mesma lógica: H09 é respondida por 3.5, 3.6 e pe
 > Cada integrante acrescenta aqui o parágrafo da sua coleta.
 
 **A01 / I01 (Paulo) — P01, médico clínico.** A entrevista investigará se o médico clínico/generalista participa da avaliação descrita, quais dados e ferramentas utiliza e como interpreta as probabilidades, a faixa de confiança, o mapa de atenção e o peso de cada modalidade. H01 deverá ser sustentada, refutada ou refinada conforme a explicação ajude, não ajude ou ajude apenas em determinadas condições a compreender e calibrar a confiança. H03 será avaliada pela compreensão espontânea e pelas dúvidas relatadas. H06 será sustentada, refutada ou refinada conforme a prática de registro e recuperação de pareceres corresponda ao cenário C02. H02 será apenas refinada nesta etapa: a entrevista recolhe percepção sobre tempo, mas a redução efetiva deverá ser medida posteriormente com protótipo.
+
+**A02 / I02 (Ana Carolina) — P02, neurologista.** O grupo focal investigará como neurologistas avaliam a autonomia de pacientes diante de divergências entre relatos familiares, testes cognitivos e achados de MRI, quais riscos ponderam e como interpretam as explicações do modelo. H01 será sustentada, refutada ou refinada conforme a explicação multimodal contribua — ou não — para compreender a sugestão e seus limites nesse contexto. A concordância do grupo será tratada como percepção dos participantes, não como consenso clínico nem validação representativa.
 
 **A03 / I03 (Nathan) — P04, técnico em radiologia.** O conjunto P04 + C03 + T03 foi construído inteiramente por inferência a partir dos itens 4.1 e 4.2 da Entrega 1: nenhum técnico em radiologia foi ouvido até aqui. O questionário cobre as cinco categorias de dados de Barbosa e Silva e ataca quatro lacunas nesta ordem de prioridade: (1) **se o problema existe** — em que momento uma falha de qualidade ou de dado clínico é percebida, e com que frequência isso gera reconvocação; (2) **se o técnico é o decisor** que a persona supõe, isto é, quem define o protocolo, se há autonomia formal para alterá-lo e se ele se sente autorizado a usá-la; (3) **qual o repertório real** de ações diante de movimento, com que vocabulário o técnico nomeia o problema e qual gravidade ele próprio atribui a cada tipo de falha; (4) **se parte da solução já existe**, na forma de sinalização automática no console ou no PACS.
 

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440" height="900" viewBox="0 0 1440 900">
+<title>UI01b — Senha incorreta</title>
+<rect x="0.0" y="0.0" width="1440.0" height="900.0" rx="0" fill="#F6F7F9"/>
+<rect x="520.0" y="150.0" width="400.0" height="500.0" rx="12" fill="#FFFFFF" stroke="#E3E6EC" stroke-width="1"/>
+<rect x="560.0" y="190.0" width="40.0" height="40.0" rx="10" fill="#3346D3"/>
+<text x="580.0" y="217.0" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#fff" text-anchor="middle">M</text>
+<text x="612.0" y="207.0" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#111827" text-anchor="start">M-XAI</text>
+<text x="612.0" y="226.0" font-family="Inter, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#5B6472" text-anchor="start">Alzheimer explicável</text>
+<text x="560.0" y="276.0" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#111827" text-anchor="start">Entrar</text>
+<rect x="560.0" y="300.0" width="320.0" height="66.0" rx="10" fill="#FEF3F2" stroke="#FECDCA" stroke-width="1"/>
+<circle cx="582" cy="324" r="9" fill="#C81E1E"/>
+<path d="M578.5,320.5 L585.5,327.5 M585.5,320.5 L578.5,327.5" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="602.0" y="329.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="600" fill="#C81E1E" text-anchor="start">E-mail ou senha incorretos</text>
+<text x="602.0" y="352.0" font-family="Inter, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#111827" text-anchor="start">Confira os dados e tente de novo.</text>
+<g id="campo_email">
+<text x="560.0" y="398.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" fill="#111827" text-anchor="start">E-mail</text>
+<rect x="560.0" y="406.0" width="320.0" height="40.0" rx="8" fill="#FFFFFF" stroke="#8A93A1" stroke-width="1"/>
+<text x="572.0" y="431.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#111827" text-anchor="start">marcos.andrade@hospital.exemplo</text>
+</g>
+<g id="campo_senha">
+<text x="560.0" y="476.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" fill="#111827" text-anchor="start">Senha</text>
+<rect x="560.0" y="484.0" width="320.0" height="40.0" rx="8" fill="#FFFFFF" stroke="#8A93A1" stroke-width="1"/>
+<text x="572.0" y="509.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#111827" text-anchor="start">••••••••</text>
+</g>
+<rect x="560.0" y="484.0" width="320.0" height="40.0" rx="8" fill="none" stroke="#C81E1E" stroke-width="1.5"/>
+<g id="btn_entrar">
+<rect x="560.0" y="556.0" width="320.0" height="44.0" rx="8" fill="#3346D3"/>
+<text x="720.0" y="583.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="600" fill="#fff" text-anchor="middle">Entrar</text>
+</g>
+<text x="720.0" y="684.0" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="400" fill="#6B7280" text-anchor="middle">Protótipo de disciplina (IHC) · dados de demonstração</text>
+</svg>

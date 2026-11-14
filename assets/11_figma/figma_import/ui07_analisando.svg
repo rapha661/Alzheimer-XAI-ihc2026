@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440" height="900" viewBox="0 0 1440 900">
+<title>UI07 — Analisando o exame</title>
+<rect x="0.0" y="0.0" width="1440.0" height="900.0" rx="0" fill="#F6F7F9"/>
+<g id="barra_lateral">
+<rect x="0.0" y="0.0" width="248.0" height="900.0" rx="0" fill="#FBFBFC"/>
+<line x1="248" y1="0" x2="248" y2="900" stroke="#E3E6EC" stroke-width="1"/>
+<rect x="24.0" y="22.0" width="34.0" height="34.0" rx="8" fill="#3346D3"/>
+<text x="41.0" y="45.0" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#fff" text-anchor="middle">M</text>
+<text x="68.0" y="37.0" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#111827" text-anchor="start">M-XAI</text>
+<text x="68.0" y="53.0" font-family="Inter, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#5B6472" text-anchor="start">Alzheimer explicável</text>
+<g id="campo_busca_lateral">
+<rect x="16.0" y="80.0" width="216.0" height="40.0" rx="8" fill="#FFFFFF" stroke="#D5DAE2" stroke-width="1"/>
+<circle cx="38" cy="99" r="6" fill="none" stroke="#6B7280" stroke-width="1.6"/>
+<path d="M42.5,103.5 L47,108" fill="none" stroke="#6B7280" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="56.0" y="105.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#6B7280" text-anchor="start">Buscar paciente…</text>
+</g>
+<g id="menu_casos">
+<path d="M36,157 L42,157 L44,159 L52,159 L52,171 L36,171 Z" fill="none" stroke="#5B6472" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="64.0" y="168.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" fill="#5B6472" text-anchor="start">Casos</text>
+</g>
+<g id="menu_novo">
+<rect x="16.0" y="190.0" width="216.0" height="38.0" rx="8" fill="#EDEFF3"/>
+<rect x="16.0" y="198.0" width="3.0" height="22.0" rx="1.5" fill="#3346D3"/>
+<circle cx="44" cy="209" r="8" fill="none" stroke="#111827" stroke-width="1.5"/>
+<path d="M44,205 L44,213 M40,209 L48,209" fill="none" stroke="#111827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="64.0" y="214.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="600" fill="#111827" text-anchor="start">Novo caso</text>
+</g>
+<line x1="16" y1="816" x2="232" y2="816" stroke="#E3E6EC" stroke-width="1"/>
+<g id="usuario_logado">
+<circle cx="42" cy="858" r="18" fill="#EEF0FD"/>
+<text x="42.0" y="863.0" font-family="Inter, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#3346D3" text-anchor="middle">BT</text>
+<text x="70.0" y="853.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="600" fill="#111827" text-anchor="start">Bruno Tavares Lima</text>
+<text x="70.0" y="871.0" font-family="Inter, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#5B6472" text-anchor="start">Técnico em radiologia</text>
+</g>
+</g>
+<text x="296.0" y="92.0" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" fill="#111827" text-anchor="start">Aparecida Souza</text>
+<rect x="542.3" y="72.0" width="82.2" height="22.0" rx="11" fill="#F1F3F6"/>
+<text x="552.3" y="87.0" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="600" fill="#5B6472" text-anchor="start">Em análise</text>
+<text x="296.0" y="122.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#5B6472" text-anchor="start">PAC-0031  ·  74 anos  ·  feminino  ·  RM em 14/11/2026</text>
+<rect x="296.0" y="156.0" width="760.0" height="360.0" rx="12" fill="#FFFFFF" stroke="#E3E6EC" stroke-width="1"/>
+<text x="324.0" y="198.0" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#111827" text-anchor="start">Acompanhamento do envio</text>
+<circle cx="336" cy="243" r="9" fill="#15803D"/>
+<path d="M332,243 L335,246 L340.5,239.5" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="336" y1="256" x2="336" y2="300" stroke="#ABEFC6" stroke-width="2"/>
+<text x="360.0" y="248.0" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="600" fill="#111827" text-anchor="start">Arquivo recebido</text>
+<text x="360.0" y="270.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#5B6472" text-anchor="start">10:42</text>
+<circle cx="336" cy="313" r="9" fill="#15803D"/>
+<path d="M332,313 L335,316 L340.5,309.5" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="336" y1="326" x2="336" y2="370" stroke="#ABEFC6" stroke-width="2"/>
+<text x="360.0" y="318.0" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="600" fill="#111827" text-anchor="start">Conferência do exame concluída</text>
+<text x="360.0" y="340.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#5B6472" text-anchor="start">série T1 volumétrica, cobertura e dados conferidos</text>
+<circle cx="336" cy="383" r="9" fill="none" stroke="#D6DBF7" stroke-width="3"/>
+<path d="M336,374 A9,9 0 0 1 345,383" fill="none" stroke="#3346D3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="360.0" y="388.0" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="600" fill="#111827" text-anchor="start">Análise pelo modelo</text>
+<text x="360.0" y="410.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#5B6472" text-anchor="start">em andamento · cerca de 3 minutos</text>
+<rect x="360.0" y="424.0" width="668.0" height="6.0" rx="3" fill="#E4E7F7"/>
+<rect x="360.0" y="424.0" width="267.2" height="6.0" rx="3" fill="#3346D3"/>
+<text x="324.0" y="470.0" font-family="Inter, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#111827" text-anchor="start">Se possível, aguarde o resultado antes de liberar a paciente: se a análise falhar por causa da imagem, a</text>
+<text x="324.0" y="490.0" font-family="Inter, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#111827" text-anchor="start">sequência ainda pode ser repetida.</text>
+<text x="296.0" y="556.0" font-family="Inter, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#5B6472" text-anchor="start">Você pode sair desta tela. O resultado aparece em Casos e o médico solicitante é avisado quando a análise terminar.</text>
+<g id="btn_enviar_outro">
+<rect x="296.0" y="596.0" width="166.1" height="42.0" rx="8" fill="#FFFFFF" stroke="#E3E6EC" stroke-width="1"/>
+<text x="379.0" y="622.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="600" fill="#111827" text-anchor="middle">Enviar outro exame</text>
+</g>
+</svg>

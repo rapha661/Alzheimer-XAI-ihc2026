@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440" height="1210" viewBox="0 0 1440 1210">
+<title>UI06 — Novo caso</title>
+<rect x="0.0" y="0.0" width="1440.0" height="1210.0" rx="0" fill="#F6F7F9"/>
+<g id="barra_lateral">
+<rect x="0.0" y="0.0" width="248.0" height="1210.0" rx="0" fill="#FBFBFC"/>
+<line x1="248" y1="0" x2="248" y2="1210" stroke="#E3E6EC" stroke-width="1"/>
+<rect x="24.0" y="22.0" width="34.0" height="34.0" rx="8" fill="#3346D3"/>
+<text x="41.0" y="45.0" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#fff" text-anchor="middle">M</text>
+<text x="68.0" y="37.0" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#111827" text-anchor="start">M-XAI</text>
+<text x="68.0" y="53.0" font-family="Inter, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#5B6472" text-anchor="start">Alzheimer explicável</text>
+<g id="campo_busca_lateral">
+<rect x="16.0" y="80.0" width="216.0" height="40.0" rx="8" fill="#FFFFFF" stroke="#D5DAE2" stroke-width="1"/>
+<circle cx="38" cy="99" r="6" fill="none" stroke="#6B7280" stroke-width="1.6"/>
+<path d="M42.5,103.5 L47,108" fill="none" stroke="#6B7280" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="56.0" y="105.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#6B7280" text-anchor="start">Buscar paciente…</text>
+</g>
+<g id="menu_casos">
+<path d="M36,157 L42,157 L44,159 L52,159 L52,171 L36,171 Z" fill="none" stroke="#5B6472" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="64.0" y="168.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="500" fill="#5B6472" text-anchor="start">Casos</text>
+</g>
+<g id="menu_novo">
+<rect x="16.0" y="190.0" width="216.0" height="38.0" rx="8" fill="#EDEFF3"/>
+<rect x="16.0" y="198.0" width="3.0" height="22.0" rx="1.5" fill="#3346D3"/>
+<circle cx="44" cy="209" r="8" fill="none" stroke="#111827" stroke-width="1.5"/>
+<path d="M44,205 L44,213 M40,209 L48,209" fill="none" stroke="#111827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="64.0" y="214.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="600" fill="#111827" text-anchor="start">Novo caso</text>
+</g>
+<line x1="16" y1="1126" x2="232" y2="1126" stroke="#E3E6EC" stroke-width="1"/>
+<g id="usuario_logado">
+<circle cx="42" cy="1168" r="18" fill="#EEF0FD"/>
+<text x="42.0" y="1173.0" font-family="Inter, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#3346D3" text-anchor="middle">BT</text>
+<text x="70.0" y="1163.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="600" fill="#111827" text-anchor="start">Bruno Tavares Lima</text>
+<text x="70.0" y="1181.0" font-family="Inter, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#5B6472" text-anchor="start">Técnico em radiologia</text>
+</g>
+</g>
+<text x="296.0" y="64.0" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" fill="#111827" text-anchor="start">Novo caso</text>
+<text x="296.0" y="92.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#5B6472" text-anchor="start">Envie a ressonância e os dados do paciente para análise. O exame é conferido assim que o arquivo é escolhido.</text>
+<g id="secao_paciente">
+<rect x="296.0" y="124.0" width="760.0" height="142.0" rx="12" fill="#FFFFFF" stroke="#E3E6EC" stroke-width="1"/>
+<text x="320.0" y="160.0" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="600" fill="#111827" text-anchor="start">1. Paciente</text>
+<text x="320.0" y="188.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" fill="#111827" text-anchor="start">Nome</text>
+<rect x="320.0" y="196.0" width="348.0" height="40.0" rx="8" fill="#FFFFFF" stroke="#8A93A1" stroke-width="1"/>
+<text x="332.0" y="221.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#6B7280" text-anchor="start">Nome completo</text>
+<text x="684.0" y="188.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" fill="#111827" text-anchor="start">Código do paciente</text>
+<rect x="684.0" y="196.0" width="348.0" height="40.0" rx="8" fill="#FFFFFF" stroke="#8A93A1" stroke-width="1"/>
+<text x="696.0" y="221.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#6B7280" text-anchor="start">Ex.: PAC-0031</text>
+</g>
+<g id="secao_exame">
+<rect x="296.0" y="282.0" width="760.0" height="196.0" rx="12" fill="#FFFFFF" stroke="#E3E6EC" stroke-width="1"/>
+<text x="320.0" y="318.0" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="600" fill="#111827" text-anchor="start">2. Ressonância magnética</text>
+<g id="area_arquivo">
+<rect x="320.0" y="338.0" width="712.0" height="116.0" rx="10" fill="#FAFBFF" stroke="#AEB8F2" stroke-width="1" stroke-dasharray="6 5"/>
+<path d="M676.0,382 L676.0,368 M671.0,373 L676.0,368 L681.0,373 M666.0,380 L666.0,386 L686.0,386 L686.0,380" fill="none" stroke="#3346D3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="676.0" y="414.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="600" fill="#3346D3" text-anchor="middle">Arraste a série T1 volumétrica ou escolha o arquivo</text>
+<text x="676.0" y="436.0" font-family="Inter, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#5B6472" text-anchor="middle">DICOM em .zip ou NIfTI (.nii, .nii.gz)</text>
+</g>
+</g>
+<g id="secao_dados_modelo">
+<rect x="296.0" y="494.0" width="760.0" height="330.0" rx="12" fill="#FFFFFF" stroke="#E3E6EC" stroke-width="1"/>
+<text x="320.0" y="530.0" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="600" fill="#111827" text-anchor="start">3. Dados enviados ao modelo</text>
+<text x="320.0" y="554.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#5B6472" text-anchor="start">Campos em branco são estimados pelo modelo e aparecem como "estimado" no caso.</text>
+<text x="320.0" y="590.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" fill="#111827" text-anchor="start">Idade</text>
+<rect x="320.0" y="598.0" width="226.7" height="40.0" rx="8" fill="#FFFFFF" stroke="#8A93A1" stroke-width="1"/>
+<text x="534.7" y="623.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#5B6472" text-anchor="end">anos</text>
+<text x="562.7" y="590.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" fill="#111827" text-anchor="start">Sexo</text>
+<rect x="562.7" y="598.0" width="226.7" height="40.0" rx="8" fill="#FFFFFF" stroke="#8A93A1" stroke-width="1"/>
+<text x="805.3" y="590.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" fill="#111827" text-anchor="start">Escolaridade</text>
+<rect x="805.3" y="598.0" width="226.7" height="40.0" rx="8" fill="#FFFFFF" stroke="#8A93A1" stroke-width="1"/>
+<text x="1020.0" y="623.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#5B6472" text-anchor="end">anos</text>
+<text x="320.0" y="666.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" fill="#111827" text-anchor="start">Estado civil</text>
+<rect x="320.0" y="674.0" width="226.7" height="40.0" rx="8" fill="#FFFFFF" stroke="#8A93A1" stroke-width="1"/>
+<text x="562.7" y="666.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" fill="#111827" text-anchor="start">APOE</text>
+<rect x="562.7" y="674.0" width="226.7" height="40.0" rx="8" fill="#FFFFFF" stroke="#8A93A1" stroke-width="1"/>
+<g id="campo_icv">
+<text x="805.3" y="666.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" fill="#111827" text-anchor="start">Volume intracraniano (ICV)</text>
+<rect x="805.3" y="674.0" width="226.7" height="40.0" rx="8" fill="#FFFFFF" stroke="#8A93A1" stroke-width="1"/>
+<text x="1020.0" y="699.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#5B6472" text-anchor="end">mm³</text>
+</g>
+<text x="320.0" y="742.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" fill="#111827" text-anchor="start">Hipocampo</text>
+<rect x="320.0" y="750.0" width="226.7" height="40.0" rx="8" fill="#FFFFFF" stroke="#8A93A1" stroke-width="1"/>
+<text x="534.7" y="775.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#5B6472" text-anchor="end">mm³</text>
+<text x="562.7" y="742.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" fill="#111827" text-anchor="start">Ventrículos laterais</text>
+<rect x="562.7" y="750.0" width="226.7" height="40.0" rx="8" fill="#FFFFFF" stroke="#8A93A1" stroke-width="1"/>
+<text x="777.3" y="775.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#5B6472" text-anchor="end">mm³</text>
+</g>
+<g id="secao_contexto_clinico">
+<rect x="296.0" y="840.0" width="760.0" height="254.0" rx="12" fill="#F8FAFC" stroke="#C9D2DF" stroke-width="1" stroke-dasharray="5 4"/>
+<text x="320.0" y="876.0" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="600" fill="#111827" text-anchor="start">4. Contexto clínico</text>
+<rect x="476.3" y="860.0" width="203.5" height="22.0" rx="11" fill="#F1F3F6"/>
+<text x="486.3" y="875.0" font-family="Inter, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#5B6472" text-anchor="start">não entra no cálculo da sugestão</text>
+<text x="320.0" y="902.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#5B6472" text-anchor="start">Fica visível para o médico ao lado da sugestão. Copie do pedido ou do prontuário.</text>
+<text x="320.0" y="934.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" fill="#111827" text-anchor="start">MMSE</text>
+<rect x="320.0" y="942.0" width="226.7" height="40.0" rx="8" fill="#FFFFFF" stroke="#8A93A1" stroke-width="1"/>
+<text x="534.7" y="967.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#5B6472" text-anchor="end">/ 30</text>
+<text x="562.7" y="934.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" fill="#111827" text-anchor="start">MoCA</text>
+<rect x="562.7" y="942.0" width="226.7" height="40.0" rx="8" fill="#FFFFFF" stroke="#8A93A1" stroke-width="1"/>
+<text x="777.3" y="967.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#5B6472" text-anchor="end">/ 30</text>
+<text x="805.3" y="934.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" fill="#111827" text-anchor="start">Data dos testes</text>
+<rect x="805.3" y="942.0" width="226.7" height="40.0" rx="8" fill="#FFFFFF" stroke="#8A93A1" stroke-width="1"/>
+<text x="320.0" y="1012.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="500" fill="#111827" text-anchor="start">Queixa / relato da família</text>
+<rect x="320.0" y="1020.0" width="712.0" height="40.0" rx="8" fill="#FFFFFF" stroke="#8A93A1" stroke-width="1"/>
+<text x="332.0" y="1045.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#6B7280" text-anchor="start">Opcional</text>
+</g>
+<g id="acoes_envio">
+<g id="btn_enviar_analise">
+<rect x="866.0" y="1118.0" width="190.0" height="44.0" rx="8" fill="#E7EAF0"/>
+<text x="961.0" y="1145.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="600" fill="#9AA3B2" text-anchor="middle">Enviar para análise</text>
+</g>
+<g id="btn_cancelar_envio">
+<rect x="744.0" y="1118.0" width="110.0" height="44.0" rx="8" fill="#FFFFFF" stroke="#E3E6EC" stroke-width="1"/>
+<text x="799.0" y="1145.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="600" fill="#111827" text-anchor="middle">Cancelar</text>
+</g>
+<text x="296.0" y="1145.0" font-family="Inter, Arial, sans-serif" font-size="13.5" font-weight="500" fill="#5B6472" text-anchor="start">Escolha o arquivo da ressonância para continuar.</text>
+</g>
+<g id="painel_o_que_e_conferido">
+<rect x="1080.0" y="124.0" width="312.0" height="300.0" rx="12" fill="#FFFFFF" stroke="#E3E6EC" stroke-width="1"/>
+<text x="1100.0" y="156.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="600" fill="#111827" text-anchor="start">O que é conferido antes do envio</text>
+<text x="1100.0" y="186.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="600" fill="#111827" text-anchor="start">Pela plataforma</text>
+<text x="1100.0" y="206.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#5B6472" text-anchor="start">tipo de série, cobertura, nome no</text>
+<text x="1100.0" y="225.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#5B6472" text-anchor="start">cabeçalho e faixas plausíveis dos volumes.</text>
+<text x="1100.0" y="255.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="600" fill="#111827" text-anchor="start">Por você</text>
+<text x="1100.0" y="275.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#5B6472" text-anchor="start">artefato de movimento, que só a leitura</text>
+<text x="1100.0" y="294.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#5B6472" text-anchor="start">visual identifica.</text>
+<text x="1100.0" y="324.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="600" fill="#111827" text-anchor="start">Depois do envio</text>
+<text x="1100.0" y="344.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#5B6472" text-anchor="start">a análise do modelo leva cerca de 3</text>
+<text x="1100.0" y="363.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#5B6472" text-anchor="start">minutos. Se puder, aguarde o resultado</text>
+<text x="1100.0" y="382.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#5B6472" text-anchor="start">antes de liberar o paciente.</text>
+</g>
+</svg>

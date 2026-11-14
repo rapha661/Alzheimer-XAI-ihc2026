@@ -128,10 +128,6 @@ Página inteira do caso, com os dados enviados ao modelo e a seção de decisão
 
 ![UI03 Página inteira](../assets/06_prototipos/ui03_caso_pagina_inteira.png)
 
-**UI03b — mapa de atenção oculto**
-
-![UI03b Mapa oculto](../assets/06_prototipos/ui03b_mapa_oculto.png)
-
 **UI03c — termo do glossário**
 
 ![UI03c Glossário](../assets/06_prototipos/ui03c_glossario.png)
@@ -155,14 +151,6 @@ Página inteira do caso, com os dados enviados ao modelo e a seção de decisão
 **UI05d — confirmar registro**
 
 ![UI05d Confirmar registro](../assets/06_prototipos/ui05d_confirmacao.png)
-
-**UI05e — decisão registrada**
-
-![UI05e Decisão registrada](../assets/06_prototipos/ui05e_decisao_registrada_pagina.png)
-
-### UI06 — Relatório
-
-![UI06 Relatório](../assets/06_prototipos/ui06_relatorio.png)
 
 ### UI07 — Novo caso
 

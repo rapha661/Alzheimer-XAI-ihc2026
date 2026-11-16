@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1546 352" width="1546" height="352" font-family="Arial, Helvetica, sans-serif">
+  <title>Mapa de objetivos — Paulo Hudson (P01, CI02)</title>
+  <rect width="1546" height="352" fill="#ffffff"/>
+  <text x="30" y="32" font-size="16" font-weight="bold">Mapa de objetivos — Paulo Hudson (P01, CI02)</text>
+  <line x1="801.0" y1="112" x2="801.0" y2="135.0" stroke="#555" stroke-width="1.2"/>
+  <line x1="168.0" y1="135.0" x2="1434.0" y2="135.0" stroke="#555" stroke-width="1.2"/>
+  <line x1="168.0" y1="135.0" x2="168.0" y2="158" stroke="#555" stroke-width="1.2"/>
+  <line x1="476.0" y1="135.0" x2="476.0" y2="158" stroke="#555" stroke-width="1.2"/>
+  <line x1="863.5" y1="135.0" x2="863.5" y2="158" stroke="#555" stroke-width="1.2"/>
+  <line x1="1254.0" y1="135.0" x2="1254.0" y2="158" stroke="#555" stroke-width="1.2"/>
+  <line x1="1434.0" y1="135.0" x2="1434.0" y2="158" stroke="#555" stroke-width="1.2"/>
+  <line x1="168.0" y1="212" x2="168.0" y2="235.0" stroke="#555" stroke-width="1.2"/>
+  <line x1="95.0" y1="235.0" x2="241.0" y2="235.0" stroke="#555" stroke-width="1.2"/>
+  <line x1="95.0" y1="235.0" x2="95.0" y2="258" stroke="#555" stroke-width="1.2"/>
+  <line x1="241.0" y1="235.0" x2="241.0" y2="258" stroke="#555" stroke-width="1.2"/>
+  <line x1="476.0" y1="212" x2="476.0" y2="235.0" stroke="#555" stroke-width="1.2"/>
+  <line x1="397.5" y1="235.0" x2="554.5" y2="235.0" stroke="#555" stroke-width="1.2"/>
+  <line x1="397.5" y1="235.0" x2="397.5" y2="258" stroke="#555" stroke-width="1.2"/>
+  <line x1="554.5" y1="235.0" x2="554.5" y2="258" stroke="#555" stroke-width="1.2"/>
+  <line x1="863.5" y1="212" x2="863.5" y2="235.0" stroke="#555" stroke-width="1.2"/>
+  <line x1="705.0" y1="235.0" x2="1022.0" y2="235.0" stroke="#555" stroke-width="1.2"/>
+  <line x1="705.0" y1="235.0" x2="705.0" y2="258" stroke="#555" stroke-width="1.2"/>
+  <line x1="865.5" y1="235.0" x2="865.5" y2="258" stroke="#555" stroke-width="1.2"/>
+  <line x1="1022.0" y1="235.0" x2="1022.0" y2="258" stroke="#555" stroke-width="1.2"/>
+  <line x1="1254.0" y1="212" x2="1254.0" y2="235.0" stroke="#555" stroke-width="1.2"/>
+  <line x1="1172.0" y1="235.0" x2="1336.0" y2="235.0" stroke="#555" stroke-width="1.2"/>
+  <line x1="1172.0" y1="235.0" x2="1172.0" y2="258" stroke="#555" stroke-width="1.2"/>
+  <line x1="1336.0" y1="235.0" x2="1336.0" y2="258" stroke="#555" stroke-width="1.2"/>
+  <rect x="666.0" y="58" width="270" height="54" rx="9" fill="#eef4fb" stroke="#1f4e79" stroke-width="1.3"/>
+  <text x="801.0" y="82.0" text-anchor="middle" font-size="12.5" font-weight="bold">Retomar a conduta do paciente</text>
+  <text x="801.0" y="97.0" text-anchor="middle" font-size="12.5">com o raciocínio anterior (P01, CI02)</text>
+  <rect x="103.0" y="158" width="130" height="54" rx="9" fill="#ffffff" stroke="#333" stroke-width="1.3"/>
+  <text x="168.0" y="182.0" text-anchor="middle" font-size="12.5" font-weight="bold">O02 Localizar</text>
+  <text x="168.0" y="197.0" text-anchor="middle" font-size="12.5">o caso</text>
+  <rect x="30.0" y="258" width="130" height="54" rx="9" fill="#ffffff" stroke="#333" stroke-width="1.3"/>
+  <text x="95.0" y="282.0" text-anchor="middle" font-size="12.5">Buscar por nome</text>
+  <text x="95.0" y="297.0" text-anchor="middle" font-size="12.5">ou prontuário</text>
+  <rect x="176.0" y="258" width="130" height="54" rx="9" fill="#ffffff" stroke="#333" stroke-width="1.3"/>
+  <text x="241.0" y="282.0" text-anchor="middle" font-size="12.5">Filtrar pelo</text>
+  <text x="241.0" y="297.0" text-anchor="middle" font-size="12.5">status</text>
+  <rect x="377.5" y="158" width="197" height="54" rx="9" fill="#ffffff" stroke="#333" stroke-width="1.3"/>
+  <text x="476.0" y="182.0" text-anchor="middle" font-size="12.5" font-weight="bold">O07 Recuperar o raciocínio</text>
+  <text x="476.0" y="197.0" text-anchor="middle" font-size="12.5">do parecer anterior</text>
+  <rect x="322.0" y="258" width="151" height="54" rx="9" fill="#ffffff" stroke="#333" stroke-width="1.3"/>
+  <text x="397.5" y="282.0" text-anchor="middle" font-size="12.5">Consultar o parecer</text>
+  <text x="397.5" y="297.0" text-anchor="middle" font-size="12.5">do especialista</text>
+  <rect x="489.0" y="258" width="131" height="54" rx="9" fill="#ffffff" stroke="#333" stroke-width="1.3"/>
+  <text x="554.5" y="282.0" text-anchor="middle" font-size="12.5">Comparar escores</text>
+  <text x="554.5" y="297.0" text-anchor="middle" font-size="12.5">anterior e atual</text>
+  <rect x="791.5" y="158" width="144" height="54" rx="9" fill="#ffffff" stroke="#333" stroke-width="1.3"/>
+  <text x="863.5" y="182.0" text-anchor="middle" font-size="12.5" font-weight="bold">O06 Interpretar a</text>
+  <text x="863.5" y="197.0" text-anchor="middle" font-size="12.5">sugestão explicada</text>
+  <rect x="636.0" y="258" width="138" height="54" rx="9" fill="#ffffff" stroke="#333" stroke-width="1.3"/>
+  <text x="705.0" y="282.0" text-anchor="middle" font-size="12.5">Ler probabilidade</text>
+  <text x="705.0" y="297.0" text-anchor="middle" font-size="12.5">e confiabilidade</text>
+  <rect x="790.0" y="258" width="151" height="54" rx="9" fill="#ffffff" stroke="#333" stroke-width="1.3"/>
+  <text x="865.5" y="282.0" text-anchor="middle" font-size="12.5">Ver mapa de atenção</text>
+  <text x="865.5" y="297.0" text-anchor="middle" font-size="12.5">e o que mais pesou</text>
+  <rect x="957.0" y="258" width="130" height="54" rx="9" fill="#ffffff" stroke="#333" stroke-width="1.3"/>
+  <text x="1022.0" y="282.0" text-anchor="middle" font-size="12.5">Conhecer os</text>
+  <text x="1022.0" y="297.0" text-anchor="middle" font-size="12.5">limites</text>
+  <rect x="1172.0" y="158" width="164" height="54" rx="9" fill="#ffffff" stroke="#333" stroke-width="1.3"/>
+  <text x="1254.0" y="182.0" text-anchor="middle" font-size="12.5" font-weight="bold">O11 Registrar decisão</text>
+  <text x="1254.0" y="197.0" text-anchor="middle" font-size="12.5">e justificativa</text>
+  <rect x="1103.0" y="258" width="138" height="54" rx="9" fill="#ffffff" stroke="#333" stroke-width="1.3"/>
+  <text x="1172.0" y="282.0" text-anchor="middle" font-size="12.5">Marcar evidências</text>
+  <text x="1172.0" y="297.0" text-anchor="middle" font-size="12.5">consideradas</text>
+  <rect x="1257.0" y="258" width="158" height="54" rx="9" fill="#ffffff" stroke="#333" stroke-width="1.3"/>
+  <text x="1336.0" y="282.0" text-anchor="middle" font-size="12.5">Confirmar e conferir</text>
+  <text x="1336.0" y="297.0" text-anchor="middle" font-size="12.5">o registro</text>
+  <rect x="1352.0" y="158" width="164" height="54" rx="9" fill="#ffffff" stroke="#333" stroke-width="1.3"/>
+  <text x="1434.0" y="182.0" text-anchor="middle" font-size="12.5" font-weight="bold">O08 Registrar parecer</text>
+  <text x="1434.0" y="197.0" text-anchor="middle" font-size="12.5">recebido por telefone</text>
+</svg>

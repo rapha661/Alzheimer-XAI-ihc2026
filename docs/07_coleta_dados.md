@@ -219,6 +219,42 @@ Sim, o projeto precisa considerar aspectos éticos: a coleta envolve pessoas dir
 
 **Limite declarado.** Este instrumento foi desenhado para uso didático e **não passou por comitê de ética**. Se qualquer parte do material for reaproveitada no TCC ou em publicação, a coleta precisa ser refeita sob as normas do comitê da instituição.
 
+### A04 — Raphael Garavati Erbert
+
+**Autor(a):** Raphael Garavati Erbert — 22.123.014-7  
+**Persona/cenário:** P03 — Dra. Helena Siqueira Prado / C01 — "O laudo que não disse nada" / tarefa T02  
+**Hipóteses sob investigação:** H01 e H08; contribuição complementar para H11
+
+#### Que dados coletar?
+
+| Dado/informação | Hipótese/lacuna relacionada | Por que é necessário | Qual decisão de design pode afetar |
+|---|---|---|---|
+| Fluxo real de trabalho desde o recebimento do pedido até a liberação do laudo, incluindo profissionais envolvidos | H08, H11 | Verifica se a rotina descrita em C01 corresponde ao trabalho real e quem participa de cada decisão | Delimitação do fluxo e dos papéis da interface |
+| Informações clínicas que acompanham a MRI e forma como chegam ao radiologista | H08, H11 | Investiga se a pergunta clínica, os testes cognitivos e o histórico estão disponíveis no momento da leitura | Dados que devem acompanhar o exame e ponto em que precisam ser apresentados |
+| Ferramentas utilizadas (PACS, RIS, visualizadores, ferramentas de medida, telefone e outros recursos) e funções efetivamente usadas | H08 | Identifica o ambiente tecnológico e evita propor funcionalidades que já existam ou não se encaixem no fluxo | Compatibilidade com padrões familiares, ponto de integração e recursos realmente necessários |
+| Como o radiologista identifica, descreve e comunica achados limítrofes, especialmente relacionados à atrofia hipocampal | H08 | Verifica se há dificuldade de interpretação, falta de referência ou apenas necessidade de contexto clínico | Vocabulário do laudo, referência visual e apresentação da incerteza |
+| Procedimentos de comparação com exames anteriores e de uso de medidas objetivas/volumétricas | H08 | Investiga quais referências estão disponíveis e quando são consideradas úteis | Necessidade de histórico/comparação e eventual apresentação de medidas |
+| Familiaridade com mapas de atenção e com a indicação do peso da imagem e dos dados clínicos, apresentados no exemplo sintético | H01 | Avalia se a explicação do modelo acrescenta informação útil ao profissional que já interpreta a imagem ou se pode confundir | Uso, nível de detalhe e posição de Grad-CAM/SHAP, sem substituir a leitura radiológica |
+| Situações de interrupção, pressão de tempo, dúvida e consulta ao solicitante ou a outro especialista | H08, H11 | Expõe restrições contextuais e a distribuição real de responsabilidades que podem não aparecer em uma entrevista fora do ambiente | Sequência do fluxo, suporte à retomada e canais de esclarecimento |
+| Problemas mais frequentes e consequências de omissões ou de conclusões genéricas | H08 | Identifica quais falhas são críticas para quem lauda e para os profissionais que recebem o resultado | Prioridade de requisitos e conteúdo mínimo do laudo |
+
+#### De quem coletar?
+
+| Perfil/stakeholder | Critério de inclusão | Relação com persona/público |
+|---|---|---|
+| Radiologista com experiência em leitura de MRI de crânio | Atua na interpretação de exames de crânio e já recebeu solicitações por queixa cognitiva, declínio cognitivo ou suspeita de demência | Corresponde à P03, responsável pela interpretação da MRI e emissão do laudo |
+| Neurorradiologista ou radiologista de serviço de telerradiologia, quando disponível | Atua com MRI neurológica ou recebe exames de unidades diferentes | Perfil complementar para comparar contextos de trabalho; não será tratado como equivalente a todos os radiologistas |
+
+A proposta é realizar investigação contextual com 1 a 3 profissionais, por conveniência. A amostra é pequena e não representativa; o objetivo é compreender em profundidade o contexto e as decisões durante o trabalho. Não há acesso institucional confirmado a um serviço de radiologia. Antes de substituir a observação em ambiente real, a equipe deverá discutir com o docente alternativas, como especialista próximo, demonstração em ambiente de treinamento ou caso sintético. A modalidade efetivamente realizada e suas limitações serão registradas, sem apresentar simulação como observação de campo.
+
+#### Aspectos éticos
+
+A participação do radiologista será voluntária e dependerá de consentimento prévio. Quando a atividade ocorrer em instituição de saúde, também será necessária autorização do serviço para acesso ao ambiente. A observação não poderá interferir no atendimento, atrasar laudos nem alterar decisões clínicas.
+
+Não serão coletados nomes, números de prontuário, datas de nascimento, imagens identificáveis, laudos reais ou outros dados de pacientes. A preferência será observar uma demonstração com caso sintético ou material previamente anonimizado. Não serão feitas fotografias, capturas de tela ou gravações da estação de trabalho. Caso apareça incidentalmente informação identificável, o registro será interrompido e o dado não será anotado. A gravação de áudio do diálogo com o participante somente ocorrerá com autorização específica; sem autorização, serão feitas anotações de campo.
+
+As anotações serão codificadas e se limitarão a ações, ferramentas, decisões, termos profissionais e condições do ambiente. Não serão usadas para avaliar produtividade ou competência individual. Os arquivos ficarão restritos aos quatro integrantes e ao docente; qualquer citação será anonimizada e o material bruto será descartado ao término da disciplina. Se a atividade for substituída por simulação ou participante proxy, essa limitação será informada nos resultados.
+
 > Repita A02, A03...
 
 ## Parte B — ferramentas de coleta
@@ -388,8 +424,71 @@ O **protocolo de execução** descrito abaixo é o instrumento mais importante d
 3. **Aplicação.** Divulgação do link em grupos profissionais de técnicos em radiologia e por indicação do corpo docente, **sem intermediação de chefias**, com texto de convite padronizado — o mesmo em todos os canais, para não enviesar quem responde. Janela de coleta de 15 dias corridos, com um único lembrete no oitavo dia.
 4. **Encerramento.** Tela de agradecimento com contato da equipe e informação de que os resultados agregados ficarão disponíveis no repositório público do projeto.
 5. **Armazenamento e anonimização.** Exportar as respostas para planilha de acesso restrito aos quatro integrantes e ao docente. Revisar manualmente as respostas abertas, removendo nomes de pessoas e de serviços antes de qualquer citação. Publicar apenas dados agregados e trechos anonimizados. Descartar a base ao término da disciplina.
+
+### Instrumento I04 — Investigação contextual com radiologistas
+
+**Autor(a):** Raphael Garavati Erbert — 22.123.014-7  
+**Técnica:** investigação contextual (observação do trabalho acompanhada de entrevista no contexto de atuação)  
+**Objetivo:** compreender como radiologistas recebem, interpretam e laudam MRI de crânio em investigação de declínio cognitivo, observando como o contexto clínico, as ferramentas, a terminologia e as limitações do ambiente afetam a interpretação de achados limítrofes. Investigar H01 e H08 e contribuir para H11.  
+**Público:** radiologistas que interpretam MRI de crânio, preferencialmente com experiência em neuroimagem ou telerradiologia.  
+**Duração estimada:** 45 a 60 minutos por sessão, conforme autorização e disponibilidade do serviço.
+
+#### Procedimento padronizado de aplicação
+
+1. **Preparação.** Buscar de 1 a 3 participantes que atendam aos critérios de inclusão. Solicitar autorização institucional quando a sessão ocorrer em serviço de saúde. Preparar protocolo de observação e perguntas. Priorizar demonstração em ambiente de treinamento ou uso de caso sintético/previamente anonimizado.
+2. **Apresentação/consentimento.** Explicar objetivo, duração e papel do pesquisador como aprendiz. Solicitar consentimento do radiologista, com o termo adaptado de [`../instrumentos/termo_consentimento_modelo.md`](../instrumentos/termo_consentimento_modelo.md), e, quando aplicável, autorização do serviço. Informar que a atividade não avaliará produtividade ou competência.
+3. **Aplicação.** Acompanhar o participante enquanto descreve ou demonstra o fluxo de análise de um exame. Observar ferramentas, informações consultadas, sequência de ações, interrupções, decisões e vocabulário. Fazer perguntas de esclarecimento no momento em que uma ação ou decisão ocorrer, sem interromper atividade clínica. Somente ao final, apresentar o exemplo sintético de explicação XAI para discutir sua utilidade e seus limites.
+4. **Encerramento.** Resumir o que foi compreendido e pedir ao participante que corrija interpretações incorretas. Perguntar se há uma etapa ou restrição importante que não foi observada.
+5. **Armazenamento/anonimização.** Produzir notas de campo codificadas (R01, R02 etc.), sem nomes de pacientes, instituição ou profissionais. Não fotografar nem capturar telas. Registrar se a sessão ocorreu em ambiente real, de treinamento ou simulado, para não confundir os tipos de evidência.
+
+#### Instrumento
+
+**Protocolo de observação**
+
+| Aspecto observado | O que registrar |
+|---|---|
+| Contexto físico | Tipo de ambiente, estação de trabalho, monitores, iluminação, interrupções e condições que possam afetar a leitura |
+| Início do fluxo | Como o exame chega ao radiologista, quais dados acompanham o pedido e como a dúvida clínica é apresentada |
+| Ferramentas | Sistemas e recursos efetivamente utilizados (por exemplo, PACS, visualizador, medidas, comparação com exames anteriores, RIS ou telefone) |
+| Sequência da atividade | Etapas realizadas desde a abertura do exame até a elaboração/liberação do laudo |
+| Informações consultadas | Idade/faixa etária, indicação clínica, testes cognitivos, histórico ou outras informações, registrando apenas categorias e nunca dados identificáveis |
+| Interpretação de achados | Como o profissional descreve alterações, achados limítrofes, incertezas e necessidade de correlação clínica |
+| Vocabulário | Termos usados espontaneamente para descrever atrofia, artefato, limitação e incerteza |
+| Decisões e rupturas | Momentos em que busca outra informação, interrompe a leitura, solicita esclarecimento ou opta por uma conclusão cautelosa |
+| Tempo e interrupções | Pontos de espera, alternância entre ferramentas e interrupções, sem avaliação de produtividade individual |
+| Comunicação do laudo | Como registra o que foi observado, como comunica limitações e se há retorno ao solicitante |
+
+**Perguntas de contextualização durante a atividade**
+
+1. O que você está procurando nesta etapa?
+2. Por que consultou essa informação ou abriu essa ferramenta?
+3. O que o pedido clínico permite entender sobre a pergunta que precisa ser respondida?
+4. Quando o contexto clínico não está disponível, o que você costuma fazer?
+5. Como diferencia um achado limítrofe de uma alteração que considera relevante descrever?
+6. Que recursos utiliza para comparar ou medir os achados? Em quais situações eles não são suficientes?
+7. Como decide o grau de certeza que será expresso no laudo?
+8. O que costuma acontecer quando precisa esclarecer uma dúvida com o médico solicitante?
+9. Quais informações seriam importantes para que o profissional que recebe o laudo compreenda o que foi avaliado?
+10. Há alguma etapa do fluxo que costuma ser interrompida ou refeita?
+
+**Discussão final de exemplo sintético**
+
+*Apresentar as telas P03 e P04 da Entrega 6: mapa de atenção sobre um corte axial da MRI, probabilidade de cada classe com a faixa de confiança e peso da imagem e dos dados clínicos. Os dados são simulados e não representam paciente real nem resultado diagnóstico.*
+
+11. O destaque visual acrescenta alguma informação à leitura que você já realiza? Qual?
+12. Que risco de interpretação você identifica nesse tipo de destaque?
+13. A indicação do peso da imagem e dos dados clínicos está adequada ao seu trabalho? O que deveria ser explicado ou omitido?
+14. Em que circunstância essa explicação seria útil, indiferente ou atrapalharia o laudo?
+
+#### Como os dados serão analisados
+
+As notas serão organizadas em um mapa do fluxo real observado, com etapas, ferramentas, informações consultadas, decisões, interrupções e pontos de dúvida. Em seguida, será feita codificação temática para: contexto de trabalho; dados recebidos; vocabulário; interpretação de achados limítrofes; recursos de comparação; comunicação de incerteza; utilidade e limites da explicação XAI.
+
+Os achados serão comparados ao cenário C01 e à tarefa T02 para identificar o que foi confirmado, refutado ou precisa ser reescrito. Também serão cruzados com o questionário de técnicos (I03), especialmente para compreender em que etapa os dados clínicos são preparados e quem define ou valida cada decisão. Caso não seja possível observar o trabalho em ambiente real, a análise distinguirá explicitamente demonstração/simulação de observação contextual e não afirmará que houve estudo de campo.
+
 #### Instrumento
  
+
 > Cópia textual integral. A marcação entre colchetes ao final de cada pergunta indica a hipótese investigada e a categoria de dados correspondente (C1 a C5, conforme a seção "Que dados coletar?"). **Essas marcações não aparecem para o respondente.**
  
 ---
@@ -591,6 +690,8 @@ As demais hipóteses seguem a mesma lógica: H09 é respondida por 3.5, 3.6 e pe
 **A02 / I02 (Ana Carolina) — P02, neurologista.** O grupo focal investigará como neurologistas avaliam a autonomia de pacientes diante de divergências entre relatos familiares, testes cognitivos e achados de MRI, quais riscos ponderam e como interpretam as explicações do modelo. H01 será sustentada, refutada ou refinada conforme a explicação multimodal contribua — ou não — para compreender a sugestão e seus limites nesse contexto. A concordância do grupo será tratada como percepção dos participantes, não como consenso clínico nem validação representativa.
 
 **A03 / I03 (Nathan) — P04, técnico em radiologia.** O conjunto P04 + C03 + T03 foi construído inteiramente por inferência a partir dos itens 4.1 e 4.2 da Entrega 1: nenhum técnico em radiologia foi ouvido até aqui. O questionário cobre as cinco categorias de dados de Barbosa e Silva e ataca quatro lacunas nesta ordem de prioridade: (1) **se o problema existe** — em que momento uma falha de qualidade ou de dado clínico é percebida, e com que frequência isso gera reconvocação; (2) **se o técnico é o decisor** que a persona supõe, isto é, quem define o protocolo, se há autonomia formal para alterá-lo e se ele se sente autorizado a usá-la; (3) **qual o repertório real** de ações diante de movimento, com que vocabulário o técnico nomeia o problema e qual gravidade ele próprio atribui a cada tipo de falha; (4) **se parte da solução já existe**, na forma de sinalização automática no console ou no PACS.
+
+**A04 / I04 (Raphael) — P03, radiologista.** A investigação contextual verificará o fluxo de leitura e emissão de laudo, a disponibilidade de contexto clínico, o uso de ferramentas e a forma como o profissional registra achados limítrofes. H08 deverá ser sustentada, refutada ou refinada conforme a falta de contexto clínico e a ausência de referência objetiva realmente contribuam para laudos genéricos. H01 será refinada a partir da avaliação do radiologista sobre o valor e os limites do mapa de atenção e do peso de cada modalidade. A investigação também contribuirá para H11 ao esclarecer como as responsabilidades se distribuem entre técnico, radiologista e solicitante.
 
 Depois da análise, estes são os desfechos esperados por hipótese:
 

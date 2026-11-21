@@ -1,7 +1,7 @@
 # Entrega 10 — MoLIC
 
-**Data:** {{dd/mm/aaaa}}  
-**Status:** ⬜ não iniciada  
+**Data:** 20/11/2026  
+**Status:** 🟨 em andamento  
 **Responsabilidade:** 1 solução completa por integrante
 
 ## Objetivo da atividade
@@ -68,6 +68,66 @@ Explique em texto o caminho principal e pelo menos os caminhos alternativos/rupt
 - [ ] Processamento, filtros, administração, relatórios e históricos incluem retornos/rupturas quando relevantes.
 
 > Repita M02, M03... para todos os integrantes.
+
+## M02 — O parecer que ficou no caso
+
+**Autor(a):** Paulo Hudson Josué da Silva — 22.222.013-9  
+**Cenário de interação de origem:** CI02 — "O parecer que ficou no caso"  
+**Objetivo(s):** O01, O02, O06, O07, O08, O11, O12  
+**Tarefa(s) relacionada(s):** T01 — Retomar a conduta de um paciente já avaliado por especialista  
+**Signos relevantes:** parecer de especialista, canal do parecer, critérios considerados, exames revisados, MMSE / MoCA, status do caso, motivo da falha, sugestão do modelo, probabilidade da classe, confiabilidade da estimativa, mapa de atenção, peso de cada modalidade, contribuição por variável, limites da sugestão, termo do glossário, concordância, conclusão, conduta, evidências consideradas, justificativa, decisão registrada
+
+### Diagrama
+
+![MoLIC M02](../assets/10_molic/molic_m02.svg)
+
+**Fonte editável:** [`molic_m02.svg`](../assets/10_molic/molic_m02.svg) — SVG em texto puro, editável no Inkscape ou em qualquer editor de texto
+
+### Leitura do diagrama
+
+Explique em texto o caminho principal e pelo menos os caminhos alternativos/rupturas mais importantes.
+
+#### Caminho principal
+
+1. Ponto de abertura → **Entrar**: o médico informa e-mail institucional e senha; o processo do sistema libera o acesso e a conversa chega ao acesso ubíquo (O01).
+2. `u: casos` abre a conversa sobre **Localizar o caso** (O02): a busca pelo nome devolve o caso do Sr. Ivo, com status e data do último registro.
+3. `u: abrir caso do paciente` abre **Retomar o raciocínio do parecer anterior** (O07): o parecer de Neurologia aparece no topo, com especialista, data, canal, conclusão, critérios considerados, exames revisados e recomendação. O contexto clínico mostra o MMSE anterior e o atual lado a lado, com a indicação de que não entra no cálculo da sugestão.
+4. Esse parecer chegou ao caso dois meses antes, pela mesma cena: durante a ligação, `u: registrar parecer` abriu **Registrar parecer de especialista** (O08). Depois de `u: gravar parecer`, o processo respondeu `d: parecer registrado, identificado como parecer de especialista`, a conversa sobre essa meta se encerrou (gcc) e voltou ao caso.
+5. `u: ver a sugestão do exame mais recente` passa por um processo do sistema; com a análise concluída, a conversa vai para **Interpretar a sugestão explicada** (O06): a probabilidade da classe e a confiabilidade da estimativa aparecem como signos separados, ao lado do mapa de atenção, do peso de cada modalidade, do que mais pesou no caso e dos limites do modelo. Um termo desconhecido abre **Consultar termo do glossário**, e `u: fechar a dica` volta à sugestão.
+6. `u: registrar decisão` abre **Registrar decisão e justificativa** (O11): concordância, conclusão, conduta, evidências consideradas (o parecer de Neurologia e os dois escores) e justificativa.
+7. Com os dados completos, o processo leva a **Confirmar o registro da decisão** [AL]: o preposto mostra o resumo e avisa que a decisão será gravada com nome e horário e ficará ligada ao parecer anterior. `u: confirmar` → processo → `d: decisão registrada {autor, data e hora}`, e a conversa sobre a meta se encerra (gcc).
+8. A conversa segue para **Consultar a decisão registrada** (O12), onde o médico confere o que foi gravado e as evidências ligadas ao parecer. `u: voltar aos casos` retorna ao acesso ubíquo, e `u: sair` encerra a interação.
+
+#### Alternativas e rupturas
+
+| Situação | Onde ocorre | Como o usuário percebe | Caminho de recuperação/saída |
+|---|---|---|---|
+| E-mail ou senha incorretos | Entrar → processo de acesso | [CE] "E-mail ou senha incorretos" | Volta a Entrar para nova tentativa |
+| Busca sem resultado (ex.: "Bitencourt", com erro de grafia) | Localizar o caso → processo de busca | [RA] "Nenhum caso encontrado", com a opção de limpar a busca | `limpar a busca` devolve a lista completa e o médico procura de novo |
+| Análise em andamento ou com falha | Retomar o raciocínio → processo antes da sugestão | [CE] o preposto mostra o status do caso e o motivo da falha | Volta ao caso; o médico decide com o parecer e os escores, ou aguarda. O reenvio do exame é do técnico (M03) |
+| Termo técnico desconhecido | Interpretar a sugestão explicada | Dica do glossário com o que o termo significa e o que não significa | `u: fechar a dica` volta à sugestão |
+| Parecer sem campo obrigatório | Registrar parecer de especialista → processo de gravação | [RA] campos obrigatórios pendentes, destacados | Completar e gravar de novo; nada é gravado antes disso |
+| Decisão com campo obrigatório vazio | Registrar decisão e justificativa → processo | [RA] campos pendentes destacados no formulário | Completar os campos e registrar de novo |
+| "Concordo" com confiabilidade baixa | Registrar decisão e justificativa → processo | [PA] o preposto pede que a justificativa cite a evidência clínica que sustenta a concordância | Citar a evidência ou rever a concordância; a decisão continua sendo do médico |
+| Médico quer rever antes de gravar | Confirmar o registro da decisão | [AL] resumo antes da gravação | `u: voltar e revisar` volta ao formulário com os dados preenchidos |
+| Falha ao gravar | Confirmar → processo de gravação | [RA] "não foi possível gravar; os dados preenchidos foram mantidos" | Volta ao formulário e registra de novo, sem redigitar |
+| Desistir do registro | Registrar decisão e justificativa | `u: cancelar` | Volta à sugestão sem gravar nada |
+| Retorno a um caso já concluído | Localizar o caso | precond: status do caso = concluído | A conversa abre direto em Consultar a decisão registrada |
+
+### Checklist específico de modelagem
+
+- [x] Existe **ponto de abertura** coerente com o início do objetivo.
+- [x] As **cenas de conversa** representam tópicos/assuntos, não nomes de páginas apenas.
+- [x] As transições/falas deixam claro o que o usuário ou o sistema comunica.
+- [x] Há **ponto(s) de encerramento** para objetivos concluídos/abandonados quando aplicável.
+- [x] Processamentos do sistema estão representados conforme a notação adotada em aula, sem “inventar” fala do usuário.
+- [x] Rupturas (breakdowns) relevantes têm feedback e caminho de recuperação, não becos sem saída.
+- [x] Acessos ubíquos/atalhos só aparecem quando semanticamente justificáveis.
+- [x] O diagrama cobre caminhos alternativos importantes, e não apenas o “happy path”.
+- [x] Nomes de objetivos, tópicos e signos são coerentes com a Entrega 9.
+- [x] O diagrama é legível em tamanho normal no GitHub.
+- [x] O MoLIC representa a conversa usuário–sistema, não o fluxo interno do algoritmo.
+- [x] Processamento, filtros, administração, relatórios e históricos incluem retornos/rupturas quando relevantes.
 
 ## Consolidação da equipe
 

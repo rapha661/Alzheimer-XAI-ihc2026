@@ -129,6 +129,62 @@ Explique em texto o caminho principal e pelo menos os caminhos alternativos/rupt
 - [x] O MoLIC representa a conversa usuário–sistema, não o fluxo interno do algoritmo.
 - [x] Processamento, filtros, administração, relatórios e históricos incluem retornos/rupturas quando relevantes.
 
+## M03 — O exame conferido antes da saída
+
+**Autor(a):** Nathan Gabriel da Fonseca Leite — 22.123.028-7  
+**Cenário de interação de origem:** CI03 — "O exame conferido antes da saída"  
+**Objetivo(s):** O01, O03, O04, O05  
+**Tarefa(s) relacionada(s):** T03 — Realizar a aquisição com qualidade diagnóstica e dados clínicos completos, dentro da agenda  
+**Signos relevantes:** sequência exigida, duração prevista, identidade confirmada, RM T1 volumétrica, escolaridade, MMSE / MoCA, genótipo APOE, volume hipocampal, volume intracraniano, pendência obrigatória, limitação registrada, status do caso, motivo da falha
+
+### Diagrama
+
+![MoLIC M03](../assets/10_molic/molic_m03.svg)
+
+**Fonte editável:** [`molic_m03.svg`](../assets/10_molic/molic_m03.svg) — SVG em texto puro, editável no Inkscape ou em qualquer editor de texto
+
+### Leitura do diagrama
+
+Explique em texto o caminho principal e pelo menos os caminhos alternativos/rupturas mais importantes.
+
+#### Caminho principal
+
+1. Ponto de abertura → **Entrar**: o técnico informa e-mail institucional e senha; o processo do sistema libera o acesso e a conversa chega ao acesso ubíquo (O01).
+2. Com o papel de técnico, `u: novo exame` abre a conversa sobre a meta **Preparar e enviar o exame** (O03): o preposto mostra a suspeita informada no pedido, as sequências que o protocolo exige, os dados clínicos obrigatórios e a duração prevista ao lado do horário do próximo paciente.
+3. `u: conferir a identidade` leva a **Confirmar a identidade**: nome e data de nascimento do pedido e do prontuário lado a lado; a confirmação é do técnico. `u: confirmo a identidade` abre **Conferir antes de liberar o paciente** (O04).
+4. Em Conferir antes de liberar o paciente, `u: selecionar arquivo` passa por um processo que lê o cabeçalho e responde `d: série conferida {tipo, cobertura, nome no cabeçalho}`. Os dados clínicos vêm do prontuário sem redigitação, as pendências obrigatórias ficam listadas e o técnico pode registrar uma limitação aceita, que acompanha o estudo até quem lauda.
+5. Sem pendência obrigatória, `u: enviar para análise` passa pelo processo do sistema, que responde `d: exame enviado` e abre **Acompanhar a análise** (O05): status do caso, aviso de que o técnico pode sair da tela e recomendação de aguardar o resultado antes de liberar o paciente.
+6. Quando o processo conclui, `d: análise concluída {status do caso}` encerra a conversa sobre a meta (gcc). Em Acompanhar a análise, `u: enviar outro exame` reabre a meta para o próximo paciente.
+
+#### Alternativas e rupturas
+
+| Situação | Onde ocorre | Como o usuário percebe | Caminho de recuperação/saída |
+|---|---|---|---|
+| E-mail ou senha incorretos | Entrar → processo de acesso | [CE] "E-mail ou senha incorretos" | Volta a Entrar para nova tentativa |
+| Pedido e prontuário não conferem | Confirmar a identidade | `u: não confere` e [CE]: envio bloqueado; o cadastro precisa ser corrigido no prontuário | A correção acontece fora do sistema; depois, o técnico volta a Preparar e enviar o exame e confere de novo |
+| Série que não é a T1 volumétrica (ex.: FLAIR) | Conferir antes de liberar → processo do arquivo | [RA] "A série enviada não é a T1 volumétrica; selecione a T1 volumétrica do mesmo exame" | Selecionar outro arquivo; com o paciente ainda no setor, adquirir a sequência que falta |
+| Pendência obrigatória (série, dado clínico ou identidade) | Conferir antes de liberar o paciente | [PA] a fala `u: enviar para análise` só existe sem pendência; a lista mostra o que falta | Resolver a pendência com o paciente no setor. A interface aponta; decidir o que fazer continua sendo do técnico e, quando o protocolo exigir, do radiologista |
+| Valor fora da faixa | Conferir antes de liberar → processo de envio | [RA] valor destacado no próprio campo | Corrigir o valor e enviar de novo |
+| Desistir do envio | Conferir antes de liberar o paciente | `u: cancelar o envio` abre a cena Descartar o envio [AL]: os dados preenchidos serão perdidos | `u: continuar` volta à conferência; `u: descartar` encerra a meta como abandonada (gcc) |
+| Análise falha depois do envio | Processo da análise | Cena Tratar a falha da análise: [RA] motivo em linguagem do serviço (ex.: hipocampo não mensurável por artefato de movimento), com os dados clínicos mantidos | `u: reenviar exame` abre Reenviar após falha; com o novo arquivo, `u: reenviar para análise` volta ao processo, sem redigitar. `u: cancelar o reenvio` volta à falha |
+| Falha percebida depois da liberação do paciente | Tratar a falha da análise | [CE] a nova aquisição depende de reconvocação | A reconvocação acontece fora do sistema; é a situação que a conferência antes da liberação tenta evitar |
+| Arquivo errado no reenvio | Reenviar após falha → processo de reenvio | [RA] "A série enviada não é a T1 volumétrica" | Selecionar o arquivo certo e reenviar |
+
+### Checklist específico de modelagem
+
+- [x] Existe **ponto de abertura** coerente com o início do objetivo.
+- [x] As **cenas de conversa** representam tópicos/assuntos, não nomes de páginas apenas.
+- [x] As transições/falas deixam claro o que o usuário ou o sistema comunica.
+- [x] Há **ponto(s) de encerramento** para objetivos concluídos/abandonados quando aplicável.
+- [x] Processamentos do sistema estão representados conforme a notação adotada em aula, sem “inventar” fala do usuário.
+- [x] Rupturas (breakdowns) relevantes têm feedback e caminho de recuperação, não becos sem saída.
+- [x] Acessos ubíquos/atalhos só aparecem quando semanticamente justificáveis.
+- [x] O diagrama cobre caminhos alternativos importantes, e não apenas o “happy path”.
+- [x] Nomes de objetivos, tópicos e signos são coerentes com a Entrega 9.
+- [x] O diagrama é legível em tamanho normal no GitHub.
+- [x] O MoLIC representa a conversa usuário–sistema, não o fluxo interno do algoritmo.
+- [x] Processamento, filtros, administração, relatórios e históricos incluem retornos/rupturas quando relevantes.
+
 ## M04 — A decisão com as evidências lado a lado
 
 **Autor(a):** Ana Carolina Lazzuri — 22.123.001-4  

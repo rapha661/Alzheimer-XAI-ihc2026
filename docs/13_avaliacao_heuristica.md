@@ -147,6 +147,46 @@ Ao justificar, considere **frequência, impacto e persistência** do problema no
 
 > Repita a seção para A02, A03... um avaliador por integrante.
 
+## Avaliador A03 — Nathan Gabriel da Fonseca Leite — 22.123.028-7
+
+### 4. Matriz de cobertura das 10 heurísticas
+
+| Heurística | Telas/fluxos examinados | Houve violação? | IDs dos achados | Exemplo de boa prática se não violada |
+|---|---|---|---|---|
+| H1 | Novo exame — pronto para enviar, Acompanhar análise, Falha da análise | não | — | Acompanhar a análise mostra etapas concluídas, progresso e tempo estimado (Acompanhar análise) |
+| H2 | Novo exame — preparar, Novo exame — série errada, Novo exame — pronto para enviar, Falha da análise | não | — | Série conferida em linguagem de aquisição: tipo, cobertura, nome no cabeçalho (Novo exame — pronto para enviar) |
+| H3 | Novo exame — identidade não confere, Novo exame — descartar envio, Reenviar após falha — arquivo errado | sim | V01 | — |
+| H4 | Falha da análise, Sugestão do modelo — análise não concluída, Lista de casos | sim | V05 | — |
+| H5 | Novo exame — valor fora da faixa, Novo exame — pronto para enviar, Novo exame — pendências obrigatórias | sim | V02, V03 | — |
+| H6 | Reenviar após falha | sim | V04 | — |
+| H7 | Novo exame — pronto para enviar, Acompanhar análise | não | — | Dados clínicos já vêm do prontuário, sem redigitação (Novo exame — pronto para enviar) |
+| H8 | Novo exame — confirmar identidade | não | — | Conferência de identidade só com os três dados comparados lado a lado (Novo exame — confirmar identidade) |
+| H9 | Login — senha incorreta, Novo exame — valor fora da faixa, Novo exame — série errada, Reenviar após falha — arquivo errado | sim | V06 | — |
+| H10 | Novo exame — preparar, Falha da análise | não | — | "O que fazer" na falha da análise, com os dois casos (paciente no setor ou já liberada) (Falha da análise) |
+
+### 5. Declaração de violações
+
+| ID | Heurística | Tela/estado | Problema observado | Evidência | Severidade | Justificativa da severidade | Recomendação |
+|---|---|---|---|---|---:|---|---|
+| V01 | H3 | Novo exame — identidade não confere | Com a identidade bloqueada, a única ação é "Conferir de novo". Não há como cancelar o envio ou voltar ao preparo; como a correção é feita fora do sistema e pode demorar, o técnico fica preso na tela e só sai pelo menu lateral. | ![a03_v01](../assets/13_heuristica/a03_v01.png) | 2 | Raro, mas sem saída clara, e acontece com o paciente ainda no setor e a agenda correndo. | "Cancelar o envio" com o mesmo aviso de descarte (Novo exame — descartar envio) e opção de deixar o exame pendente. |
+| V02 | H5 | Novo exame — valor fora da faixa | A volumetria (ICV, hipocampo, ventrículos) é digitada à mão, enquanto os dados clínicos vêm "sem redigitação". O print mostra 120.000 em vez de 1.200.000. A validação de faixa pega o erro grosseiro, mas não um erro dentro da faixa (ex.: 5.800 × 8.500). | ![a03_v02](../assets/13_heuristica/a03_v02.png) | 2 | Todo exame passa por aqui; um erro dentro da faixa entra no modelo sem aviso. | Importar os valores do laudo de volumetria, como os dados do prontuário, ou pedir confirmação dos três valores. |
+| V03 | H5 | Novo exame — pronto para enviar / Novo exame — pendências obrigatórias | O teste cognitivo é um campo de texto livre ("MMSE 22 (28/10/2026)"). Nada impede trocar teste, escore e data ou escrever em outro formato. | ![a03_v03](../assets/13_heuristica/a03_v03.png) | 2 | Frequente: o escore costuma não estar no prontuário (GOMS T03, 3.B) e é digitado nesse campo. | Separar em teste (MMSE/MoCA), escore (0–30) e data. |
+| V04 | H6 | Reenviar após falha | O reenvio avisa que dados, volumetria e limitação foram mantidos, mas não mostra quais. A limitação registrada era da aquisição anterior e pode não valer para a nova série; o técnico precisa lembrar o que tinha preenchido. | ![a03_v04](../assets/13_heuristica/a03_v04.png) | 1 | Só no reenvio, e o técnico preencheu os dados minutos antes. | Resumo recolhível dos dados mantidos, com opção de editar a limitação. |
+| V05 | H4 | Falha da análise × Sugestão do modelo — análise não concluída | O mesmo caso aparece como "Reenvio pendente" para o técnico (Falha da análise) e na lista do médico, mas como "Aguardando revisão" no cabeçalho do caso (Sugestão do modelo — análise não concluída). | ![a03_v05](../assets/13_heuristica/a03_v05.png) | 2 | Todo caso com falha; técnico e médico podem achar que o outro já resolveu. | Um status único, com o mesmo nome em todas as telas. |
+| V06 | H9 | Login — senha incorreta | Sem caminho para recuperar a senha; a mensagem fala em "e-mail ou senha", mas só a senha fica destacada. | ![a03_v06](../assets/13_heuristica/a03_v06.png) | 1 | Raro; em estação compartilhada a recuperação costuma passar pela TI [H]. | "Esqueci minha senha" e destaque coerente com a mensagem. |
+
+**Qualidade do relato:** o problema deve ser observável e localizado. Evite “interface confusa” sem dizer **o que**, **onde**, **quando** e **para quem**.
+
+### 6. Boas práticas — heurísticas não violadas (atividade didática)
+
+| Heurística sem violação | Exemplo no sistema | Evidência | Por que atende |
+|---|---|---|---|
+| H1 | Etapas e barra de progresso da análise, com tempo estimado | ![a03_bp_h1](../assets/13_heuristica/a03_bp_h1.png) | O técnico sabe o que já foi feito, o que está rodando e quanto falta. |
+| H2 | Conferência da série em termos de aquisição | ![a03_bp_h2](../assets/13_heuristica/a03_bp_h2.png) | Usa o vocabulário do técnico (sequência, cobertura, cabeçalho), não métricas do modelo (Entrega 1, item 2.4). |
+| H7 | Dados clínicos que já vêm do prontuário | ![a03_bp_h7](../assets/13_heuristica/a03_bp_h7.png) | Elimina o caminho mais lento da tarefa (copiar e transcrever, HTA T03 2.2). |
+| H8 | Conferência de identidade com só três dados lado a lado | ![a03_bp_h8](../assets/13_heuristica/a03_bp_h8.png) | Nada além do que é preciso para comparar pedido e prontuário. |
+| H10 | "O que fazer" na falha da análise | ![a03_bp_h10](../assets/13_heuristica/a03_bp_h10.png) | Ajuda focada na situação, com passos concretos para cada caso. |
+
 ## Avaliador A04 — Ana Carolina Lazzuri — 22.123.001-4
 
 ### 4. Matriz de cobertura das 10 heurísticas

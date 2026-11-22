@@ -1,7 +1,7 @@
 # Entrega 13 — Avaliação de IHC por inspeção heurística
 
-**Data:** {{dd/mm/aaaa}}  
-**Status:** ⬜ não iniciada  
+**Data:** 21/11/2026  
+**Status:** 🟨 em andamento  
 **Responsabilidade:** 1 avaliação completa por integrante, sobre todas as telas/estados relevantes do projeto.
 
 ## Objetivo da atividade
@@ -46,11 +46,47 @@ Em TCCs técnicos, observe especialmente se a interface comunica o estado do pro
 
 | Item | Definição |
 |---|---|
-| Versão avaliada | {{link/commit/data}} |
-| Telas/estados | {{lista completa}} |
-| Fluxos | {{M01/M02...}} |
-| Dispositivo/viewport | {{...}} |
-| Avaliadores | {{nomes}} |
+| Versão avaliada | Protótipo da Entrega 11, estado de 21/11/2026 — {{link do protótipo}} |
+| Telas/estados | 19 telas e 51 estados, dos 4 perfis (ver 2.1) |
+| Fluxos | M01, M02, M03 e M04 (ver 2.2) |
+| Dispositivo/viewport | Desktop, navegador, 1440 × 900 |
+| Avaliadores | A01 Paulo, A02 Raphael, A03 Nathan, A04 Ana Carolina |
+
+### 2.1 Telas e estados inspecionados
+
+**Acesso**
+- Login: normal e senha incorreta
+
+**Médico clínico e neurologista (P01, P02)**
+- Lista de casos: normal, busca sem resultado e vazia
+- Sugestão do modelo: normal, dica de ajuda, análise não concluída e confiabilidade baixa
+- Registrar decisão: vazia, campos pendentes, alerta de confiabilidade baixa, preenchida e falha ao gravar
+- Confirmar registro da decisão: médico clínico e neurologista
+- Decisão registrada: normal e com divergência
+- Evidências do caso: parecer anterior e linha do tempo
+- Registrar parecer: normal e campos pendentes
+- Registrar episódio: normal, campos pendentes, preenchido e episódio incluído
+
+**Técnico em radiologia (P04)**
+- Novo exame: preparar, confirmar identidade, identidade não confere, valor fora da faixa, série errada, pendências obrigatórias, pronto para enviar e descartar envio
+- Acompanhar análise
+- Falha da análise
+- Reenviar após falha: normal e arquivo errado
+
+**Radiologista (P03)**
+- Fila de laudos: normal, laudo suspenso e laudo liberado
+- Ler pergunta clínica: normal e análise indisponível
+- Análise do modelo (segunda leitura)
+- Redigir laudo: normal, aviso de urgência, conclusão obrigatória e pergunta enviada
+- Liberar laudo sem método
+- Perguntar ao solicitante: normal e pergunta em branco
+
+### 2.2 Fluxos avaliados
+
+- **M01** — O laudo que registrou o que foi avaliado (P03, Raphael)
+- **M02** — O parecer que ficou no caso (P01, Paulo)
+- **M03** — O exame conferido antes da saída (P04, Nathan)
+- **M04** — A decisão com as evidências lado a lado (P02, Ana Carolina)
 
 ## 3. Procedimento individual
 
@@ -73,6 +109,8 @@ Cada avaliador deve:
 | 4 | catástrofe de usabilidade; correção imperativa antes de disponibilizar |
 
 Ao justificar, considere **frequência, impacto e persistência** do problema no contexto real de uso.
+
+---
 
 ---
 
@@ -108,6 +146,47 @@ Ao justificar, considere **frequência, impacto e persistência** do problema no
 | {{H4}} | {{...}} | {{print}} | {{...}} |
 
 > Repita a seção para A02, A03... um avaliador por integrante.
+
+## Avaliador A04 — Ana Carolina Lazzuri — 22.123.001-4
+
+### 4. Matriz de cobertura das 10 heurísticas
+
+| Heurística | Telas/fluxos examinados | Houve violação? | IDs dos achados | Exemplo de boa prática se não violada |
+|---|---|---|---|---|
+| H1 | Linha do tempo — episódio incluído, Decisão registrada — com divergência, Confirmar registro da decisão — neurologista | não | — | Aviso "Episódio incluído na linha do tempo" e selo "novo" no item (Linha do tempo — episódio incluído) |
+| H2 | Sugestão do modelo — confiabilidade baixa, Evidências do caso — linha do tempo, Registrar episódio | sim | V03 | — |
+| H3 | Registrar episódio, Registrar decisão — alerta de confiabilidade baixa, Confirmar registro da decisão — neurologista | não | — | "Cancelar" no registro de episódio fecha sem gravar nada (Registrar episódio) |
+| H4 | Sugestão do modelo — confiabilidade baixa, Análise do modelo — segunda leitura | sim | V01 | — |
+| H5 | Registrar episódio, Registrar episódio — campos pendentes, Registrar decisão — alerta de confiabilidade baixa, Confirmar registro da decisão — neurologista | sim | V02, V05, V07 | — |
+| H6 | Evidências do caso — linha do tempo, Registrar decisão — alerta de confiabilidade baixa | não | — | Linha do tempo com data e fonte de cada evidência e o aviso de que os episódios são posteriores ao teste (Evidências do caso — linha do tempo) |
+| H7 | Sugestão do modelo — confiabilidade baixa | sim | V04 | — |
+| H8 | Decisão registrada — com divergência | não | — | Decisão registrada só com o que foi decidido, em blocos curtos (Decisão registrada — com divergência) |
+| H9 | Registrar decisão — campos pendentes, Registrar episódio — campos pendentes | não | — | Erro geral no topo e mensagem em cada campo pendente (Registrar decisão — campos pendentes) |
+| H10 | Sugestão do modelo — confiabilidade baixa | sim | V06 | — |
+
+### 5. Declaração de violações
+
+| ID | Heurística | Tela/estado | Problema observado | Evidência | Severidade | Justificativa da severidade | Recomendação |
+|---|---|---|---|---|---:|---|---|
+| V01 | H4 | Sugestão do modelo — confiabilidade baixa × Análise do modelo — segunda leitura | O volume hipocampal não informado aparece como "estimado" na tela do neurologista e como "imputado" na da radiologista. | ![a04_v01](../assets/13_heuristica/a04_v01.png) | 2 | Os dois perfis comentam o mesmo exame; termos diferentes para a mesma coisa geram dúvida. | Um termo só em todas as telas. |
+| V02 | H5 | Registrar episódio — campos pendentes | Ao tentar adicionar sem dados, data e atividade ficam marcadas, mas "Relatado por" vazio não. O M04 trata "relatado por" como obrigatório; sem ele a linha do tempo não diz quem relatou, justamente na evidência que diverge dos testes. | ![a04_v02](../assets/13_heuristica/a04_v02.png) | 2 | Todo episódio; o erro é silencioso e só aparece quando alguém consulta a linha do tempo. | Tornar "Relatado por" obrigatório e validar junto dos outros campos. |
+| V03 | H2 | Registrar episódio | "Data aproximada" pede dd/mm/aaaa. A família costuma lembrar "começo do mês" ou "semana passada", e o formato obriga a inventar um dia exato. | ![a04_v03](../assets/13_heuristica/a04_v03.png) | 1 | Contornável escolhendo um dia; o custo é uma data falsa na linha do tempo. | Aceitar mês/ano ou marcar a data como aproximada. |
+| V04 | H7 | Sugestão do modelo — confiabilidade baixa | Mapa de atenção num corte fixo, sem ajuste de opacidade nem troca de corte. O neurologista quer conferir a anatomia sob o destaque. | ![a04_v04](../assets/13_heuristica/a04_v04.png) | 2 | Recorrente nos casos que o neurologista revisa; dá para contornar no PACS. | Mostrar/ocultar o mapa e controle de opacidade (hipótese de P02, Entrega 3). |
+| V05 | H5 | Confirmar registro da decisão — neurologista | A confirmação mostra concordância, conclusão e conduta, mas não a divergência registrada nem as evidências marcadas, que são o centro da decisão no caso divergente (T04). | ![a04_v05](../assets/13_heuristica/a04_v05.png) | 2 | Toda decisão de caso divergente; o erro fica gravado sem edição. | Incluir divergência e evidências no resumo. |
+| V06 | H10 | Sugestão do modelo — confiabilidade baixa | Só a confiabilidade tem ⓘ. "Peso de cada modalidade", "ventrículos laterais" como fator e a nota sobre "pontos" e "valores médios do treino" ficam sem ajuda. | ![a04_v06](../assets/13_heuristica/a04_v06.png) | 2 | Toda sugestão; mesmo o especialista pode ler "pontos" como probabilidade final. | ⓘ nos demais termos, no formato da dica de confiabilidade. |
+| V07 | H5 | Registrar episódio | Nenhum campo indica ser obrigatório antes de tentar adicionar; o mesmo vale para o registro da decisão. | ![a04_v07](../assets/13_heuristica/a04_v07.png) | 2 | Primeiro uso de cada formulário; resolvido pelas mensagens, mas gera retrabalho. | Marcar os obrigatórios com *. |
+
+**Qualidade do relato:** o problema deve ser observável e localizado. Evite “interface confusa” sem dizer **o que**, **onde**, **quando** e **para quem**.
+
+### 6. Boas práticas — heurísticas não violadas (atividade didática)
+
+| Heurística sem violação | Exemplo no sistema | Evidência | Por que atende |
+|---|---|---|---|
+| H1 | Aviso de episódio incluído e selo "novo" | ![a04_bp_h1](../assets/13_heuristica/a04_bp_h1.png) | Confirma na hora que o episódio entrou e mostra onde. |
+| H3 | "Cancelar" no registro de episódio | ![a04_bp_h3](../assets/13_heuristica/a04_bp_h3.png) | Saída clara de um formulário aberto por engano. |
+| H6 | Linha do tempo com data, tipo e fonte de cada evidência | ![a04_bp_h6](../assets/13_heuristica/a04_bp_h6.png) | O neurologista vê escores, laudo, sugestão e episódios juntos, sem lembrar de outra tela (HTA T04, 2.1). |
+| H8 | Tela de decisão registrada | ![a04_bp_h8](../assets/13_heuristica/a04_bp_h8.png) | Mostra só o que foi decidido, com divergência e justificativa, sem repetir a sugestão inteira. |
+| H9 | Erro geral e mensagens por campo no registro da decisão | ![a04_bp_h9](../assets/13_heuristica/a04_bp_h9.png) | Linguagem simples, aponta o campo e diz o que preencher. |
 
 ## 7. Consolidação da equipe
 

@@ -114,28 +114,35 @@ Ao justificar, considere **frequência, impacto e persistência** do problema no
 
 ---
 
-## Avaliador A01 — {{nome}}
+## Avaliador A01 — Paulo Hudson Josué da Silva — 22.222.013-9
 
 ### 4. Matriz de cobertura das 10 heurísticas
 
 | Heurística | Telas/fluxos examinados | Houve violação? | IDs dos achados | Exemplo de boa prática se não violada |
 |---|---|---|---|---|
-| H1 | {{...}} | sim/não | {{V01...}} | {{...}} |
-| H2 | {{...}} | sim/não |  |  |
-| H3 | {{...}} | sim/não |  |  |
-| H4 | {{...}} | sim/não |  |  |
-| H5 | {{...}} | sim/não |  |  |
-| H6 | {{...}} | sim/não |  |  |
-| H7 | {{...}} | sim/não |  |  |
-| H8 | {{...}} | sim/não |  |  |
-| H9 | {{...}} | sim/não |  |  |
-| H10 | {{...}} | sim/não |  |  |
+| H1 | Lista de casos, Sugestão do modelo, Sugestão do modelo — análise não concluída, Registrar decisão — falha ao gravar, Acompanhar análise, Decisão registrada | sim | V01 | — |
+| H2 | Sugestão do modelo, Sugestão do modelo — dica de ajuda, Sugestão do modelo — confiabilidade baixa, Evidências do caso — parecer anterior | sim | V02 | — |
+| H3 | Registrar decisão, Confirmar registro da decisão, Registrar decisão — preenchida, Registrar parecer, Lista de casos — busca sem resultado | não | — | "Voltar e revisar" na confirmação devolve ao formulário com tudo preenchido (Confirmar registro da decisão) |
+| H4 | Lista de casos, Sugestão do modelo, Sugestão do modelo — confiabilidade baixa, Decisão registrada, Evidências do caso — parecer anterior | não | — | Abas e botão "Registrar decisão" no mesmo lugar em todos os casos (Sugestão do modelo, Sugestão do modelo — confiabilidade baixa, Evidências do caso — parecer anterior) |
+| H5 | Registrar decisão, Registrar decisão — campos pendentes, Registrar decisão — alerta de confiabilidade baixa, Confirmar registro da decisão, Registrar parecer, Registrar parecer — campos pendentes | sim | V03, V04 | — |
+| H6 | Registrar decisão, Registrar decisão — preenchida, Evidências do caso — parecer anterior | não | — | O painel de decisão repete paciente, código e confiabilidade e já lista as evidências do caso (Registrar decisão) |
+| H7 | Lista de casos, Lista de casos — busca sem resultado | sim | V05 | — |
+| H8 | Sugestão do modelo, Sugestão do modelo — confiabilidade baixa | sim | V06 | — |
+| H9 | Login — senha incorreta, Lista de casos — busca sem resultado, Registrar decisão — campos pendentes, Registrar decisão — falha ao gravar, Registrar parecer — campos pendentes | sim | V07 | — |
+| H10 | Sugestão do modelo, Sugestão do modelo — dica de ajuda, Sugestão do modelo — confiabilidade baixa | sim | V08 | — |
 
 ### 5. Declaração de violações
 
 | ID | Heurística | Tela/estado | Problema observado | Evidência | Severidade | Justificativa da severidade | Recomendação |
 |---|---|---|---|---|---:|---|---|
-| V01 | H1 | {{F02}} | {{o que ocorre, em que ação e qual consequência}} | ![print](../assets/13_heuristica/v01.svg) | 3 | {{frequência/impacto/persistência}} | {{correção específica}} |
+| V01 | H1 | Sugestão do modelo — análise não concluída | O selo ao lado do nome diz "Aguardando revisão", mas o status do caso logo abaixo e a lista (Lista de casos) dizem "Reenvio pendente". O médico não sabe se o caso espera por ele ou pelo setor de imagem. | ![a01_v01](../assets/13_heuristica/a01_v01.png) | 2 | Acontece em todo caso com falha de análise. O aviso amarelo esclarece, então o impacto é baixo, mas o selo é o primeiro sinal que o médico lê. | Um status só por caso, vindo da mesma fonte, no selo do cabeçalho e na lista. |
+| V02 | H2 | Sugestão do modelo | Termos de ML e siglas sem tradução para o clínico: "Fusão tardia: ResNet50 + Random Forest", "paciente de referência com os valores médios do treino (29%)", "ICV", "1 alelo ε4". | ![a01_v02](../assets/13_heuristica/a01_v02.png) | 2 | Aparece em toda sugestão. P01 não interpreta esses termos (Entrega 3); não trava a tarefa, mas atrapalha entender a explicação (H03). | Linguagem clínica ("ponto de partida: média dos pacientes do treino"), "volume intracraniano" por extenso e a arquitetura do modelo numa camada de detalhes técnicos. |
+| V03 | H5 | Registrar decisão / Registrar decisão — campos pendentes | Nada indica quais campos são obrigatórios; só "Divergência (opcional)" tem marcação. O médico descobre os obrigatórios ao tentar registrar (Registrar decisão — campos pendentes). O mesmo ocorre em Registrar parecer (Registrar parecer/Registrar parecer — campos pendentes). | ![a01_v03](../assets/13_heuristica/a01_v03.png) | 2 | Frequente no primeiro uso e corrigido fácil pelas mensagens; persiste até o usuário decorar o formulário. | Marcar os obrigatórios com * e legenda, como no MoLIC (conclusão*, conduta*, justificativa*). |
+| V04 | H5 | Confirmar registro da decisão | O resumo antes de gravar mostra concordância, conclusão e conduta, mas não as evidências marcadas nem a justificativa. Depois de confirmada a decisão não pode ser editada (Entrega 1, seção 8), e marcar a evidência errada é fácil. | ![a01_v04](../assets/13_heuristica/a01_v04.png) | 2 | Toda decisão passa por aqui; o erro só aparece em Consultar a decisão registrada, quando já não dá para corrigir. | Incluir no resumo as evidências marcadas e o começo da justificativa, como o M02 previa (resumo {concordância, conduta, evidências consideradas}). |
+| V05 | H7 | Lista de casos | A lista só tem busca por nome/código. Não dá para filtrar por status (ex.: só "Aguardando revisão"), embora o M02 tenha `u: filtrar por status`. | ![a01_v05](../assets/13_heuristica/a01_v05.png) | 1 | Com 5 casos não atrapalha; o impacto cresce com o volume real de casos [H]. | Filtro por status acima da tabela, ou ordenar a lista por status. |
+| V06 | H8 | Sugestão do modelo | A tela tem seis blocos e rola até ~1600 px. Em 1440 × 900 (linha tracejada), "Limites da sugestão" e "Dados enviados ao modelo" ficam abaixo da dobra, enquanto detalhes técnicos disputam espaço com o que importa para decidir. | ![a01_v06](../assets/13_heuristica/a01_v06.png) | 2 | Toda sugestão; P01 tem pouco tempo por consulta e pode não rolar até os limites. | Uma linha de limites junto da sugestão, com "ver mais", e os detalhes técnicos recolhidos. |
+| V07 | H9 | Login — senha incorreta | Depois do erro não há caminho para recuperar a senha. A mensagem diz "E-mail ou senha incorretos", mas só o campo senha fica vermelho, o que sugere que o problema é só a senha. | ![a01_v07](../assets/13_heuristica/a01_v07.png) | 2 | Raro, mas quando acontece o usuário fica sem saída dentro do sistema. | Incluir "Esqueci minha senha" e destacar os dois campos (ou nenhum) quando a mensagem não diz qual está errado. |
+| V08 | H10 | Sugestão do modelo | Só "Confiabilidade desta estimativa" tem ⓘ com explicação (Sugestão do modelo — dica de ajuda). Mapa de atenção, peso de cada modalidade, "pontos" e ICV não têm ajuda, embora o M02 preveja o glossário para mais termos. | ![a01_v08](../assets/13_heuristica/a01_v08.png) | 2 | Toda sugestão; quem não conhece o termo adivinha ou ignora (H03). | ⓘ nos demais termos da sugestão, no mesmo formato da dica de confiabilidade (o que é / o que não é). |
 
 **Qualidade do relato:** o problema deve ser observável e localizado. Evite “interface confusa” sem dizer **o que**, **onde**, **quando** e **para quem**.
 
@@ -143,7 +150,9 @@ Ao justificar, considere **frequência, impacto e persistência** do problema no
 
 | Heurística sem violação | Exemplo no sistema | Evidência | Por que atende |
 |---|---|---|---|
-| {{H4}} | {{...}} | {{print}} | {{...}} |
+| H3 | "Voltar e revisar" na confirmação do registro | ![a01_bp_h3](../assets/13_heuristica/a01_bp_h3.png) | Saída clara antes de uma ação que não pode ser desfeita; volta ao formulário sem perder o que foi digitado. |
+| H4 | Abas "Evidências do caso / Sugestão do modelo / Decisão" e botão "Registrar decisão" sempre no mesmo lugar | ![a01_bp_h4](../assets/13_heuristica/a01_bp_h4.png) | A mesma ação aparece no mesmo local e com o mesmo nome em todos os casos (Sugestão do modelo, Sugestão do modelo — confiabilidade baixa, Evidências do caso — parecer anterior). |
+| H6 | Cabeçalho do painel com paciente, código e confiabilidade; evidências do caso já listadas para marcar | ![a01_bp_h6](../assets/13_heuristica/a01_bp_h6.png) | O médico não precisa lembrar o que viu nas outras abas para justificar a decisão. |
 
 > Repita a seção para A02, A03... um avaliador por integrante.
 

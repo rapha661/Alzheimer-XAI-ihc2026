@@ -27,18 +27,24 @@ Dashboards, relatórios, filtros e CRUDs devem aparecer no modelo conceitual por
 
 Para cada cenário de problema, produza uma versão em que a solução já pode ser descrita. **Destaque claramente o texto alterado** em relação ao cenário original.
 
-### CI01 — {{título}}
+### CI01 — O laudo que registrou o que foi avaliado
 
-**Autor(a):** {{nome — matrícula}}  
-**Origem:** cenário problema {{C01}}
+**Autor(a):** Raphael Garavati Erbert — 22.123.014-7  
+**Origem:** cenário problema C01 — "O laudo que não disse nada" (P03, tarefa T02)
 
-{{cenário de interação com alterações marcadas}}
+*Em **negrito**, o texto novo ou alterado em relação ao cenário refinado C01 da Entrega 4; em ~~tachado~~, o texto retirado.*
+
+Numa quarta-feira à tarde, a Dra. Helena Siqueira Prado, radiologista de um serviço de telerradiologia, tem 41 exames na fila de laudos, vindos de hospitais diferentes. O serviço opera sob metas estritas de prazo por exame, monitoradas por relatórios de produtividade. Ela abre a ressonância de crânio de um paciente idoso. ~~O pedido diz apenas "RM de crânio — investigação de déficit cognitivo", e o campo de dados clínicos traz só a idade. Esses dados clínicos foram repassados de forma resumida pelo técnico do hospital de origem.~~ **Junto das imagens, o caso traz a pergunta clínica escrita pelo solicitante ("queixa de memória há cerca de um ano; distinguir declínio esperado para a idade de doença de Alzheimer") e um bloco de contexto clínico com idade, escolaridade e o MMSE mais recente, com a data de aplicação.** Helena percorre os cortes e nota que os hipocampos parecem um pouco reduzidos, mas não o suficiente para afirmar atrofia com segurança. Não há exame anterior para comparar. ~~Ela pensa em medir, mas fazer a medição à mão levaria um tempo que a fila não permite; o PACS do serviço dispõe apenas de ferramentas de medidas lineares, carecendo de volumetria automática para o hipocampo.~~ **Ela abre a análise do modelo, apresentada como segunda leitura: o volume hipocampal enviado ao modelo aparece com a proporção em relação ao volume intracraniano (ou marcado como "imputado", quando não foi informado), e o mapa de atenção aparece sobreposto a um corte axial. A tela informa que o mapa mostra onde o modelo se apoiou, e não uma lesão, e que o modelo não foi validado na população brasileira.** Enquanto analisa o caso, chegam exames de urgência (como suspeita de AVC) que ganham prioridade imediata na fila. **Helena suspende o laudo e, ao voltar, encontra o caso no ponto em que parou, com a anotação de dúvida que tinha deixado.** ~~Sem ferramentas objetivas e sem contexto clínico, Helena opta por escrever uma frase cautelosa ("Redução volumétrica hipocampal discreta... Correlacionar com dados clínicos") para se proteger de falsos positivos, sem dispor de um canal ágil para sanar a dúvida com o solicitante ou de auditoria interna que avalie o impacto dessa inconclusão no destino do paciente.~~ **Com a pergunta clínica e uma referência objetiva à mão, Helena descreve o achado e preenche, em campos próprios do laudo, o que avaliou, por qual método (inspeção visual e volume informado) e a dúvida que permanece. A conclusão continua sendo dela. Como a dúvida depende de um dado que só o solicitante tem, ela envia uma pergunta ligada ao próprio exame, sem travar a fila.** Libera o laudo e abre o próximo exame.
 
 ### Diferenças relevantes
 
 | Alteração | Por que foi necessária | Evidência/artefato que justifica |
 |---|---|---|
-| {{...}} | {{...}} | {{...}} |
+| A pergunta clínica e o contexto clínico mínimo acompanham o exame | Sem eles, a seleção de T02 recai em "prosseguir só com os dados recebidos", e a dúvida passa para a conclusão | H08; T02 HTA 1.2 e 1.3 (Entrega 5); C01 Q3 |
+| O volume hipocampal e o mapa de atenção aparecem como segunda leitura, sem regiões nomeadas nem percentil | A medida manual não cabe no prazo da fila; a referência objetiva não pode afirmar mais do que o modelo calcula | T02 HTA 2.3.3 e GOMS GOAL 2.6; Entrega 6, seção 5.2 (o que o modelo produz) |
+| O laudo suspenso preserva a etapa e a dúvida registrada | A urgência interrompe o laudo, e a dúvida não fica registrada em lugar nenhum | T02 CTT, operador `\|>`; C01 Q5 |
+| Campos do laudo para método e dúvida | A frase cautelosa devolve a dúvida ao médico clínico, que não interpreta RM | T02 HTA 3.3 (recomendação); P01 (Entrega 3) |
+| Pergunta ao solicitante ligada ao exame | Não há canal ágil com o solicitante | T02 HTA 1.3.1 (recomendação); C01 Q6 |
 
 ### CI02 — O parecer que ficou no caso
 
@@ -63,12 +69,17 @@ Hoje, o Sr. Ivo retorna à consulta acompanhado do filho, relatando piora percep
 
 ## 2. Design centrado na comunicação
 
-**Nome do cenário:** {{CI01}}
+**Nome do cenário:** CI01 — O laudo que registrou o que foi avaliado (Raphael Garavati Erbert)
 
 | Tópico > subtópico | Falas e signos envolvidos | Intenção/efeito esperado |
 |---|---|---|
-| {{objetivo}} | `U: ...` / `D: ...` | {{...}} |
-| > {{subtópico}} | {{...}} | {{...}} |
+| Laudar com contexto clínico e referência | `D: "Fila de laudos — 41 exames; urgências no topo"` / `U: abre o próximo exame` | Começar pelo exame sem perder a visão da fila |
+| > Ler a pergunta clínica | `D: "Pergunta clínica: distinguir declínio esperado para a idade de doença de Alzheimer"` · `D: "Contexto clínico: 72 anos · 11 anos de escolaridade · MMSE 25, aplicado em 03/09"` | A leitura do caso limítrofe parte da dúvida de quem pediu o exame |
+| > Consultar a referência objetiva | `U: abre "Análise do modelo (segunda leitura)"` / `D: "Hipocampo: 5.900 mm³ · 0,39% do volume intracraniano"` ou `D: "Hipocampo: imputado — valor estimado pelo modelo"` | Dar uma referência objetiva sem substituir a leitura; deixar claro quando o número foi estimado |
+| > Ver o mapa de atenção | `D: corte axial com o mapa de atenção sobreposto` · `D: "O mapa mostra onde o modelo se apoiou, não uma lesão"` / `U: compara o mapa com a própria leitura dos cortes` | Evitar que o destaque seja lido como achado anatômico |
+| > Retomar após interrupção | `D: "Urgência na fila — suspender este laudo?"` / `U: "Suspender"` · `D: "Laudo suspenso · dúvida anotada: volume limítrofe para a idade"` | Voltar ao caso no ponto em que parou |
+| > Registrar método e dúvida | `U: preenche "Método: inspeção visual + volume informado"` e `"Dúvida: redução discreta, sem exame anterior"` / `D: "Esses campos acompanham o laudo para o solicitante"` | O laudo diz o que foi avaliado, em vez de só pedir correlação clínica |
+| > Perguntar ao solicitante | `U: "Enviar pergunta ao solicitante"` / `D: "Pergunta enviada pelo exame — a resposta aparece neste caso"` | Resolver a dúvida sem travar a fila |
 
 **Nome do cenário:** CI02 — O parecer que ficou no caso (Paulo Hudson Josué da Silva)
 
@@ -90,6 +101,8 @@ Hoje, o Sr. Ivo retorna à consulta acompanhado do filho, relatando piora percep
 ## 3. Mapa de objetivos
 
 Cada integrante apresenta seu mapa e a equipe cria um **mapa consolidado**, eliminando duplicidades e resolvendo conflitos de nomenclatura.
+
+![Mapa de objetivos — Raphael Garavati Erbert (P03, CI01)](../assets/09_modelo_conceitual/mapa_objetivos_p03.svg)
 
 ![Mapa de objetivos — Paulo Hudson (P01, CI02)](../assets/09_modelo_conceitual/mapa_objetivos_p01.svg)
 

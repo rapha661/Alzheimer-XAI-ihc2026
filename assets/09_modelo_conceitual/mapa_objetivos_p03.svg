@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1128 352" width="1128" height="352" font-family="Arial, Helvetica, sans-serif">
+  <title>Mapa de objetivos — Raphael Garavati Erbert (P03, CI01)</title>
+  <rect width="1128" height="352" fill="#ffffff"/>
+  <text x="30" y="32" font-size="16" font-weight="bold">Mapa de objetivos — Raphael Garavati Erbert (P03, CI01)</text>
+  <line x1="629.6" y1="112" x2="629.6" y2="135.0" stroke="#555" stroke-width="1.2"/>
+  <line x1="226.2" y1="135.0" x2="1033.0" y2="135.0" stroke="#555" stroke-width="1.2"/>
+  <line x1="226.2" y1="135.0" x2="226.2" y2="158" stroke="#555" stroke-width="1.2"/>
+  <line x1="395.8" y1="135.0" x2="395.8" y2="158" stroke="#555" stroke-width="1.2"/>
+  <line x1="859.5" y1="135.0" x2="859.5" y2="158" stroke="#555" stroke-width="1.2"/>
+  <line x1="1033.0" y1="135.0" x2="1033.0" y2="158" stroke="#555" stroke-width="1.2"/>
+  <line x1="395.8" y1="212" x2="395.8" y2="235.0" stroke="#555" stroke-width="1.2"/>
+  <line x1="115.5" y1="235.0" x2="676.0" y2="235.0" stroke="#555" stroke-width="1.2"/>
+  <line x1="115.5" y1="235.0" x2="115.5" y2="258" stroke="#555" stroke-width="1.2"/>
+  <line x1="319.0" y1="235.0" x2="319.0" y2="258" stroke="#555" stroke-width="1.2"/>
+  <line x1="502.5" y1="235.0" x2="502.5" y2="258" stroke="#555" stroke-width="1.2"/>
+  <line x1="676.0" y1="235.0" x2="676.0" y2="258" stroke="#555" stroke-width="1.2"/>
+  <line x1="859.5" y1="212" x2="859.5" y2="235.0" stroke="#555" stroke-width="1.2"/>
+  <line x1="859.5" y1="235.0" x2="859.5" y2="258" stroke="#555" stroke-width="1.2"/>
+  <rect x="514.6" y="58" width="230" height="54" rx="9" fill="#eef4fb" stroke="#1f4e79" stroke-width="1.3"/>
+  <text x="629.6" y="82.0" text-anchor="middle" font-size="12.5" font-weight="bold">Laudar com contexto clínico e</text>
+  <text x="629.6" y="97.0" text-anchor="middle" font-size="12.5">referência objetiva (P03, CI01)</text>
+  <rect x="161.2" y="158" width="130" height="54" rx="9" fill="#ffffff" stroke="#333" stroke-width="1.3"/>
+  <text x="226.2" y="182.0" text-anchor="middle" font-size="12.5" font-weight="bold">O02 Localizar</text>
+  <text x="226.2" y="197.0" text-anchor="middle" font-size="12.5">o exame</text>
+  <rect x="307.2" y="158" width="177" height="54" rx="9" fill="#ffffff" stroke="#333" stroke-width="1.3"/>
+  <text x="395.8" y="182.0" text-anchor="middle" font-size="12.5" font-weight="bold">O10 Laudar com contexto</text>
+  <text x="395.8" y="197.0" text-anchor="middle" font-size="12.5">e referência</text>
+  <rect x="30.0" y="258" width="171" height="54" rx="9" fill="#ffffff" stroke="#333" stroke-width="1.3"/>
+  <text x="115.5" y="282.0" text-anchor="middle" font-size="12.5">Ler a pergunta clínica</text>
+  <text x="115.5" y="297.0" text-anchor="middle" font-size="12.5">e os dados mínimos</text>
+  <rect x="217.0" y="258" width="204" height="54" rx="9" fill="#ffffff" stroke="#333" stroke-width="1.3"/>
+  <text x="319.0" y="282.0" text-anchor="middle" font-size="12.5">Consultar volume hipocampal</text>
+  <text x="319.0" y="297.0" text-anchor="middle" font-size="12.5">e proporção do ICV</text>
+  <rect x="437.0" y="258" width="131" height="54" rx="9" fill="#ffffff" stroke="#333" stroke-width="1.3"/>
+  <text x="502.5" y="282.0" text-anchor="middle" font-size="12.5">Registrar método</text>
+  <text x="502.5" y="297.0" text-anchor="middle" font-size="12.5">e dúvida</text>
+  <rect x="584.0" y="258" width="184" height="54" rx="9" fill="#ffffff" stroke="#333" stroke-width="1.3"/>
+  <text x="676.0" y="282.0" text-anchor="middle" font-size="12.5">Perguntar ao solicitante</text>
+  <text x="676.0" y="297.0" text-anchor="middle" font-size="12.5">pelo próprio exame</text>
+  <rect x="767.5" y="158" width="184" height="54" rx="9" fill="#ffffff" stroke="#333" stroke-width="1.3"/>
+  <text x="859.5" y="182.0" text-anchor="middle" font-size="12.5" font-weight="bold">O06 Consultar a sugestão</text>
+  <text x="859.5" y="197.0" text-anchor="middle" font-size="12.5">como segunda leitura</text>
+  <rect x="784.0" y="258" width="151" height="54" rx="9" fill="#ffffff" stroke="#333" stroke-width="1.3"/>
+  <text x="859.5" y="282.0" text-anchor="middle" font-size="12.5">Comparar o mapa com</text>
+  <text x="859.5" y="297.0" text-anchor="middle" font-size="12.5">a própria leitura</text>
+  <rect x="967.5" y="158" width="131" height="54" rx="9" fill="#ffffff" stroke="#333" stroke-width="1.3"/>
+  <text x="1033.0" y="182.0" text-anchor="middle" font-size="12.5">Retomar o laudo</text>
+  <text x="1033.0" y="197.0" text-anchor="middle" font-size="12.5">após interrupção</text>
+</svg>

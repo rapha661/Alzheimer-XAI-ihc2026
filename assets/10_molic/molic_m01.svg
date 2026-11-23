@@ -1,5 +1,175 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="360" viewBox="0 0 960 360">
-<rect width="100%" height="100%" fill="#f6f8fa" stroke="#8c959f" stroke-width="4"/>
-<text x="480" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#24292f">PLACEHOLDER DE ARTEFATO</text>
-<text x="480" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#57606a">Substitua este arquivo pela evidência real da equipe.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="1611" viewBox="0 0 1040 1611" font-family="Arial, 'Liberation Sans', Helvetica, sans-serif" fill="#1f1f1f">
+<title>M01 — O laudo que registrou o que foi avaliado (CI01 · P03 · T02) — Raphael Garavati Erbert</title>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" fill="#1f1f1f"/></marker></defs>
+<rect width="100%" height="100%" fill="white"/>
+<text x="16" y="26" font-size="16" font-weight="bold">M01 — O laudo que registrou o que foi avaliado (CI01 · P03 · T02) — Raphael Garavati Erbert</text>
+<g transform="translate(0,40)">
+<path d="M480.0,29.0 L480.0,62.0" fill="none" stroke="#1f1f1f" stroke-width="1.3" marker-end="url(#arr)"/>
+<path d="M480.0,113.0 L480.0,156.0" fill="none" stroke="#1f1f1f" stroke-width="1.3" marker-end="url(#arr)"/>
+<path d="M489.0,165.0 L620.0,165.0 L620.0,95.0 L571.5,95.0" fill="none" stroke="#1f1f1f" stroke-width="1.3" stroke-dasharray="5,4" marker-end="url(#arr)"/>
+<path d="M480.0,174.0 L480.0,218.0" fill="none" stroke="#1f1f1f" stroke-width="1.3" marker-end="url(#arr)"/>
+<path d="M550.0,230.0 L671.0,230.0" fill="none" stroke="#1f1f1f" stroke-width="1.3" marker-end="url(#arr)"/>
+<path d="M480.0,242.0 L480.0,300.0" fill="none" stroke="#1f1f1f" stroke-width="1.3" marker-end="url(#arr)"/>
+<path d="M480.0,381.0 L480.0,480.0" fill="none" stroke="#1f1f1f" stroke-width="1.3" marker-end="url(#arr)"/>
+<path d="M630.0,525.0 L830.0,525.0 L830.0,571.0" fill="none" stroke="#1f1f1f" stroke-width="1.3" marker-end="url(#arr)"/>
+<path d="M821.0,580.0 L630.0,580.0" fill="none" stroke="#1f1f1f" stroke-width="1.3" stroke-dasharray="5,4" marker-end="url(#arr)"/>
+<path d="M830.0,589.0 L830.0,640.0" fill="none" stroke="#1f1f1f" stroke-width="1.3" marker-end="url(#arr)"/>
+<path d="M480.0,591.0 L480.0,860.0" fill="none" stroke="#1f1f1f" stroke-width="1.3" marker-end="url(#arr)"/>
+<path d="M830.0,781.0 L830.0,900.0 L639.0,900.0" fill="none" stroke="#1f1f1f" stroke-width="1.3" marker-end="url(#arr)"/>
+<path d="M639.0,960.0 L780.0,960.0 L780.0,1080.0" fill="none" stroke="#1f1f1f" stroke-width="1.3" marker-end="url(#arr)"/>
+<path d="M808.0,1161.0 L808.0,1213.0" fill="none" stroke="#1f1f1f" stroke-width="1.3" marker-end="url(#arr)"/>
+<path d="M824.0,1213.0 L824.0,1161.0" fill="none" stroke="#1f1f1f" stroke-width="1.3" stroke-dasharray="5,4" marker-end="url(#arr)"/>
+<path d="M817.0,1222.0 L960.0,1222.0 L960.0,930.0 L639.0,930.0" fill="none" stroke="#1f1f1f" stroke-width="1.3" marker-end="url(#arr)"/>
+<path d="M709.5,1110.0 L620.0,1110.0 L620.0,1016.0" fill="none" stroke="#1f1f1f" stroke-width="1.3" stroke-dasharray="5,4" marker-end="url(#arr)"/>
+<path d="M321.0,928.0 L209.0,928.0" fill="none" stroke="#1f1f1f" stroke-width="1.3" marker-end="url(#arr)"/>
+<path d="M191.0,928.0 L60.0,928.0 L60.0,230.0 L410.0,230.0" fill="none" stroke="#1f1f1f" stroke-width="1.3" marker-end="url(#arr)"/>
+<path d="M350.5,350.0 L150.0,350.0 L150.0,875.0 L321.0,875.0" fill="none" stroke="#1f1f1f" stroke-width="1.3" marker-end="url(#arr)"/>
+<path d="M488.0,1016.0 L488.0,1071.0" fill="none" stroke="#1f1f1f" stroke-width="1.3" marker-end="url(#arr)"/>
+<path d="M474.0,1071.0 L474.0,1016.0" fill="none" stroke="#1f1f1f" stroke-width="1.3" stroke-dasharray="5,4" marker-end="url(#arr)"/>
+<path d="M471.0,1080.0 L200.0,1080.0 L200.0,1150.0" fill="none" stroke="#1f1f1f" stroke-width="1.3" marker-end="url(#arr)"/>
+<path d="M86.5,1185.0 L30.0,1185.0 L30.0,990.0 L321.0,990.0" fill="none" stroke="#1f1f1f" stroke-width="1.3" marker-end="url(#arr)"/>
+<path d="M200.0,1231.0 L200.0,1271.0" fill="none" stroke="#1f1f1f" stroke-width="1.3" marker-end="url(#arr)"/>
+<path d="M209.0,1280.0 L450.0,1280.0 L450.0,1307.0" fill="none" stroke="#1f1f1f" stroke-width="1.3" marker-end="url(#arr)"/>
+<path d="M480.0,1089.0 L480.0,1307.0" fill="none" stroke="#1f1f1f" stroke-width="1.3" marker-end="url(#arr)"/>
+<path d="M460.0,1313.0 L460.0,1376.0" fill="none" stroke="#1f1f1f" stroke-width="1.3" marker-end="url(#arr)"/>
+<path d="M510.0,1313.0 L510.0,1345.0 L1000.0,1345.0 L1000.0,350.0 L609.5,350.0" fill="none" stroke="#1f1f1f" stroke-width="1.3" marker-end="url(#arr)"/>
+<circle cx="480.0" cy="20.0" r="9" fill="#1f1f1f"/>
+<rect x="388.5" y="62.0" width="183" height="51" rx="9" fill="white" stroke="#1f1f1f" stroke-width="1.4"/>
+<text x="480.0" y="79.0" text-anchor="middle" font-weight="bold" font-size="13">Entrar</text>
+<line x1="388.5" y1="87.0" x2="571.5" y2="87.0" stroke="#1f1f1f" stroke-width="1"/>
+<text x="397.5" y="101.0" font-size="12" xml:space="preserve">d+u: e-mail institucional, senha</text>
+<rect x="471.0" y="156.0" width="18" height="18" fill="#1f1f1f"/>
+<rect x="410.0" y="218.0" width="140" height="24" rx="12" fill="#c4c4c4" stroke="#555" stroke-width="1.2"/>
+<circle cx="680.0" cy="230.0" r="9" fill="white" stroke="#1f1f1f" stroke-width="1.5"/><circle cx="680.0" cy="230.0" r="5" fill="#1f1f1f"/>
+<rect x="350.5" y="300.0" width="259" height="81" rx="9" fill="white" stroke="#1f1f1f" stroke-width="1.4"/>
+<text x="480.0" y="317.0" text-anchor="middle" font-weight="bold" font-size="13">Localizar o exame na fila</text>
+<line x1="350.5" y1="325.0" x2="609.5" y2="325.0" stroke="#1f1f1f" stroke-width="1"/>
+<text x="359.5" y="339.0" font-size="12" xml:space="preserve">d: fila de laudos {paciente, serviço de origem,</text>
+<text x="359.5" y="354.0" font-size="12" xml:space="preserve">     prazo, urgência, laudo suspenso}</text>
+<text x="359.5" y="369.0" font-size="12" xml:space="preserve">d: exames urgentes no topo</text>
+<rect x="330.0" y="480.0" width="300" height="111" rx="9" fill="white" stroke="#1f1f1f" stroke-width="1.4"/>
+<text x="480.0" y="497.0" text-anchor="middle" font-weight="bold" font-size="13">Ler a pergunta clínica</text>
+<line x1="330.0" y1="505.0" x2="630.0" y2="505.0" stroke="#1f1f1f" stroke-width="1"/>
+<text x="339.0" y="519.0" font-size="12" xml:space="preserve">d: imagens do exame</text>
+<text x="339.0" y="534.0" font-size="12" xml:space="preserve">d: pergunta clínica do solicitante</text>
+<text x="339.0" y="549.0" font-size="12" xml:space="preserve">d: contexto clínico {idade, escolaridade,</text>
+<text x="339.0" y="564.0" font-size="12" xml:space="preserve">     MMSE / MoCA, com data de aplicação}</text>
+<text x="339.0" y="579.0" font-size="12" xml:space="preserve">d: resposta do solicitante, quando houver</text>
+<rect x="821.0" y="571.0" width="18" height="18" fill="#1f1f1f"/>
+<rect x="702.5" y="640.0" width="255" height="141" rx="9" fill="white" stroke="#1f1f1f" stroke-width="1.4"/>
+<text x="830.0" y="657.0" text-anchor="middle" font-weight="bold" font-size="13">Consultar a referência objetiva</text>
+<line x1="702.5" y1="665.0" x2="957.5" y2="665.0" stroke="#1f1f1f" stroke-width="1"/>
+<text x="711.5" y="679.0" font-size="12" xml:space="preserve">d: volume hipocampal {mm³ e % do volume</text>
+<text x="711.5" y="694.0" font-size="12" xml:space="preserve">     intracraniano, ou “imputado”}</text>
+<text x="711.5" y="709.0" font-size="12" xml:space="preserve">d: mapa de atenção sobre um corte axial:</text>
+<text x="711.5" y="724.0" font-size="12" xml:space="preserve">     onde o modelo se apoiou, não uma lesão</text>
+<text x="711.5" y="739.0" font-size="12" xml:space="preserve">d: limites da sugestão {treinado na ADNI,</text>
+<text x="711.5" y="754.0" font-size="12" xml:space="preserve">     não validado no Brasil}</text>
+<text x="711.5" y="769.0" font-size="12" xml:space="preserve">u: comparar com a própria leitura dos cortes</text>
+<rect x="321.0" y="860.0" width="318" height="156" rx="9" fill="white" stroke="#1f1f1f" stroke-width="1.4"/>
+<text x="480.0" y="877.0" text-anchor="middle" font-weight="bold" font-size="13">Registrar método e dúvida</text>
+<line x1="321.0" y1="885.0" x2="639.0" y2="885.0" stroke="#1f1f1f" stroke-width="1"/>
+<text x="330.0" y="899.0" font-size="12" xml:space="preserve">d: aviso de urgência na fila, quando houver</text>
+<text x="330.0" y="914.0" font-size="12" xml:space="preserve">d+u: achado {descrição}</text>
+<text x="330.0" y="929.0" font-size="12" xml:space="preserve">d+u: método de avaliação {inspeção visual,</text>
+<text x="330.0" y="944.0" font-size="12" xml:space="preserve">     escala visual, medida, volume informado}</text>
+<text x="330.0" y="959.0" font-size="12" xml:space="preserve">d+u: dúvida registrada {o que ficou incerto,</text>
+<text x="330.0" y="974.0" font-size="12" xml:space="preserve">     o que ajudaria a resolver}</text>
+<text x="330.0" y="989.0" font-size="12" xml:space="preserve">d+u: conclusão*</text>
+<text x="330.0" y="1004.0" font-size="12" xml:space="preserve">d: método e dúvida acompanham o laudo</text>
+<rect x="709.5" y="1080.0" width="221" height="81" rx="9" fill="white" stroke="#1f1f1f" stroke-width="1.4"/>
+<text x="820.0" y="1097.0" text-anchor="middle" font-weight="bold" font-size="13">Perguntar ao solicitante</text>
+<line x1="709.5" y1="1105.0" x2="930.5" y2="1105.0" stroke="#1f1f1f" stroke-width="1"/>
+<text x="718.5" y="1119.0" font-size="12" xml:space="preserve">d+u: pergunta* {texto}</text>
+<text x="718.5" y="1134.0" font-size="12" xml:space="preserve">d: a pergunta fica ligada a este exame</text>
+<text x="718.5" y="1149.0" font-size="12" xml:space="preserve">d: a resposta aparece neste caso</text>
+<rect x="799.0" y="1213.0" width="18" height="18" fill="#1f1f1f"/>
+<rect x="191.0" y="919.0" width="18" height="18" fill="#1f1f1f"/>
+<rect x="471.0" y="1071.0" width="18" height="18" fill="#1f1f1f"/>
+<rect x="86.5" y="1150.0" width="227" height="81" rx="9" fill="white" stroke="#1f1f1f" stroke-width="1.4"/>
+<text x="200.0" y="1167.0" text-anchor="middle" font-weight="bold" font-size="13">Confirmar liberação sem método</text>
+<line x1="86.5" y1="1175.0" x2="313.5" y2="1175.0" stroke="#1f1f1f" stroke-width="1"/>
+<text x="95.5" y="1189.0" font-size="12" xml:space="preserve">[AL] d: achado limítrofe sem método</text>
+<text x="95.5" y="1204.0" font-size="12" xml:space="preserve">     de avaliação registrado</text>
+<text x="95.5" y="1219.0" font-size="12" xml:space="preserve">d: o solicitante verá só a conclusão</text>
+<rect x="191.0" y="1271.0" width="18" height="18" fill="#1f1f1f"/>
+<rect x="435.0" y="1307.0" width="90" height="6" fill="#1f1f1f"/>
+<circle cx="460.0" cy="1385.0" r="9" fill="white" stroke="#1f1f1f" stroke-width="1.5"/><circle cx="460.0" cy="1385.0" r="5" fill="#1f1f1f"/>
+<text x="488.0" y="46.0" text-anchor="start" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">u: URL do sistema</text>
+<text x="472.0" y="140.0" text-anchor="end" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">u: entrar</text>
+<text x="628.0" y="128.0" text-anchor="start" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">[CE] d: e-mail ou</text>
+<text x="628.0" y="143.0" text-anchor="start" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">senha incorretos</text>
+<text x="488.0" y="202.0" text-anchor="start" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">d: acesso liberado</text>
+<text x="615.0" y="222.0" text-anchor="middle" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">u: sair</text>
+<text x="472.0" y="266.0" text-anchor="end" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">u: fila de laudos</text>
+<text x="472.0" y="281.0" text-anchor="end" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">gco: Localizar o exame</text>
+<text x="488.0" y="405.0" text-anchor="start" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">u: abrir o próximo exame</text>
+<text x="488.0" y="420.0" text-anchor="start" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">gco: Laudar com contexto</text>
+<text x="488.0" y="435.0" text-anchor="start" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">clínico e referência</text>
+<text x="650.0" y="478.0" text-anchor="start" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">u: abrir a análise do modelo</text>
+<text x="650.0" y="493.0" text-anchor="start" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">(segunda leitura)</text>
+<text x="650.0" y="508.0" text-anchor="start" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">gco: Consultar a referência objetiva</text>
+<text x="648.0" y="552.0" text-anchor="start" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">[CE] d: análise indisponível</text>
+<text x="648.0" y="567.0" text-anchor="start" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">{motivo da falha}</text>
+<text x="838.0" y="618.0" text-anchor="start" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">d: análise concluída</text>
+<text x="472.0" y="700.0" text-anchor="end" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">u: redigir o laudo</text>
+<text x="472.0" y="715.0" text-anchor="end" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">gco: Registrar método</text>
+<text x="472.0" y="730.0" text-anchor="end" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">e dúvida</text>
+<text x="838.0" y="803.0" text-anchor="start" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">u: redigir o laudo</text>
+<text x="838.0" y="818.0" text-anchor="start" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">gco: Registrar método</text>
+<text x="838.0" y="833.0" text-anchor="start" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">e dúvida</text>
+<text x="788.0" y="990.0" text-anchor="start" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">u: perguntar ao</text>
+<text x="788.0" y="1005.0" text-anchor="start" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">solicitante</text>
+<text x="788.0" y="1020.0" text-anchor="start" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">gco: Perguntar ao</text>
+<text x="788.0" y="1035.0" text-anchor="start" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">solicitante</text>
+<text x="800.0" y="1191.0" text-anchor="end" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">u: enviar pergunta</text>
+<text x="832.0" y="1183.0" text-anchor="start" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">[RA] d: escreva</text>
+<text x="832.0" y="1198.0" text-anchor="start" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">a pergunta</text>
+<text x="830.0" y="1250.0" text-anchor="start" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">d: pergunta enviada pelo exame;</text>
+<text x="830.0" y="1265.0" text-anchor="start" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">a fila não fica travada</text>
+<text x="632.0" y="1128.0" text-anchor="start" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">u: cancelar</text>
+<text x="222.0" y="905.0" text-anchor="start" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">u: suspender</text>
+<text x="222.0" y="920.0" text-anchor="start" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">o laudo</text>
+<text x="68.0" y="700.0" text-anchor="start" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">d: laudo suspenso;</text>
+<text x="68.0" y="715.0" text-anchor="start" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">etapa e dúvida</text>
+<text x="68.0" y="730.0" text-anchor="start" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">anotada</text>
+<text x="68.0" y="745.0" text-anchor="start" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">preservadas</text>
+<text x="158.0" y="420.0" text-anchor="start" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">precond: laudo suspenso</text>
+<text x="158.0" y="435.0" text-anchor="start" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">u: retomar o laudo suspenso</text>
+<text x="158.0" y="450.0" text-anchor="start" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">gco: Retomar após interrupção</text>
+<text x="158.0" y="465.0" text-anchor="start" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">d: laudo no ponto em que parou</text>
+<text x="496.0" y="1048.0" text-anchor="start" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">u: liberar o laudo</text>
+<text x="466.0" y="1038.0" text-anchor="end" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">[RA] d: conclusão obrigatória</text>
+<text x="212.0" y="1058.0" text-anchor="start" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">precond: achado limítrofe sem</text>
+<text x="212.0" y="1073.0" text-anchor="start" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">método de avaliação</text>
+<text x="100.0" y="982.0" text-anchor="start" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">u: completar o método</text>
+<text x="192.0" y="1261.0" text-anchor="end" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">u: liberar assim mesmo</text>
+<text x="226.0" y="1272.0" text-anchor="start" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">d: laudo liberado</text>
+<text x="488.0" y="1180.0" text-anchor="start" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">d: laudo liberado,</text>
+<text x="488.0" y="1195.0" text-anchor="start" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">com método e dúvida</text>
+<text x="452.0" y="1350.0" text-anchor="end" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">gcc: Laudar com contexto</text>
+<text x="452.0" y="1365.0" text-anchor="end" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">clínico e referência</text>
+<text x="700.0" y="1363.0" text-anchor="start" font-size="12" stroke="white" stroke-width="4" stroke-linejoin="round" paint-order="stroke" xml:space="preserve">u: abrir o próximo exame</text>
+</g>
+<g transform="translate(0,1464)"><line x1="10" y1="4" x2="1030" y2="4" stroke="#bbb"/>
+<text x="16" y="22" font-size="12.5" font-weight="bold">Legenda — notação MoLIC (Barbosa e Silva, 2010)</text>
+<circle cx="24" cy="42" r="7" fill="#1f1f1f"/>
+<text x="40" y="46" font-size="12">ponto de abertura</text>
+<circle cx="162.703125" cy="42" r="7" fill="white" stroke="#1f1f1f" stroke-width="1.3"/><circle cx="162.703125" cy="42" r="3.8" fill="#1f1f1f"/>
+<text x="178.703125" y="46" font-size="12">ponto de encerramento</text>
+<rect x="322.75" y="35" width="38" height="14" rx="7" fill="#c4c4c4" stroke="#555"/>
+<text x="368.75" y="46" font-size="12">acesso ubíquo</text>
+<rect x="466.78125" y="32" width="32" height="20" rx="5" fill="white" stroke="#1f1f1f"/><line x1="466.78125" y1="39" x2="498.78125" y2="39" stroke="#1f1f1f"/>
+<text x="506.78125" y="46" font-size="12">cena: tópico e diálogos</text>
+<rect x="650.5" y="35" width="14" height="14" fill="#1f1f1f"/>
+<text x="673.5" y="46" font-size="12">processo do sistema</text>
+<rect x="16" y="62" width="26" height="5" fill="#1f1f1f"/>
+<text x="48" y="68" font-size="12">encerramento de conversa sobre a meta (gcc)</text>
+<path d="M314.0625,64 L340.0625,64" stroke="#1f1f1f" stroke-width="1.3" marker-end="url(#arr)"/>
+<text x="348.0625" y="68" font-size="12">fala de transição</text>
+<path d="M456.09375,64 L482.09375,64" stroke="#1f1f1f" stroke-width="1.3" stroke-dasharray="5,4" marker-end="url(#arr)"/>
+<text x="490.09375" y="68" font-size="12">fala de ruptura ou de recuperação</text>
+<text x="16" y="90" font-size="12">u: fala do usuário · d: fala do preposto do designer · d+u: diálogo em que os dois falam · {…} signos · * obrigatório</text>
+<text x="16" y="107" font-size="12">gco / gcc: abertura / encerramento de conversa sobre a meta · precond: condição para a fala</text>
+<text x="16" y="124" font-size="12">[PP] prevenção passiva · [PA] prevenção ativa · [AL] alerta · [RA] recuperação apoiada · [CE] captura de erro</text></g>
 </svg>

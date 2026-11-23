@@ -23,19 +23,19 @@ Exemplos de conversas:
 
 Modele também rupturas plausíveis: entrada inválida, falha de processamento, ausência de resultado, permissão insuficiente, filtro sem resultados, conflito de alteração, cancelamento ou necessidade de recuperação.
 
-## M01 — {{nome do cenário/objetivo}}
+## M01 — O laudo que registrou o que foi avaliado
 
-**Autor(a):** {{nome — matrícula}}  
-**Cenário de interação de origem:** {{CI01}}  
-**Objetivo(s):** {{O01}}  
-**Tarefa(s) relacionada(s):** {{T01}}  
-**Signos relevantes:** {{...}}
+**Autor(a):** Raphael Garavati Erbert — 22.123.014-7  
+**Cenário de interação de origem:** CI01 — "O laudo que registrou o que foi avaliado"  
+**Objetivo(s):** O01, O02, O06, O10 (com o subobjetivo "Retomar após interrupção")  
+**Tarefa(s) relacionada(s):** T02 — Laudar uma RM de investigação cognitiva com atrofia hipocampal limítrofe, dentro do prazo da fila  
+**Signos relevantes:** pergunta clínica, MMSE / MoCA, escolaridade, motivo da falha, volume hipocampal, volume intracraniano, valor imputado, mapa de atenção, limites da sugestão, método de avaliação, dúvida registrada, pergunta ao solicitante
 
 ### Diagrama
 
 ![MoLIC M01](../assets/10_molic/molic_m01.svg)
 
-**Fonte editável:** {{adicione aqui o link para o arquivo `.drawio`, `.svg` editável ou outro formato utilizado pela equipe}}
+**Fonte editável:** [`molic_m01.svg`](../assets/10_molic/molic_m01.svg) — SVG em texto puro, editável no Inkscape ou em qualquer editor de texto
 
 ### Leitura do diagrama
 
@@ -43,30 +43,41 @@ Explique em texto o caminho principal e pelo menos os caminhos alternativos/rupt
 
 #### Caminho principal
 
-1. {{ponto de abertura → cena...}}
-2. {{...}}
+1. Ponto de abertura → **Entrar**: a radiologista informa e-mail institucional e senha; o processo do sistema libera o acesso e a conversa chega ao acesso ubíquo (O01).
+2. `u: fila de laudos` abre a conversa sobre **Localizar o exame na fila** (O02): o preposto mostra os exames com serviço de origem, prazo e urgência, com os urgentes no topo.
+3. `u: abrir o próximo exame` abre a conversa sobre a meta "Laudar com contexto clínico e referência" (O10) na cena **Ler a pergunta clínica**: junto das imagens, o preposto mostra a pergunta do solicitante e o contexto clínico (idade, escolaridade e MMSE com a data de aplicação).
+4. `u: abrir a análise do modelo (segunda leitura)` passa por um processo do sistema; com a análise concluída, a conversa vai para **Consultar a referência objetiva** (O06): volume hipocampal com a proporção do volume intracraniano (ou marcado como "imputado"), mapa de atenção sobre um corte axial com o aviso de que não indica lesão, e os limites do modelo. A radiologista compara com a própria leitura dos cortes.
+5. `u: redigir o laudo` leva a **Registrar método e dúvida**: a radiologista descreve o achado, marca o método de avaliação, registra a dúvida que permanece e escreve a conclusão. O preposto informa que método e dúvida acompanham o laudo.
+6. Como a dúvida depende de um dado do solicitante, `u: perguntar ao solicitante` abre **Perguntar ao solicitante**; depois de `u: enviar pergunta`, o processo confirma que a pergunta foi enviada pelo exame e a conversa volta ao laudo, sem travar a fila.
+7. `u: liberar o laudo` passa pelo processo do sistema, que responde `d: laudo liberado, com método e dúvida`. A conversa sobre a meta se encerra (gcc) e `u: abrir o próximo exame` devolve a radiologista à fila.
 
 #### Alternativas e rupturas
 
 | Situação | Onde ocorre | Como o usuário percebe | Caminho de recuperação/saída |
 |---|---|---|---|
-| {{dado inválido}} | {{...}} | {{fala/feedback}} | {{...}} |
+| E-mail ou senha incorretos | Entrar → processo de acesso | [CE] "E-mail ou senha incorretos" | Volta a Entrar para nova tentativa |
+| Análise do modelo indisponível (em andamento ou com falha) | Ler a pergunta clínica → processo antes da referência | [CE] o preposto informa o motivo da falha | Volta a Ler a pergunta clínica; a radiologista pode redigir o laudo sem a segunda leitura (`u: redigir o laudo` sai da própria cena) |
+| Volume hipocampal não informado no envio | Consultar a referência objetiva | O valor aparece marcado como "imputado", com o aviso nos limites da sugestão | Não é erro: a radiologista trata o número como estimativa e registra o método que de fato usou |
+| Exame urgente chega no meio do laudo | Registrar método e dúvida | Aviso de urgência na fila, dentro da cena | `u: suspender o laudo` → processo → `d: laudo suspenso; etapa e dúvida anotada preservadas` → fila. Depois, com o laudo suspenso, `u: retomar o laudo suspenso` volta a Registrar método e dúvida no ponto em que parou |
+| Conclusão não preenchida | Registrar método e dúvida → processo de liberação | [RA] "conclusão obrigatória" | Preencher a conclusão e liberar de novo |
+| Achado limítrofe sem método de avaliação | Registrar método e dúvida → processo de liberação | [AL] cena Confirmar liberação sem método: o solicitante verá só a conclusão | `u: completar o método` volta ao laudo; `u: liberar assim mesmo` libera — a decisão continua sendo da radiologista |
+| Pergunta enviada em branco | Perguntar ao solicitante → processo de envio | [RA] "escreva a pergunta" | Escrever a pergunta e enviar de novo |
+| Desistir da pergunta | Perguntar ao solicitante | `u: cancelar` | Volta a Registrar método e dúvida sem enviar nada |
 
 ### Checklist específico de modelagem
 
-- [ ] Existe **ponto de abertura** coerente com o início do objetivo.
-- [ ] As **cenas de conversa** representam tópicos/assuntos, não nomes de páginas apenas.
-- [ ] As transições/falas deixam claro o que o usuário ou o sistema comunica.
-- [ ] Há **ponto(s) de encerramento** para objetivos concluídos/abandonados quando aplicável.
-- [ ] Processamentos do sistema estão representados conforme a notação adotada em aula, sem “inventar” fala do usuário.
-- [ ] Rupturas (breakdowns) relevantes têm feedback e caminho de recuperação, não becos sem saída.
-- [ ] Acessos ubíquos/atalhos só aparecem quando semanticamente justificáveis.
-- [ ] O diagrama cobre caminhos alternativos importantes, e não apenas o “happy path”.
-- [ ] Nomes de objetivos, tópicos e signos são coerentes com a Entrega 9.
-- [ ] O diagrama é legível em tamanho normal no GitHub.
-- [ ] O MoLIC representa a conversa usuário–sistema, não o fluxo interno do algoritmo.
-- [ ] Processamento, filtros, administração, relatórios e históricos incluem retornos/rupturas quando relevantes.
-
+- [x] Existe **ponto de abertura** coerente com o início do objetivo.
+- [x] As **cenas de conversa** representam tópicos/assuntos, não nomes de páginas apenas.
+- [x] As transições/falas deixam claro o que o usuário ou o sistema comunica.
+- [x] Há **ponto(s) de encerramento** para objetivos concluídos/abandonados quando aplicável.
+- [x] Processamentos do sistema estão representados conforme a notação adotada em aula, sem “inventar” fala do usuário.
+- [x] Rupturas (breakdowns) relevantes têm feedback e caminho de recuperação, não becos sem saída.
+- [x] Acessos ubíquos/atalhos só aparecem quando semanticamente justificáveis.
+- [x] O diagrama cobre caminhos alternativos importantes, e não apenas o “happy path”.
+- [x] Nomes de objetivos, tópicos e signos são coerentes com a Entrega 9.
+- [x] O diagrama é legível em tamanho normal no GitHub.
+- [x] O MoLIC representa a conversa usuário–sistema, não o fluxo interno do algoritmo.
+- [x] Processamento, filtros, administração, relatórios e históricos incluem retornos/rupturas quando relevantes.
 > Repita M02, M03... para todos os integrantes.
 
 ## M02 — O parecer que ficou no caso

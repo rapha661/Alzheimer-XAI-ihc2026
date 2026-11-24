@@ -3,7 +3,7 @@
 **Projeto:** Protótipo de interface de apoio à investigação de Alzheimer com IA explicável, desenvolvido na disciplina CC8122 — Interação Humano-Computador (Centro Universitário FEI)  
 **Atividade:** teste de usabilidade  
 **Responsáveis:** Ana Carolina Lazzuri, Paulo Hudson Josué da Silva, Raphael Garavati Erbert e Nathan Gabriel da Fonseca Leite  
-**Contato institucional:** unifalazzuri@fei.edu.br
+**Contato institucional:** unifpsilva@fei.edu.br
 
 ## Convite e objetivo
 
@@ -36,3 +36,5 @@ Declaro que recebi informações suficientes sobre a atividade e concordo em par
 
 **Participante:** U01 — aceite da participação e da gravação de tela e áudio dado em voz ao fim da sessão e registrado na gravação (04:59), incluindo a autorização para publicar o vídeo com a sua voz  
 **Data:** 24/11/2026
+
+![Consentimento UT01](https://github.com/rapha661/Alzheimer-XAI-ihc2026/blob/main/assets/14_testes/Consentimento-UT01.png) 

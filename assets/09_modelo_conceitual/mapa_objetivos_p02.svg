@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1161 352" width="1161" height="352" font-family="Arial, Helvetica, sans-serif">
+  <title>Mapa de objetivos — Ana Carolina Lazzuri (P02, CI04)</title>
+  <rect width="1161" height="352" fill="#ffffff"/>
+  <text x="30" y="32" font-size="16" font-weight="bold">Mapa de objetivos — Ana Carolina Lazzuri (P02, CI04)</text>
+  <line x1="569.1" y1="112" x2="569.1" y2="135.0" stroke="#555" stroke-width="1.2"/>
+  <line x1="95.0" y1="135.0" x2="1043.2" y2="135.0" stroke="#555" stroke-width="1.2"/>
+  <line x1="95.0" y1="135.0" x2="95.0" y2="158" stroke="#555" stroke-width="1.2"/>
+  <line x1="261.5" y1="135.0" x2="261.5" y2="158" stroke="#555" stroke-width="1.2"/>
+  <line x1="570.0" y1="135.0" x2="570.0" y2="158" stroke="#555" stroke-width="1.2"/>
+  <line x1="856.8" y1="135.0" x2="856.8" y2="158" stroke="#555" stroke-width="1.2"/>
+  <line x1="1043.2" y1="135.0" x2="1043.2" y2="158" stroke="#555" stroke-width="1.2"/>
+  <line x1="261.5" y1="212" x2="261.5" y2="235.0" stroke="#555" stroke-width="1.2"/>
+  <line x1="166.5" y1="235.0" x2="356.5" y2="235.0" stroke="#555" stroke-width="1.2"/>
+  <line x1="166.5" y1="235.0" x2="166.5" y2="258" stroke="#555" stroke-width="1.2"/>
+  <line x1="356.5" y1="235.0" x2="356.5" y2="258" stroke="#555" stroke-width="1.2"/>
+  <line x1="570.0" y1="212" x2="570.0" y2="235.0" stroke="#555" stroke-width="1.2"/>
+  <line x1="570.0" y1="235.0" x2="570.0" y2="258" stroke="#555" stroke-width="1.2"/>
+  <line x1="856.8" y1="212" x2="856.8" y2="235.0" stroke="#555" stroke-width="1.2"/>
+  <line x1="770.0" y1="235.0" x2="943.5" y2="235.0" stroke="#555" stroke-width="1.2"/>
+  <line x1="770.0" y1="235.0" x2="770.0" y2="258" stroke="#555" stroke-width="1.2"/>
+  <line x1="943.5" y1="235.0" x2="943.5" y2="258" stroke="#555" stroke-width="1.2"/>
+  <rect x="440.6" y="58" width="257" height="54" rx="9" fill="#eef4fb" stroke="#1f4e79" stroke-width="1.3"/>
+  <text x="569.1" y="82.0" text-anchor="middle" font-size="12.5" font-weight="bold">Decidir a conduta diante de</text>
+  <text x="569.1" y="97.0" text-anchor="middle" font-size="12.5">evidências conflitantes (P02, CI04)</text>
+  <rect x="30.0" y="158" width="130" height="54" rx="9" fill="#ffffff" stroke="#333" stroke-width="1.3"/>
+  <text x="95.0" y="182.0" text-anchor="middle" font-size="12.5" font-weight="bold">O02 Localizar</text>
+  <text x="95.0" y="197.0" text-anchor="middle" font-size="12.5">o caso</text>
+  <rect x="176.0" y="158" width="171" height="54" rx="9" fill="#ffffff" stroke="#333" stroke-width="1.3"/>
+  <text x="261.5" y="182.0" text-anchor="middle" font-size="12.5" font-weight="bold">O09 Confrontar</text>
+  <text x="261.5" y="197.0" text-anchor="middle" font-size="12.5">evidências divergentes</text>
+  <rect x="94.5" y="258" width="144" height="54" rx="9" fill="#ffffff" stroke="#333" stroke-width="1.3"/>
+  <text x="166.5" y="282.0" text-anchor="middle" font-size="12.5">Registrar episódio</text>
+  <text x="166.5" y="297.0" text-anchor="middle" font-size="12.5">relatado, com data</text>
+  <rect x="254.5" y="258" width="204" height="54" rx="9" fill="#ffffff" stroke="#333" stroke-width="1.3"/>
+  <text x="356.5" y="282.0" text-anchor="middle" font-size="12.5">Ver escores, laudo e relato</text>
+  <text x="356.5" y="297.0" text-anchor="middle" font-size="12.5">lado a lado</text>
+  <rect x="498.0" y="158" width="144" height="54" rx="9" fill="#ffffff" stroke="#333" stroke-width="1.3"/>
+  <text x="570.0" y="182.0" text-anchor="middle" font-size="12.5" font-weight="bold">O06 Interpretar a</text>
+  <text x="570.0" y="197.0" text-anchor="middle" font-size="12.5">sugestão explicada</text>
+  <rect x="474.5" y="258" width="191" height="54" rx="9" fill="#ffffff" stroke="#333" stroke-width="1.3"/>
+  <text x="570.0" y="282.0" text-anchor="middle" font-size="12.5">Reconhecer o que o modelo</text>
+  <text x="570.0" y="297.0" text-anchor="middle" font-size="12.5">não avalia (autonomia)</text>
+  <rect x="774.8" y="158" width="164" height="54" rx="9" fill="#ffffff" stroke="#333" stroke-width="1.3"/>
+  <text x="856.8" y="182.0" text-anchor="middle" font-size="12.5" font-weight="bold">O11 Registrar decisão</text>
+  <text x="856.8" y="197.0" text-anchor="middle" font-size="12.5">e justificativa</text>
+  <rect x="681.5" y="258" width="177" height="54" rx="9" fill="#ffffff" stroke="#333" stroke-width="1.3"/>
+  <text x="770.0" y="282.0" text-anchor="middle" font-size="12.5">Registrar a divergência</text>
+  <text x="770.0" y="297.0" text-anchor="middle" font-size="12.5">encontrada</text>
+  <rect x="874.5" y="258" width="138" height="54" rx="9" fill="#ffffff" stroke="#333" stroke-width="1.3"/>
+  <text x="943.5" y="282.0" text-anchor="middle" font-size="12.5">Indicar avaliação</text>
+  <text x="943.5" y="297.0" text-anchor="middle" font-size="12.5">complementar</text>
+  <rect x="954.8" y="158" width="177" height="54" rx="9" fill="#ffffff" stroke="#333" stroke-width="1.3"/>
+  <text x="1043.2" y="182.0" text-anchor="middle" font-size="12.5" font-weight="bold">O12 Consultar a decisão</text>
+  <text x="1043.2" y="197.0" text-anchor="middle" font-size="12.5">registrada no retorno</text>
+</svg>

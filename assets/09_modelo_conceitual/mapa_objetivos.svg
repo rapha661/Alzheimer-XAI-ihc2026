@@ -1,5 +1,78 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="360" viewBox="0 0 960 360">
-<rect width="100%" height="100%" fill="#f6f8fa" stroke="#8c959f" stroke-width="4"/>
-<text x="480" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#24292f">PLACEHOLDER DE ARTEFATO</text>
-<text x="480" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#57606a">Substitua este arquivo pela evidência real da equipe.</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2202 352" width="2202" height="352" font-family="Arial, Helvetica, sans-serif">
+  <title>Mapa de objetivos consolidado — Equipe 08</title>
+  <rect width="2202" height="352" fill="#ffffff"/>
+  <text x="30" y="32" font-size="16" font-weight="bold">Mapa de objetivos consolidado — Equipe 08</text>
+  <line x1="1085.9" y1="112" x2="1085.9" y2="135.0" stroke="#555" stroke-width="1.2"/>
+  <line x1="271.5" y1="135.0" x2="1900.2" y2="135.0" stroke="#555" stroke-width="1.2"/>
+  <line x1="271.5" y1="135.0" x2="271.5" y2="158" stroke="#555" stroke-width="1.2"/>
+  <line x1="719.5" y1="135.0" x2="719.5" y2="158" stroke="#555" stroke-width="1.2"/>
+  <line x1="1242.2" y1="135.0" x2="1242.2" y2="158" stroke="#555" stroke-width="1.2"/>
+  <line x1="1900.2" y1="135.0" x2="1900.2" y2="158" stroke="#555" stroke-width="1.2"/>
+  <line x1="271.5" y1="212" x2="271.5" y2="235.0" stroke="#555" stroke-width="1.2"/>
+  <line x1="95.0" y1="235.0" x2="448.0" y2="235.0" stroke="#555" stroke-width="1.2"/>
+  <line x1="95.0" y1="235.0" x2="95.0" y2="258" stroke="#555" stroke-width="1.2"/>
+  <line x1="258.0" y1="235.0" x2="258.0" y2="258" stroke="#555" stroke-width="1.2"/>
+  <line x1="448.0" y1="235.0" x2="448.0" y2="258" stroke="#555" stroke-width="1.2"/>
+  <line x1="719.5" y1="212" x2="719.5" y2="235.0" stroke="#555" stroke-width="1.2"/>
+  <line x1="638.0" y1="235.0" x2="801.0" y2="235.0" stroke="#555" stroke-width="1.2"/>
+  <line x1="638.0" y1="235.0" x2="638.0" y2="258" stroke="#555" stroke-width="1.2"/>
+  <line x1="801.0" y1="235.0" x2="801.0" y2="258" stroke="#555" stroke-width="1.2"/>
+  <line x1="1242.2" y1="212" x2="1242.2" y2="235.0" stroke="#555" stroke-width="1.2"/>
+  <line x1="954.0" y1="235.0" x2="1530.5" y2="235.0" stroke="#555" stroke-width="1.2"/>
+  <line x1="954.0" y1="235.0" x2="954.0" y2="258" stroke="#555" stroke-width="1.2"/>
+  <line x1="1140.5" y1="235.0" x2="1140.5" y2="258" stroke="#555" stroke-width="1.2"/>
+  <line x1="1340.5" y1="235.0" x2="1340.5" y2="258" stroke="#555" stroke-width="1.2"/>
+  <line x1="1530.5" y1="235.0" x2="1530.5" y2="258" stroke="#555" stroke-width="1.2"/>
+  <line x1="1900.2" y1="212" x2="1900.2" y2="235.0" stroke="#555" stroke-width="1.2"/>
+  <line x1="1717.0" y1="235.0" x2="2083.5" y2="235.0" stroke="#555" stroke-width="1.2"/>
+  <line x1="1717.0" y1="235.0" x2="1717.0" y2="258" stroke="#555" stroke-width="1.2"/>
+  <line x1="1897.0" y1="235.0" x2="1897.0" y2="258" stroke="#555" stroke-width="1.2"/>
+  <line x1="2083.5" y1="235.0" x2="2083.5" y2="258" stroke="#555" stroke-width="1.2"/>
+  <rect x="924.4" y="58" width="323" height="54" rx="9" fill="#eef4fb" stroke="#1f4e79" stroke-width="1.3"/>
+  <text x="1085.9" y="82.0" text-anchor="middle" font-size="12.5" font-weight="bold">Decidir, com apoio de uma sugestão explicada,</text>
+  <text x="1085.9" y="97.0" text-anchor="middle" font-size="12.5">a conduta em casos de suspeita de Alzheimer</text>
+  <rect x="206.5" y="158" width="130" height="54" rx="9" fill="#f4f4f4" stroke="#333" stroke-width="1.3"/>
+  <text x="271.5" y="189.5" text-anchor="middle" font-size="12.5" font-weight="bold">Preparar o caso</text>
+  <rect x="30.0" y="258" width="130" height="54" rx="9" fill="#ffffff" stroke="#333" stroke-width="1.3"/>
+  <text x="95.0" y="282.0" text-anchor="middle" font-size="12.5" font-weight="bold">O03 Preparar e</text>
+  <text x="95.0" y="297.0" text-anchor="middle" font-size="12.5">enviar o exame</text>
+  <rect x="176.0" y="258" width="164" height="54" rx="9" fill="#ffffff" stroke="#333" stroke-width="1.3"/>
+  <text x="258.0" y="282.0" text-anchor="middle" font-size="12.5" font-weight="bold">O04 Conferir antes de</text>
+  <text x="258.0" y="297.0" text-anchor="middle" font-size="12.5">liberar o paciente</text>
+  <rect x="356.0" y="258" width="184" height="54" rx="9" fill="#ffffff" stroke="#333" stroke-width="1.3"/>
+  <text x="448.0" y="282.0" text-anchor="middle" font-size="12.5" font-weight="bold">O05 Acompanhar a análise</text>
+  <text x="448.0" y="297.0" text-anchor="middle" font-size="12.5">e tratar falhas</text>
+  <rect x="654.0" y="158" width="131" height="54" rx="9" fill="#f4f4f4" stroke="#333" stroke-width="1.3"/>
+  <text x="719.5" y="189.5" text-anchor="middle" font-size="12.5" font-weight="bold">Encontrar o caso</text>
+  <rect x="556.0" y="258" width="164" height="54" rx="9" fill="#ffffff" stroke="#333" stroke-width="1.3"/>
+  <text x="638.0" y="282.0" text-anchor="middle" font-size="12.5" font-weight="bold">O01 Acessar o sistema</text>
+  <text x="638.0" y="297.0" text-anchor="middle" font-size="12.5">com segurança</text>
+  <rect x="736.0" y="258" width="130" height="54" rx="9" fill="#ffffff" stroke="#333" stroke-width="1.3"/>
+  <text x="801.0" y="282.0" text-anchor="middle" font-size="12.5" font-weight="bold">O02 Localizar</text>
+  <text x="801.0" y="297.0" text-anchor="middle" font-size="12.5">o caso</text>
+  <rect x="1146.8" y="158" width="191" height="54" rx="9" fill="#f4f4f4" stroke="#333" stroke-width="1.3"/>
+  <text x="1242.2" y="189.5" text-anchor="middle" font-size="12.5" font-weight="bold">Compreender as evidências</text>
+  <rect x="882.0" y="258" width="144" height="54" rx="9" fill="#ffffff" stroke="#333" stroke-width="1.3"/>
+  <text x="954.0" y="282.0" text-anchor="middle" font-size="12.5" font-weight="bold">O06 Interpretar a</text>
+  <text x="954.0" y="297.0" text-anchor="middle" font-size="12.5">sugestão explicada</text>
+  <rect x="1042.0" y="258" width="197" height="54" rx="9" fill="#ffffff" stroke="#333" stroke-width="1.3"/>
+  <text x="1140.5" y="282.0" text-anchor="middle" font-size="12.5" font-weight="bold">O07 Recuperar o raciocínio</text>
+  <text x="1140.5" y="297.0" text-anchor="middle" font-size="12.5">do parecer anterior</text>
+  <rect x="1255.0" y="258" width="171" height="54" rx="9" fill="#ffffff" stroke="#333" stroke-width="1.3"/>
+  <text x="1340.5" y="282.0" text-anchor="middle" font-size="12.5" font-weight="bold">O09 Confrontar</text>
+  <text x="1340.5" y="297.0" text-anchor="middle" font-size="12.5">evidências divergentes</text>
+  <rect x="1442.0" y="258" width="177" height="54" rx="9" fill="#ffffff" stroke="#333" stroke-width="1.3"/>
+  <text x="1530.5" y="282.0" text-anchor="middle" font-size="12.5" font-weight="bold">O10 Laudar com contexto</text>
+  <text x="1530.5" y="297.0" text-anchor="middle" font-size="12.5">e referência</text>
+  <rect x="1824.8" y="158" width="151" height="54" rx="9" fill="#f4f4f4" stroke="#333" stroke-width="1.3"/>
+  <text x="1900.2" y="189.5" text-anchor="middle" font-size="12.5" font-weight="bold">Decidir e registrar</text>
+  <rect x="1635.0" y="258" width="164" height="54" rx="9" fill="#ffffff" stroke="#333" stroke-width="1.3"/>
+  <text x="1717.0" y="282.0" text-anchor="middle" font-size="12.5" font-weight="bold">O08 Registrar parecer</text>
+  <text x="1717.0" y="297.0" text-anchor="middle" font-size="12.5">de especialista</text>
+  <rect x="1815.0" y="258" width="164" height="54" rx="9" fill="#ffffff" stroke="#333" stroke-width="1.3"/>
+  <text x="1897.0" y="282.0" text-anchor="middle" font-size="12.5" font-weight="bold">O11 Registrar decisão</text>
+  <text x="1897.0" y="297.0" text-anchor="middle" font-size="12.5">e justificativa</text>
+  <rect x="1995.0" y="258" width="177" height="54" rx="9" fill="#ffffff" stroke="#333" stroke-width="1.3"/>
+  <text x="2083.5" y="282.0" text-anchor="middle" font-size="12.5" font-weight="bold">O12 Consultar a decisão</text>
+  <text x="2083.5" y="297.0" text-anchor="middle" font-size="12.5">registrada</text>
 </svg>

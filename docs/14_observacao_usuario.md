@@ -64,7 +64,7 @@ O fluxograma deve representar, no mínimo: planejamento → recrutamento → con
 
 | ID | Perfil | Critérios que justificam participação | Integrante responsável |
 |---|---|---|---|
-| U01 | {{perfil resumido}} — no papel de médico clínico (UT01) |  | Paulo Hudson Josué da Silva |
+| U01 | Estudante de TI, com formação e atuação em gestão — no papel de médico clínico (UT01) | Sem formação na área da saúde; nunca usou o protótipo; não é da equipe | Paulo Hudson Josué da Silva |
 | U02 | Engenheiro eletricista, ex-aluno da FEI — no papel de neurologista (UT02) | Sem formação na área da saúde; nunca usou o protótipo; não é da equipe | Ana Carolina Lazzuri |
 | U03 | {{perfil resumido}} — no papel de radiologista (UT03) |  | Raphael Garavati Erbert |
 | U04 | {{perfil resumido}} — no papel de técnico em radiologia (UT04) | | Nathan Gabriel da Fonseca Leite |
@@ -135,14 +135,87 @@ Tempo-limite de 5 minutos por tarefa. Se passar disso, a tarefa conta como falha
 
 ## C. Resultados — por participante
 
-### U01 — {{perfil resumido}}, no papel de médico clínico (UT01)
+### U01 — estudante de TI, no papel de médico clínico (UT01)
 
 | Tarefa | Grau de sucesso | Erros | Tipos de erro/dificuldade | Ajudas | Tempo | Satisfação | Evidência/observação |
 |---|---|---:|---|---:|---|---|---|
-| UT01 | total/parcial/falha | {{n}} | {{...}} | {{n}} | {{mm:ss}} | {{1–5}} | {{fala/comportamento}} |
+| UT01 | parcial | 1 | Abriu "Registrar parecer" e gravou o formulário; falou a data da reavaliação só ao ler a conduta já preenchida; não conhecia a sigla MMSE | 0 | 03:50 | 5 (coletada após a sessão) | Leu a conclusão do parecer em voz alta (01:42–01:50) |
 
-**Link da gravação (se autorizado):** {{...}}  
-**Resposta pós-teste:** {{...}}
+**Link da gravação (se autorizado):** [Gravação do U01](https://www.youtube.com/watch?v=s4iZQaoxC9U) — o participante autoriza o uso da gravação em 04:59  
+**Resposta pós-teste:** respostas enviadas por mensagem depois da sessão (imagem abaixo)
+
+![Pós-teste UT01](../assets/14_testes/Pos-teste-ut01.png)
+
+#### Perfil pré-teste
+
+Estudante de TI, com formação e atuação em gestão. Não tem conhecimento prévio da área da saúde. É um participante proxy: o resultado mostra se um leigo encontra a informação na tela e não equivale ao de um médico clínico. O perfil foi apresentado pelo moderador no início da gravação (00:14–00:34).
+
+#### Cenário apresentado
+
+O moderador apresentou o projeto e o protótipo (00:34–00:56) e leu o cenário UT01 (00:56–01:04): ele é o médico que atende o Sr. Ivo Bittencourt, que voltou com o filho relatando piora da memória; em agosto o paciente foi avaliado por um especialista; antes da consulta, deve descobrir o que o especialista concluiu e quando recomendou reavaliar o paciente. O cenário não indicou tela nem botão.
+
+#### Percurso observado
+
+Os tempos são do vídeo (mm:ss).
+
+- **01:00:** a lista de casos abre depois do login.
+- **01:14–01:16:** abre o caso do Sr. Ivo, na aba "Evidências do caso".
+- **01:16–01:58:** lê o status ("Aguardando revisão"), a última RM (12/11), o MMSE e o parecer do Dr. César Andrade de Melo, por telefone, de 29/08: conclusão e exames revisados. A recomendação do parecer, "Reavaliar em seis meses (fevereiro de 2027)", está na tela, mas não é lida em voz alta.
+- **01:59–02:07:** clica em "Registrar parecer", que abre o formulário já preenchido com o mesmo parecer, e clica em "Gravar parecer". Volta às evidências.
+- **02:10–02:48:** abre "Ver a sugestão do exame mais recente" e lê a sugestão do modelo; rola até "Dados enviados ao modelo".
+- **02:44–03:13:** alterna entre as abas "Decisão" ("Nenhuma decisão registrada ainda"), "Sugestão do modelo" e "Evidências do caso".
+- **03:16:** abre "Registrar decisão e justificativa", o que o cenário não pedia.
+- **03:19–03:31:** tenta marcar "Concordo" e "Compatível com Alzheimer"; os campos não respondem ao clique.
+- **03:48–03:52:** clica em "Registrar decisão" com o formulário vazio e recebe "Preencha os campos indicados para registrar".
+- **03:54:** ao clicar num campo, o protótipo preenche o formulário inteiro com outras escolhas: "Concordo parcialmente" e "Inconclusivo: encaminhar a especialista", com conduta e justificativa prontas.
+- **04:04–04:20:** lê a conduta e a justificativa preenchidas, incluindo a reavaliação prevista para fevereiro e a queda do MMSE de 26 para 23.
+- **04:24–04:36:** registra, vê a confirmação do registro e confirma; abre a decisão registrada.
+- **04:42–04:56:** clica em "Voltar aos casos". O protótipo não volta à lista: mostra de novo as evidências, com o status ainda "Aguardando revisão" (04:44), e passa pelo parecer, pelo registro e pela confirmação até a decisão registrada (04:56).
+- **04:54:** encerra com "É isso".
+
+#### Pensar em voz alta
+
+Ele falou em voz alta durante toda a tarefa. O moderador não interveio entre o fim do cenário (01:04) e o encerramento (04:54). As falas abaixo vêm da legenda da gravação, com o minuto:
+
+- "Aqui no caso sou o Marcos Andrade e o paciente Ivo, 71 anos de idade" (01:06)
+- "Com base aqui no painel a gente tem aqui o status aguardando a revisão" (01:14)
+- "Contato no caso aqui com o Dr. César Andrade Melo e telefone de 29/08" (01:32)
+- "Conclusão: [sem] fortes elementos para [Alzheimer] neste momento" (01:42)
+- "Temos a sugestão de modelo, no caso que seria compatível com Alzheimer" (02:20)
+- "Aqui as informações do paciente que ele usou para calcular" (02:38)
+- "Por enquanto isso é uma decisão. Mas acredito que seja isso" (02:50)
+- "Vai estar aqui anotado a decisão minha […] confirmando ali o Alzheimer ou não?" (03:06)
+- "Paciente aqui, ó, tava oculta, não tinha visto" (03:22)
+- "Ainda não consigo preencher" (03:28)
+- "Reavaliação prevista para fevereiro? O [MMSE] caiu de 26 para 23" (04:14)
+- "Voltar aos casos. É isso" (04:44–04:54)
+
+#### Análise do resultado
+
+O resultado foi **parcial**: cumpriu um item do critério de sucesso e o outro ficou incompleto.
+
+- **Item cumprido:** achou o parecer e leu a conclusão do especialista em voz alta (01:42), sem ajuda.
+- **Item incompleto:** a recomendação do parecer, "Reavaliar em seis meses (fevereiro de 2027)", estava na tela desde 01:16, mas ele não a leu. Só falou "reavaliação prevista para fevereiro" em 04:14, lendo a conduta que o protótipo preencheu no registro da decisão, e não como recomendação do especialista. Também não chegou a formular a resposta ao filho, que era o que o cenário pedia.
+- **Erro não crítico:** procurou o parecer no botão "Registrar parecer" e gravou o formulário já preenchido (01:59–02:07).
+- **Além da tarefa:** registrou uma decisão. As escolhas que ele tentou marcar ("Concordo", "Compatível com Alzheimer") foram trocadas pelo preenchimento do protótipo ("Concordo parcialmente", "Inconclusivo"), e ele confirmou o registro sem perceber a diferença.
+- **Dificuldade relatada:** não conhecia a sigla MMSE.
+
+Esses pontos aparecem nos achados AU04 a AU07 (seção E).
+
+#### Metas de usabilidade (Entrega 8)
+
+| Meta | Resultado do U01 na UT01 | Atingida? |
+|---|---|---|
+| MU01 — eficácia | Parcial, sem ajuda (0/1 com sucesso total) | não |
+| MU02 — erros críticos | 0 erros críticos | sim |
+| MU03 — eficiência | 03:50 (medida na UT02; aqui só referência) | — |
+| MU04 — satisfação | Nota 5 (meta ≥ 4) | sim, com ressalva |
+| MU05 — papel de apoio da IA | não medida na UT01 | — |
+| MU06 — elementos da explicação | não medida na UT01 | — |
+
+- **MU01:** faltou informar a data da reavaliação como recomendação do especialista.
+- **MU02:** ele não apontou a sugestão do modelo como a conclusão do especialista, que é o erro crítico ligado à UT01.
+- **MU04:** só a satisfação geral foi coletada, por mensagem e depois da sessão. Os itens de clareza e de facilidade previstos na meta não foram perguntados.
 
 > Repita para U02, U03...
 
@@ -245,7 +318,7 @@ Esses pontos aparecem nos achados AU01 a AU03 (seção E).
 
 | Tarefa | Taxa de sucesso | Tempo típico | Erros recorrentes | Satisfação | Meta atendida? | Problemas prioritários |
 |---|---:|---|---|---|---|---|
-| UT01 | {{x/1}} | {{mm:ss}} | {{...}} | {{1–5}} | sim/não | {{...}} |
+| UT01 | 0/1 total (1 parcial) | 03:50 | 1 erro não crítico (gravou o parecer de novo) | 5 | não (MU01) | Recomendação do parecer não lida; botão "Registrar parecer" confundido com o parecer; preenchimento simulado diferente do escolhido |
 | UT02 | 0/1 total (1 parcial) | 03:00 | nenhum erro | 5 | não (MU01, MU06) | Confiabilidade não percebida; pesos da explicação lidos errado |
 | UT03 | {{x/1}} | {{mm:ss}} | {{...}} | {{1–5}} | sim/não | {{...}} |
 | UT04 | {{x/1}} | {{mm:ss}} | {{...}} | {{1–5}} | sim/não | {{...}} |
@@ -259,7 +332,12 @@ Com um participante por tarefa, os resultados são contagens individuais (x/1), 
 | AU01 | Confiabilidade "Baixa" não percebida | UT02: 1/1 não citou; não abriu a ajuda | Alto | Mostrar o motivo junto da probabilidade | Figma, signos, MoLIC M04 |
 | AU02 | Peso dos dados clínicos lido como peso dos relatos da família | UT02: 1/1 + fala 03:21 | Alto | Renomear e listar os dados que entram | Figma, signos |
 | AU03 | "O que mais pesou" lido como frequência de casos; estágio da doença inferido | UT02: 1/1 + falas 03:39 e 04:06 | Médio | Frase-resumo e aviso de que não indica estágio | Figma, signos |
-| AU__ | {{achados de UT01, UT03 e UT04}} | {{...}} | {{...}} | {{...}} | {{...}} |
+| AU04 | Recomendação do parecer não percebida | UT01: 1/1 não leu "Reavaliar em seis meses (fevereiro de 2027)", na tela desde 01:16 | Alto | Destacar a recomendação e a data no topo do parecer | Figma, signos, MoLIC M02 |
+| AU05 | "Registrar parecer" confundido com o parecer existente | UT01: 1/1 abriu e gravou o formulário (01:59–02:07) | Médio | Formulário vazio e rótulo "Registrar novo parecer" | Figma |
+| AU06 | Registro confirmado sem conferir o resumo | UT01: tentou "Concordo" e "Compatível com Alzheimer" (03:19–03:31), registrou "Concordo parcialmente" e "Inconclusivo" (04:24–04:36) sem comentar | Médio | Destacar concordância e conclusão na confirmação | Figma, MoLIC M02 |
+| AU07 | "Voltar aos casos" não volta à lista; status não muda depois da decisão | UT01: 04:42–04:56 | Médio | Corrigir a ligação e o status no protótipo | Figma |
+| AU08 | Sigla MMSE sem explicação | UT01: pós-teste ("não conhecia o termo MMSE") | Baixo | Nome por extenso na primeira ocorrência e termo no glossário | Figma, signos |
+| AU__ | {{achados de UT03 e UT04}} | {{...}} | {{...}} | {{...}} | {{...}} |
 
 #### AU01 — confiabilidade "Baixa" não percebida
 
@@ -282,6 +360,36 @@ Com um participante por tarefa, os resultados são contagens individuais (x/1), 
   - abrir o bloco com uma frase-resumo, como "A ressonância foi o que mais puxou a sugestão para Alzheimer";
   - incluir em "O que o modelo não avalia" que ele não indica estágio nem progressão.
 
+#### AU04 — recomendação do parecer não percebida
+
+- **Evidência:** o U01 leu o especialista, a data, o canal e a conclusão do parecer (01:32–01:50), mas não a recomendação "Reavaliar em seis meses (fevereiro de 2027)", que estava no mesmo card desde 01:16. Só falou em fevereiro em 04:14, lendo a conduta preenchida no registro da decisão.
+- **Impacto:** alto. A data da reavaliação é metade da resposta que o filho pediu, e é a informação que o parecer registra para orientar o retorno (H06).
+- **Recomendação:** colocar a recomendação e a data em destaque no topo do card do parecer, junto da conclusão, e não como último item do card.
+
+#### AU05 — "Registrar parecer" confundido com o parecer existente
+
+- **Evidência:** procurando o parecer, ele clicou em "Registrar parecer" (01:59). O formulário abriu já preenchido com os dados do parecer de 29/08, e ele clicou em "Gravar parecer" (02:06).
+- **Impacto:** médio. Num sistema real, isso duplicaria o parecer no caso. O formulário preenchido também faz o botão parecer um "ver parecer".
+- **Recomendação:** abrir o formulário vazio e trocar o rótulo para "Registrar novo parecer".
+
+#### AU06 — registro confirmado sem conferir o resumo
+
+- **Evidência:** ele tentou marcar "Concordo" e "Compatível com Alzheimer" (03:19–03:31). O protótipo preencheu "Concordo parcialmente" e "Inconclusivo: encaminhar a especialista" (03:54). Ele leu a conduta e a justificativa (04:04–04:20) e confirmou o registro (04:24–04:36) sem comentar a diferença.
+- **Impacto:** médio. A troca foi causada pelo preenchimento simulado, que é limitação do protótipo. Mas a confirmação não serviu para ele conferir o que estava gravando, que é o papel dela (H5).
+- **Recomendação:** na confirmação, destacar concordância e conclusão. No protótipo, preencher o formulário com escolhas neutras ou com as que o participante clicar.
+
+#### AU07 — "Voltar aos casos" e status depois da decisão
+
+- **Evidência:** depois de registrar, ele clicou em "Voltar aos casos" (04:42). O protótipo não abriu a lista: mostrou as evidências com o status "Aguardando revisão" (04:44) e repassou parecer, registro e confirmação até a decisão registrada (04:56).
+- **Impacto:** médio. O participante não percebe que saiu do caso, e o status contradiz a decisão registrada como "Concluído".
+- **Recomendação:** corrigir a ligação de "Voltar aos casos" para a lista (UI02) e mostrar o status "Concluído" em todas as telas do caso depois do registro.
+
+#### AU08 — sigla MMSE sem explicação
+
+- **Evidência:** no pós-teste, o U01 disse que nenhum termo ficou sem sentido, "apenas não conhecia o termo MMSE".
+- **Impacto:** baixo para o público real, porque o médico clínico conhece a sigla.
+- **Recomendação:** escrever "MMSE (Mini-Exame do Estado Mental)" na primeira ocorrência e incluir o termo no glossário.
+
 ## F. Comparação com a avaliação heurística
 
 | Problema | Detectado na heurística? | Detectado por usuários? | O que aprendemos |
@@ -291,12 +399,16 @@ Com um participante por tarefa, os resultados são contagens individuais (x/1), 
 | Limites da sugestão abaixo da dobra (UT02) | sim — HC10 | não — U02 | Ele rolou até lá; não atrapalhou |
 | Mapa de atenção fixo, sem controles (UT02) | sim — HC01 | não observado | O U02 não interagiu com o mapa |
 | "Estimado" e "imputado" para o mesmo valor (UT02) | sim — HC04 | não observado | O U02 não comentou o hipocampo estimado |
-| Status do caso diferente entre telas; lista sem filtro (UT01) | sim — HC03, HC16 | {{sim/não}} | {{...}} |
+| Status do caso diferente entre telas; lista sem filtro (UT01) | sim — HC03, HC16 | parcial — U01 | O status ficou "Aguardando revisão" depois da decisão registrada (04:44), mas ele não comentou. A falta de filtro não apareceu: ele abriu o caso direto |
 | Método sem MTA; análise indisponível sem previsão; fila sem indicação de clique (UT03) | sim — HC02, HC11, HC19 | {{sim/não}} | {{...}} |
 | Identidade sem voltar; volumetria digitada; teste cognitivo em texto livre (UT04) | sim — HC12, HC13, HC14 | {{sim/não}} | {{...}} |
 | Peso dos dados clínicos lido como peso dos relatos (UT02) | não | sim — U02 | Ver AU02 |
 | Estágio da doença inferido da explicação (UT02) | não | sim — U02 | Ver AU03 |
-| {{problema que só apareceu com usuários em UT01, UT03 ou UT04}} | não | sim | {{...}} |
+| Resumo da confirmação não confere o que foi escolhido (UT01) | sim — V04 (A01) | sim — U01 | Ver AU06. O participante confirmou escolhas diferentes das que tentou marcar |
+| Recomendação do parecer não percebida (UT01) | não | sim — U01 | Ver AU04 |
+| "Registrar parecer" confundido com o parecer (UT01) | não | sim — U01 | Ver AU05 |
+| "Voltar aos casos" leva ao lugar errado (UT01) | não | sim — U01 | Ver AU07. Falha de ligação do protótipo |
+| {{problema que só apareceu com usuários em UT03 ou UT04}} | não | sim | {{...}} |
 
 ## G. Conclusão
 
@@ -311,16 +423,18 @@ A conclusão deve responder:
 **1. Metas atingidas.**
 
 - **UT02:** atingiu MU02 (nenhum erro crítico), MU04 (nota 5) e MU05 (entendeu que é sugestão, não diagnóstico). Não atingiu MU01 (sucesso parcial) nem MU06 (0 de 3 elementos). O tempo (03:00) fica dentro da referência da MU03.
-- **UT01, UT03 e UT04:** {{...}}
+- **UT01:** atingiu MU02 (nenhum erro crítico) e MU04 (nota 5). Não atingiu MU01 (sucesso parcial: achou a conclusão do especialista, mas não a data da reavaliação no parecer). O tempo foi 03:50, dentro do limite de 5 minutos.
+- **UT03 e UT04:** {{...}}
 
 **2. Problemas recorrentes.** {{a preencher quando houver os quatro resultados}}
 
 **3. O que surpreendeu.**
 
 - **UT02:** o participante entendeu bem o papel de apoio da IA, ajudado pelo aviso da tela. Mesmo assim, leu errado justamente a parte da explicação: confiabilidade, pesos e "O que mais pesou". Esses dois problemas de leitura (AU02, AU03) não tinham aparecido na avaliação heurística.
+- **UT01:** o participante achou o parecer em 15 segundos, mas leu só a conclusão e pulou a recomendação, que estava no mesmo card. Depois seguiu sozinho até registrar uma decisão que o cenário não pedia, e confirmou escolhas que não eram as dele sem perceber.
 - **Outras tarefas:** {{...}}
 
-**4. Mudanças prioritárias.** AU01 e AU02, porque levam a explicar o caso para a família de forma errada. {{incluir as de UT01, UT03 e UT04}}
+**4. Mudanças prioritárias.** AU01 e AU02, porque levam a explicar o caso para a família de forma errada, e AU04, porque a data da reavaliação é a informação que o parecer existe para guardar. {{incluir as de UT03 e UT04}}
 
 **5. Limitações.**
 

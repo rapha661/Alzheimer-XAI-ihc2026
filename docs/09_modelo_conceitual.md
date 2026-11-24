@@ -1,7 +1,7 @@
 # Entrega 9 — Modelo conceitual e design centrado na comunicação
 
 **Data:** 16/11/2026  
-**Status:** 🟨 em andamento  
+**Status:** 🟩 concluída  
 **Responsabilidade:** soluções individuais, com consolidação da equipe para mapa de objetivos e esquema de signos.
 
 ## Objetivo da atividade
@@ -185,11 +185,24 @@ Cada integrante apresenta seu mapa e a equipe cria um **mapa consolidado**, elim
 
 ![Mapa consolidado](../assets/09_modelo_conceitual/mapa_objetivos.svg)
 
+Na consolidação, "localizar o exame" (P03) e "localizar o caso" (P01, P02) viraram um só objetivo, O02, e "consultar a sugestão como segunda leitura" (P03) e "interpretar a sugestão explicada" (P01, P02) viraram O06. "Retomar o laudo após interrupção" (P03) ficou como subobjetivo de O10, porque só aparece na tarefa da radiologista.
+
 ### Dicionário de objetivos
 
 | ID | Objetivo | Persona(s) | Cenário(s) | Prioridade |
 |---|---|---|---|---|
-| O01 | {{...}} | {{P01}} | {{CI01}} | {{...}} |
+| O01 | Acessar o sistema com segurança, em estação compartilhada | P01, P02, P03, P04 | CI01, CI02, CI03, CI04 | média |
+| O02 | Localizar o caso ou o exame por nome, prontuário ou status | P01, P02, P03 | CI01, CI02, CI04 | alta |
+| O03 | Preparar e enviar o exame com os dados que o caso exige | P04 | CI03 | alta |
+| O04 | Conferir qualidade e completude antes de liberar o paciente | P04 | CI03 | alta |
+| O05 | Acompanhar a análise e tratar falhas sem redigitar dados | P04, P01 | CI03 | média |
+| O06 | Interpretar a sugestão explicada: probabilidade, confiabilidade, mapa de atenção, peso de cada modalidade, contribuição de cada variável e limites | P01, P02, P03 | CI01, CI02, CI04 | alta |
+| O07 | Recuperar o raciocínio de um parecer anterior | P01 | CI02 | alta |
+| O08 | Registrar parecer de especialista, com origem e critérios | P01, P02 | CI02 | alta |
+| O09 | Confrontar evidências divergentes (escores, laudo, sugestão e relato) | P02, P01 | CI04 | alta |
+| O10 | Laudar com contexto clínico e referência objetiva, registrando método e dúvida | P03 | CI01 | alta |
+| O11 | Registrar a decisão profissional, a justificativa e as evidências consideradas | P01, P02 | CI02, CI04 | alta |
+| O12 | Consultar a decisão registrada no caso concluído | P01, P02 | CI02, CI04 | média |
 
 ## 4. Esquema conceitual de signos
 
@@ -197,7 +210,52 @@ Consolide as informações em **uma tabela única**.
 
 | Grupo | Signo | Origem | Observações/semântica | Tipo de conteúdo | Restrição | Valor padrão | Prevenção | Recuperação |
 |---|---|---|---|---|---|---|---|---|
-| Credenciais | usuário | domínio | {{...}} | texto | não nulo | — | {{...}} | {{...}} |
+| Credenciais | e-mail institucional | domínio | Identifica o profissional que registra pareceres, laudos e decisões | texto | não nulo; formato de e-mail | — | PA: validação de formato | CE: "E-mail ou senha incorretos" |
+| Credenciais | senha | domínio | Segredo de acesso em estação compartilhada | texto oculto | não nulo | — | PP: indicação de requisitos | CE: "E-mail ou senha incorretos" |
+| Credenciais | sessão | aplicação | Acesso encerrado por inatividade, por causa de estações compartilhadas | estado | expira por inatividade | ativa ao entrar | PP: aviso antes de expirar | RA: entrar de novo e voltar ao caso |
+| Identificação do caso | paciente | domínio | Nome completo de quem fez o exame | texto | não nulo; ≥ 5 caracteres | — | PA: campo obrigatório | CE: mensagem no campo |
+| Identificação do caso | prontuário | domínio | Código do paciente no serviço | texto | não nulo; único | — | PA: busca por código | CE: "Nenhum caso encontrado" |
+| Identificação do caso | data de nascimento | domínio | Usada para conferir a identidade e derivar a idade | data | entre 18 e 110 anos atrás | — | PA: seletor de data com limite | CE: "Data fora do intervalo esperado" |
+| Identificação do caso | identidade confirmada | aplicação | Confirmação explícita, feita pelo técnico, de que pedido e prontuário são do mesmo paciente | sim/não | obrigatória antes do envio | não | PA: envio bloqueado sem confirmação | RA: corrigir o paciente antes do envio |
+| Identificação do caso | status do caso | aplicação | Aguardando revisão · Em análise · Concluído · Com falha | lista fechada | um por caso | Em análise (após envio) | PP: rótulo em texto, não só cor | — |
+| Identificação do caso | motivo da falha | aplicação | Explica, em linguagem do serviço, por que a análise não foi feita e o que fazer | texto | presente quando status = Com falha | — | — | RA: "Reenviar exame" com os dados mantidos |
+| Pedido e contexto clínico | pergunta clínica | domínio | Dúvida que o solicitante quer ver respondida pelo exame | texto | recomendada | — | PP: exemplo no campo | — |
+| Pedido e contexto clínico | escolaridade | domínio | Anos de estudo; também entra no modelo | número | 0 a 30 | — | PA: limite do campo | CE: "Máximo 30" |
+| Pedido e contexto clínico | MMSE / MoCA | domínio | Escore do teste cognitivo, com data de aplicação; contexto clínico que **não entra** no cálculo da sugestão | número + data | MMSE 0–30; MoCA 0–30 | — | PP: frase "não entra no cálculo da sugestão" junto do bloco | CE: valor fora da escala |
+| Pedido e contexto clínico | episódio relatado | domínio | Fato do dia a dia relatado por familiar, com data aproximada, atividade afetada e quem relatou | texto + data + lista | atividade em lista fechada | — | PA: lista de atividades (deslocamento, finanças, direção, outra) | RA: editar o episódio até o registro da decisão |
+| Entradas do modelo | RM T1 volumétrica | domínio | Série de ressonância usada pelo modelo; outras séries não servem | arquivo (DICOM .zip ou NIfTI) | tipo de série verificado na seleção | — | PA: leitura do cabeçalho na seleção do arquivo | CE: "A série enviada não é a T1 volumétrica" |
+| Entradas do modelo | genótipo APOE | domínio | O modelo usa o número de alelos ε4 | lista fechada | opcional | Não informado | PP: dica "o modelo usa o número de alelos ε4" | — |
+| Entradas do modelo | volume hipocampal | domínio | Soma dos hipocampos, em mm³, exibida também como proporção do volume intracraniano | número | positivo; opcional | — | PA: só números positivos | CE: "Deve ser positivo" |
+| Entradas do modelo | volume intracraniano | domínio | Referência para as proporções dos volumes | número | positivo; opcional | — | PA: só números positivos | CE: "Deve ser positivo" |
+| Entradas do modelo | valor imputado | aplicação | Valor que faltou e foi estimado pelo modelo a partir de casos parecidos | rótulo | aparece quando o campo veio vazio | — | PP: aviso nos limites da sugestão | — |
+| Aquisição e qualidade | sequência exigida | domínio | Sequência que o protocolo do serviço exige para a suspeita informada | lista | definida pelo serviço | conforme protocolo | PP: lista visível antes da aquisição | — |
+| Aquisição e qualidade | duração prevista | aplicação | Tempo estimado do protocolo, ao lado do horário do próximo paciente | duração | somente leitura | — | PP: comparação com a agenda | — |
+| Aquisição e qualidade | pendência obrigatória | aplicação | Item exigido que ainda falta (série, dado clínico, identidade) | lista | envio bloqueado enquanto houver pendência | — | PA: bloqueio do envio | RA: resolver a pendência com o paciente no setor |
+| Aquisição e qualidade | limitação registrada | domínio | Limitação de qualidade aceita pelo técnico (ex.: movimento em uma sequência), enviada com o estudo | texto | opcional | — | PP: sugestão de registrar quando houver repetição | — |
+| Resultado do modelo | sugestão do modelo | aplicação | Classe que o modelo favorece; apoio à decisão, não diagnóstico | rótulo | somente leitura | — | PP: rótulo "Sugestão do modelo" | — |
+| Resultado do modelo | probabilidade da classe | aplicação | Quanto o modelo favorece cada classe entre as alternativas retornadas (hoje normal × Alzheimer) | percentual por classe | soma 100%; somente leitura | — | PP: rótulo próprio, separado da confiabilidade | — |
+| Resultado do modelo | confiabilidade da estimativa | aplicação | Faixa (alta · moderada · baixa) que indica quanto a probabilidade é confiável naquele caso; limiares provisórios | lista fechada | somente leitura | — | PP: texto além da cor; PA: em faixa baixa, a justificativa precisa citar a evidência clínica | — |
+| Resultado do modelo | mapa de atenção | aplicação | Áreas de um corte axial em que o modelo mais se apoiou; não indica lesão nem região anatômica | imagem sobreposta | um corte por exame; sempre sobreposto | visível | PP: legenda "não indica lesão" | — |
+| Resultado do modelo | peso de cada modalidade | aplicação | Quanto a sugestão veio da imagem e quanto dos dados clínicos | percentual por modalidade | soma 100%; somente leitura | — | PP: termo explicado no glossário | — |
+| Resultado do modelo | contribuição por variável | aplicação | Quanto cada variável deslocou a probabilidade, em pontos, em direção a Normal ou a Alzheimer, a partir de um paciente de referência (média do treino); mostra o que pesou no modelo, não a causa da doença | lista de valores | somente leitura; ordenada pela maior contribuição | fator mais relevante em destaque | PP: aviso "não é a causa da doença" | — |
+| Resultado do modelo | limites da sugestão | domínio | Avisos do caso e do modelo (treinado na ADNI, não validado no Brasil, não avalia comprometimento leve, não avalia autonomia) | lista de textos | sempre visível junto da sugestão | — | PP: aviso fixo | — |
+| Parecer do especialista | parecer de especialista | domínio | Registro do raciocínio de outro profissional, separado das anotações de rotina | registro estruturado | autor, data, canal e conclusão obrigatórios | — | PA: campos obrigatórios | RA: adendo com o original visível (H15) |
+| Parecer do especialista | canal do parecer | domínio | Como o parecer foi obtido: telefone, consulta presencial ou sistema | lista fechada | obrigatório | — | PA: lista fechada | — |
+| Parecer do especialista | critérios considerados | domínio | Achados e testes que sustentaram a conclusão do especialista | lista de textos | ao menos um | — | PP: exemplos no campo | — |
+| Parecer do especialista | exames revisados | domínio | Exames que o especialista usou, ligados ao caso | lista de referências | — | — | PA: seleção entre os exames do caso | — |
+| Laudo | método de avaliação | domínio | Como o hipocampo foi avaliado: inspeção visual, escala visual, medida ou volume informado | lista fechada (múltipla) | recomendado em caso limítrofe | — | PP: lembrete em achado limítrofe | — |
+| Laudo | dúvida registrada | domínio | O que permaneceu incerto e o que ajudaria a resolver | texto | opcional | — | — | RA: preservada ao suspender o laudo |
+| Laudo | pergunta ao solicitante | domínio | Dúvida enviada pelo próprio exame, sem travar a fila | texto | — | — | — | RA: resposta aparece no caso |
+| Decisão profissional | concordância | domínio | Concordo · Concordo parcialmente · Discordo, em relação à sugestão | lista fechada | obrigatória | — | PA: escolha obrigatória | CE: "Indique se concorda com a sugestão" |
+| Decisão profissional | conclusão | domínio | Cognitivamente normal · Comprometimento cognitivo leve · Doença de Alzheimer provável · Inconclusivo | lista fechada | obrigatória; pode diferir da sugestão | a sugestão, quando "Concordo" | PP: aviso quando difere da sugestão com "Concordo" | CE: mensagem no campo |
+| Decisão profissional | conduta | domínio | O que será feito (novo exame, encaminhamento, avaliação complementar, reavaliação) | texto | obrigatória | — | PP: sugestões de conduta | — |
+| Decisão profissional | evidências consideradas | domínio | Fontes marcadas pelo médico (parecer, escores, laudo, sugestão, episódios) | lista de referências | — | — | PP: lista das fontes do caso | — |
+| Decisão profissional | justificativa | domínio | Raciocínio clínico do profissional | texto | ≥ 30 caracteres | — | PA: tamanho mínimo | CE: "A justificativa precisa ter ao menos 30 caracteres" |
+| Decisão profissional | divergência registrada | domínio | Conflito entre fontes identificado pelo médico (ex.: escores estáveis × episódios recentes) | texto | opcional | — | — | — |
+| Decisão profissional | decisão registrada | aplicação | Decisão gravada com autor e horário, ligada às evidências e ao parecer anterior | registro | não editável; correção por adendo com o original visível, em aberto (H15) | — | AL: confirmação antes de gravar | RA: adendo |
+| Apoio | termo do glossário | aplicação | Definição curta exibida no próprio termo (ex.: confiabilidade, mapa de atenção, ADNI) | texto | — | — | PP: explicação no ponto de uso | — |
+
+Siglas (Barbosa e Silva, 2010): **PP** — prevenção passiva (a interface explica para evitar o erro); **PA** — prevenção ativa (a interface impede a ação incorreta); **AL** — alerta (a interface descreve o risco e pede confirmação); **RA** — recuperação apoiada (depois do erro, a interface mostra como corrigir); **CE** — captura de erro (depois do erro, a interface informa o problema e, quando a correção é fora dela, o que fazer).
 
 ### Regras para os signos
 
@@ -210,14 +268,23 @@ Consolide as informações em **uma tabela única**.
 
 Quais objetivos/tópicos/signos deverão necessariamente aparecer nos diagramas MoLIC?
 
+Cada integrante modela na Entrega 10 o seu cenário, reutilizando os nomes desta entrega:
+
+- **Raphael (CI01):** tópicos "Laudar com contexto clínico e referência", "Consultar a referência objetiva", "Ver o mapa de atenção", "Retomar após interrupção", "Registrar método e dúvida" e "Perguntar ao solicitante" (O02, O06, O10). Signos obrigatórios: pergunta clínica, MMSE / MoCA, volume hipocampal, valor imputado, mapa de atenção, método de avaliação, dúvida registrada e pergunta ao solicitante. A suspensão por urgência precisa aparecer como ruptura com retorno ao ponto em que o laudo parou.
+- **Paulo (CI02):** tópicos "Registrar parecer de especialista", "Retomar o raciocínio do parecer anterior", "Interpretar a sugestão explicada" e "Registrar decisão e justificativa" (O02, O06, O07, O08, O11). Signos obrigatórios: parecer de especialista, canal do parecer, critérios considerados, exames revisados, MMSE / MoCA, probabilidade da classe, confiabilidade da estimativa, contribuição por variável, limites da sugestão, concordância, conduta, evidências consideradas, justificativa e decisão registrada.
+- **Nathan (CI03):** tópicos "Preparar e enviar o exame", "Conferir antes de liberar o paciente" e "Acompanhar a análise e tratar falhas" (O03, O04, O05). Signos obrigatórios: sequência exigida, duração prevista, identidade confirmada, RM T1 volumétrica, pendência obrigatória, limitação registrada, status do caso e motivo da falha. O bloqueio do envio com pendência e o "Reenviar exame" precisam aparecer como fala de recuperação.
+- **Ana (CI04):** tópicos "Confrontar evidências divergentes", "Interpretar a sugestão explicada" e "Registrar decisão e justificativa" (O06, O09, O11). Signos obrigatórios: episódio relatado, MMSE / MoCA, sugestão do modelo, probabilidade da classe, confiabilidade da estimativa, limites da sugestão (incluindo "não avalia autonomia"), conduta, divergência registrada e decisão registrada.
+
+Em todos os diagramas, "Acessar o sistema" (O01) e "Localizar o caso" (O02) entram como abertura comum, e a confirmação antes de gravar a decisão precisa aparecer como fala do preposto do designer, seguida da verificação de que o registro foi gravado.
+
 ## Checklist
 
-- [ ] Cenários de interação mostram alterações em relação aos cenários de problema.
-- [ ] Cada solução individual identifica autor e cenário de origem.
-- [ ] Tópicos/falas/signos são coerentes com objetivos do usuário.
-- [ ] Mapas individuais foram consolidados.
-- [ ] O esquema de signos está em uma tabela única e sem duplicações conceituais.
-- [ ] Nomes de objetivos/signos serão reutilizados na Entrega 10.
-- [ ] Em TCC técnico, signos representam conceitos do domínio compreensíveis ao usuário, não apenas variáveis/estruturas internas.
-- [ ] Padrões como dashboard, relatório, filtros, administração e CRUD possuem objetivos e signos correspondentes.
-- [ ] A interface comunica não só o resultado técnico, mas também seu significado para a tarefa.
+- [x] Cenários de interação mostram alterações em relação aos cenários de problema.
+- [x] Cada solução individual identifica autor e cenário de origem.
+- [x] Tópicos/falas/signos são coerentes com objetivos do usuário.
+- [x] Mapas individuais foram consolidados.
+- [x] O esquema de signos está em uma tabela única e sem duplicações conceituais.
+- [x] Nomes de objetivos/signos serão reutilizados na Entrega 10.
+- [x] Em TCC técnico, signos representam conceitos do domínio compreensíveis ao usuário, não apenas variáveis/estruturas internas.
+- [x] Padrões como dashboard, relatório, filtros, administração e CRUD possuem objetivos e signos correspondentes.
+- [x] A interface comunica não só o resultado técnico, mas também seu significado para a tarefa.

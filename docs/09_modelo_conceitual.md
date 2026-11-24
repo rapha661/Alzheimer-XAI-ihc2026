@@ -67,6 +67,31 @@ Hoje, o Sr. Ivo retorna à consulta acompanhado do filho, relatando piora percep
 | Probabilidade da classe e confiabilidade da estimativa como signos separados | Um percentual alto com confiabilidade baixa é o caso perigoso, e os dois eram lidos como uma coisa só | H03; Entrega 6, seção 5.2; Entrega 8, MU06 |
 | Decisão ligada ao parecer anterior, com as evidências marcadas | Sem a ligação, a próxima retomada repete o problema | T01 HTA 4; F05 (`RASTREABILIDADE.md`); H15 em aberto (correção por adendo) |
 
+### CI03 — O exame conferido antes da saída
+
+**Autor(a):** Nathan Gabriel da Fonseca Leite — 22.123.028-7  
+**Origem:** cenário problema C03 — "O exame que precisou ser refeito" (P04, tarefa T03)
+
+*Em **negrito**, o texto novo ou alterado em relação ao cenário refinado C03 da Entrega 4; em ~~tachado~~, o texto retirado.*
+
+Numa segunda-feira de manhã, Bruno Tavares Lima, técnico em radiologia, recebe no setor de imagem a Sra. Aparecida Souza, 74 anos, acompanhada do filho, Rogério. O pedido médico diz apenas "RM de crânio — investigação de déficit cognitivo". ~~Bruno usa o protocolo padrão de crânio que o setor aplica na maioria dos casos.~~ **Ao abrir o caso, Bruno vê, para a suspeita informada, as sequências que o protocolo do serviço exige — entre elas a T1 volumétrica — e os dados clínicos obrigatórios, além da duração prevista do protocolo ao lado do horário do próximo paciente.** Como a escala do aparelho opera com intervalos curtos entre pacientes, a margem de manobra para lidar com imprevistos é reduzida.
+
+Durante o exame, Dona Aparecida fica inquieta e mexe a cabeça várias vezes. Diante da movimentação, Bruno pondera as alternativas técnicas disponíveis em seu treinamento — como tentar orientar a paciente novamente ou aplicar contenções leves —, mas, percebendo o desconforto dela e pressionado pela agenda, Bruno repete apenas uma das sequências ~~e encerra o exame. Na tela do console, as imagens parecem visualmente aceitáveis. Depois que a paciente vai embora, Bruno envia o exame ao PACS e transcreve manualmente do prontuário as informações clínicas para a requisição de laudo — um procedimento sujeito a lapsos devido à digitação manual sob ritmo acelerado~~. **Antes de liberar a paciente, Bruno abre a conferência do caso. Ao selecionar o arquivo, a interface lê o cabeçalho da série e avisa que a T1 volumétrica não está entre as séries enviadas; a lista de pendências mostra também que o MMSE não consta da requisição. Os dados clínicos vêm do prontuário sem redigitação, e Bruno confirma a identidade da paciente comparando nome e data de nascimento com o pedido. Enquanto houver pendência obrigatória, o envio para laudo fica bloqueado. A interface aponta as pendências; decidir o que fazer com cada uma continua sendo de Bruno e, quando o protocolo exigir, do radiologista.** **Com a paciente ainda no aparelho, Bruno adquire a sequência volumétrica, registra a limitação de movimento observada em uma das outras sequências — que passa a acompanhar o estudo até quem lauda — e só então libera Dona Aparecida.**
+
+~~Três dias depois, o laudo volta com a observação "exame limitado por artefato de movimento; ausência de sequência volumétrica; dados clínicos incompletos". Como o fluxo operacional do serviço carece de um validador automatizado de qualidade de imagem no PACS logo após o escaneamento, a falha só é descoberta após a saída da paciente, tornando indispensável a reconvocação e gerando atraso de semanas no diagnóstico.~~ **Três dias depois, o laudo chega sem pedido de reconvocação, e a radiologista viu no próprio estudo a limitação registrada por Bruno. Se o envio tivesse falhado depois da saída da paciente, a mensagem diria em linguagem do serviço o que estava errado e ofereceria "Reenviar exame", mantendo os dados já preenchidos.**
+
+### Diferenças relevantes
+
+| Alteração | Por que foi necessária | Evidência/artefato que justifica |
+|---|---|---|
+| Sequências e dados obrigatórios apresentados antes da aquisição | A escolha do protocolo dependia da memória do técnico diante de um pedido genérico | T03 HTA 1.2 (recomendação); H10 (em aberto) |
+| Duração prevista ao lado do próximo horário | É o tempo restante que distingue repetir a sequência de encurtar o protocolo | T03 HTA 1.3; GOMS T03 2.A e 2.B; H09 (em aberto) |
+| Verificação do tipo de série na seleção do arquivo e lista de pendências antes da liberação, com envio bloqueado | Só antes da liberação a correção ainda é barata; depois, resta reconvocar | H07; T03 HTA 3; F03 e Entrega 6, seção 5.1 |
+| Dados clínicos sem redigitação, com identidade confirmada por pessoa | A transcrição é onde o escore se perde; a identidade precisa de confirmação explícita | T03 HTA 2.2.2 e 2.2.3; H13 |
+| Limitação aceita registrada e enviada com o estudo | A limitação não chegava a quem lauda | T03 HTA 2.1.3.3 |
+| A interface aponta pendências, mas a decisão é do técnico ou do radiologista | Não se sabe quais decisões pertencem a cada profissional; a interface não pode tomar decisão que não é dela | H11; feedback da Entrega 5 sobre T03 |
+| Mensagem de falha em linguagem do serviço e "Reenviar exame" | A tela de falha era um fim de caminho e obrigava a redigitar tudo | F04; Entrega 6, seção 5.1 |
+
 ### CI04 — A decisão com as evidências lado a lado
 
 **Autor(a):** Ana Carolina Lazzuri — 22.123.001-4  
@@ -117,6 +142,20 @@ Numa tarde de quinta-feira, o Dr. César Andrade de Melo, neurologista, atende o
 | Registrar decisão e justificativa | `U: escolhe "Concordo parcialmente", escreve a conduta e marca as evidências "Parecer de Neurologia" e "MMSE"` / `D: "A decisão será gravada com seu nome e horário e ficará ligada ao parecer de 29/08"` | Tornar a decisão rastreável e conectada ao raciocínio anterior |
 | > Conferir o registro | `U: "Registrar decisão"` / `D: "Decisão registrada · Dr. Marcos Andrade · 13/11, 10:42"` | Verificar que o objetivo foi atingido (operador de verificação do GOMS T01) |
 
+**Nome do cenário:** CI03 — O exame conferido antes da saída (Nathan Gabriel da Fonseca Leite)
+
+| Tópico > subtópico | Falas e signos envolvidos | Intenção/efeito esperado |
+|---|---|---|
+| Preparar e enviar o exame | `U: abre o caso a partir do pedido` / `D: "Suspeita informada: investigação de déficit cognitivo"` | Partir do pedido real, mesmo genérico |
+| > Ver o que o protocolo exige | `D: "Sequências exigidas: T1 volumétrica, …" · "Dados obrigatórios: idade, queixa, teste cognitivo"` | Não depender da memória para saber o que o caso exige |
+| > Comparar tempo e agenda | `D: "Duração prevista: 28 min · próximo paciente às 9h40"` | Decidir entre repetir e encurtar com o tempo à vista |
+| > Confirmar a identidade | `D: "Pedido: Aparecida Souza, 12/03/1952 · Prontuário: Aparecida Souza, 12/03/1952"` / `U: "Confirmo a identidade"` | Evitar associar o exame ao paciente errado |
+| Conferir antes de liberar o paciente | `U: seleciona o arquivo` / `D: "A série enviada não é a T1 volumétrica. Selecione a T1 volumétrica do mesmo exame."` | Detectar o problema enquanto ainda é possível corrigir |
+| > Resolver pendências | `D: "2 pendências obrigatórias: T1 volumétrica · teste cognitivo"` · `D: "Envio para laudo bloqueado até resolver"` | Impedir a saída do paciente com exame incompleto, sem decidir no lugar do técnico |
+| > Registrar limitação | `U: "Registrar limitação: movimento na sequência axial"` / `D: "A limitação acompanhará o estudo até quem lauda"` | Levar a limitação aceita para quem lê o exame |
+| Acompanhar a análise e tratar falhas | `D: "Analisando o exame — você pode sair desta tela"` | Saber que a análise está em andamento |
+| > Reenviar após falha | `D: "O arquivo enviado é uma sequência FLAIR; a análise precisa da T1 volumétrica do mesmo exame."` / `U: "Reenviar exame"` / `D: "Dados clínicos mantidos — selecione o novo arquivo"` | Corrigir sem redigitar e sem jargão do modelo |
+
 **Nome do cenário:** CI04 — A decisão com as evidências lado a lado (Ana Carolina Lazzuri)
 
 | Tópico > subtópico | Falas e signos envolvidos | Intenção/efeito esperado |
@@ -139,6 +178,8 @@ Cada integrante apresenta seu mapa e a equipe cria um **mapa consolidado**, elim
 ![Mapa de objetivos — Raphael Garavati Erbert (P03, CI01)](../assets/09_modelo_conceitual/mapa_objetivos_p03.svg)
 
 ![Mapa de objetivos — Paulo Hudson (P01, CI02)](../assets/09_modelo_conceitual/mapa_objetivos_p01.svg)
+
+![Mapa de objetivos — Nathan Gabriel da Fonseca Leite (P04, CI03)](../assets/09_modelo_conceitual/mapa_objetivos_p04.svg)
 
 ![Mapa de objetivos — Ana Carolina Lazzuri (P02, CI04)](../assets/09_modelo_conceitual/mapa_objetivos_p02.svg)
 

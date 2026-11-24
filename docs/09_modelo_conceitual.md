@@ -67,6 +67,27 @@ Hoje, o Sr. Ivo retorna à consulta acompanhado do filho, relatando piora percep
 | Probabilidade da classe e confiabilidade da estimativa como signos separados | Um percentual alto com confiabilidade baixa é o caso perigoso, e os dois eram lidos como uma coisa só | H03; Entrega 6, seção 5.2; Entrega 8, MU06 |
 | Decisão ligada ao parecer anterior, com as evidências marcadas | Sem a ligação, a próxima retomada repete o problema | T01 HTA 4; F05 (`RASTREABILIDADE.md`); H15 em aberto (correção por adendo) |
 
+### CI04 — A decisão com as evidências lado a lado
+
+**Autor(a):** Ana Carolina Lazzuri — 22.123.001-4  
+**Origem:** cenário problema C04 — "A dúvida sobre a autonomia do paciente" (P02, tarefa T04)
+
+*Em **negrito**, o texto novo ou alterado em relação ao cenário refinado C04 da Entrega 4; em ~~tachado~~, o texto retirado.*
+
+Numa tarde de quinta-feira, o Dr. César Andrade de Melo, neurologista, atende o Sr. Roberto Mendes, 76 anos, acompanhado de sua filha. Na consulta anterior, os testes cognitivos (MMSE) e o laudo de ressonância magnética indicavam um quadro limítrofe de declínio leve. No entanto, a filha relata episódios recentes preocupantes: o paciente se perdeu voltando da padaria e apresentou pequenos lapsos ao gerenciar contas domésticas, embora insista veementemente em continuar dirigindo seu automóvel. César precisa decidir se emite um laudo restritivo recomendando a suspensão da CNH e maior supervisão domiciliar. **Durante a consulta, ele registra no caso cada episódio relatado pela filha, com a data aproximada e a atividade afetada (deslocamento, finanças, direção).**
+
+~~Ele analisa os dados objetivos do prontuário, que mostram pontuação estável, confrontando-os com o relato empírico da filha. Na ausência de um protocolo padronizado no sistema para ponderar relatos subjetivos de familiares frente a métricas de exames de imagem, César precisa ponderar a decisão com base em sua experiência clínica pessoal.~~ **A tela de evidências mostra lado a lado a evolução do MMSE, a conclusão do laudo de MRI, a sugestão do modelo — com a probabilidade da classe e a confiabilidade da estimativa — e os episódios relatados em uma linha do tempo. Um aviso fixo junto da sugestão informa que o modelo analisa padrões de imagem e dados clínicos e não avalia capacidade funcional nem aptidão para dirigir. Com as fontes reunidas, César percebe que os episódios são posteriores ao último teste; a ponderação continua sendo dele.** Para mitigar o risco de uma restrição abrupta sem respaldo inequívoco, ele considera como alternativa solicitar uma avaliação neuropsicológica complementar antes de emitir um parecer definitivo. César pondera o impacto de restringir a autonomia de um paciente que ainda preserva lucidez parcial, equilibrando o risco severo de um acidente de trânsito com o dano psicológico de uma limitação precipitada. **Ele registra a conduta, as evidências que considerou e a divergência encontrada entre o relato e os escores.** ~~sabendo que a aceitação dessa conduta por parte da família e do paciente só poderá ser avaliada com segurança nos retornos dos meses seguintes~~ **A aceitação da conduta continua a ser acompanhada nos retornos, mas agora cada retorno parte do que foi decidido e por quê, e os novos episódios entram na mesma linha do tempo.**
+
+### Diferenças relevantes
+
+| Alteração | Por que foi necessária | Evidência/artefato que justifica |
+|---|---|---|
+| Episódios relatados registrados com data e atividade afetada | O relato era oral e ficava em texto livre, sem data | T04 HTA 1.1; Entrega 7, A02; `RASTREABILIDADE.md`, R04 |
+| Escores, laudo, sugestão e relato lado a lado | O confronto entre as fontes acontecia só no raciocínio do médico | T04 HTA 2.1 e CTT ("Confrontar as evidências" como tarefa do usuário) |
+| Aviso fixo de que o modelo não avalia autonomia | A sugestão não pode ser lida como resposta sobre dirigir ou morar sozinho | Feedback da Entrega 5 sobre T04; Entrega 8, restrições e MU02 |
+| Registro da conduta com evidências consideradas e divergência | O conflito entre avaliação objetiva e relato era registrado em texto livre | T04 HTA 4.2; C04 Q4 |
+| Retornos partem da decisão registrada | A aceitação da conduta só aparece nos retornos seguintes | C04 Q5; T04 HTA 3.3 |
+
 ## 2. Design centrado na comunicação
 
 **Nome do cenário:** CI01 — O laudo que registrou o que foi avaliado (Raphael Garavati Erbert)
@@ -96,6 +117,19 @@ Hoje, o Sr. Ivo retorna à consulta acompanhado do filho, relatando piora percep
 | Registrar decisão e justificativa | `U: escolhe "Concordo parcialmente", escreve a conduta e marca as evidências "Parecer de Neurologia" e "MMSE"` / `D: "A decisão será gravada com seu nome e horário e ficará ligada ao parecer de 29/08"` | Tornar a decisão rastreável e conectada ao raciocínio anterior |
 | > Conferir o registro | `U: "Registrar decisão"` / `D: "Decisão registrada · Dr. Marcos Andrade · 13/11, 10:42"` | Verificar que o objetivo foi atingido (operador de verificação do GOMS T01) |
 
+**Nome do cenário:** CI04 — A decisão com as evidências lado a lado (Ana Carolina Lazzuri)
+
+| Tópico > subtópico | Falas e signos envolvidos | Intenção/efeito esperado |
+|---|---|---|
+| Confrontar evidências divergentes | `U: abre o caso do Sr. Roberto` / `D: "Evidências do caso"` | Reunir as fontes num só lugar |
+| > Registrar episódio relatado | `U: "Adicionar episódio"` / `D: campos "Data aproximada", "Atividade afetada (deslocamento, finanças, direção, outra)", "Relatado por", "Descrição"` | Tirar o relato do texto livre e datá-lo |
+| > Ver as fontes lado a lado | `D: linha do tempo com "MMSE 27 (02/06) · 27 (13/11)", "Laudo de MRI: alterações limítrofes", episódios de 20/10 e 02/11` | Mostrar que os episódios são posteriores ao último teste |
+| Interpretar a sugestão explicada | `D: "Probabilidade da classe: 58% — padrão compatível com Alzheimer · Confiabilidade desta estimativa: baixa"` | Ler a sugestão com a confiabilidade ao lado |
+| > Reconhecer o que o modelo não avalia | `D: "O modelo analisa padrões de imagem e dados clínicos. Não avalia capacidade funcional nem aptidão para dirigir."` | Evitar que o score determine a conduta sobre a autonomia |
+| Registrar decisão e justificativa | `U: escreve a conduta "solicitar avaliação neuropsicológica antes de parecer sobre direção"` e marca as evidências | A decisão fica com as fontes que a sustentaram |
+| > Registrar a divergência | `U: preenche "Divergência: escores estáveis × episódios recentes relatados"` / `D: "A divergência aparecerá no próximo retorno"` | O retorno parte do conflito já identificado |
+| > Conferir o registro | `D: "Decisão registrada · Dr. César Andrade de Melo · 13/11, 15:20"` | Verificar que o registro foi gravado |
+
 **Convenção:** `U` = usuário; `D` = preposto do designer/sistema, conforme a abordagem de Engenharia Semiótica adotada na disciplina.
 
 ## 3. Mapa de objetivos
@@ -105,6 +139,8 @@ Cada integrante apresenta seu mapa e a equipe cria um **mapa consolidado**, elim
 ![Mapa de objetivos — Raphael Garavati Erbert (P03, CI01)](../assets/09_modelo_conceitual/mapa_objetivos_p03.svg)
 
 ![Mapa de objetivos — Paulo Hudson (P01, CI02)](../assets/09_modelo_conceitual/mapa_objetivos_p01.svg)
+
+![Mapa de objetivos — Ana Carolina Lazzuri (P02, CI04)](../assets/09_modelo_conceitual/mapa_objetivos_p02.svg)
 
 ![Mapa consolidado](../assets/09_modelo_conceitual/mapa_objetivos.svg)
 

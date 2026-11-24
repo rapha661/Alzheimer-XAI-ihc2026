@@ -82,7 +82,7 @@ Todos os participantes são proxies. Nenhum é profissional de saúde, e a equip
 
 ### Passo 3 — Consentimento e privacidade
 
-- Termo/registro de consentimento: [instrumentos.md — 1. Termo de consentimento](../assets/14_testes/instrumentos.md#1-termo-de-consentimento); aceite registrado {{forma: no início da gravação / por mensagem}}.
+- Termo/registro de consentimento: [Termo de consentimento](https://github.com/rapha661/Alzheimer-XAI-ihc2026/blob/main/instrumentos/termo_consentimento_modelo.md); aceite registrado {{forma: no início da gravação / por mensagem}}.
 - Gravação de tela/áudio/vídeo: sim, tela e áudio pela sala virtual, para conferir tempos, erros e falas depois da sessão.
 - Forma de anonimização: IDs `UT01`, `UT02`... no relatório e nas planilhas. Nos vídeos, o nome do participante aparece na sala virtual, por isso o link só é publicado com a autorização dele.
 - Local e período de armazenamento: vídeos no YouTube {{como não listados}}, com o link em cada participante na seção C. Planilhas de observação em `assets/14_testes/`.
@@ -119,7 +119,7 @@ Tempo-limite de 5 minutos por tarefa. Se passar disso, a tarefa conta como falha
 - Falas e reações (hesitação, volta de tela, clique no lugar errado) são anotadas na planilha de observação com o minuto da gravação.
 - Tempo, erros e ajudas são conferidos na gravação depois da sessão. Nenhum valor é estimado ou ajustado.
 - Logo após a tarefa, o participante dá notas de 1 a 5 para clareza, facilidade e satisfação geral (MU04).
-- As definições de sucesso, erro e ajuda foram combinadas antes da coleta e estão em [`instrumentos.md`](../assets/14_testes/instrumentos.md), junto com o termo, o pré-teste e o pós-teste.
+- As definições de sucesso, erro e ajuda foram combinadas antes da coleta e estão em [`instrumentos.md`](https://github.com/rapha661/Alzheimer-XAI-ihc2026/tree/main/instrumentos), junto com o termo, o pré-teste e o pós-teste.
 
 ### Passo 6 — Protocolo do moderador
 

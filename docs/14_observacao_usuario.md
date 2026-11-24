@@ -119,7 +119,7 @@ Tempo-limite de 5 minutos por tarefa. Se passar disso, a tarefa conta como falha
 - Falas e reações (hesitação, volta de tela, clique no lugar errado) são anotadas na planilha de observação com o minuto da gravação.
 - Tempo, erros e ajudas são conferidos na gravação depois da sessão. Nenhum valor é estimado ou ajustado.
 - Logo após a tarefa, o participante dá notas de 1 a 5 para clareza, facilidade e satisfação geral (MU04).
-- As definições de sucesso, erro e ajuda foram combinadas antes da coleta e estão em [`instrumentos.md`](https://github.com/rapha661/Alzheimer-XAI-ihc2026/tree/main/instrumentos), junto com o termo, o pré-teste e o pós-teste.
+- As definições de sucesso, erro e ajuda foram combinadas antes da coleta e estão em [`instrumentos.md`](https://github.com/rapha661/Alzheimer-XAI-ihc2026/tree/main/instrumentos), junto com o termo e o pós-teste.
 
 ### Passo 6 — Protocolo do moderador
 
@@ -154,6 +154,8 @@ Tempo-limite de 5 minutos por tarefa. Se passar disso, a tarefa conta como falha
 
 **Link da gravação (se autorizado):** [{{link da gravação}} ](https://www.youtube.com/watch?v=HkwDZDBbXOQ)  
 **Resposta pós-teste:** Vide imagem abaixo
+
+![pós-teste ut02](https://github.com/rapha661/Alzheimer-XAI-ihc2026/blob/main/assets/14_testes/Pos-teste-ut02.png)
 
 > **Observação sobre a gravação:** por um problema técnico, a voz do participante ficou baixa no vídeo. É necessário usar fone de ouvido para escutá-lo. As falas também estão nas legendas.
 

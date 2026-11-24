@@ -1,7 +1,7 @@
 # Entrega 10 — MoLIC
 
 **Data:** 20/11/2026  
-**Status:** 🟨 em andamento  
+**Status:** 🟩 concluída 
 **Responsabilidade:** 1 solução completa por integrante
 
 ## Objetivo da atividade
@@ -261,11 +261,69 @@ Explique em texto o caminho principal e pelo menos os caminhos alternativos/rupt
 
 | Objetivo | MoLIC que cobre | Lacunas/duplicidades | Decisão |
 |---|---|---|---|
-| O01 | M01 | {{...}} | {{...}} |
+| O01 | M01, M02, M03, M04 | Mesma abertura nos quatro. A expiração da sessão por inatividade (signo "sessão", Entrega 9) não foi modelada | Uma só conversa de entrada para todos os perfis (UI01, UI01b). A expiração da sessão fica registrada como lacuna |
+| O02 | M02, M04 (Localizar o caso); M01 (Localizar o exame na fila) | Mesma meta em duas cenas | Manter as duas: a conversa é a mesma, mas a fila de laudos mostra prazo, urgência e laudo suspenso, que só importam à radiologista. O M04 reaproveita as telas de busca do M02 |
+| O03 | M03 | As sequências exigidas dependem do protocolo do serviço, e quem pode alterá-lo segue em aberto (H10, H11) | O preposto mostra o que o protocolo exige; a decisão de mudar o protocolo não é atribuída à interface |
+| O04 | M03 | — | A conferência acontece antes da liberação do paciente; a fala `u: enviar para análise` só existe sem pendência obrigatória [PA] |
+| O05 | M03 | O médico também percebe uma análise com falha (M02, M04), mas o reenvio é do técnico | No médico, a falha é captura de erro com volta ao caso; o reenvio fica só no M03 |
+| O06 | M02, M04 (Interpretar a sugestão explicada); M01 (Consultar a referência objetiva) | Duplicidade intencional entre M02 e M04. O aviso "não avalia capacidade funcional nem aptidão para dirigir" só aparece no M04 | Uma cena "Interpretar a sugestão explicada" com as mesmas falas para médico clínico e neurologista; o aviso de autonomia acompanha a sugestão no caso do neurologista. Para a radiologista, a cena mostra só o que ela usa no laudo: volume, mapa e limites |
+| O07 | M02 | O parecer é recuperado no próprio caso; não há busca por pareceres | Manter dentro do caso, como na Entrega 9 |
+| O08 | M02 | Na Entrega 9, O08 inclui P02; no M02, quem registra é o médico que recebeu o parecer | O canal "sistema" cobre o caso em que o próprio especialista registra; não foi modelado à parte |
+| O09 | M04 | O M02 compara os escores (contexto clínico), mas não modela o confronto completo | O confronto com linha do tempo fica no M04; o M02 usa só o bloco de contexto clínico |
+| O10 | M01 | É o único objetivo da radiologista e não tinha tela antes desta entrega | O M01 define as telas da radiologista; ver "Preparação para o Figma" |
+| O11 | M02, M04 | Mesma cena nos dois. As evidências mudam: parecer de especialista no M02; episódios relatados e divergência no M04 | Um único formulário: a lista de evidências vem das fontes do caso, e "divergência registrada" é campo opcional. A correção depois de gravar segue em aberto (H15) |
+| O12 | M02, M04 | O retorno a um caso concluído é precondição nos dois diagramas | Consultar a decisão registrada é o ponto de verificação depois do registro e a porta de entrada no retorno do paciente |
 
 ### Preparação para o Figma
 
 Liste os estados/telas que serão necessários **a partir das conversas modeladas**, incluindo feedback, confirmação, erro e recuperação.
+
+| Cena ou fala no MoLIC | Estado/tela | Tipo |
+|---|---|---|
+| Entrar (M01–M04) | UI01 — Entrar | conversa |
+| [CE] e-mail ou senha incorretos | UI01b — E-mail ou senha incorretos | erro |
+| Localizar o caso (M02, M04) | UI02 — Casos; UI02d — Nenhum caso ainda | conversa + feedback |
+| [RA] nenhum caso encontrado; limpar a busca | UI02c — Busca sem resultado | recuperação |
+| Retomar o raciocínio do parecer anterior (M02) | UI10 — Evidências do caso: parecer anterior | conversa |
+| Registrar parecer de especialista (M02) | UI11 — Registrar parecer de especialista | conversa |
+| [RA] parecer sem campo obrigatório | UI11b — Parecer com campo obrigatório pendente | recuperação |
+| Interpretar a sugestão explicada (M02) | UI03 — Sugestão do modelo | conversa |
+| Consultar termo do glossário | UI03b — Termo do glossário aberto | apoio |
+| [CE] análise em andamento ou com falha | UI03c — Sugestão indisponível: análise com falha | erro |
+| Registrar decisão e justificativa (M02) | UI05 — Registrar decisão e justificativa; UI05h — Decisão preenchida | conversa |
+| [RA] decisão com campo obrigatório vazio | UI05b — Decisão com campos pendentes | recuperação |
+| [RA] não foi possível gravar; dados mantidos | UI05f — Falha ao gravar a decisão | erro + recuperação |
+| [AL] Confirmar o registro da decisão (M02) | UI05d — Confirmar o registro da decisão | confirmação |
+| Consultar a decisão registrada (M02) | UI09 — Decisão registrada | feedback |
+| Confrontar evidências divergentes (M04) | UI12 — Evidências do caso: linha do tempo | conversa |
+| Registrar episódio relatado (M04) | UI12b — Registrar episódio relatado; UI12e — Episódio preenchido | conversa |
+| [RA] episódio sem campo obrigatório | UI12c — Episódio com campo obrigatório pendente | recuperação |
+| `d: episódio incluído na linha do tempo` | UI12d — Episódio incluído na linha do tempo | feedback |
+| Interpretar a sugestão explicada, com [PP] de autonomia (M04) | UI04 — Sugestão com confiabilidade baixa | conversa + prevenção |
+| [PA] "concordo" com confiabilidade baixa | UI05c — "Concordo" com confiabilidade baixa | prevenção |
+| [AL] Confirmar o registro (M04) | UI05g — Confirmar o registro (neurologista | confirmação |
+| Consultar a decisão registrada (M04) | UI09b — Decisão registrada com divergência | feedback |
+| Localizar o exame na fila (M01) | UI13 — Fila de laudos; UI13b — Fila com urgência e laudo suspenso; UI13c — Fila depois de liberar o laudo | conversa + feedback |
+| Ler a pergunta clínica (M01) | UI14 — Ler a pergunta clínica | conversa |
+| [CE] análise do modelo indisponível | UI14b — Análise do modelo indisponível | erro |
+| Consultar a referência objetiva (M01) | UI15 — Consultar a referência objetiva | conversa |
+| Registrar método e dúvida (M01) | UI16 — Registrar método e dúvida; UI16b — Urgência chega durante o laudo; UI16e — Laudo após enviar a pergunta | conversa + feedback |
+| [RA] conclusão obrigatória | UI16c — Conclusão obrigatória | recuperação |
+| [AL] Confirmar liberação sem método | UI16d — Confirmar liberação sem método | confirmação |
+| Perguntar ao solicitante (M01) | UI17 — Perguntar ao solicitante | conversa |
+| [RA] pergunta em branco | UI17b — Pergunta em branco | recuperação |
+| Preparar e enviar o exame (M03) | UI06 — Preparar e enviar o exame | conversa |
+| Confirmar a identidade (M03) | UI06e — Confirmar a identidade | conversa |
+| `u: não confere` + [CE] envio bloqueado | UI06f — Identidade não confere | erro |
+| [RA] série que não é a T1 volumétrica | UI06c — Conferir antes de liberar: série errada | recuperação |
+| [PA] pendência obrigatória | UI06g — Conferir antes de liberar: pendência obrigatória | prevenção |
+| [RA] valor fora da faixa | UI06b — Conferir antes de liberar: valor fora da faixa | recuperação |
+| `d: série conferida` + pendências resolvidas | UI06d — Conferir antes de liberar: sem pendência | feedback |
+| [AL] Descartar o envio | UI06h — Descartar o envio | confirmação |
+| Acompanhar a análise (M03) | UI07 — Acompanhar a análise | feedback |
+| Tratar a falha da análise, com [CE] de reconvocação | UI08 — Tratar a falha da análise | erro + recuperação |
+| Reenviar após falha | UI08b — Reenviar após falha | recuperação |
+| [RA] arquivo errado no reenvio | UI08c — Reenvio com arquivo errado | recuperação |
 
 ## Erros frequentes a evitar
 

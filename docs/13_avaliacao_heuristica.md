@@ -1,7 +1,7 @@
 # Entrega 13 — Avaliação de IHC por inspeção heurística
 
 **Data:** 21/11/2026  
-**Status:** 🟨 em andamento  
+**Status:** 🟩 concluída  
 **Responsabilidade:** 1 avaliação completa por integrante, sobre todas as telas/estados relevantes do projeto.
 
 ## Objetivo da atividade
@@ -46,7 +46,7 @@ Em TCCs técnicos, observe especialmente se a interface comunica o estado do pro
 
 | Item | Definição |
 |---|---|
-| Versão avaliada | Protótipo da Entrega 11, estado de 21/11/2026 — {{link do protótipo}} |
+| Versão avaliada | Protótipo da Entrega 11, estado de 21/11/2026 — [link do protótipo](https://www.figma.com/design/wQIeoySFfUvRdhjPRIj1HJ/M-XAI-%E2%80%94-Entrega-11--prot%C3%B3tipo-?node-id=9-2&t=Yz9SznpQ3YgKnjLe-0) |
 | Telas/estados | 19 telas e 51 estados, dos 4 perfis (ver 2.1) |
 | Fluxos | M01, M02, M03 e M04 (ver 2.2) |
 | Dispositivo/viewport | Desktop, navegador, 1440 × 900 |
@@ -285,7 +285,27 @@ Problemas iguais ou muito semelhantes encontrados por avaliadores diferentes dev
 
 | ID consolidado | Achados individuais | Heurística | Problema | Severidade final | Prioridade | Responsável pela correção |
 |---|---|---|---|---:|---|---|
-| HC01 | V01(A01), V04(A02) | H1 | {{...}} | {{...}} | alta | {{...}} |
+| HC01 | V05(A02), V04(A04) | H7 | Mapa de atenção fixo num corte, sem mostrar/ocultar, opacidade ou troca de corte (Sugestão do modelo — confiabilidade baixa, Análise do modelo — segunda leitura) | 3 | alta | Raphael |
+| HC02 | V01(A02) | H2 | Lista de métodos do laudo sem escala visual (MTA) e medida linear (Redigir laudo) | 3 | alta | Raphael |
+| HC03 | V01(A01), V05(A03) | H4 | Status do caso diferente no cabeçalho ("Aguardando revisão") e na lista/tela do técnico ("Reenvio pendente") (Lista de casos, Sugestão do modelo — análise não concluída, Falha da análise) | 2 | média | Paulo |
+| HC04 | V06(A02), V01(A04) | H4 | Mesmo valor faltante chamado de "estimado" e "imputado" (Sugestão do modelo — confiabilidade baixa, Análise do modelo — segunda leitura) | 2 | média | Ana Carolina |
+| HC05 | V03(A01), V07(A04) | H5 | Campos obrigatórios só aparecem depois de tentar gravar (Registrar decisão, Registrar parecer, Registrar episódio) | 2 | média | Paulo |
+| HC06 | V04(A01), V05(A04) | H5 | Resumo de confirmação sem evidências, justificativa e divergência (Confirmar registro da decisão, Confirmar registro da decisão — neurologista) | 2 | alta | Paulo |
+| HC07 | V08(A01), V06(A04) | H10 | Ajuda contextual só em "Confiabilidade" (Sugestão do modelo, Sugestão do modelo — confiabilidade baixa) | 2 | média | Paulo |
+| HC08 | V07(A01), V06(A03) | H9 | Login sem recuperação de senha e destaque só na senha (Login — senha incorreta) | 2 | média | Nathan |
+| HC09 | V02(A01) | H2 | Jargão técnico na sugestão: fusão tardia, valores médios do treino, ICV, alelo (Sugestão do modelo, Sugestão do modelo — confiabilidade baixa) | 2 | média | Paulo |
+| HC10 | V06(A01) | H8 | Limites e dados enviados abaixo da dobra na sugestão (Sugestão do modelo) | 2 | média | Paulo |
+| HC11 | V04(A02) | H1 | Análise indisponível sem previsão nem aviso de atualização (Ler pergunta clínica — análise indisponível) | 2 | média | Raphael |
+| HC12 | V01(A03) | H3 | Identidade não confere sem opção de cancelar ou voltar (Novo exame — identidade não confere) | 2 | média | Nathan |
+| HC13 | V02(A03) | H5 | Volumetria digitada à mão (Novo exame — valor fora da faixa) | 2 | alta | Nathan |
+| HC14 | V03(A03) | H5 | Teste cognitivo em texto livre (Novo exame — pronto para enviar) | 2 | média | Nathan |
+| HC15 | V02(A04) | H5 | Episódio aceito sem "Relatado por" (Registrar episódio — campos pendentes) | 2 | alta | Ana Carolina |
+| HC16 | V05(A01) | H7 | Lista de casos sem filtro por status (Lista de casos) | 1 | baixa | Paulo |
+| HC17 | V02(A02) | H5 | Método "não disponível" como checkbox ativo (Redigir laudo) | 1 | baixa | Raphael |
+| HC18 | V03(A02) | H4 | Urgência com estilo de erro e "continuar" sem botão (Redigir laudo — aviso de urgência) | 1 | baixa | Raphael |
+| HC19 | V07(A02) | H4 | Linhas da fila sem indicação de clique (Fila de laudos) | 1 | baixa | Raphael |
+| HC20 | V04(A03) | H6 | Reenvio não mostra os dados mantidos (Reenviar após falha) | 1 | baixa | Nathan |
+| HC21 | V03(A04) | H2 | "Data aproximada" exige dia exato (Registrar episódio) | 1 | baixa | Ana Carolina |
 
 ## 8. Síntese e plano de melhoria
 
@@ -294,15 +314,58 @@ Problemas iguais ou muito semelhantes encontrados por avaliadores diferentes dev
 - Padrões recorrentes entre telas.
 - Correções que serão feitas antes/para a avaliação com usuários.
 
+**Quantidade.** 28 achados individuais viraram 21 problemas consolidados.
+
+| Heurística | Sev. 1 | Sev. 2 | Sev. 3 | Sev. 4 | Total |
+|---|---:|---:|---:|---:|---:|
+| H1 | 0 | 1 | 0 | 0 | 1 |
+| H2 | 1 | 1 | 1 | 0 | 3 |
+| H3 | 0 | 1 | 0 | 0 | 1 |
+| H4 | 2 | 2 | 0 | 0 | 4 |
+| H5 | 1 | 5 | 0 | 0 | 6 |
+| H6 | 1 | 0 | 0 | 0 | 1 |
+| H7 | 1 | 0 | 1 | 0 | 2 |
+| H8 | 0 | 1 | 0 | 0 | 1 |
+| H9 | 0 | 1 | 0 | 0 | 1 |
+| H10 | 0 | 1 | 0 | 0 | 1 |
+| **Total** | **6** | **13** | **2** | **0** | **21** |
+
+**Críticos/graves.** Nenhuma catástrofe (4). Os dois problemas graves (3) atingem o uso especialista da explicação: o mapa de atenção fixo (HC01) e a lista de métodos do laudo, que não tem os métodos que a radiologista usa (HC02). Nenhum impede o teste com usuários, mas os dois afetam diretamente as tarefas de P03 e P02.
+
+**Padrões recorrentes.**
+- O mesmo dado com nomes ou estados diferentes conforme a tela (HC03, HC04): a interface de cada persona foi pensada separada e o vocabulário não foi unificado.
+- Formulários que só revelam obrigatoriedade no erro (HC05, HC15) e resumos de confirmação que deixam de fora parte do que será gravado (HC06).
+- A explicação do modelo ainda carrega termos de ML sem tradução e com ajuda em um único termo (HC07, HC09), ponto que se liga à hipótese H03.
+- O que vai bem também se repete: mensagens de erro claras com o campo destacado, confirmação antes de gravar, dados mantidos depois de falha e linguagem própria de cada perfil.
+
+**Relação com os princípios e metas da Entrega 8.**
+
+| Princípio de interface (Entrega 8, 2.2) | Problemas | Metas · fator de Nielsen |
+|---|---|---|
+| Prevenção e recuperação de erros | HC05, HC06, HC12, HC13, HC14, HC15, HC17 | MU01, MU02 · baixa taxa de erros |
+| Consistência de controles, termos e estados | HC03, HC04, HC18, HC19 | MU02 · baixa taxa de erros |
+| Termos explicados no contexto e linguagem por papel | HC02, HC07, HC09, HC21 | MU05, MU06 · aprendizado |
+| Feedback de processamento e erro | HC08, HC11 | MU01 · aprendizado |
+| Profundidade por papel | HC01, HC10 | MU06 · eficiência |
+| Preservar o estado e permitir retomar | HC20 | MU01 · memorização |
+| Eficiência de uso | HC16 | MU03 · eficiência |
+
+**Prioridade.** A severidade mede o problema; a prioridade também considera a ordem dos fatores de Nielsen definida na Entrega 8 (3.3), em que baixa taxa de erros vem em primeiro lugar. Por isso HC06, HC13 e HC15, de severidade 2, ficaram com prioridade alta: os três deixam passar um erro que é gravado no caso sem aviso (decisão sem edição posterior, valor de volumetria dentro da faixa, episódio sem fonte).
+
+**Correções e avaliação com usuários.** O teste com usuários (Entrega 14) foi feito na mesma versão inspecionada aqui, sem corrigir os problemas antes. Assim, dá para comparar o que a inspeção encontrou com o que os participantes realmente sentiram (Entrega 14, seção F). Para o protótipo só foram ligadas as telas e a navegação que as tarefas precisavam. A ordem das correções fica assim:
+- **Primeiro:** HC06, HC13 e HC15, pela prioridade de prevenção de erros, e HC02, a inclusão de MTA e medida linear.
+- **Em seguida:** HC03, HC04 e HC05, de baixo custo, e os problemas confirmados no teste com usuários. HC01 e HC07 dependem do resultado da UT02, que passa pela tela da sugestão.
+- **Para a próxima versão:** os de severidade 1.
+
 ## Checklist
 
-- [ ] Cada integrante fez uma inspeção completa e identificada.
-- [ ] Todas as telas/estados relevantes foram examinados.
-- [ ] Estados administrativos, filtros, relatórios, históricos, processamento e erros foram incluídos quando existentes.
-- [ ] A inspeção avaliou a interface/protótipo, não o mérito técnico do algoritmo/modelo.
-- [ ] H1–H10 aparecem na matriz de cobertura de cada avaliador.
-- [ ] Parte de violações contém apenas violações, sem “forçar” exemplos.
-- [ ] Todo problema tem print/localização e contexto.
-- [ ] Severidade possui justificativa, não apenas número.
-- [ ] Recomendação resolve a causa ou reduz o impacto.
-- [ ] Achados duplicados foram consolidados ao final.
+- [x] Cada integrante fez uma inspeção completa e identificada.
+- [x] Todas as telas/estados relevantes foram examinados.
+- [x] Estados administrativos, filtros, relatórios, históricos, processamento e erros foram incluídos quando existentes.
+- [x] A inspeção avaliou a interface/protótipo, não o mérito técnico do algoritmo/modelo.
+- [x] H1–H10 aparecem na matriz de cobertura de cada avaliador.
+- [x] Parte de violações contém apenas violações, sem “forçar” exemplos.
+- [x] Todo problema tem print/localização e contexto.
+- [x] Severidade possui justificativa, não apenas número.
+- [x] Recomendação resolve a causa ou reduz o impacto.
+- [x] Achados duplicados foram consolidados ao final.

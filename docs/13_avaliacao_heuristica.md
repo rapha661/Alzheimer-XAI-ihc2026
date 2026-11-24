@@ -154,7 +154,46 @@ Ao justificar, considere **frequência, impacto e persistência** do problema no
 | H4 | Abas "Evidências do caso / Sugestão do modelo / Decisão" e botão "Registrar decisão" sempre no mesmo lugar | ![a01_bp_h4](../assets/13_heuristica/a01_bp_h4.png) | A mesma ação aparece no mesmo local e com o mesmo nome em todos os casos (Sugestão do modelo, Sugestão do modelo — confiabilidade baixa, Evidências do caso — parecer anterior). |
 | H6 | Cabeçalho do painel com paciente, código e confiabilidade; evidências do caso já listadas para marcar | ![a01_bp_h6](../assets/13_heuristica/a01_bp_h6.png) | O médico não precisa lembrar o que viu nas outras abas para justificar a decisão. |
 
-> Repita a seção para A02, A03... um avaliador por integrante.
+## Avaliador A02 — Raphael Garavati Erbert — 22.123.014-7
+
+### 4. Matriz de cobertura das 10 heurísticas
+
+| Heurística | Telas/fluxos examinados | Houve violação? | IDs dos achados | Exemplo de boa prática se não violada |
+|---|---|---|---|---|
+| H1 | Fila de laudos — laudo suspenso, Fila de laudos — laudo liberado, Ler pergunta clínica — análise indisponível, Redigir laudo — pergunta enviada | sim | V04 | — |
+| H2 | Ler pergunta clínica, Análise do modelo — segunda leitura, Redigir laudo | sim | V01 | — |
+| H3 | Fila de laudos — laudo suspenso, Redigir laudo — aviso de urgência, Liberar laudo sem método, Perguntar ao solicitante | não | — | Suspender o laudo e retomá-lo depois pela fila, com etapa e dúvida guardadas (Fila de laudos — laudo suspenso) |
+| H4 | Fila de laudos, Análise do modelo — segunda leitura, Redigir laudo — aviso de urgência, Lista de casos, Sugestão do modelo — confiabilidade baixa | sim | V03, V06, V07 | — |
+| H5 | Redigir laudo, Redigir laudo — conclusão obrigatória, Liberar laudo sem método, Perguntar ao solicitante — pergunta em branco | sim | V02 | — |
+| H6 | Ler pergunta clínica, Redigir laudo | não | — | Pergunta clínica e volume hipocampal ficam visíveis ao lado do laudo (Redigir laudo) |
+| H7 | Fila de laudos, Análise do modelo — segunda leitura | sim | V05 | — |
+| H8 | Ler pergunta clínica, Redigir laudo | não | — | Tela de leitura só com imagem, pergunta clínica, contexto e duas ações (Ler pergunta clínica) |
+| H9 | Ler pergunta clínica — análise indisponível, Redigir laudo — conclusão obrigatória, Perguntar ao solicitante — pergunta em branco | não | — | "Preencha a conclusão para liberar o laudo" com o campo destacado (Redigir laudo — conclusão obrigatória) |
+| H10 | Análise do modelo — segunda leitura, Liberar laudo sem método | não | — | A análise diz o que é e o que não é: "referência para a sua leitura, não uma conclusão" (Análise do modelo — segunda leitura) |
+
+### 5. Declaração de violações
+
+| ID | Heurística | Tela/estado | Problema observado | Evidência | Severidade | Justificativa da severidade | Recomendação |
+|---|---|---|---|---|---:|---|---|
+| V01 | H2 | Redigir laudo | "Método de avaliação" só oferece inspeção visual, volume informado pelo modelo e comparação com exame anterior. Escala visual (MTA) e medida com régua, que a radiologista usa hoje (HTA T02 2.3; GOMS 2.7), não existem; ela teria que escrever isso no achado. | ![a02_v01](../assets/13_heuristica/a02_v01.png) | 3 | Todo caso limítrofe passa por aqui. Se o método usado não cabe na lista, o laudo volta a não dizer como foi avaliado, que é o problema de H08. | Incluir "escala visual (MTA), com a nota" e "medida linear", mais um "outro" com texto curto. |
+| V02 | H5 | Redigir laudo | "Comparação com exame anterior — não disponível" aparece como checkbox normal, que dá para marcar. | ![a02_v02](../assets/13_heuristica/a02_v02.png) | 1 | Raro alguém marcar, e o texto avisa; mas um método inexistente pode ir para o laudo. | Mostrar a opção desabilitada (cinza, sem clique) ou só como informação. |
+| V03 | H4 | Redigir laudo — aviso de urgência | O aviso de urgência usa ícone e cor de erro; "Suspender o laudo" é vermelho, cor que no sistema marca ação destrutiva (Descartar, Novo exame — descartar envio); "ou continue este laudo" é texto, não botão. | ![a02_v03](../assets/13_heuristica/a02_v03.png) | 1 | O texto deixa claro o que fazer; o risco é hesitar ou achar que suspender apaga algo. | Aviso em tom de alerta (amarelo), suspender com cor neutra e "Continuar este laudo" como botão. |
+| V04 | H1 | Ler pergunta clínica — análise indisponível | "O processamento deste exame ainda não terminou", sem previsão de tempo e sem dizer se a tela atualiza sozinha. | ![a02_v04](../assets/13_heuristica/a02_v04.png) | 2 | Com fila e prazo, a radiologista decide entre esperar e laudar sem a segunda leitura sem saber quanto falta; acontece a cada exame recém-chegado [H]. | Mostrar o tempo estimado (como no Acompanhar análise, "cerca de 3 minutos") e sinalizar na fila quando a análise ficar pronta. |
+| V05 | H7 | Análise do modelo — segunda leitura | O mapa de atenção vem num único corte axial, fixo: não dá para ligar/desligar a sobreposição, ajustar a opacidade nem trocar de corte. Para comparar com a própria leitura (M01) ela precisa voltar ao PACS. | ![a02_v05](../assets/13_heuristica/a02_v05.png) | 3 | Todo exame com segunda leitura; usuária especialista, uso contínuo, obrigada a alternar sistemas. | Botão para mostrar/ocultar o mapa e controle de opacidade; no mínimo, o corte sem sobreposição ao lado. |
+| V06 | H4 | Análise do modelo — segunda leitura × Sugestão do modelo — confiabilidade baixa | O mesmo caso (volume hipocampal não informado no envio) é chamado de "imputado" na tela da radiologista e de "estimado" na tela do médico. | ![a02_v06](../assets/13_heuristica/a02_v06.png) | 2 | Médico e radiologista falam do mesmo exame; nomes diferentes geram dúvida se são coisas diferentes. | Um termo só ("estimado pelo modelo") em todas as telas e no glossário. |
+| V07 | H4 | Fila de laudos × Lista de casos | As linhas da fila não têm a seta que a lista de casos usa para indicar que a linha abre. Não fica claro se dá para abrir um exame específico ou só "Abrir o próximo exame". | ![a02_v07](../assets/13_heuristica/a02_v07.png) | 1 | O botão principal resolve o caso comum; a dúvida aparece quando ela quer abrir outro exame. | Mesma indicação de linha clicável da lista de casos, ou deixar claro que a fila é só sequencial. |
+
+**Qualidade do relato:** o problema deve ser observável e localizado. Evite “interface confusa” sem dizer **o que**, **onde**, **quando** e **para quem**.
+
+### 6. Boas práticas — heurísticas não violadas (atividade didática)
+
+| Heurística sem violação | Exemplo no sistema | Evidência | Por que atende |
+|---|---|---|---|
+| H3 | Laudo suspenso aparece na fila com "Retomar o laudo suspenso" | ![a02_bp_h3](../assets/13_heuristica/a02_bp_h3.png) | A urgência não obriga a perder o trabalho: há como sair e voltar ao ponto em que parou. |
+| H6 | Pergunta clínica e volume hipocampal ao lado do formulário do laudo | ![a02_bp_h6](../assets/13_heuristica/a02_bp_h6.png) | Ela não precisa lembrar o que leu nas telas anteriores para redigir a conclusão. |
+| H8 | Tela de leitura com imagem, pergunta, contexto e duas ações | ![a02_bp_h8](../assets/13_heuristica/a02_bp_h8.png) | Só o necessário para começar o laudo; a análise do modelo fica a um clique, sem poluir a primeira leitura. |
+| H9 | Erro de conclusão vazia no topo e no campo | ![a02_bp_h9](../assets/13_heuristica/a02_bp_h9.png) | Diz qual é o problema, onde está e o que fazer, sem códigos. |
+| H10 | Texto da análise do modelo explicando o que ela é e o que não é | ![a02_bp_h10](../assets/13_heuristica/a02_bp_h10.png) | A ajuda está no lugar da tarefa e é curta. |
 
 ## Avaliador A03 — Nathan Gabriel da Fonseca Leite — 22.123.028-7
 
@@ -236,6 +275,9 @@ Ao justificar, considere **frequência, impacto e persistência** do problema no
 | H6 | Linha do tempo com data, tipo e fonte de cada evidência | ![a04_bp_h6](../assets/13_heuristica/a04_bp_h6.png) | O neurologista vê escores, laudo, sugestão e episódios juntos, sem lembrar de outra tela (HTA T04, 2.1). |
 | H8 | Tela de decisão registrada | ![a04_bp_h8](../assets/13_heuristica/a04_bp_h8.png) | Mostra só o que foi decidido, com divergência e justificativa, sem repetir a sugestão inteira. |
 | H9 | Erro geral e mensagens por campo no registro da decisão | ![a04_bp_h9](../assets/13_heuristica/a04_bp_h9.png) | Linguagem simples, aponta o campo e diz o que preencher. |
+
+> Repita a seção para A02, A03... um avaliador por integrante.
+    
 
 ## 7. Consolidação da equipe
 

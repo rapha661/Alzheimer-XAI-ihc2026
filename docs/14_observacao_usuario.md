@@ -67,7 +67,7 @@ O fluxograma deve representar, no mínimo: planejamento → recrutamento → con
 | U01 | Estudante de TI, com formação e atuação em gestão — no papel de médico clínico (UT01) | Sem formação na área da saúde; nunca usou o protótipo; não é da equipe | Paulo Hudson Josué da Silva |
 | U02 | Engenheiro eletricista, ex-aluno da FEI — no papel de neurologista (UT02) | Sem formação na área da saúde; nunca usou o protótipo; não é da equipe | Ana Carolina Lazzuri |
 | U03 | Graduando em Ciência da Computação na FEI, trabalha como engenheiro de dados e IA — no papel de radiologista (UT03) | Sem formação na área da saúde; nunca usou o protótipo; não é da equipe | Nathan Gabriel da Fonseca Leite |
-| U04 | {{perfil resumido}} — no papel de técnico em radiologia (UT04) | | Nathan Gabriel da Fonseca Leite |
+| U04 | Graduando em Ciência da Computação na UNESP de Rio Claro — no papel de técnico em radiologia (UT04) | Sem formação na área da saúde; nunca usou o protótipo; não é da equipe | Raphael Garavati Erbert |
 
 #### Participantes proxy
 
@@ -396,14 +396,102 @@ Esses pontos aparecem nos achados AU09 a AU11 (seção E).
 - **MU04:** as notas não foram pedidas. A opinião dada em voz alta foi positiva ("ficou fácil", 03:33; "ficou muito bom", 04:18), mas não substitui a escala da meta.
 - **Consentimento:** a autorização de gravação foi pedida no fim (04:21–04:28), e não antes da tarefa, como prevê o protocolo.
 
-### U04 — {{perfil resumido}}, no papel de técnico em radiologia (UT04)
+### U04 — graduando em Ciência da Computação, no papel de técnico em radiologia (UT04)
 
 | Tarefa | Grau de sucesso | Erros | Tipos de erro/dificuldade | Ajudas | Tempo | Satisfação | Evidência/observação |
 |---|---|---:|---|---:|---|---|---|
-| UT04 | total/parcial/falha | {{n}} | {{...}} | {{n}} | {{mm:ss}} | {{1–5}} | {{fala/comportamento}} |
+| UT04 | parcial | 1 | Abriu "Cancelar o envio" para ver o que acontecia; a troca para a série T1 apareceu pelo protótipo, não por uma ação dele; teste cognitivo e uma limitação foram preenchidos pelo protótipo | 0 | 02:16 | {{nota 1–5, se coletada depois}} (opinião em voz alta: "bem satisfatório", 05:56) | "Ele corrigiu já no caso" (03:44–03:46) |
 
-**Link da gravação (se autorizado):** {{...}}  
-**Resposta pós-teste:** {{...}}
+**Link da gravação (se autorizado):** [Gravação do U04](https://youtu.be/dbwC-iDbJj0) — {{forma da autorização: a gravação não mostra o pedido de consentimento}}  
+**Resposta pós-teste:** dada em voz alta, na própria gravação (04:44–06:04), a partir de um pedido de opinião geral. As perguntas da entrevista pós-teste (seção 6 dos instrumentos) não foram feitas uma a uma.
+
+> **Sobre as falas:** a sala virtual estava com legendas automáticas ligadas. As falas abaixo vêm dessas legendas, conferidas com o que acontece na tela no mesmo minuto; trechos entre colchetes corrigem erros de transcrição.
+
+#### Perfil pré-teste
+
+Graduando em Ciência da Computação na UNESP de Rio Claro. Não tem conhecimento prévio da área da saúde e nunca tinha visto o protótipo. É um participante proxy: o resultado mostra se um leigo consegue conferir e enviar o exame pela tela e não equivale ao de um técnico em radiologia. Ele mesmo disse, no fim, que "a única facilidade que eu tenho é por conhecer interfaces" (05:44–05:52). O perfil foi apresentado pelo moderador (00:34–01:00) e pelo próprio participante (02:08–02:20).
+
+#### Cenário apresentado
+
+O moderador apresentou o projeto (00:00–00:34) e o participante, e leu o cenário UT04 (01:12–01:36): ele é técnico do setor de ressonância; a paciente Aparecida Souza acabou de fazer o exame e ainda está no setor; antes de ela ir embora, deve enviar o exame para análise; a análise usa a série chamada "T1", e o último teste de memória dela foi MMSE 22, feito em 28/10/2026. Foi lido sem o nome e a idade do personagem do cartão (Bruno Tavares Lima, 32 anos). O MMSE 22 de 28/10 é o mesmo dado da ficha impressa prevista para o técnico na UT05 da [Entrega 12](12_planejamento_avaliacao.md).
+
+**Desvio do protocolo:** logo depois do cenário (01:36–01:52), o moderador resumiu o que precisava ser feito: "confirmar a identidade dela, trocar o arquivo pelo correto e completar o teste cognitivo, enviando o exame". É o critério de sucesso, que deveria ficar só com o moderador. A frase não indica telas nem botões e foi dita antes da tarefa, por isso não conta como ajuda pela definição combinada. Mesmo assim, adiantou ao participante que haveria um arquivo errado e um teste faltando, e enfraquece a leitura da QA11 (se o técnico percebe as pendências sozinho). Em seguida, o moderador avisou que não ajudaria durante a tarefa (01:52–02:04).
+
+#### Percurso observado
+
+Os tempos são do vídeo (mm:ss).
+
+- **02:20–02:42:** na lista "Novo exame", vê a Aparecida Souza marcada como "Próximo", comenta o botão "Iniciar o próximo exame" e clica nele (02:42).
+- **02:42–03:17:** na etapa "Preparar", lê o pedido médico, o acompanhante e o médico solicitante, e comenta o card "Tempo e agenda" com a barra de tempo (02:58–03:16).
+- **03:18:** clica em "Conferir a identidade". Compara os dados do pedido e do prontuário (nome, nascimento e código PAC-0031) e clica em "Confirmo a identidade" (03:27). Não usou "Não confere".
+- **03:28:** a conferência mostra o arquivo `AparecidaSouza_AX_FLAIR.zip` com erro e duas pendências (T1 ausente e teste cognitivo ausente); "Enviar para análise" fica bloqueado.
+- **03:33–03:35:** para o cursor sobre "Selecionar outro arquivo". A tela não muda (a gravação não deixa claro se houve clique).
+- **03:38:** clica em "Cancelar o envio" para ver o que acontece. Abre o diálogo "Descartar o envio?". Ao fundo do diálogo, o arquivo já aparece trocado para `AparecidaSouza_T1_MPRAGE.zip`, com uma pendência só.
+- **03:41:** clica em "Continuar a conferência" e volta à conferência com a T1 já conferida.
+- **03:54:** clica no campo "Teste cognitivo". O protótipo preenche "MMSE 22 (28/10/2026)" e, ao mesmo tempo, registra uma limitação que ele não escreveu: "Movimento na sequência T2 axial — leitura possível com ressalva". O painel passa a "Nenhuma pendência" (03:55).
+- **03:56–04:14:** confere os campos e lê a limitação.
+- **04:15:** clica em "Enviar para análise". A tela "Exame enviado" mostra o status "em análise" e o aviso de aguardar o resultado antes de liberar a paciente (04:16).
+- **04:26:** clica em "Enviar outro exame" e volta à lista, onde a Aparecida Souza continua como "Próximo" (04:27).
+- **04:36:** encerra com "acho que a navegação tá concluída".
+- Não editou a volumetria, não abriu "Registrar limitação" e não comentou o aviso de aguardar o resultado antes de liberar a paciente.
+
+
+#### Pensar em voz alta
+
+Ele falou em voz alta durante toda a tarefa. O moderador não interveio entre o fim das instruções (02:04) e o pedido de opinião (04:44). As falas abaixo vêm da legenda da gravação, com o minuto:
+
+- "O botão de iniciar o próximo exame, ele segue também de fato. A própria interface deixa bem intuitivo" (02:24–02:34)
+- "Já puxou todas as informações aqui, até o acompanhante, o doutor" (02:40–02:48)
+- "O tempo de agenda, ele tá acompanhando na barra de completude aqui, então ponto positivo nesse sentido" (02:58–03:08)
+- "Bem visual, usuário geralmente gosta disso" (03:14–03:16)
+- "[A identidade] batendo também, boa para mostrar para [a] paciente" (03:22–03:26)
+- "Aqui no caso, [o] formato errado, a gente tem opção de cancelar. Vamos ver" (03:34–03:38)
+- "A gente vai ter a opção de continuar com conferência, ele corrigiu já no caso" (03:42–03:46)
+- "Então a gente já tá com o teste certo" (03:50)
+- "[A] limitação também é importante aqui para observar. E parece bem representada" (04:08–04:14)
+- "Demonstra que [está] em andamento, visual também bem interessante" (04:20–04:24)
+- "Acho que a navegação tá concluída" (04:34–04:36)
+
+#### Opinião depois da tarefa
+
+O moderador pediu "um feedback geral" (04:44–04:48). O participante não apontou nenhum problema:
+
+- "A interface tá boa, bem apresentada, principalmente quando você vai pensar em usuário que tem pouco domínio de tecnologia" (04:50–05:00)
+- "Estar tudo bem estruturado e as etapas bem organizadas faz com que seja fácil a navegação. Eu, por exemplo, naveguei aqui de primeira, deu para entender tudo" (05:22–05:36)
+- "Para uma pessoa que tem mais domínio da área especificamente, poderia ter até mais facilidade do que eu" (05:38–05:46)
+
+#### Análise do resultado
+
+O resultado foi **parcial**. O critério tem quatro itens: confirmar a identidade, trocar o arquivo para a série T1, completar o teste cognitivo e enviar.
+
+- **Itens cumpridos:**
+  - identidade: comparou os dois lados e confirmou (03:19–03:27);
+  - envio: enviou sem pendência aberta (04:15) e viu o status "em análise".
+- **Teste cognitivo:** clicou no campo certo, e o protótipo preencheu o valor do cenário. Conta como cumprido dentro do limite do Figma, mas não mostra se ele digitaria o valor certo.
+- **Item que faltou — troca do arquivo:** ele chegou a "Selecionar outro arquivo", mas a T1 só apareceu quando abriu "Cancelar o envio" (03:38), por uma ligação do protótipo. A conclusão dele foi que o sistema "corrigiu já no caso" (03:44–03:46). O item ficou cumprido na tela, mas não por uma ação dele, e o que ficou foi a ideia de que a correção é automática.
+- **Erro não crítico:** abriu "Cancelar o envio" para explorar (03:38) e desfez com "Continuar a conferência" (03:41). O diálogo funcionou como previsto: avisou o que seria perdido e ofereceu voltar.
+- **Além da tarefa:** enviou o exame com uma limitação (movimento na T2) que não registrou, e a leu como "bem representada" (04:08–04:14).
+- **Pontos positivos citados por ele:** botão "Iniciar o próximo exame", barra de "Tempo e agenda", comparação lado a lado da identidade e etapas numeradas no topo.
+- **Ressalva:** as etapas da tarefa foram adiantadas na leitura do cenário (01:36–01:52). Sem isso, não dá para afirmar que ele perceberia sozinho o arquivo errado e o teste faltando, embora a tela mostre as duas pendências em destaque.
+
+Esses pontos aparecem nos achados AU12 a AU14 (seção E).
+
+#### Metas de usabilidade (Entrega 8)
+
+| Meta | Resultado do U04 na UT04 | Atingida? |
+|---|---|---|
+| MU01 — eficácia | Parcial, sem ajuda durante a tarefa (0/1 com sucesso total) | não |
+| MU02 — erros críticos | 0 erros críticos | sim |
+| MU03 — eficiência | 02:16 (medida na UT02; aqui só referência) | — |
+| MU04 — satisfação | {{nota, se coletada depois}} | {{sim/não/não medida}} |
+| MU05 — papel de apoio da IA | não medida na UT04 | — |
+| MU06 — elementos da explicação | não medida na UT04 | — |
+
+- **MU01:** a troca do arquivo não foi feita por ele, e as etapas foram adiantadas pelo moderador antes da tarefa.
+- **MU02:** ele não declarou a paciente liberada com pendência aberta, que é o erro crítico ligado à tarefa do técnico (Entrega 12). Também não descartou o envio, o que tornaria a tarefa uma falha: abriu o diálogo de descarte, mas voltou à conferência.
+- **MU03:** o tempo vai do início da tarefa, depois da apresentação do participante (02:20), ao encerramento (04:36). O envio aconteceu em 04:15, 01:55 depois do início.
+- **MU04:** as notas de 1 a 5 não foram pedidas na gravação. A opinião em voz alta foi positiva ("deu para entender tudo", 05:36; "bem satisfatório", 05:56), mas não substitui a escala da meta.
+- **Consentimento:** a gravação não mostra o pedido de consentimento nem a autorização de publicação. {{registrar como foram obtidos}}
 
 ## D. Consolidação por tarefa
 
@@ -412,7 +500,7 @@ Esses pontos aparecem nos achados AU09 a AU11 (seção E).
 | UT01 | 0/1 total (1 parcial) | 03:50 | 1 erro não crítico (gravou o parecer de novo) | 5 | não (MU01) | Recomendação do parecer não lida; botão "Registrar parecer" confundido com o parecer; preenchimento simulado diferente do escolhido |
 | UT02 | 0/1 total (1 parcial) | 03:00 | nenhum erro | 5 | não (MU01, MU06) | Confiabilidade não percebida; pesos da explicação lidos errado |
 | UT03 | 0/1 total (1 parcial) | 02:27 | nenhum erro; 1 ajuda | não coletada | não (MU01) | Laudo sem a imagem e a análise do modelo; volta à fila pouco visível |
-| UT04 | {{x/1}} | {{mm:ss}} | {{...}} | {{1–5}} | sim/não | {{...}} |
+| UT04 | 0/1 total (1 parcial) | 02:16 | 1 erro não crítico (abriu "Cancelar o envio") | {{1–5}} | não (MU01) | Troca do arquivo lida como automática; limitação enviada sem ter sido registrada; status da paciente não muda depois do envio |
 
 Com um participante por tarefa, os resultados são contagens individuais (x/1), sem percentual nem média.
 
@@ -431,7 +519,9 @@ Com um participante por tarefa, os resultados são contagens individuais (x/1), 
 | AU09 | Ao redigir o laudo, a imagem e a análise do modelo saem da tela | UT03: 1/1 saiu do laudo para rever a análise (01:52–02:00) + falas 01:48, 03:18 e 04:03–04:16 | Médio | Manter a imagem, com o mapa de atenção, ao lado do formulário do laudo | Figma, MoLIC M01 |
 | AU10 | Volta do exame para a fila pouco visível | UT03: procurou por cerca de 8 s (01:08–01:16) + fala 01:08 | Baixo | Dar mais destaque ao link "Fila de laudos" no topo do exame | Figma |
 | AU11 | "Abrir o próximo exame" reabre o exame já liberado | U03: depois de liberar, o botão abriu o mesmo José Ferraz (03:46–03:52) | Baixo | Ligar o botão a outro exame ou a uma tela de fim da demonstração | Figma |
-| AU__ | {{achados de UT04}} | {{...}} | {{...}} | {{...}} | {{...}} |
+| AU12 | Troca do arquivo entendida como correção automática | UT04: "Selecionar outro arquivo" sem resposta (03:33–03:35); T1 apareceu ao abrir "Cancelar o envio" (03:38) + fala 03:44–03:46 | Alto | Diálogo de descarte voltando ao estado de origem; confirmar a troca feita pelo técnico | Figma, MoLIC M03 |
+| AU13 | Limitação enviada sem ter sido registrada pelo técnico | UT04: o clique no teste cognitivo preencheu também a limitação (03:55); ele a aceitou (04:08–04:14) e enviou | Médio | Preencher só o campo clicado; resumir o que vai junto antes do envio | Figma, MoLIC M03 |
+| AU14 | Status da paciente não muda depois do envio | UT04: a lista mostra a Aparecida Souza como "Próximo" depois do envio (04:27) | Baixo | Mostrar "Enviado — em análise" na lista | Figma |
 
 #### AU01 — confiabilidade "Baixa" não percebida
 
@@ -506,6 +596,31 @@ Com um participante por tarefa, os resultados são contagens individuais (x/1), 
 - **Impacto:** baixo. É falha de ligação do protótipo, mas contradiz o aviso de laudo liberado.
 - **Recomendação:** ligar o botão a outro exame da fila ou a uma tela de fim da demonstração.
 
+#### AU12 — troca do arquivo entendida como correção automática
+
+- **Evidência:**
+  - o U04 parou o cursor sobre "Selecionar outro arquivo" (03:33–03:35), mas a gravação não mostra clique, e a tela não mudou;
+  - abriu "Cancelar o envio" para ver o que acontecia (03:38); o diálogo "Descartar o envio?" apareceu sobre a tela já com a T1 conferida;
+  - ao voltar com "Continuar a conferência", disse que "ele corrigiu já no caso" (03:44–03:46).
+- **Causa no protótipo:** o diálogo de descarte (UI06h) foi montado sobre o estado com a T1 já conferida (UI06g), e "Continuar a conferência" leva a esse estado ([Entrega 11](11_figma.md)). Aberto a partir da tela com a FLAIR (UI06c), o diálogo pula a troca do arquivo.
+- **Impacto:** alto. A causa imediata é uma ligação do protótipo, mas o efeito pega o ponto central da tarefa (H07): o técnico precisa escolher a série certa ou adquirir a que faltou com a paciente ainda no setor. Quem sai achando que o sistema troca o arquivo sozinho pode liberar a paciente sem a T1.
+- **Recomendação:**
+  - no protótipo, criar uma versão do diálogo de descarte para cada estado da conferência, em que "Continuar a conferência" volta à tela de onde saiu (UI06c com a FLAIR, UI06g com a T1);
+  - no sistema, fazer "Selecionar outro arquivo" abrir a lista de séries do exame, com a T1 volumétrica indicada;
+  - depois da troca, registrar no card do arquivo que a mudança foi do técnico, por exemplo "Você trocou a FLAIR axial pela T1 volumétrica".
+
+#### AU13 — limitação enviada sem ter sido registrada
+
+- **Evidência:** ao clicar no campo "Teste cognitivo" (03:54), o protótipo preencheu o MMSE e também a "Limitação observada": "Movimento na sequência T2 axial — leitura possível com ressalva" (03:55). O U04 não abriu "Registrar limitação", leu a limitação como "bem representada" (04:08–04:14) e enviou.
+- **Impacto:** médio. A limitação acompanha o estudo até quem lauda; uma ressalva que o técnico não fez chega à radiologista como se fosse dele. É o mesmo padrão do AU06: o preenchimento simulado coloca escolhas que o participante não fez, e ele confirma sem conferir.
+- **Recomendação:** no protótipo, preencher só o campo clicado e deixar a limitação entrar apenas por "Registrar limitação". No painel "Nenhuma pendência", listar o que vai junto com o envio (série, teste cognitivo e limitação) antes do botão "Enviar para análise".
+
+#### AU14 — status da paciente não muda depois do envio
+
+- **Evidência:** depois de enviar, o U04 clicou em "Enviar outro exame" (04:26). Na lista, a Aparecida Souza continuava como "Próximo" (04:27). Ele não comentou.
+- **Impacto:** baixo. É falha de ligação do protótipo, mas a lista contradiz a tela "Exame enviado", e o técnico usa essa lista para saber quem ainda falta.
+- **Recomendação:** mostrar "Enviado — em análise" na linha da paciente e passar a marcação "Próximo" para o paciente seguinte.
+
 ## F. Comparação com a avaliação heurística
 
 | Problema | Detectado na heurística? | Detectado por usuários? | O que aprendemos |
@@ -517,7 +632,7 @@ Com um participante por tarefa, os resultados são contagens individuais (x/1), 
 | "Estimado" e "imputado" para o mesmo valor (UT02) | sim — HC04 | não observado | O U02 não comentou o hipocampo estimado |
 | Status do caso diferente entre telas; lista sem filtro (UT01) | sim — HC03, HC16 | parcial — U01 | O status ficou "Aguardando revisão" depois da decisão registrada (04:44), mas ele não comentou. A falta de filtro não apareceu: ele abriu o caso direto |
 | Método sem MTA; análise indisponível sem previsão; fila sem indicação de clique (UT03) | sim — HC02, HC11, HC19 | não — U03 | Ele não comentou o método e não passou pela análise indisponível. Na fila, abriu o exame pela linha e depois achou o botão (01:02–01:23): a falta de indicação de clique não atrapalhou |
-| Identidade sem voltar; volumetria digitada; teste cognitivo em texto livre (UT04) | sim — HC12, HC13, HC14 | {{sim/não}} | {{...}} |
+| Identidade sem voltar; volumetria digitada; teste cognitivo em texto livre (UT04) | sim — HC12, HC13, HC14 | não observado — U04 | Ele confirmou a identidade sem precisar de "Não confere", não mexeu na volumetria e não digitou o teste: o protótipo preencheu ao clique e foi direto a "Nenhuma pendência", sem o estado de valor fora da faixa. Os três problemas não foram exercitados, então o teste nem confirma nem descarta |
 | Peso dos dados clínicos lido como peso dos relatos (UT02) | não | sim — U02 | Ver AU02 |
 | Estágio da doença inferido da explicação (UT02) | não | sim — U02 | Ver AU03 |
 | Resumo da confirmação não confere o que foi escolhido (UT01) | sim — V04 (A01) | sim — U01 | Ver AU06. O participante confirmou escolhas diferentes das que tentou marcar |
@@ -527,7 +642,9 @@ Com um participante por tarefa, os resultados são contagens individuais (x/1), 
 | Imagem e análise somem ao redigir o laudo (UT03) | não | sim — U03 | Ver AU09. A inspeção olhou cada tela sozinha; o problema só apareceu quando o participante precisou das duas ao mesmo tempo |
 | Volta do exame para a fila pouco visível (UT03) | não | sim — U03 | Ver AU10 |
 | "Abrir o próximo exame" reabre o exame liberado (UT03) | não | sim — U03 | Ver AU11. Falha de ligação do protótipo |
-| {{problema que só apareceu com usuários em UT04}} | não | sim | {{...}} |
+| Troca do arquivo entendida como correção automática (UT04) | não | sim — U04 | Ver AU12. A inspeção avaliou o diálogo "descartar envio" (H3, sem violação), mas como tela isolada; o problema só aparece quando o diálogo é aberto a partir da tela com a FLAIR |
+| Limitação enviada sem ter sido registrada (UT04) | não | sim — U04 | Ver AU13. Mesmo padrão do AU06 na UT01 |
+| Status da paciente não muda depois do envio (UT04) | não | sim — U04 | Ver AU14. Falha de ligação do protótipo |
 
 ## G. Conclusão
 
@@ -544,24 +661,30 @@ A conclusão deve responder:
 - **UT02:** atingiu MU02 (nenhum erro crítico), MU04 (nota 5) e MU05 (entendeu que é sugestão, não diagnóstico). Não atingiu MU01 (sucesso parcial) nem MU06 (0 de 3 elementos). O tempo (03:00) fica dentro da referência da MU03.
 - **UT01:** atingiu MU02 (nenhum erro crítico) e MU04 (nota 5). Não atingiu MU01 (sucesso parcial: achou a conclusão do especialista, mas não a data da reavaliação no parecer). O tempo foi 03:50, dentro do limite de 5 minutos.
 - **UT03:** atingiu MU02 (nenhum erro crítico). Não atingiu MU01 (sucesso parcial: liberou o laudo, mas não disse o que o solicitante recebe, e houve uma ajuda). MU04 não foi medida, porque as notas não foram pedidas. O tempo foi 02:27, dentro do limite de 5 minutos.
-- **UT04:** {{...}}
+- **UT04:** atingiu MU02 (nenhum erro crítico: não descartou o envio nem liberou a paciente com pendência). Não atingiu MU01 (sucesso parcial: a troca para a T1 apareceu pelo protótipo, não por uma ação dele). MU04 {{não foi medida / nota X}}. O tempo foi 02:16, dentro do limite de 5 minutos.
 
-**2. Problemas recorrentes.** {{a preencher quando houver os quatro resultados}}
+**2. Problemas recorrentes.**
+
+- **Nenhuma tarefa teve sucesso total, e nenhuma teve erro crítico.** As quatro terminaram em sucesso parcial, sempre por um item do critério que ficou de fora ou foi cumprido pela tela, e não por um bloqueio.
+- **Leitura parcial da tela (UT01, UT02):** a informação estava visível, mas o participante leu só parte do card ou do bloco e pulou o que completava a resposta (recomendação do parecer, AU04; confiabilidade, AU01).
+- **Confirmar o que não escolheu (UT01, UT04):** o preenchimento simulado do protótipo colocou escolhas que o participante não fez, e ele confirmou ou enviou sem conferir (AU06, AU13). Parte é limitação do Figma, mas mostra que a confirmação e o resumo antes do envio não chamam a atenção para o que vai ser gravado.
+- **Ligações e status do protótipo (UT01, UT03, UT04):** botões que levam ao lugar errado e status que não muda depois da ação concluída (AU07, AU11, AU12, AU14). No caso da UT04, a ligação errada mudou o entendimento da tarefa.
 
 **3. O que surpreendeu.**
 
 - **UT02:** o participante entendeu bem o papel de apoio da IA, ajudado pelo aviso da tela. Mesmo assim, leu errado justamente a parte da explicação: confiabilidade, pesos e "O que mais pesou". Esses dois problemas de leitura (AU02, AU03) não tinham aparecido na avaliação heurística.
 - **UT01:** o participante achou o parecer em 15 segundos, mas leu só a conclusão e pulou a recomendação, que estava no mesmo card. Depois seguiu sozinho até registrar uma decisão que o cenário não pedia, e confirmou escolhas que não eram as dele sem perceber.
 - **UT03:** o participante achou sozinho os dois caminhos para abrir o exame e chegou à liberação sem erro. O que mais o incomodou não estava em nenhuma tela isolada: foi ter que sair do laudo para rever a imagem e a análise do modelo (AU09), problema que a inspeção heurística não pegou.
-- **Outras tarefas:** {{...}}
+- **UT04:** o participante passou pelas quatro etapas em menos de dois minutos e elogiou a organização da tela. Mesmo assim, a única pendência que exigia uma ação dele, trocar o arquivo, foi resolvida por uma ligação do protótipo, e ele saiu achando que o sistema corrige sozinho (AU12). Também enviou, sem estranhar, uma limitação que não tinha registrado.
 
-**4. Mudanças prioritárias.** AU01 e AU02, porque levam a explicar o caso para a família de forma errada, e AU04, porque a data da reavaliação é a informação que o parecer existe para guardar. AU09, porque a radiologista precisa da imagem enquanto escreve o laudo. {{incluir as de UT04}}
+**4. Mudanças prioritárias.** AU01 e AU02, porque levam a explicar o caso para a família de forma errada, e AU04, porque a data da reavaliação é a informação que o parecer existe para guardar. AU09, porque a radiologista precisa da imagem enquanto escreve o laudo. AU12, porque o técnico pode liberar a paciente achando que a série certa foi trocada sozinha.
 
 **5. Limitações.**
 
 - Os quatro participantes são leigos no papel de profissionais de saúde (proxies) e cada um fez uma única tarefa.
 - Os resultados são casos individuais: não permitem taxa nem média e não equivalem aos de profissionais reais.
 - O teste foi feito num protótipo do Figma com navegação limitada e casos fictícios.
+- Houve desvios de protocolo: na UT04, o moderador adiantou as etapas da tarefa ao ler o cenário; na UT03 e na UT04, as notas de satisfação não foram pedidas na sessão.
 
 ## Checklist
 

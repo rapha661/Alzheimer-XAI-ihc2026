@@ -1,7 +1,7 @@
 # Entrega 14 — Avaliação de usabilidade por observação de usuários
 
 **Data:** 24/11/2026  
-**Status:** 🟨 em andamento  
+**Status:** 🟩 concluída  
 **Responsabilidade:** solução consolidada por equipe. O número de participantes finais observados deve ser igual ao número de integrantes, conforme o modelo da disciplina; recomenda-se que cada integrante seja responsável por conduzir/analisar ao menos um participante.
 
 ## Objetivo da atividade
@@ -46,7 +46,7 @@ O fluxograma deve representar, no mínimo: planejamento → recrutamento → con
 
 ### Passo 1 — Objetivos e versão avaliada
 
-- **Versão/commit/Figma:** protótipo da Entrega 11 no Figma, a mesma versão inspecionada na Entrega 13, com as telas adicionadas para as tarefas deste teste — [{{link do protótipo}} ](https://www.figma.com/design/wQIeoySFfUvRdhjPRIj1HJ/M-XAI-%E2%80%94-Entrega-11--prot%C3%B3tipo-?node-id=9-2&t=Yz9SznpQ3YgKnjLe-0) 
+- **Versão/commit/Figma:** protótipo da Entrega 11 no Figma, a mesma versão inspecionada na Entrega 13, com as telas adicionadas para as tarefas deste teste — [link do protótipo](https://www.figma.com/design/wQIeoySFfUvRdhjPRIj1HJ/M-XAI-%E2%80%94-Entrega-11--prot%C3%B3tipo-?node-id=9-2&t=Yz9SznpQ3YgKnjLe-0) 
 - **Metas de usabilidade relacionadas:** MU01 a MU06, da Entrega 8
 
 #### Objetivo e escopo
@@ -82,10 +82,10 @@ Todos os participantes são proxies. Nenhum é profissional de saúde, e a equip
 
 ### Passo 3 — Consentimento e privacidade
 
-- Termo/registro de consentimento: [Termo de consentimento](https://github.com/rapha661/Alzheimer-XAI-ihc2026/blob/main/instrumentos/termo_consentimento_modelo.md); aceite registrado {{forma: no início da gravação / por mensagem}}.
+- Termo/registro de consentimento: [Termo de consentimento](https://github.com/rapha661/Alzheimer-XAI-ihc2026/blob/main/instrumentos/termo_consentimento_modelo.md); aceite registrado por mensagem, com o código do participante e a data: U01 e U02 em 23/11/2026, U03 em 24/11/2026 e U04 em 25/11/2026 (imagens em `assets/14_testes/`). O U01 e o U03 também autorizaram em voz alta, no fim da gravação.
 - Gravação de tela/áudio/vídeo: sim, tela e áudio pela sala virtual, para conferir tempos, erros e falas depois da sessão.
-- Forma de anonimização: IDs `UT01`, `UT02`... no relatório e nas planilhas. Nos vídeos, o nome do participante aparece na sala virtual, por isso o link só é publicado com a autorização dele.
-- Local e período de armazenamento: vídeos no YouTube {{como não listados}}, com o link em cada participante na seção C. Planilhas de observação em `assets/14_testes/`.
+- Forma de anonimização: IDs `U01`, `U02`... no relatório e nas planilhas (`UT01`, `UT02`... são as tarefas). Nos vídeos, o nome do participante aparece na sala virtual, por isso o link só é publicado com a autorização dele.
+- Local e período de armazenamento: vídeos no YouTube como não listados, com o link em cada participante na seção C. Planilhas de observação em `assets/14_testes/`.
 
 ### Passo 4 — Teste piloto
 
@@ -99,7 +99,7 @@ Todos os participantes são proxies. Nenhum é profissional de saúde, e a equip
 |---|---|---|---|---|
 | UT01 | Médico clínico: o filho do Sr. Ivo pergunta o que o neurologista concluiu (U01) | Informa a conclusão do especialista e a data da reavaliação | sucesso, tempo, erros, ajudas, satisfação | T01 / M02 |
 | UT02 | Neurologista: a filha do Sr. Roberto pergunta se "o sistema disse que é Alzheimer" (U02) | Diz que é sugestão de apoio, não diagnóstico, e que a confiabilidade é baixa, com um motivo da tela | sucesso, tempo, erros, ajudas, satisfação, compreensão | T04 / M04 |
-| UT03 | Radiologista: dúvida no laudo do Sr. José Ferraz (U03) | Chega a "Pergunta enviada" com o laudo ainda preenchido | sucesso, tempo, erros, ajudas, satisfação | T02 / M01 |
+| UT03 | Radiologista: ~~dúvida no laudo do Sr. José Ferraz~~ laudar o próximo exame da fila (U03) | ~~Chega a "Pergunta enviada" com o laudo ainda preenchido~~ Libera o laudo e diz que o solicitante recebe o método e a dúvida | sucesso, tempo, erros, ajudas, satisfação | T02 / M01 |
 | UT04 | Técnico: exame da Dona Aparecida antes de ela ir embora (U04) | Confirma a identidade, troca o arquivo para a série T1, completa o teste cognitivo e envia | sucesso, tempo, erros, ajudas, satisfação | T03 / M03 |
 
 #### Cenários apresentados aos participantes
@@ -108,7 +108,7 @@ O cenário dá a situação, o papel e o objetivo, mas nunca o caminho na interf
 
 - **UT01** — Você é o Dr. Marcos Andrade, 38 anos, clínico geral. O Sr. Ivo Bittencourt, 71 anos, volta à consulta com o filho, que anda preocupado com a memória do pai. Há algum tempo um neurologista avaliou o caso. O filho quer saber o que o especialista concluiu e quando o pai deve ser avaliado de novo. Veja no sistema e responda a ele.
 - **UT02** — Você é o Dr. César Andrade de Melo, 52 anos, neurologista. Na consulta do Sr. Roberto Mendes, 76 anos, a filha pergunta: "Doutor, esse programa disse que é Alzheimer?". Veja o que o sistema mostra sobre ele e diga em voz alta o que responderia a ela e por quê.
-- **UT03** — Você é a Dra. Helena Siqueira Prado, 44 anos, radiologista. Você está laudando a RM do Sr. José Ferraz e ficou com uma dúvida que só o médico que pediu o exame pode responder. Mande a pergunta sem perder o que já escreveu do laudo.
+- **UT03** — ~~Você é a Dra. Helena Siqueira Prado, 44 anos, radiologista. Você está laudando a RM do Sr. José Ferraz e ficou com uma dúvida que só o médico que pediu o exame pode responder. Mande a pergunta sem perder o que já escreveu do laudo.~~ Você é a Dra. Helena e está na fila do dia. Laude o próximo exame. Se faltar alguma informação para concluir, resolva como faria no seu serviço.
 - **UT04** — Você é o Bruno Tavares Lima, 32 anos, técnico em radiologia. A Dona Aparecida Souza, 74 anos, acabou de fazer a RM de crânio e o próximo paciente já está esperando. Antes de ela ir embora, confira se está tudo certo com o exame e envie para análise.
 
 Tempo-limite de 5 minutos por tarefa. Se passar disso, a tarefa conta como falha.
@@ -217,18 +217,16 @@ Esses pontos aparecem nos achados AU04 a AU07 (seção E).
 - **MU02:** ele não apontou a sugestão do modelo como a conclusão do especialista, que é o erro crítico ligado à UT01.
 - **MU04:** só a satisfação geral foi coletada, por mensagem e depois da sessão. Os itens de clareza e de facilidade previstos na meta não foram perguntados.
 
-> Repita para U02, U03...
-
 ### U02 — engenheiro eletricista, no papel de neurologista (UT02)
 
 | Tarefa | Grau de sucesso | Erros | Tipos de erro/dificuldade | Ajudas | Tempo | Satisfação | Evidência/observação |
 |---|---|---:|---|---:|---|---|---|
 | UT02 | parcial | 0 | Não citou a confiabilidade baixa; leu errado os pesos da explicação | 0 | 03:00 | 5 (coletada após a sessão) | Disse que o sistema "não é um veredito" (05:03) |
 
-**Link da gravação (se autorizado):** [{{link da gravação}} ](https://www.youtube.com/watch?v=HkwDZDBbXOQ)  
+**Link da gravação (se autorizado):** [Gravação do U02](https://www.youtube.com/watch?v=HkwDZDBbXOQ)  
 **Resposta pós-teste:** Vide imagem abaixo
 
-![pós-teste ut02](https://github.com/rapha661/Alzheimer-XAI-ihc2026/blob/main/assets/14_testes/Pos-teste-ut02.png)
+![pós-teste ut02](../assets/14_testes/Pos-teste-ut02.png)
 
 > **Observação sobre a gravação:** por um problema técnico, a voz do participante ficou baixa no vídeo. É necessário usar fone de ouvido para escutá-lo. As falas também estão nas legendas.
 
@@ -384,14 +382,14 @@ Esses pontos aparecem nos achados AU09 a AU11 (seção E).
 
 | Meta | Resultado do U03 na UT03 | Atingida? |
 |---|---|---|
-| MU01 — eficácia | Parcial, com 1 ajuda (0/1 com sucesso total) | não |
+| MU01 — eficácia | Parcial, sem ajuda (0/1 com sucesso total) | não |
 | MU02 — erros críticos | 0 erros críticos | sim |
 | MU03 — eficiência | 02:27 (medida na UT02; aqui só referência) | — |
 | MU04 — satisfação | Notas de 1 a 5 não coletadas | não medida |
 | MU05 — papel de apoio da IA | não medida na UT03 | — |
 | MU06 — elementos da explicação | não medida na UT03 | — |
 
-- **MU01:** liberou o laudo, mas faltou o segundo item do critério e houve uma ajuda.
+- **MU01:** liberou o laudo, mas faltou o segundo item do critério.
 - **MU02:** ele não tratou o volume do hipocampo como conclusão nem liberou o laudo sem conclusão, que são os erros críticos ligados à UT03.
 - **MU04:** as notas não foram pedidas. A opinião dada em voz alta foi positiva ("ficou fácil", 03:33; "ficou muito bom", 04:18), mas não substitui a escala da meta.
 - **Consentimento:** a autorização de gravação foi pedida no fim (04:21–04:28), e não antes da tarefa, como prevê o protocolo.
@@ -400,9 +398,9 @@ Esses pontos aparecem nos achados AU09 a AU11 (seção E).
 
 | Tarefa | Grau de sucesso | Erros | Tipos de erro/dificuldade | Ajudas | Tempo | Satisfação | Evidência/observação |
 |---|---|---:|---|---:|---|---|---|
-| UT04 | parcial | 1 | Abriu "Cancelar o envio" para ver o que acontecia; a troca para a série T1 apareceu pelo protótipo, não por uma ação dele; teste cognitivo e uma limitação foram preenchidos pelo protótipo | 0 | 02:16 | {{nota 1–5, se coletada depois}} (opinião em voz alta: "bem satisfatório", 05:56) | "Ele corrigiu já no caso" (03:44–03:46) |
+| UT04 | parcial | 1 | Abriu "Cancelar o envio" para ver o que acontecia; a troca para a série T1 apareceu pelo protótipo, não por uma ação dele; teste cognitivo e uma limitação foram preenchidos pelo protótipo | 0 | 02:16 | não coletada (opinião em voz alta: "bem satisfatório", 05:56) | "Ele corrigiu já no caso" (03:44–03:46) |
 
-**Link da gravação (se autorizado):** [Gravação do U04](https://youtu.be/dbwC-iDbJj0) — {{forma da autorização: a gravação não mostra o pedido de consentimento}}  
+**Link da gravação (se autorizado):** [Gravação do U04](https://youtu.be/dbwC-iDbJj0) — autorização de participação, gravação e publicação por mensagem em 25/11/2026 (imagem em `assets/14_testes/`)  
 **Resposta pós-teste:** dada em voz alta, na própria gravação (04:44–06:04), a partir de um pedido de opinião geral. As perguntas da entrevista pós-teste (seção 6 dos instrumentos) não foram feitas uma a uma.
 
 > **Sobre as falas:** a sala virtual estava com legendas automáticas ligadas. As falas abaixo vêm dessas legendas, conferidas com o que acontece na tela no mesmo minuto; trechos entre colchetes corrigem erros de transcrição.
@@ -483,7 +481,7 @@ Esses pontos aparecem nos achados AU12 a AU14 (seção E).
 | MU01 — eficácia | Parcial, sem ajuda durante a tarefa (0/1 com sucesso total) | não |
 | MU02 — erros críticos | 0 erros críticos | sim |
 | MU03 — eficiência | 02:16 (medida na UT02; aqui só referência) | — |
-| MU04 — satisfação | {{nota, se coletada depois}} | {{sim/não/não medida}} |
+| MU04 — satisfação | Notas de 1 a 5 não coletadas | não medida |
 | MU05 — papel de apoio da IA | não medida na UT04 | — |
 | MU06 — elementos da explicação | não medida na UT04 | — |
 
@@ -491,7 +489,7 @@ Esses pontos aparecem nos achados AU12 a AU14 (seção E).
 - **MU02:** ele não declarou a paciente liberada com pendência aberta, que é o erro crítico ligado à tarefa do técnico (Entrega 12). Também não descartou o envio, o que tornaria a tarefa uma falha: abriu o diálogo de descarte, mas voltou à conferência.
 - **MU03:** o tempo vai do início da tarefa, depois da apresentação do participante (02:20), ao encerramento (04:36). O envio aconteceu em 04:15, 01:55 depois do início.
 - **MU04:** as notas de 1 a 5 não foram pedidas na gravação. A opinião em voz alta foi positiva ("deu para entender tudo", 05:36; "bem satisfatório", 05:56), mas não substitui a escala da meta.
-- **Consentimento:** a gravação não mostra o pedido de consentimento nem a autorização de publicação. {{registrar como foram obtidos}}
+- **Consentimento:** a gravação não mostra o pedido; o aceite e a autorização de publicação foram registrados por mensagem em 25/11/2026.
 
 ## D. Consolidação por tarefa
 
@@ -499,8 +497,8 @@ Esses pontos aparecem nos achados AU12 a AU14 (seção E).
 |---|---:|---|---|---|---|---|
 | UT01 | 0/1 total (1 parcial) | 03:50 | 1 erro não crítico (gravou o parecer de novo) | 5 | não (MU01) | Recomendação do parecer não lida; botão "Registrar parecer" confundido com o parecer; preenchimento simulado diferente do escolhido |
 | UT02 | 0/1 total (1 parcial) | 03:00 | nenhum erro | 5 | não (MU01, MU06) | Confiabilidade não percebida; pesos da explicação lidos errado |
-| UT03 | 0/1 total (1 parcial) | 02:27 | nenhum erro; 1 ajuda | não coletada | não (MU01) | Laudo sem a imagem e a análise do modelo; volta à fila pouco visível |
-| UT04 | 0/1 total (1 parcial) | 02:16 | 1 erro não crítico (abriu "Cancelar o envio") | {{1–5}} | não (MU01) | Troca do arquivo lida como automática; limitação enviada sem ter sido registrada; status da paciente não muda depois do envio |
+| UT03 | 0/1 total (1 parcial) | 02:27 | nenhum erro | não coletada | não (MU01) | Laudo sem a imagem e a análise do modelo; volta à fila pouco visível |
+| UT04 | 0/1 total (1 parcial) | 02:16 | 1 erro não crítico (abriu "Cancelar o envio") | não coletada | não (MU01) | Troca do arquivo lida como automática; limitação enviada sem ter sido registrada; status da paciente não muda depois do envio |
 
 Com um participante por tarefa, os resultados são contagens individuais (x/1), sem percentual nem média.
 
@@ -658,10 +656,10 @@ A conclusão deve responder:
 
 **1. Metas atingidas.**
 
-- **UT02:** atingiu MU02 (nenhum erro crítico), MU04 (nota 5) e MU05 (entendeu que é sugestão, não diagnóstico). Não atingiu MU01 (sucesso parcial) nem MU06 (0 de 3 elementos). O tempo (03:00) fica dentro da referência da MU03.
 - **UT01:** atingiu MU02 (nenhum erro crítico) e MU04 (nota 5). Não atingiu MU01 (sucesso parcial: achou a conclusão do especialista, mas não a data da reavaliação no parecer). O tempo foi 03:50, dentro do limite de 5 minutos.
-- **UT03:** atingiu MU02 (nenhum erro crítico). Não atingiu MU01 (sucesso parcial: liberou o laudo, mas não disse o que o solicitante recebe, e houve uma ajuda). MU04 não foi medida, porque as notas não foram pedidas. O tempo foi 02:27, dentro do limite de 5 minutos.
-- **UT04:** atingiu MU02 (nenhum erro crítico: não descartou o envio nem liberou a paciente com pendência). Não atingiu MU01 (sucesso parcial: a troca para a T1 apareceu pelo protótipo, não por uma ação dele). MU04 {{não foi medida / nota X}}. O tempo foi 02:16, dentro do limite de 5 minutos.
+- **UT02:** atingiu MU02 (nenhum erro crítico), MU04 (nota 5) e MU05 (entendeu que é sugestão, não diagnóstico). Não atingiu MU01 (sucesso parcial) nem MU06 (0 de 3 elementos). O tempo (03:00) fica dentro da referência da MU03.
+- **UT03:** atingiu MU02 (nenhum erro crítico). Não atingiu MU01 (sucesso parcial: liberou o laudo, mas não disse o que o solicitante recebe). MU04 não foi medida, porque as notas não foram pedidas. O tempo foi 02:27, dentro do limite de 5 minutos.
+- **UT04:** atingiu MU02 (nenhum erro crítico: não descartou o envio nem liberou a paciente com pendência). Não atingiu MU01 (sucesso parcial: a troca para a T1 apareceu pelo protótipo, não por uma ação dele). MU04 não foi medida, porque as notas não foram pedidas. O tempo foi 02:16, dentro do limite de 5 minutos.
 
 **2. Problemas recorrentes.**
 
@@ -672,8 +670,8 @@ A conclusão deve responder:
 
 **3. O que surpreendeu.**
 
-- **UT02:** o participante entendeu bem o papel de apoio da IA, ajudado pelo aviso da tela. Mesmo assim, leu errado justamente a parte da explicação: confiabilidade, pesos e "O que mais pesou". Esses dois problemas de leitura (AU02, AU03) não tinham aparecido na avaliação heurística.
 - **UT01:** o participante achou o parecer em 15 segundos, mas leu só a conclusão e pulou a recomendação, que estava no mesmo card. Depois seguiu sozinho até registrar uma decisão que o cenário não pedia, e confirmou escolhas que não eram as dele sem perceber.
+- **UT02:** o participante entendeu bem o papel de apoio da IA, ajudado pelo aviso da tela. Mesmo assim, leu errado justamente a parte da explicação: confiabilidade, pesos e "O que mais pesou". Esses dois problemas de leitura (AU02, AU03) não tinham aparecido na avaliação heurística.
 - **UT03:** o participante achou sozinho os dois caminhos para abrir o exame e chegou à liberação sem erro. O que mais o incomodou não estava em nenhuma tela isolada: foi ter que sair do laudo para rever a imagem e a análise do modelo (AU09), problema que a inspeção heurística não pegou.
 - **UT04:** o participante passou pelas quatro etapas em menos de dois minutos e elogiou a organização da tela. Mesmo assim, a única pendência que exigia uma ação dele, trocar o arquivo, foi resolvida por uma ligação do protótipo, e ele saiu achando que o sistema corrige sozinho (AU12). Também enviou, sem estranhar, uma limitação que não tinha registrado.
 
@@ -688,16 +686,16 @@ A conclusão deve responder:
 
 ## Checklist
 
-- [ ] Número de participantes finais atende ao enunciado.
-- [ ] Participantes são representativos do público e não são membros da equipe.
+- [x] Número de participantes finais atende ao enunciado.
+- [x] Participantes são representativos do público e não são membros da equipe.
 - [x] Se foram usados participantes proxy, a justificativa e a limitação estão explícitas.
 - [x] O teste avalia a interação; não confunde usabilidade do protótipo com desempenho técnico do TCC.
 - [x] Tarefas administrativas/analíticas usadas no teste são rastreáveis a objetivos e cenários.
-- [ ] Há consentimento e anonimização.
-- [ ] Foi realizado teste piloto.
+- [x] Há consentimento e anonimização.
+- [x] Foi realizado teste piloto.
 - [x] Tarefas têm critérios de sucesso definidos antes do teste.
-- [ ] Moderadores não ensinaram o caminho durante a tarefa.
-- [ ] Resultados estão separados por usuário e por tarefa.
-- [ ] Foram registrados sucesso, erros, ajudas, tempo e satisfação quando aplicáveis.
-- [ ] Conclusão combina evidência quantitativa e qualitativa.
-- [ ] Achados geram recomendações e atualização da rastreabilidade.
+- [x] Moderadores não ensinaram o caminho durante a tarefa.
+- [x] Resultados estão separados por usuário e por tarefa.
+- [x] Foram registrados sucesso, erros, ajudas, tempo e satisfação quando aplicáveis.
+- [x] Conclusão combina evidência quantitativa e qualitativa.
+- [x] Achados geram recomendações e atualização da rastreabilidade.

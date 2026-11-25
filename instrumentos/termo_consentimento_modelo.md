@@ -38,4 +38,8 @@ Declaro que recebi informações suficientes sobre a atividade e concordo em par
 **Data:** 23/11/2026
 
 ![Consentimento UT02](https://github.com/rapha661/Alzheimer-XAI-ihc2026/blob/main/assets/14_testes/Consentimento-UT02.png)
+
+**Participante:** U03 — aceite da participação e da gravação de tela e áudio enviado por mensagem (print abaixo)  
+**Data:** 24/11/2026
+
 ![Consentimento UT02](https://github.com/rapha661/Alzheimer-XAI-ihc2026/blob/main/assets/14_testes/Consentimento-UT03.png)

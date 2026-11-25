@@ -66,7 +66,7 @@ O fluxograma deve representar, no mínimo: planejamento → recrutamento → con
 |---|---|---|---|
 | U01 | Estudante de TI, com formação e atuação em gestão — no papel de médico clínico (UT01) | Sem formação na área da saúde; nunca usou o protótipo; não é da equipe | Paulo Hudson Josué da Silva |
 | U02 | Engenheiro eletricista, ex-aluno da FEI — no papel de neurologista (UT02) | Sem formação na área da saúde; nunca usou o protótipo; não é da equipe | Ana Carolina Lazzuri |
-| U03 | {{perfil resumido}} — no papel de radiologista (UT03) |  | Raphael Garavati Erbert |
+| U03 | Graduando em Ciência da Computação na FEI, trabalha como engenheiro de dados e IA — no papel de radiologista (UT03) | Sem formação na área da saúde; nunca usou o protótipo; não é da equipe | Nathan Gabriel da Fonseca Leite |
 | U04 | {{perfil resumido}} — no papel de técnico em radiologia (UT04) | | Nathan Gabriel da Fonseca Leite |
 
 #### Participantes proxy
@@ -296,14 +296,105 @@ Esses pontos aparecem nos achados AU01 a AU03 (seção E).
   - (2) mapa de atenção (Grad-CAM): não comentou;
   - (3) pesos da imagem e dos dados clínicos (SHAP): leu errado.
 
-### U03 — {{perfil resumido}}, no papel de radiologista (UT03)
+### U03 — graduando em Ciência da Computação, no papel de radiologista (UT03)
 
 | Tarefa | Grau de sucesso | Erros | Tipos de erro/dificuldade | Ajudas | Tempo | Satisfação | Evidência/observação |
 |---|---|---:|---|---:|---|---|---|
-| UT03 | total/parcial/falha | {{n}} | {{...}} | {{n}} | {{mm:ss}} | {{1–5}} | {{fala/comportamento}} |
+| UT03 | parcial | 0 | Procurou como voltar à fila; saiu do laudo para rever a análise do modelo; não disse o que o solicitante recebe do laudo | 0 | 02:27 | não coletada (comentários: "ficou fácil", 03:33; "ficou muito bom", 04:18) | "Acho que seria legal poder visualizar aqui a imagem também" (03:18) |
 
-**Link da gravação (se autorizado):** {{...}}  
-**Resposta pós-teste:** {{...}}
+**Link da gravação (se autorizado):** [Gravação do U03](https://youtu.be/-Ha1jvNS_EE) — o participante autoriza a gravação da voz em 04:25, no fim da sessão  
+**Resposta pós-teste:** dada em voz alta, na própria gravação (03:36–04:20). Não houve questionário depois da sessão.
+
+#### Perfil pré-teste
+
+Graduando em Ciência da Computação na FEI, trabalha como engenheiro de dados e IA. Não tem relação com a área da saúde e nunca tinha visto o protótipo. É um participante proxy: o resultado mostra se um leigo consegue laudar o exame na tela e não equivale ao de um radiologista. Ele mesmo lembra disso durante a tarefa: "não sou radiologista, né?" (02:48). O perfil foi informado ao moderador antes da gravação e não aparece no vídeo.
+
+#### Cenário apresentado
+
+A gravação começa com o participante perguntando o que é o projeto (00:00). O moderador explicou que é uma interface em que o radiologista sobe laudos para os médicos avaliarem o paciente e verem a resposta da IA (00:03–00:23), e que, por ser um protótipo com exemplos, "vai tá tudo meio pronto já, você só meio que realiza a ação" (00:39–00:51). Depois deu a tarefa (00:51–01:02): fazer o laudo da próxima pessoa a ser atendida, falando em voz alta e sem dicas.
+
+O cenário seguiu a UT03 da [Entrega 12](12_planejamento_avaliacao.md) ("Laude o próximo exame"). Foi dito de forma resumida, sem o papel da Dra. Helena e sem a frase "se faltar alguma informação para concluir, resolva como faria no seu serviço". A explicação de que tudo estaria pronto adiantou que o laudo viria preenchido.
+
+#### Percurso observado
+
+Os tempos são do vídeo (mm:ss).
+
+- **01:02–01:07:** na fila de laudos, identifica o José Ferraz como o próximo e abre o exame pela linha da fila.
+- **01:08–01:16:** procura como voltar à fila ("Como que eu faço para voltar?") e volta pelo link "Fila de laudos".
+- **01:16–01:23:** testa os dois jeitos de abrir o exame, a linha e o botão "Abrir o próximo exame", e comenta que gostou.
+- **01:23–01:31:** lê a pergunta clínica e o contexto clínico e comenta a imagem.
+- **01:31:** abre "Abrir a análise do modelo (segunda leitura)".
+- **01:43–01:48:** volta à pergunta clínica e abre "Redigir o laudo". Pergunta se consegue ver o que a IA gerou e redigir ao mesmo tempo.
+- **01:52–02:00:** sai do laudo pelo link "Fila de laudos", reabre o exame e volta à análise do modelo.
+- **02:00–03:04:** lê a análise: volume do hipocampo, limites da sugestão e mapa de atenção. Em 02:27 pergunta o que aquilo está dizendo.
+- **03:05:** abre "Redigir o laudo" de novo e lê o laudo já preenchido (03:06–03:28).
+- **03:29:** clica em "Liberar o laudo". A fila mostra "Laudo liberado, com método e dúvida" e o José Ferraz sai da lista (03:30).
+- Não abriu "Perguntar ao solicitante" e não comentou o método de avaliação nem a dúvida registrados no laudo.
+
+Depois da tarefa, ao dar a opinião (03:36–04:20), ele refez o caminho para mostrar o que achou estranho. Clicou em "Abrir o próximo exame" (03:46), e o protótipo reabriu o mesmo José Ferraz (03:52). Passou de novo pela análise e pelo laudo e liberou outra vez (04:16).
+
+#### Pensar em voz alta
+
+Ele falou em voz alta durante toda a tarefa. As falas abaixo vêm da legenda da gravação, com o minuto:
+
+- "Esse daqui é o próximo cara que eu vou atender, que eu vou gerar o [laudo], o José" (01:02)
+- "Consegui voltar aqui? Não, ainda não dá, né? Como que eu faço para voltar para aqui?" (01:08–01:16)
+- "Eu posso ir pro próximo exame, ele já vai pro José Ferraz, ou eu venho por aqui, isso é legal" (01:16–01:23)
+- "Aí aqui é o que o modelo gerou pra mim, que é o XAI mesmo, né?" (01:35)
+- "Como que funciona esse redigir? Aí eu consigo ver o que a IA gerou e redigiu ao mesmo tempo?" (01:48)
+- "O limite da sugestão: [base ADNI], não validado na população brasileira" (02:01)
+- "Isso daqui tá explicando o que que a IA fez, né?" (02:10)
+- "Aí aqui é o que o modelo retornou, né? O volume do hipocampo" (02:14)
+- "Daqui o que ele está me dizendo então?" (02:27)
+- "E aí eu só tenho essa informação que a IA gerou, né? E não tenho mais [a] imagem" (03:08)
+- "Aí aqui já tá o exemplo do que eu irei escrever e aí eu libero" (03:13)
+- "Acho que seria legal poder visualizar aqui a imagem também […] pra eu lembrar" (03:18–03:26)
+- "Aí eu libero o laudo, aí o próximo lá já foi. Perfeito" (03:28)
+- "Ah, ficou fácil aqui, né?" (03:33)
+
+**Intervenções do moderador durante a tarefa:**
+
+- **01:55:** respondeu que "como é um exemplo, já vai estar tudo pronto". Esclarece a simulação e não conta como ajuda (Entrega 12, seção D).
+- **01:38, 02:13 e 02:19:** "Isso", confirmando o que o participante leu.
+- **02:51:** "lembra da tarefa, você vai ter que fazer um laudo pro médico ver". Repete a instrução e não conta como ajuda.
+
+#### Opinião depois da tarefa
+
+Perguntado sobre o que achou (03:36–03:45), ele disse que ficou fácil e apontou um problema:
+
+- "Essa daqui é a tela da análise da IA, né? Essa daqui é a imagem […] sem a IA ainda, né? E aí, pra abrir a análise do modelo, tá nessa página" (03:50–04:00)
+- "Aí, se eu for pro laudo, eu […] não vejo mais a imagem que foi enviada e nem que o modelo analisou. Se eu quiser ver pra enviar o laudo, fica de ir [e voltar], tá estranho" (04:03–04:16)
+- "Mas acho que é isso, na minha opinião, ficou muito bom" (04:16–04:20)
+
+#### Análise do resultado
+
+O resultado foi **parcial**, pelo critério da UT03 da Entrega 12 (o cenário que foi aplicado): liberar o laudo **e** dizer que o solicitante recebe o método e a dúvida.
+
+- **Item cumprido:** abriu o exame certo, passou pela pergunta clínica e pela análise do modelo e liberou o laudo (03:29), sem erro.
+- **Item que faltou:** a pergunta "O que o solicitante vai receber deste laudo?" (QA09) não foi feita, e ele não falou do método nem da dúvida por conta própria. Ao chegar ao laudo, leu o texto como "o exemplo do que eu irei escrever" (03:13) e liberou.
+- **Ajuda:** Nenhuma
+- **Dificuldades:**
+  - procurou como voltar do exame para a fila (01:08–01:16);
+  - para redigir, precisou sair do laudo e voltar à análise, porque o laudo não mostra a imagem nem o mapa de atenção (01:52–02:00; opinião em 04:03–04:16).
+- **Pergunta ao solicitante:** pelo cenário aplicado, era opcional, e ele não precisou dela.
+
+Esses pontos aparecem nos achados AU09 a AU11 (seção E).
+
+#### Metas de usabilidade (Entrega 8)
+
+| Meta | Resultado do U03 na UT03 | Atingida? |
+|---|---|---|
+| MU01 — eficácia | Parcial, com 1 ajuda (0/1 com sucesso total) | não |
+| MU02 — erros críticos | 0 erros críticos | sim |
+| MU03 — eficiência | 02:27 (medida na UT02; aqui só referência) | — |
+| MU04 — satisfação | Notas de 1 a 5 não coletadas | não medida |
+| MU05 — papel de apoio da IA | não medida na UT03 | — |
+| MU06 — elementos da explicação | não medida na UT03 | — |
+
+- **MU01:** liberou o laudo, mas faltou o segundo item do critério e houve uma ajuda.
+- **MU02:** ele não tratou o volume do hipocampo como conclusão nem liberou o laudo sem conclusão, que são os erros críticos ligados à UT03.
+- **MU04:** as notas não foram pedidas. A opinião dada em voz alta foi positiva ("ficou fácil", 03:33; "ficou muito bom", 04:18), mas não substitui a escala da meta.
+- **Consentimento:** a autorização de gravação foi pedida no fim (04:21–04:28), e não antes da tarefa, como prevê o protocolo.
 
 ### U04 — {{perfil resumido}}, no papel de técnico em radiologia (UT04)
 
@@ -320,7 +411,7 @@ Esses pontos aparecem nos achados AU01 a AU03 (seção E).
 |---|---:|---|---|---|---|---|
 | UT01 | 0/1 total (1 parcial) | 03:50 | 1 erro não crítico (gravou o parecer de novo) | 5 | não (MU01) | Recomendação do parecer não lida; botão "Registrar parecer" confundido com o parecer; preenchimento simulado diferente do escolhido |
 | UT02 | 0/1 total (1 parcial) | 03:00 | nenhum erro | 5 | não (MU01, MU06) | Confiabilidade não percebida; pesos da explicação lidos errado |
-| UT03 | {{x/1}} | {{mm:ss}} | {{...}} | {{1–5}} | sim/não | {{...}} |
+| UT03 | 0/1 total (1 parcial) | 02:27 | nenhum erro; 1 ajuda | não coletada | não (MU01) | Laudo sem a imagem e a análise do modelo; volta à fila pouco visível |
 | UT04 | {{x/1}} | {{mm:ss}} | {{...}} | {{1–5}} | sim/não | {{...}} |
 
 Com um participante por tarefa, os resultados são contagens individuais (x/1), sem percentual nem média.
@@ -337,7 +428,10 @@ Com um participante por tarefa, os resultados são contagens individuais (x/1), 
 | AU06 | Registro confirmado sem conferir o resumo | UT01: tentou "Concordo" e "Compatível com Alzheimer" (03:19–03:31), registrou "Concordo parcialmente" e "Inconclusivo" (04:24–04:36) sem comentar | Médio | Destacar concordância e conclusão na confirmação | Figma, MoLIC M02 |
 | AU07 | "Voltar aos casos" não volta à lista; status não muda depois da decisão | UT01: 04:42–04:56 | Médio | Corrigir a ligação e o status no protótipo | Figma |
 | AU08 | Sigla MMSE sem explicação | UT01: pós-teste ("não conhecia o termo MMSE") | Baixo | Nome por extenso na primeira ocorrência e termo no glossário | Figma, signos |
-| AU__ | {{achados de UT03 e UT04}} | {{...}} | {{...}} | {{...}} | {{...}} |
+| AU09 | Ao redigir o laudo, a imagem e a análise do modelo saem da tela | UT03: 1/1 saiu do laudo para rever a análise (01:52–02:00) + falas 01:48, 03:18 e 04:03–04:16 | Médio | Manter a imagem, com o mapa de atenção, ao lado do formulário do laudo | Figma, MoLIC M01 |
+| AU10 | Volta do exame para a fila pouco visível | UT03: procurou por cerca de 8 s (01:08–01:16) + fala 01:08 | Baixo | Dar mais destaque ao link "Fila de laudos" no topo do exame | Figma |
+| AU11 | "Abrir o próximo exame" reabre o exame já liberado | U03: depois de liberar, o botão abriu o mesmo José Ferraz (03:46–03:52) | Baixo | Ligar o botão a outro exame ou a uma tela de fim da demonstração | Figma |
+| AU__ | {{achados de UT04}} | {{...}} | {{...}} | {{...}} | {{...}} |
 
 #### AU01 — confiabilidade "Baixa" não percebida
 
@@ -390,6 +484,28 @@ Com um participante por tarefa, os resultados são contagens individuais (x/1), 
 - **Impacto:** baixo para o público real, porque o médico clínico conhece a sigla.
 - **Recomendação:** escrever "MMSE (Mini-Exame do Estado Mental)" na primeira ocorrência e incluir o termo no glossário.
 
+#### AU09 — imagem e análise somem ao redigir o laudo
+
+- **Evidência:**
+  - ao abrir "Redigir o laudo", o U03 perguntou se conseguiria "ver o que a IA gerou e redigir ao mesmo tempo" (01:48);
+  - saiu do laudo, voltou à fila, reabriu o exame e voltou à análise do modelo (01:52–02:00);
+  - no laudo, disse que "não tenho mais [a] imagem" (03:08) e que "seria legal poder visualizar aqui a imagem também […] pra eu lembrar" (03:18–03:26);
+  - na opinião final, chamou o ir e voltar de "estranho" (04:03–04:16).
+- **Impacto:** médio. A radiologista lauda olhando a imagem; sem ela ao lado, precisa lembrar o que viu ou alternar telas, o que vai contra o reconhecimento em vez da memorização (H6). O laudo mostra só o volume do hipocampo, sem a imagem e sem o mapa de atenção.
+- **Recomendação:** na tela do laudo, manter a imagem com o mapa de atenção ao lado do formulário, como já acontece na análise do modelo, e deixar a pergunta clínica visível.
+
+#### AU10 — volta do exame para a fila pouco visível
+
+- **Evidência:** logo depois de abrir o exame, o U03 perguntou "como que eu faço para voltar para aqui?" (01:08–01:16) e só então achou o link "Fila de laudos" no topo.
+- **Impacto:** baixo. Ele achou sozinho em poucos segundos, mas a radiologista alterna entre fila e exame o dia todo.
+- **Recomendação:** dar mais destaque ao link "Fila de laudos" no topo do exame e do laudo.
+
+#### AU11 — "Abrir o próximo exame" reabre o exame liberado
+
+- **Evidência:** depois de liberar o laudo, o U03 clicou em "Abrir o próximo exame" (03:46) e o protótipo abriu de novo o José Ferraz (03:52), que já tinha saído da fila. Ele estava mostrando a opinião e não comentou.
+- **Impacto:** baixo. É falha de ligação do protótipo, mas contradiz o aviso de laudo liberado.
+- **Recomendação:** ligar o botão a outro exame da fila ou a uma tela de fim da demonstração.
+
 ## F. Comparação com a avaliação heurística
 
 | Problema | Detectado na heurística? | Detectado por usuários? | O que aprendemos |
@@ -400,7 +516,7 @@ Com um participante por tarefa, os resultados são contagens individuais (x/1), 
 | Mapa de atenção fixo, sem controles (UT02) | sim — HC01 | não observado | O U02 não interagiu com o mapa |
 | "Estimado" e "imputado" para o mesmo valor (UT02) | sim — HC04 | não observado | O U02 não comentou o hipocampo estimado |
 | Status do caso diferente entre telas; lista sem filtro (UT01) | sim — HC03, HC16 | parcial — U01 | O status ficou "Aguardando revisão" depois da decisão registrada (04:44), mas ele não comentou. A falta de filtro não apareceu: ele abriu o caso direto |
-| Método sem MTA; análise indisponível sem previsão; fila sem indicação de clique (UT03) | sim — HC02, HC11, HC19 | {{sim/não}} | {{...}} |
+| Método sem MTA; análise indisponível sem previsão; fila sem indicação de clique (UT03) | sim — HC02, HC11, HC19 | não — U03 | Ele não comentou o método e não passou pela análise indisponível. Na fila, abriu o exame pela linha e depois achou o botão (01:02–01:23): a falta de indicação de clique não atrapalhou |
 | Identidade sem voltar; volumetria digitada; teste cognitivo em texto livre (UT04) | sim — HC12, HC13, HC14 | {{sim/não}} | {{...}} |
 | Peso dos dados clínicos lido como peso dos relatos (UT02) | não | sim — U02 | Ver AU02 |
 | Estágio da doença inferido da explicação (UT02) | não | sim — U02 | Ver AU03 |
@@ -408,7 +524,10 @@ Com um participante por tarefa, os resultados são contagens individuais (x/1), 
 | Recomendação do parecer não percebida (UT01) | não | sim — U01 | Ver AU04 |
 | "Registrar parecer" confundido com o parecer (UT01) | não | sim — U01 | Ver AU05 |
 | "Voltar aos casos" leva ao lugar errado (UT01) | não | sim — U01 | Ver AU07. Falha de ligação do protótipo |
-| {{problema que só apareceu com usuários em UT03 ou UT04}} | não | sim | {{...}} |
+| Imagem e análise somem ao redigir o laudo (UT03) | não | sim — U03 | Ver AU09. A inspeção olhou cada tela sozinha; o problema só apareceu quando o participante precisou das duas ao mesmo tempo |
+| Volta do exame para a fila pouco visível (UT03) | não | sim — U03 | Ver AU10 |
+| "Abrir o próximo exame" reabre o exame liberado (UT03) | não | sim — U03 | Ver AU11. Falha de ligação do protótipo |
+| {{problema que só apareceu com usuários em UT04}} | não | sim | {{...}} |
 
 ## G. Conclusão
 
@@ -424,7 +543,8 @@ A conclusão deve responder:
 
 - **UT02:** atingiu MU02 (nenhum erro crítico), MU04 (nota 5) e MU05 (entendeu que é sugestão, não diagnóstico). Não atingiu MU01 (sucesso parcial) nem MU06 (0 de 3 elementos). O tempo (03:00) fica dentro da referência da MU03.
 - **UT01:** atingiu MU02 (nenhum erro crítico) e MU04 (nota 5). Não atingiu MU01 (sucesso parcial: achou a conclusão do especialista, mas não a data da reavaliação no parecer). O tempo foi 03:50, dentro do limite de 5 minutos.
-- **UT03 e UT04:** {{...}}
+- **UT03:** atingiu MU02 (nenhum erro crítico). Não atingiu MU01 (sucesso parcial: liberou o laudo, mas não disse o que o solicitante recebe, e houve uma ajuda). MU04 não foi medida, porque as notas não foram pedidas. O tempo foi 02:27, dentro do limite de 5 minutos.
+- **UT04:** {{...}}
 
 **2. Problemas recorrentes.** {{a preencher quando houver os quatro resultados}}
 
@@ -432,9 +552,10 @@ A conclusão deve responder:
 
 - **UT02:** o participante entendeu bem o papel de apoio da IA, ajudado pelo aviso da tela. Mesmo assim, leu errado justamente a parte da explicação: confiabilidade, pesos e "O que mais pesou". Esses dois problemas de leitura (AU02, AU03) não tinham aparecido na avaliação heurística.
 - **UT01:** o participante achou o parecer em 15 segundos, mas leu só a conclusão e pulou a recomendação, que estava no mesmo card. Depois seguiu sozinho até registrar uma decisão que o cenário não pedia, e confirmou escolhas que não eram as dele sem perceber.
+- **UT03:** o participante achou sozinho os dois caminhos para abrir o exame e chegou à liberação sem erro. O que mais o incomodou não estava em nenhuma tela isolada: foi ter que sair do laudo para rever a imagem e a análise do modelo (AU09), problema que a inspeção heurística não pegou.
 - **Outras tarefas:** {{...}}
 
-**4. Mudanças prioritárias.** AU01 e AU02, porque levam a explicar o caso para a família de forma errada, e AU04, porque a data da reavaliação é a informação que o parecer existe para guardar. {{incluir as de UT03 e UT04}}
+**4. Mudanças prioritárias.** AU01 e AU02, porque levam a explicar o caso para a família de forma errada, e AU04, porque a data da reavaliação é a informação que o parecer existe para guardar. AU09, porque a radiologista precisa da imagem enquanto escreve o laudo. {{incluir as de UT04}}
 
 **5. Limitações.**
 
